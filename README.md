@@ -139,4 +139,8 @@ Once you report to GyanSys office in January 2024, we will have additional train
 
 ### Questions/Help?
 
-If you need any help or have any queries/issues related to this readiness plan, then please send the message in the WhatsApp group we have created for Microsoft Practice.
+If you need any help or have any queries/issues related to this readiness plan, then please use below options: 
+1. Option 1 - Use the Discussions tab in this same repository. If you have a Question, goto Discussions -> Select Q&A Category -> New Discussion
+2. Option 2 - Send message in the WhatsApp group we have created for Microsoft Practice.
+
+

@@ -22,6 +22,10 @@ This paragraph has some `variable` inline code.
 ```javascript
 let num = Math.random();
 ```
+```bash
+git clone
+git --version
+```
 
 ![alt text](http://picsum.photos/200/200)
 
@@ -34,3 +38,7 @@ Some paragraph with text.
 | more | more | more |
 
 This is being * created * on a ** Friday ** ~~Saturday~~.
+
+For inline code (within a line), you can use a single backtick on both sides of the code.<br>
+This is `inline` code
+

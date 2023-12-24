@@ -16,3 +16,10 @@
 
   * Gaining hands-on experience through practical engagement with HTML, CSS, and JavaScript.
   * Started Learning C#.
+
+## Week 4 (18-Dec-2023 to 22-Dec-2023)
+
+  * Advancing my knowledge in JavaScript.
+  * Learning more about C#.
+
+

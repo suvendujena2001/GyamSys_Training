@@ -57,7 +57,13 @@
 - Re-built web apps - [a website](https://appeasybank.netlify.app/), [tip calculator web app](https://tip-calculator-prince.netlify.app/), and [Three theme calculator](https://calculator-prince.netlify.app/)
 
 ## Week 3 (11-Dec-2023 to 15-Dec-2023)
-- Started learning about C# 
-  - A naming convention for variables, methods, classes, and interfaces.
-  - Control statements - if, if-else, if-else-if, nested if, switch, nested switch.
-  - iteration statements - for, while, foreach, do-while
+- Completed basics of C# from W3Schools
+  
+  > - A naming convention for variables, methods, classes, and interfaces.
+  > 
+  > - Control statements - if, if-else, if-else-if, nested if, switch, nested switch.
+  > 
+  > - iteration statements - for, while, foreach, do-while
+  
+## Week 4 (18-Dec-2023 to 22-Dec-2023)
+- Completed _C# for Beginners_ playlist on YouTube by **Scott Hanselman** and **David Fowler**.

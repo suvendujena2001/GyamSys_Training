@@ -10,10 +10,10 @@
 
   * Learnt about HTML.
   * Learnt CSS.
-  * Learnt JavaScript.
 
 ## Week 3 (11-Dec-2023 to 15-Dec-2023)
 
+  * Learnt JavaScript.
   * Gaining hands-on experience through practical engagement with HTML, CSS, and JavaScript.
   * Started Learning C#.
 
@@ -21,5 +21,9 @@
 
   * Advancing my knowledge in JavaScript.
   * Learning more about C#.
+    
+## Week 5 (18-Dec-2023 to 22-Dec-2023)
+
+  * Completed the video playlist for C# for Beginners by dotnet.
 
 

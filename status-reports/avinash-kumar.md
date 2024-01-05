@@ -22,7 +22,7 @@
   * Advancing my knowledge in JavaScript.
   * Learning more about C#.
     
-## Week 5 (18-Dec-2023 to 22-Dec-2023)
+## Week 5 (25-Dec-2023 to 29-Dec-2023)
 
   * Completed the video playlist for C# for Beginners by dotnet.
 

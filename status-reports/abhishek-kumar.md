@@ -2,6 +2,6 @@
 # Status report
 ## Week1
 - Learnt Git and Github basics
-- Learnt Github clone, push and pull commands.
-- Learnt Github branch anf fork commands.
+- Learnt Github clone, push and pull commands
+- Learnt Github branch anf fork commands
 

@@ -67,3 +67,12 @@
   
 ## Week 4 (18-Dec-2023 to 22-Dec-2023)
 - Completed _C# for Beginners_ playlist on YouTube by **Scott Hanselman** and **David Fowler**.
+
+## Week 5 (25-Dec-2023 to 29-Dec-2023)
+- Completed Microsoft C# beginner course.
+
+## Week 6 (01-Jan-2024 to 05-Jan-2024)
+- Started learning Foundational C# with Microsoft certification @freeCodeCamp
+
+## Week 7 (08-Jan-2024 to 12-Jan-2024)
+- Completed and passed **[Foundational C# with Microsoft Certification Exam](https://www.freecodecamp.org/certification/princeroy/foundational-c-sharp-with-microsoft)** scoring 92%.

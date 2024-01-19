@@ -24,6 +24,18 @@
     
 ## Week 5 (25-Dec-2023 to 29-Dec-2023)
 
+  * Started the video playlist for C# for Beginners by dotnet.
+
+## Week 6 (1-Jan-2024 to 6-Jan-2024)
+
   * Completed the video playlist for C# for Beginners by dotnet.
+ 
+## Week 7 (8-Jan-2024 to 12-Jan-2024)
+
+  * Completed and passed [Foundational C# with Microsoft Certification](https://www.freecodecamp.org/certification/fcc3bd8af80-dd4e-4d07-aa31-7f6a7d36a828/foundational-c-sharp-with-microsoft).
+
+## Week 8 (15-Jan-2024 to 19-Jan-2024)
+
+  * Started learning SQL.
 
 

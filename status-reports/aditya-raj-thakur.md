@@ -4,7 +4,7 @@
 > WEEK 1-
  - Understood GitHub platform.
  - Learned about Git.
- - Learned differnt Git Commands.
+ - Learned different Git Commands.
  - Learned about how to clone files and also push the files on github using init().
  - Performed push operations of source code/files.
  - Learned about fork,branch etc.

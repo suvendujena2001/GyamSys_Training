@@ -4,17 +4,17 @@
 ## Week 1
 
 ### MarkDown
-  - Researched about the MarkDown and learned the basic syntax.
-  - Understood the uses and working of Markdown Language.
-  - Started documenting the work progress usuing the MarkDown language.
+  - Researched about the ***MarkDown*** and learned the ***basic syntax***.
+  - Understood the ***uses and working*** of Markdown Language.
+  - Started ***documenting*** the work progress using the MarkDown language.
 
 ### Git and GitHub
   - What is Version Control System and Git?
-  - What is GitHub and uses.
+  - What is GitHub and uses?
   - Explored the GitHub platform. 
   - Differnece between Git and GitHub.
   - The terminologies associated with Git.
-  - Using Git from the Command Line and an IDE (like VS Code).
+  - Using Git from the Command Line and an IDE (VS Code).
   - Learned the different Git commands.
       - Getting a Git Repo
         - git clone <-some link->  (https link of the repo from github to be cloned)

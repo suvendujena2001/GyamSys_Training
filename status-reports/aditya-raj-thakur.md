@@ -10,5 +10,8 @@
  - Learned about fork,branch etc.
  - Used Git operations from Command Line.
  - Learned Markdown Language.
- 
+> WEEK 2-
+ - Learned about HTML.
+ - Learned about CSS.
+ - Learned basics about Javascript.
 

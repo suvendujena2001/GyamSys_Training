@@ -39,3 +39,8 @@
   - Learned about derived classes, abstract classes, overridding
   - Learned about encapsulation and constructor and their importance
   - Revised all the learning from official website
+
+ ## Week6(12.01.2024 - 22.01.2024)
+  - Revised all the learning of C#
+  - Completed the certification in [**Foundational C# with Microsoft**](https://www.freecodecamp.org/certification/SoumyadipDhara/foundational-c-sharp-with-microsoft) .
+  - Started Learning SQL Basics

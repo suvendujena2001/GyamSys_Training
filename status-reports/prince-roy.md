@@ -76,3 +76,13 @@
 
 ## Week 7 (08-Jan-2024 to 12-Jan-2024)
 - Completed and passed **[Foundational C# with Microsoft Certification Exam](https://www.freecodecamp.org/certification/princeroy/foundational-c-sharp-with-microsoft)** scoring 92%.
+
+## Week 8 (15-Jan-2024 to 19-Jan-2024)
+- Completed 5+ hours of course on Transact-SQL from **Microsoft** and covered concepts such as:-
+  
+  > - Sorts and filters in T-SQL.
+  > - JOINs in T-SQL.
+  > - Subqueries in T-SQL.
+  > - Group by and built-in functions.
+
+- Revised T-SQL from **W3Schools**.

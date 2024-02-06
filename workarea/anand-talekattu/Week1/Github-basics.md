@@ -186,9 +186,14 @@ git reset --soft <-commit hash ->
 git reset --mixed <-commit hash ->
 ```
 - This is the default behavior if no option is specified. It resets the HEAD to the specified commit and updates the index (staging area) to match, but it does not alter the working directory.
+- This is useful when you want to undo the last commit and unstage its changes, so they appear as unstaged changes in the working directory. You can then selectively stage and commit the changes.
 ```bash
 git reset --hard <-commit hash ->
 ```
+- This option resets the HEAD to the specified commit, updates the index to match, and resets the working directory to match the state of the commit.
+- If effectively discards all changes made after the specified commit.
+- This is useful when you want to completely discard all changes made after a certain commit nd return to this state. However, it's also the riskiest options because it can cause loss of uncommitted changes.
+
 You can get the hash by executing 
 ```bash
 git log

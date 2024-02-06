@@ -176,6 +176,17 @@ git reset HEAD~1
 Case3: committed changes(for many commits)
 ```bash
 git reset <- commit hash ->
+```
+```bash
+git reset --soft <-commit hash ->
+```
+- This option moves the HEAD to the specified commit without altering the index or the working directory.
+- It's useful when you want to undo the last commit but keep the changes staged. After the soft reset, the changes from the undonne commit will appear as staged changes, ready to be committed again.
+```bash
+git reset --mixed <-commit hash ->
+```
+- This is the default behavior if no option is specified. It resets the HEAD to the specified commit and updates the index (staging area) to match, but it does not alter the working directory.
+```bash
 git reset --hard <-commit hash ->
 ```
 You can get the hash by executing 

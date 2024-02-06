@@ -27,7 +27,7 @@ We call folders in github as repository.
 ## Clone & Status
 To clone a repository on our local machine
 ```bash
-git clone <some link>
+git clone <remote repo url>
 ```
 To display the status of the code
 ```bash
@@ -107,7 +107,7 @@ To merge 2 branches
 git merge <- branch name ->
 ```
 ### Way2
-Create a Pull Request
+Create a Pull Request.<br>
 A pull request in GitHub is a way to propose changes to a repository. It allows you to submit changes that you've made in a branch of your repository to be reviewed by others and merged into the main branch.
 - Go to the GitHub repository.
 - Switch to the `target-branch` using the branch selector.

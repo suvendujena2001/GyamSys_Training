@@ -50,7 +50,7 @@ git commit -m "some message"
 ## Push Command
 To upload local repo content to remote repo
 ```bash
-git push origin main
+git push origin <-branch name->
 ```
 The above command is used to push the local changes in the "main" branch to the remote repository named "origin." 
 To create the shorthand for 'git push '. We set the shorthand by
@@ -79,6 +79,10 @@ To check branch
 ```bash
 git branch
 ```
+To create a new branch
+```bash
+git branch <new_branch_name>
+```
 To rename branch
 ```bash
 git branch -M new_name
@@ -87,7 +91,7 @@ To navigate to specific branch
 ```bash
 git checkout <- branch name ->
 ```
-To create a new branch
+To create a new branch and navigate to it
 ```bash
 git checkout -b <- new branch name ->
 ```
@@ -100,23 +104,24 @@ git branch -d <- branch name ->
 ### Way1
 To compare commits, branches, files & more
 ```bash
-git diff <- branch name ->
+git diff <- branch name with which we want to compare ->
 ```
 To merge 2 branches
 ```bash
 git merge <- branch name ->
 ```
-### Way2
+### Way2(using github)
 Create a Pull Request.<br>
 A pull request in GitHub is a way to propose changes to a repository. It allows you to submit changes that you've made in a branch of your repository to be reviewed by others and merged into the main branch.
 - Go to the GitHub repository.
 - Switch to the `target-branch` using the branch selector.
-- Click on the "New pull request" button.
+- Click on the "compare and pull request" or "New pull request" button.
 - In the "base" dropdown, select the `target-branch`.
 - In the "compare" dropdown, select `source-branch`.
 - Click "Create pull request."
-- Discuss the changes with your team.
-- If everything looks good, merge the pull request.
+- Discuss the changes with your team and if uyou have any comments.
+- If everything looks good, merge the pull request using "Merge pull request".
+- Then click "confirm merge" which will add new commit about the merge.
 
 ## Pull Command
 To update your local branch with changes made by others on the remote repository.
@@ -126,7 +131,7 @@ git pull origin target-branch
 The command `git pull origin target-branch` is used to fetch changes from the remote repository (`origin`) and merge them into the currently checked-out branch (`target-branch`). 
 
 ## Resolving Merge conflicts
-Resolving merge conflicts in Git occurs when there are conflicting changes in different branches, and Git cannot automatically merge them. Here's a step-by-step guide on how to resolve merge conflicts:
+Resolving merge conflicts in Git occurs when there are conflicting changes in different branches, and Git cannot automatically merge them. We can resolve merge conflicts as follows:
 
 - Start a Merge:<br>
   Start the merge process using a command like `git pull` or `git merge`. If conflicts are encountered, Git will stop and mark the conflicted files.
@@ -168,6 +173,7 @@ If you were pulling changes, Git might automatically continue the merge after yo
 Case1: staged changes
 ```bash
 git reset <- file name ->
+git reset 
 ```
 Case2: committed changes(for one commit)
 ```bash

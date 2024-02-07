@@ -198,12 +198,38 @@ git reset --hard <-commit hash ->
 ```
 - This option resets the HEAD to the specified commit, updates the index to match, and resets the working directory to match the state of the commit.
 - If effectively discards all changes made after the specified commit.
-- This is useful when you want to completely discard all changes made after a certain commit nd return to this state. However, it's also the riskiest options because it can cause loss of uncommitted changes.
+- This is useful when you want to completely discard all changes made after a certain commit and return to this state. However, it's also the riskiest options because it can cause loss of uncommitted changes.
 
-You can get the hash by executing 
+You can get the hash by executing (to check commit history)
 ```bash
 git log
 ```
+
+## Viewing the Commit History
+After you have created several commits, or if you have cloned a repository with an existing commit history, you’ll probably want to look back to see what has happened. The most basic and powerful tool to do this is the `git log` command.
+```bash
+git log
+```
+By default, with no arguments, git log lists the commits made in that repository in reverse chronological order; that is, the most recent commits show up first. 
+
+- One of the more helpful options is `-p` or `--patch`, which shows the difference (the patch output) introduced in each commit. You can also limit the number of log entries displayed, such as using `-2` to show only the last two entries.
+  ```bash
+  git log -p -2
+  ```
+  This option displays the same information but with a diff directly following each entry. This is very helpful for code review or to quickly browse what happened during a series of commits that a collaborator has added.
+
+- You can also use a series of summarizing options with git log. For example, if you want to see some abbreviated stats for each commit, you can use the `--stat` option:
+  ```bash
+  git log --stat
+  ```
+  The `--stat` option prints below each commit entry a list of modified files, how many files were changed, and how many lines in those files were added and removed. It also puts a summary of the information at the end.
+
+- Limiting Log Output<br>
+  The time-limiting options such as --since and --until are very useful. For example, this command gets the list of commits made in the last two weeks:
+  ```bash
+  git log --since=2.weeks
+  ```
+  This command works with lots of formats — you can specify a specific date like "2008-01-15", or a relative date such as "2 years 1 day 3 minutes ago".
 
 ## Fork
 A fork is a new repository that shares code and visibility settings with the original "ustream" repository.<br>

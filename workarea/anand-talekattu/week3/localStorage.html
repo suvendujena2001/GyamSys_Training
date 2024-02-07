@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage Example</title>
+  </head>
+<body>
+<h2>Local Storage Example</h2>
+<input id="numberInput" type="number" placeholder="Enter text">
+<button onclick="saveData()">save Data</button>
+<button onclick="incrementData()">increment Data</button>
+<button onclick="retrieveData()">retrieve Data</button>
+<button onclick="clearData()">Clear Data</button>
+<p id="displayData"></p>
+
+<script>
+ const saveData=()=>{
+  var inputNum=document.getElementById("numberInput").value;
+  localStorage.setItem('userInput',inputNum);
+  alert("Data saved successfully");
+ }
+ const incrementData=()=>{
+  var saveNum=Number(localStorage.getItem('userInput'));
+  if(!isNaN(saveNum)){
+    saveNum+=1;
+  localStorage.setItem('userInput',saveNum);
+  alert('Data incremented successfully');
+  }
+  else{
+    alert('No data found to increment');
+  }
+ }
+  const retrieveData=()=>{
+    var savedText=localStorage.getItem('userInput');
+    if(savedText){
+      document.getElementById('displayData').innerText='saved Data:'+savedText;
+    }
+    else{
+      document.getElementById('displayData').innerText='No data found';
+    }
+  }
+
+  const clearData=()=>{
+    localStorage.removeItem('userInput');
+    alert('Data cleared successfully!');
+  }
+ 
+
+</script>
+
+</body>
+</html>

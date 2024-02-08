@@ -1,0 +1,31 @@
+h1 {
+  color: red;
+}
+
+h1:hover {
+  font-size: 30px;
+  color: blue;
+ transition: 2s;
+}
+
+.flex-div{
+    height: 300px;
+    width: 300px;
+    background-color: black;
+}
+
+.first{
+    height: 40px;
+    width: 60px;
+    background-color: red;
+}
+.second{
+    height: 40px;
+    width: 60px;
+    background-color: blue;
+}
+.third{
+    height: 40px;
+    width: 60px;
+    background-color: greenyellow;
+}

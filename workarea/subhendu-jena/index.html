@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarize HTML and CSS</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/021/388/655/non_2x/red-book-design-free-vector.jpg">
+    <link rel="CSS" href="index.css">
+    <style>
+        body{
+            background-image: url('https://wallpapertag.com/wallpaper/full/f/3/8/540646-library-background-image-1920x1280-tablet.jpg');
+        }
+
+
+        .abc {
+            list-style-type: none;
+            margin-left: 41.5%;
+            padding: 0;
+            display: flex;
+        }
+
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration:solid;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        label{
+            color:burlywood;
+            padding: 10px;
+            margin-right: 25px;
+        }
+
+        #new2{
+    width: 320px;
+    height: 75px;
+    padding: 10px;
+    border: 6px solid red;
+    margin: 10;
+    color:aqua;
+    font-size: larger;
+  }
+    </style>
+</head>
+<body>
+    <header>
+    <div style="color:aliceblue; text-align: center; font-size: xx-large;"><em><h1>Welcome to the Book World</h1></em></div><hr/>
+
+<div>
+    <ul class="abc">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#mybooks">My Books</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</div><br/>
+</header>
+<main>
+
+    <section>
+        <h1 style="color:rgb(252, 139, 192);">
+          <span  style="border: solid;"> Some famous authors and their books:</span>
+        </h1>
+            <Section>
+                <span style="background-color: beige; font-family: 'Times New Roman', Times, serif;font-size:x-large;" >Chetan Bhagat:-</span>
+                <ul>
+                <li style="color: aliceblue;font-size: larger;">Girl In Room 105</li>
+                <li style="color: aliceblue;font-size: larger;">Three Mistakes of my Life</li>
+                <li style="color: aliceblue;font-size: larger;">One Arranged Murder</li>
+                </ul>
+                <span style="background-color: bisque; font-family: 'Times New Roman', Times, serif;font-size: x-large;">Amish Tripathy:-</span>
+                <ul>
+                <li style="color: aquamarine; font-size: larger;">The Immortals of Meluha</li>
+                <li style="color: aquamarine;font-size: larger;">The Secret of the Nagas</li>
+                <li style="color: aquamarine;font-size: larger;">The Oath of the Vayuputras</li>
+                </ul>
+            </Section>
+    </section>
+    <br/>
+    <br/>
+
+
+    <section>
+       <h1 style="color:rgb(252, 139, 192);"><span style="border: solid;">Login to Buy Books:</span></h1>
+        <form>
+            <label>Name</label>
+            <input type="text" name="Name" id="name" /><br/>
+            <label>Password</label>
+            <input type="password" name="password" /><br/>
+            <label>DOB</label>
+            <input type="date" name="dob" /><br/>
+            <label>Gender:</label>
+            <p style="color: tan;"><input type="radio" name="gender"/>Male</p>
+            <p style="color: tan;"><input type="radio" name="gender"/>Female</p>
+            <p style="color: tan;"><input type="checkbox" name="terms" /> Agree to terms</p>
+        </form>
+    </section>
+
+    <section>
+        <h2 style="color: rgb(252, 139, 192);"><span style="border: solid;">Harry Potter and The Goblet of Fire:</span></h2>
+
+<img src="https://i5.walmartimages.com/asr/a1645c74-72ff-4b4e-a598-5be7ad4481f4_1.aa688a67c7b76f2c6813079a345c581b.jpeg" width="350" height="263" alt="Klematis">
+<div id="new2">Picture above is 350px wide. The total width of this element is also 350px. The total height of this element is 80px.</div>
+    </section>
+
+</main>
+</body>
+</html>

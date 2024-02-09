@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample</title>
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <style>
+            @media screen and (min-width:320px) and (max-width:536px) {
+                nav a{
+                    display: none;
+                }
+                nav button{
+                    display: block;
+                }
+                
+            }
+            @media screen and (min-width:534px) and (max-width:1440px) {
+                
+                nav button{
+                    display: none;
+                }
+                
+            }
+            .icon{
+                color:white;
+                position: absolute;
+                height: 20px;
+                right: 0;
+                top: 0;
+                background-color: black;
+                border-radius:  40px;
+                
+            }
+            .container
+            {
+                z-index: 2;
+                height: 90px;
+                position:relative;
 
+            }
+            div{
+                background-color: lavender;
+                font-size: 70px; 
+                height: 110px;               
+            }
+            .container2
+            {
+                background-color: #8fd8ec;
+                height:fit-content;
+                font-size: large;
+                border-radius: 10px;
+            }
+            
+            header
+            {
+                
+                z-index: 2;
+                text-align: left;
+                
+            }
+            .menu
+            {
+                
+                font-style: italic;
+                color: blueviolet;
+                text-align: right;
+                font-size: 20px;
+                position: fixed;
+                width:100%;
+                top: 0;
+                
+            }
+            nav a:hover
+            {
+                background-color: #0a9fc9;
+                color: black;
+
+            }
+            .button1{
+                display:inline;
+                padding: 10px 20px;
+                background-color: #aCAF50;
+                color: white;
+                text-align: center;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover
+            {
+                background-color: black;
+                transition: 0.5s ease;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header class="container">
+        <nav >  
+        <div class="menu">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Bangalore_Institute_of_Technology_logo.png" style="float: left; height:110px">
+            <h2 style="text-align: center;">Banaglore Institute of Technology</h2>
+            <a href="home.html" style="padding: 10px;">Home</a>
+            <a href="about.html" style="padding: 10px;">About</a>
+            <a href="services.html" style="padding: 10px;">Services</a>
+            <a href="contact.html" style="padding: 10px;">Contact</a>
+        </div>
+        <button class="icon">...</button>
+        </nav> 
+        </header>
+        <h1>welcome to placement cell BIT</h1>
+        <p>your one-step destination for all things related to placement</p><hr>
+        
+            <button class="button1">Register</button>
+            <button class="button1">View Opportunities</button>
+        
+            <h2>Upcoming events</h2>
+            <ul>
+                <li>
+                    <h3>Career Fair 2024</h3>
+                    <p>Date:Febraury 10,2024</p>
+                    <p>Mode:online</p>
+                </li>
+            
+            <li>
+                <h3>Workshop on Interview Skills</h3>
+                <p>Date:Febraury 10,2024</p>
+                <p>Location:Bangalore</p>
+
+            </li>
+            </ul>
+            <div class="container2">
+                <h2>Latest News</h2>
+                <ul>
+                    <li>
+                        <h3>Infosys Recruiting for Software Developer</h3>
+                        <p>Apply before March 15,2024</p>
+                    </li>
+                    <li>
+                        <h3>Gyansys Recruiting Associate Consultant</h3>
+                        <p>Apply before March 25,2024</p>
+                    </li>
+                </ul>
+            </div>  
+    </body>
+
+    
+</html>

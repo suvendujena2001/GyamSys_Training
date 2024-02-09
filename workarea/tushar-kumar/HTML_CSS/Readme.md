@@ -1,1 +1,2 @@
-
+# Practiced Basic HTML and CSS what had been taught in the trining session.
+# Applied the same over here...

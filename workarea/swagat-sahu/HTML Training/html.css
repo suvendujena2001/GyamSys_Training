@@ -1,0 +1,108 @@
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #827272;
+    text-align: center;
+    color: black;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: rgb(9, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #6f6e6e;
+  }
+  body{
+    background-image: url(Sea.jpg) ;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+p{
+    color: blueviolet;
+}
+#Enter{
+    
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: brown;
+    font-style: oblique;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.top{
+    padding: 15px;
+    max-width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size:larger;
+    color: rgb(98, 35, 3);
+    gap:100px;
+    margin-bottom: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+a:hover{
+    Color: red;
+	font-size: large;
+    font-style: italic;
+    
+
+}
+h2{
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: small;
+    padding: 15px;
+    max-width: 500px;
+    
+}
+#Image{
+    margin-top: 20px;
+    position: relative;
+    width:10%;
+    height:20%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.container{
+   display: flex;
+   margin: auto;
+}
+#destination{
+    align-items: center;
+    width:100%;
+}
+button{
+    align-items: center;
+    width: 100%;
+    color: rgb(20, 19, 18);
+    background-color: bisque;
+}
+.bottom
+{
+    margin: auto;
+}
+ 

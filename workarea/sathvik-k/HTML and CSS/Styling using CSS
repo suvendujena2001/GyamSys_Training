@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header and Footer Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .content {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: #0066cc;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        .highlight {
+            background-color: #ffff99;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Header Example</h1>
+    </header>
+
+    <div class="content">
+        <p>This is some text content with CSS styling. You can customize the styles based on your preferences.</p>
+        
+        <p><strong>Here is some bold text</strong> and <em>italic text</em> within the content. You can use these styles to emphasize important information.</p>
+
+        <p>Adding more content to demonstrate the styling. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac mauris ac est lacinia commodo ut vel libero. <span class="highlight">This is a highlighted text</span> that grabs attention.</p>
+
+        <p>More text with <a href="#">a link</a> to showcase link styling.</p>
+
+        <p>Don't forget to check out the <a href="#" class="highlight">special offers</a> on our website.</p>
+    </div>
+
+    <footer>
+        <p>© 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

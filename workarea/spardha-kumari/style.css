@@ -80,14 +80,16 @@ nav ul a:hover{
     transform:scale(1.08);
 }
 
-@media screen and (max-width:100px){
+@media screen and (min-width:400px) and (max-width:800px){
     .items{
-        grid-template-columns: (2,1fr);
+        
+        grid-template-columns: 300px;
     }
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1200px){
     .items{
-        grid-template-columns: (1,1fr);
+        grid-template-columns: 100px;
+        
     }
 }

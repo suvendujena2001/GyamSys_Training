@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
     <title>Calculator</title>
 </head>
 <body>
@@ -11,13 +12,12 @@
         <div class="display">
             <input type="text" placeholder="0" id="input" disabled />
         </div>
-
         <!--next the buttons -->
         <div class="buttons">
             <button value="%" class="operation-button">%</button>
             <button value="CE" class="operation-button">CE</button>
             <button value="C"  class="operation-button">C</button>
-            <button value="del" class="operation-button">del</button>
+            <button value="del" class="operation-button" id="del"><img src="C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop" alt="download.png" width="10%" height="10%"></button>
             <br>
             <button value="7" class="digit-button">7</button>
             <button value="8" class="digit-button">8</button>
@@ -37,7 +37,7 @@
             <button value="-" class="sign-button">+/-</button>
             <button value="0" class="digit-button">0</button>
             <button value="." class="digit-button">.</button>
-            <button value="=" class="operation-button">=</button>
+            <button value="=" class="operation-button" id="equal">=</button>
         </div>
         
 

@@ -1,0 +1,184 @@
+body{
+    background-color: rgb(173, 173, 173);
+    margin: 20px;
+    background-image: url("https://cdn.dribbble.com/users/7486341/screenshots/16650987/media/cb574fa791c2f0b361a7d03ec55e1e39.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    
+}
+
+header{
+    text-align: center;
+
+}
+#flex{
+    border: 2px solid greenyellow;
+    display: flex;
+}
+
+#flex div{
+    padding: 10px;
+    
+}
+
+.container{
+    display: flex;
+    height: 1000px;
+    border: 2px dotted green;
+    margin: 10px;
+}
+#main1{
+    display: flex;
+    color: white;
+    background-color: rgb(152, 152, 152);
+    opacity: 0.8;
+    color: black;
+    margin: 10px;
+}
+.container>div{
+    border: 1px solid rgb(255, 255, 255);
+    width: 50%;
+    margin: 10px;
+    text-align: center;
+}
+#main1>div{
+    border: 1px solid rgb(255, 255, 255);
+    width: 50%;
+    margin: 10px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.logo{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid rebeccapurple;
+    border-radius: 50px;
+}
+
+li{
+    list-style: none;
+}
+details{
+    margin: 20px;
+    padding: 10px;
+    border: 1px dotted red;
+    border-radius: 20px;
+    background-color: rgb(152, 152, 152);
+    opacity: 0.8;
+    color: black;
+}
+
+details>ul{
+    border: 1px solid green;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(152, 152, 152);
+    opacity: 0.8;
+    color: black;
+}   
+footer{
+    border: 2px solid red;
+    text-align: center;
+    color: rgb(255, 65, 65);
+}
+
+
+#flex>div:hover{
+    background-color: blue;
+    color: white;
+}
+
+#btn1{
+    height: 50px;
+    width: 75%;
+    background-color: black;
+    color: aliceblue;
+    transition: 1s,smooth;
+    border-radius: 20px;
+}
+
+#btn1:hover{
+    height: 70px;
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (min-width:300px) and (max-width:600px) {
+    body{
+        margin: 5px;
+    }
+    #flex{
+        border: 2px solid greenyellow;
+    }
+    #flex div{
+        padding: 2px;
+    }
+    
+    .container{
+        display: block;
+        height: 1000px;
+        border: 2px dotted green;
+        margin: 5px;
+    }
+    #main1{
+        color: white;
+        background-color: rgb(152, 152, 152);
+        opacity: 0.8;
+        color: black;
+        margin: 3px;
+    }
+    .container>div{
+        border: 1px solid rgb(255, 255, 255);
+        width: 100%;
+        margin: 3px;
+        text-align: center;
+    }
+    #main1>div{
+        border: 1px solid rgb(255, 255, 255);
+        width: 50%;
+        margin: 3px;
+        text-align: center;
+        padding: 3px;
+    }
+    .logo{
+        padding: 3px;
+        margin: 3px;
+        border: 2px solid rebeccapurple;
+        border-radius: 25px;
+    }
+    
+    li{
+        list-style: none;
+    }
+    details{
+        margin: 5px;
+        padding: 3px;
+        border: 1px dotted red;
+        border-radius: 20px;
+        background-color: rgb(152, 152, 152);
+        opacity: 0.8;
+        color: black;
+    }
+    
+    details>ul{
+        border: 1px solid green;
+        margin: 5pxx;
+        padding: 3px;
+        background-color: rgb(152, 152, 152);
+        opacity: 0.8;
+        color: black;
+    } 
+    footer{
+        border: 2px solid red;
+        text-align: center;
+        color: rgb(255, 65, 65);
+        
+    }
+    .sec2{
+        margin: 20px;
+    }
+}

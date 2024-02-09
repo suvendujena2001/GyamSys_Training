@@ -1,0 +1,47 @@
+.digit-button{
+    display: flexbox;
+    margin-top: 40px;
+    color:white;
+    background-color: black;
+}
+.digit-button:hover{
+    background-color: rgba(20, 21, 21, 0);
+    color: rgb(243, 16, 16);
+}
+.display{
+    width: 100%;
+    align-self: left;
+    text-align: end;
+    padding: 15px 10px;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+.display input::placeholder{
+    color: rgb(255, 255, 255);
+    background-color:rgba(0, 0, 0, 0.685);
+}
+
+.operation-button{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+img{
+    object-fit: cover;
+}
+
+.sign-button{
+    display: flexbox;
+    margin-top: 40px;
+    color:white;
+    background-color: black;
+}
+
+
+.operation-button:hover{
+    background-color: rgba(20, 21, 21, 0);
+    color: rgb(243, 16, 16);
+}

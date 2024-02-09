@@ -1,1 +1,0 @@
-Workarea of Kalpana Panigrahi

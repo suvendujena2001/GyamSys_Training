@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+
+}
+
+html,body{
+  font-family: sans-serif;
+  font-family: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-size: 1.4rem;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+ul{
+  list-style: none;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav ul{
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li{
+  font-size: 1.8rem;
+
+}
+
+nav ul li:hover{
+  border-bottom: #b2f547 2px solid;
+}
+ 
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero_image img{
+  border-radius: 5rem;
+  height: 30rem;
+}
+  
+.hero_content h1{
+  font-size: 6rem;
+  line-height: 1.2;
+}
+
+.hero_content h4{
+font-size: 2.5rem;
+font-weight: 300;
+}
+
+/* long crd section */
+
+.h-card{
+  display: flex;
+  margin: 2rem 0;
+  box-shadow: 0px 5px 4px rgb(114, 108, 231);
+  align-items: center;
+  border: 1px solid #e2e2e2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card-content{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.status{
+  display: flex;
+  justify-content: space-between;
+}
+
+.read-btn{
+  all: unset;
+  font-weight: 600;
+
+}
+
+.read-btn:hover{
+
+  border-bottom: 1px solid #ccc;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+ align-items: center;
+ padding: 1rem;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+footer ul{
+  display: flex;
+  gap: 2rem;
+}
+
+footer ul li{
+  font-size: 1.8rem;
+}

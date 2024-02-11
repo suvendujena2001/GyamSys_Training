@@ -6,6 +6,16 @@
 
 ---
 
+## Day 2
+
+Practice on Git, Html and C# basic 
+
+---
+
+## Day 3
+
+Training and Self practice on the following topics
+
 ### HTML
 1. Paragraph
 2. Tags
@@ -39,6 +49,10 @@
     
 ---
 
+## Day 4
+
+Training and Self practice on the following topics
+
 ### CSS
 1. Styling
    - inline style
@@ -62,7 +76,14 @@
 16. padding
 17. Margin
     
+- Revising the above topics and Building a Schedule Planner Website
+- Hosting the website on Github
+
 ---
+
+## Day 5
+
+Training and Self practice on the following topics
 
 ### Java Script
 1. Evolution of Javascript

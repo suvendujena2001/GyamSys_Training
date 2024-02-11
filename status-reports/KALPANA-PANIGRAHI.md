@@ -1,30 +1,30 @@
 ## Weekly status report(Feb 5 to Feb 11)
 # HTML
 1. Basics of HTML 
-   -Paragraph
-   -Tags
-   -Boiler plate
-   -Head and meta tag
+   - Paragraph
+   - Tags
+   - Boiler plate
+   - Head and meta tag
 2. List
-   -Ordered list
-   -Unordered lost
-   -nested list
+   - Ordered list
+   - Unordered list
+   - nested list
 3. Anchor Tag and Image Tag
 4. Inline elements
-   -Div
-   -span
-   -hr
-   -br
-   -subscpript
-   -superscript
+   - Div
+   - span
+   - hr
+   - br
+   - subscpript
+   - superscript
 5. Scmantic Markup
-   -main
-   -section
-   -nav
+   - main
+   - section
+   - nav
 6. table
-   -thead
-   -tr
-   -th
+   - thead
+   - tr
+   - th
 7.Form , Button, DOM
 # CSS
 1. Styling (inline,stylesheet,external stylesheet)

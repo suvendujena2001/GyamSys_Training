@@ -6,6 +6,12 @@
 
 ---
 
+## Day 1
+
+Induction, Team lunch
+
+---
+
 ## Day 2
 
 Practice on Git, Html and C# basic 

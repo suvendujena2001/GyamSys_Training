@@ -1,15 +1,44 @@
 ## Weekly status report(Feb 5 to Feb 11)
-# DAY 1
-Onboarding Process
-# DAY 2
-Basics of HTML and CSS html syntax, what is html, different types of tags, basic of CSS, Self-Practice (C#), discussion with teams, readiness evaluation and CEO interaction with Interns.
-# DAY 3
-Self-Practice (Git and github), Training on HTML and CSS , Self -Practice(HTML).Self practice on C#(Datatype,string,ifelse statement, while and do while, switch case, Function and for loop).
-# DAY 4
-Practice on  HTML and CSS  and revision , CSS training Use of meta tag ,pseudo classes , Event Control(unfocus, un blour,hover),box model(padding, margin, border), opacity, z-index , media query, responsive property ,Grid system and external CSS training with all implementation through code . Doing assignment project (JOB APPLICATION WEB PAGE).
-# DAY 5
-Revision on media query in CSS, Introduction to, implementation of DOM API, Introduction to debugging, what is hoisting, variables, difference between var, let and const, Primitive datatype, non-primitive datatype, Object and Operators.
-# DAY 6
-Revision on HTML, CSS, C# and Git and Github. Javascript basic syntax , javascript datatypes, variables, javascript comments, operators, functions, Objects, Events, String , string methods, javascript numbers.
-# DAY 7
-Javascript Number methods and properties, Arrays, Array Sort, Array iteration , Array Const, Dates, javascript math,Random, Booleans, Comparisions . Doing Assignment Projects(Simple Calculator using HTML, CSS and JAVASCRIPT)
+# HTML
+1. Basics of HTML 
+   -Paragraph
+   -Tags
+   -Boiler plate
+   -Head and meta tag
+2. List
+   -Ordered list
+   -Unordered lost
+   -nested list
+3. Anchor Tag and Image Tag
+4. Inline elements
+   -Div
+   -span
+   -hr
+   -br
+   -subscpript
+   -superscript
+5. Scmantic Markup
+   -main
+   -section
+   -nav
+6. table
+   -thead
+   -tr
+   -th
+7.Form , Button, DOM
+# CSS
+1. Styling (inline,stylesheet,external stylesheet)
+2. Class, id, box model
+3. Relation(parent, child,siblings, descendants), attributs
+4. Properties, flex box
+5. Responsive page design, media queries, events and pseudo elements.
+6.  Doing assignment project (JOB APPLICATION WEB PAGE).
+# c#
+1. Basic syntax, output, comments, variables, datatypes.
+2. Type casting, user input, operators, math, string, Booleans
+3. if...else , switch case, while loop, do while loop,break/continue
+# JAVASCRIPT
+1. Basic syntax
+2. outputs, statements, comments, variables, operators, let, const, var, datatypes
+3. functions, objects
+4. events, string

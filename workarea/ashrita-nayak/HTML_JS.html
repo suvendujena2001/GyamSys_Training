@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript </title>
+</head>
+<body>
+
+  <h2><font color="green">WELCOME TO MY JAVASCRIPT PROJECT-1</font></h2>
+  <BODY bgcolor="lavender"></BODY>
+  <!-- WELCOME TO GYANSYS id--> 
+  <h1 id="WELCOME TO GYANSYS"> <font color="maroon">
+    WELCOME TO GYANSYS 
+  </font></h1> 
+<p>KNOWING HOW TO ACCESS AN ELEMENT BY getElementById method</p> 
+<!-- Multiple html element with h4 tag --> 
+<h4> <font color="red">IN WHICH STATE DO YOU LIVE?</font></h4>
+<h4><font color="orange">WHAT IS YOUR FAV PLACE TO VISIT IN YOUR STATE?</font></h4> 
+<h4><font color="darkblue">HOW CLEAN IS YOUR STATE ON A SALE OF 10?</font></h4> 
+<p>KNOWING HOW TO ACCESS AN ELEMENT BY getElementsByTagName</p> 
+<script>
+    // Accessing the element by getElementById method 
+    let temp = document.getElementById("WELCOME TO GYANSYS"); 
+ console.log(temp); 
+    console.log(temp.innerHTML); 
+    // Accessing the element by getElementsByTagName method 
+        let temp2 = document.getElementsByTagName("h4"); 
+        console.log(temp2[0]); 
+        console.log(temp2[1]); 
+        console.log(temp2[2]);
+   var name = "MOHAN"; 
+  document.write("<p>" + name + "</p>");
+  let age = 18; 
+  document.write("<p>" + age + "</p>");
+  const countryCode = "ARGENTINA"; 
+  document.write("<p>" + countryCode + "</p>");
+  </script>
+</body>
+</html>

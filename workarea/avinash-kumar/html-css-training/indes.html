@@ -9,10 +9,16 @@
 <body>
     <header>
         <div id="flex">
+            <div id="icon">
+            <img src="icon.png" alt="" onclick="funct2()"></div>
+            <div class="nav">
             <div><a href="indes.html">Home</a></div>
             <div><a href="about.html">About Us</a></div>
             <div><a href="contact.html">Contact</a></div>
+            <div><a href="login.html">Login</a></div>
+            <div><a href="SignUp.html">Sign Up</a></div>
             <div class="cont">Call +91 1234567899 To Place Order</div>
+            </div>
         </div>
     </header>
     <div class="container">
@@ -79,7 +85,11 @@
            <h2 id="total">Total Amount:$33</h2>
            </main>
 
-           <button id="btn1" onclick='func1()'>Pay $33</button>
+           <button id="btn1" onclick="func1()">Pay $33</button>
+           <div class="hidden">
+                <h3>You need to pay $33</h3>
+                <button>click here to pay</button>
+           </div>
 
         </div>
     </div>

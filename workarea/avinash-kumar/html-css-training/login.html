@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="contact.css">
+    <title>Login</title>
     <link rel="stylesheet" href="stylessheet.css">
 </head>
 <body>
+    
     <header>
         <div id="flex">
             <div id="icon">
@@ -22,14 +22,20 @@
             </div>
         </div>
     </header>
-    <form action="" class="contact" >
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname"><br><br>
-        <label for="lname">Write Comment</label><br>
-        <input type="text" id="lname" name="lname" ><br><br>
-        <input id="btn1" type="submit" value="Submit" onclick="window.alert('are sure you want to submit')">
-      </form> 
+
+   
+
+    <div class="container-login">
+        <h1>Enter Your user id and Password to login</h1>
+        <form action="">
+        <label for="" class="label">User Id</label>
+        <input  class="label" type="text">
+        <br>
+        <label class="label" for="">Pass</label>
+        <input  class="label" type="text">
+        <br>
+        <button class="label" onclick="window.alert('are you sure you want to login')">login</button>
+    </form>
+    </div>
 </body>
 </html>

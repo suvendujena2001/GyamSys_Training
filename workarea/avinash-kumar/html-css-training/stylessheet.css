@@ -6,6 +6,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
     color: white;
+    min-height: 100vh;
     
 }
 
@@ -16,19 +17,37 @@ header{
 #flex{
     border: 2px solid greenyellow;
     display: flex;
+    
+    
 }
 
 #flex div{
     padding: 10px;
-    
+    flex-direction: row;        
 }
-
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+#icon{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    display: none;
+}
 .container{
     display: flex;
-    height: 1000px;
+    flex-direction: row;
+    justify-content: space-between;
     border: 2px dotted green;
     margin: 10px;
+    padding: 20px 10px;
 }
+.sec1, .sec2{
+    flex-basis: 50%;
+}
+
 #main1{
     display: flex;
     color: white;
@@ -38,11 +57,33 @@ header{
     margin: 10px;
 }
 .container>div{
+    
     border: 1px solid rgb(255, 255, 255);
-    width: 50%;
+    /* width: 50%; */
     margin: 10px;
     text-align: center;
+    padding: 10px 0;
 }
+.container-login {
+    text-align: center  ;
+}
+.container-login .label{
+    margin: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+.contact{
+    text-align: center;
+}
+.hidden{
+    display: none;
+    transition: all 1s ease-in-out;
+}
+.show{
+    display:block;
+}
+
 #main1>div{
     border: 1px solid rgb(255, 255, 255);
     width: 50%;
@@ -106,21 +147,34 @@ footer{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
+.nav {
+    display: flex;
+    flex-direction: column;
+}
 
 @media screen and (min-width:300px) and (max-width:600px) {
     body{
         margin: 5px;
+        min-height: 100vh;
     }
     #flex{
         border: 2px solid greenyellow;
     }
+
+    
+    .nav{
+        display: none;
+        transition: 1s,smooth;
+    }
+
     #flex div{
         padding: 2px;
     }
     
     .container{
-        display: block;
-        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        /* height: 1000px; */
         border: 2px dotted green;
         margin: 5px;
     }
@@ -180,5 +234,11 @@ footer{
     }
     .sec2{
         margin: 20px;
+    }
+    #icon{
+        display: block;
+    }
+    .show{
+        display: block;
     }
 }

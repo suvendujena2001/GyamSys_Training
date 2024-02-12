@@ -12,24 +12,23 @@
 
       #bt1, #bt2{
   background-color: #04AA6D;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  border: 2px dashed darkslateblue;
+  color:bisque;
+  padding: 15px 45px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  text-decoration:solid;
   font-size: 16px;
-  border: 1px dotted;
+  margin-right: 10%;
+  
 }
 
 #bt3{
   background-color:brown; 
-  border: none;
-  color: white;
+  border:2px dashed darkslateblue;
+  color:bisque;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  text-decoration: solid;
   font-size: 16px;
 }
 #id1{
@@ -57,17 +56,18 @@
   </p>
   <div id="id1">
    
-    <div>
+    <span>
     <button id="bt1" onclick="document.getElementById('demo1').innerHTML = getRndInteger1(1,10)">Player-1</button>
     <p id="demo1" style="color: darkslateblue;font-family: 'Courier New', Courier, monospace;font-size: x-large;font-weight: bold; text-align: center;"></p>
-    </div>
-    
-    <div>
+    </span>
+
+    <span>
     <button id="bt2" onclick="document.getElementById('demo2').innerHTML = getRndInteger2(1,10)">Player-2</button>
     <p id="demo2" style="color: darkslateblue;font-size: x-large;font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;"></p>
-     </div>
-    </div>
+    </span>
 
+    </div>
+    
     <div id="id2">
     <button id="bt3" onclick="document.getElementById('demo3').innerHTML= giveComparison()">Compare Numbers</button>
     <p id="demo3" style="color:darkslateblue; font-size: x-large; font-family:'Courier New', Courier, monospace; font-weight: bold;"></p>

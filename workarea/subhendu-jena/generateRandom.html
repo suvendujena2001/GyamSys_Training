@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Random Numbers</title>
+    <style>
+      #heading{
+        background-color:brown ;
+      }
+
+      #bt1, #bt2{
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px dotted;
+}
+
+#bt3{
+  background-color:brown; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#id1{
+  display: flex;
+}
+    </style>
+</head>
+<body style="background-color:goldenrod;">
+
+
+  <h1 style="text-align: center; color:cornsilk;"><span id="heading"><u>THE NUMBER GAME</u></span></h1>
+  <p style="margin-left: 41%; color:azure; font-size: x-large;"><b>The rules of the game:</b></p>
+  <p><pre>
+    The first player presses the "Player-1" button. 
+    The second player presses the "Player-2" button.
+    Random numbers are generated for both the players; 
+    The player with greater number wins; 
+    And if the numbers are equal, then it's a tie.
+  </pre>
+  </p>
+  <div id="id1">
+    <button id="bt1" onclick="document.getElementById('demo1').innerHTML = getRndInteger1(1,10)">Player-1</button>
+    <p id="demo1"></p>
+    <button id="bt2" onclick="document.getElementById('demo2').innerHTML = getRndInteger2(1,10)">Player-2</button>
+    <p id="demo2"></p>
+    </div>
+    <button id="bt3" onclick="document.getElementById('demo3').innerHTML= giveComparison()">Compare Numbers</button>
+    <p id="demo3"></p>
+
+    <script>
+      var rand1;
+      var rand2;
+        function getRndInteger1(min, max) {
+             rand1= Math.floor(Math.random() * (max - min + 1) ) + min;
+          return rand1;
+        }
+        function getRndInteger2(min, max) {
+             rand2= Math.floor(Math.random() * (max - min + 1) ) + min;
+          return rand2;
+        }
+
+        function giveComparison(){
+            var text="";
+            if(rand1>rand2)
+            text="Player 1 wins";
+            else if(rand2>rand1)
+            text="Player 2 wins";
+            else
+            text="It's a tie";
+        return text;
+        }
+        </script>
+
+
+</body>
+
+
+
+</html>

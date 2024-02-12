@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Game!</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn3.vectorstock.com/i/1000x1000/88/37/set-of-red-number-icons-vector-21318837.jpg">
+    <style>
+      .abc{
+        border: 10px solid black;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color:chocolate;
+      }
+      #heading{
+        background-color:brown ;
+      }
+
+      #bt1, #bt2{
+  background-color: #04AA6D;
+  border: 2px dashed darkslateblue;
+  color:bisque;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration:solid;
+  font-size: 16px;
+  margin-right: 10%;
+  
+}
+
+#bt3{
+  background-color:brown; 
+  border:2px dashed darkslateblue;
+  color:bisque;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: solid;
+  font-size: 16px;
+}
+#id1{
+  display: flex;
+  justify-content: center;
+}
+#id2{
+  text-align: center;
+}
+footer{
+  text-align: center;
+  padding: 3px;
+  background-color:crimson;
+  color:cornsilk;
+  position:relative;
+  margin-top:10%;
+}
+    </style>
+</head>
+
+<body style="background-color:goldenrod;">
+
+  <header>
+  <h1 style="text-align: center; color:cornsilk;"><span id="heading"><u>THE NUMBER GAME</u></span></h1>
+  </header>
+  <main>
+  <p style="text-align: center;color:azure; font-size: x-large;"><b>The rules of the game:</b></p>
+  
+  <section class="abc">
+  <p><pre style="text-align: center;">
+    The first player presses the "Player-1" button. 
+    The second player presses the "Player-2" button.
+    Random numbers are generated for both the players; 
+    The player with greater number wins; 
+    And if the numbers are equal, then it's a tie.
+  </pre>
+  </p>
+  <div id="id1">
+   
+    <span>
+    <button id="bt1" onclick="document.getElementById('demo1').innerHTML = getRndInteger1(1,10)">Player-1</button>
+    <p id="demo1" style="color: darkslateblue;font-family: 'Courier New', Courier, monospace;font-size: x-large;font-weight: bold; text-align: center;"></p>
+    </span>
+
+    <span>
+    <button id="bt2" onclick="document.getElementById('demo2').innerHTML = getRndInteger2(1,10)">Player-2</button>
+    <p id="demo2" style="color: darkslateblue;font-size: x-large;font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;"></p>
+    </span>
+
+    </div>
+    
+    <div id="id2">
+    <button id="bt3" onclick="document.getElementById('demo3').innerHTML= giveComparison()">Compare Numbers</button>
+    <p id="demo3" style="color:darkslateblue; font-size: x-large; font-family:'Courier New', Courier, monospace; font-weight: bold;"></p>
+    </div>
+
+    </section>
+    </main>
+
+    <footer>
+        Created By: Subhendu Kumar Jena🖤
+    </footer>
+    <script>
+      var rand1;
+      var rand2;
+        function getRndInteger1(min, max) {
+             rand1= Math.floor(Math.random() * (max - min + 1) ) + min;
+          return rand1;
+        }
+        function getRndInteger2(min, max) {
+             rand2= Math.floor(Math.random() * (max - min + 1) ) + min;
+          return rand2;
+        }
+
+        function giveComparison(){
+            var text="";
+            if(rand1>rand2)
+            text="Player 1 wins";
+            else if(rand2>rand1)
+            text="Player 2 wins";
+            else
+            text="It's a tie";
+        return text;
+        }
+        </script>
+</body>
+</html>

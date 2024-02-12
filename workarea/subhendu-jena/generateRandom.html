@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generate Random Numbers</title>
+    <title>Play Game!</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn3.vectorstock.com/i/1000x1000/88/37/set-of-red-number-icons-vector-21318837.jpg">
     <style>
       #heading{
         background-color:brown ;
       }
 
       #bt1, #bt2{
-  background-color: #04AA6D; /* Green */
+  background-color: #04AA6D;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -33,15 +34,20 @@
 }
 #id1{
   display: flex;
+  justify-content: center;
+}
+#id2{
+  text-align: center;
 }
     </style>
 </head>
+
 <body style="background-color:goldenrod;">
 
 
   <h1 style="text-align: center; color:cornsilk;"><span id="heading"><u>THE NUMBER GAME</u></span></h1>
   <p style="margin-left: 41%; color:azure; font-size: x-large;"><b>The rules of the game:</b></p>
-  <p><pre>
+  <p><pre style="text-align: center;">
     The first player presses the "Player-1" button. 
     The second player presses the "Player-2" button.
     Random numbers are generated for both the players; 
@@ -53,18 +59,19 @@
    
     <div>
     <button id="bt1" onclick="document.getElementById('demo1').innerHTML = getRndInteger1(1,10)">Player-1</button>
-    <p id="demo1"></p>
+    <p id="demo1" style="color: darkslateblue;font-family: 'Courier New', Courier, monospace;font-size: x-large;font-weight: bold; text-align: center;"></p>
     </div>
     
     <div>
     <button id="bt2" onclick="document.getElementById('demo2').innerHTML = getRndInteger2(1,10)">Player-2</button>
-    <p id="demo2"></p>
+    <p id="demo2" style="color: darkslateblue;font-size: x-large;font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;"></p>
      </div>
     </div>
 
+    <div id="id2">
     <button id="bt3" onclick="document.getElementById('demo3').innerHTML= giveComparison()">Compare Numbers</button>
-    <p id="demo3"></p>
-
+    <p id="demo3" style="color:darkslateblue; font-size: x-large; font-family:'Courier New', Courier, monospace; font-weight: bold;"></p>
+    </div>
     <script>
       var rand1;
       var rand2;
@@ -88,10 +95,5 @@
         return text;
         }
         </script>
-
-
 </body>
-
-
-
 </html>

@@ -1,0 +1,17 @@
+body{
+    background-image: linear-gradient(to right, pink,aqua);
+}
+
+.h1{
+    background-image: linear-gradient(to right, green,orange);
+    text-align: center;
+    border-radius: 15px;
+}
+
+.btn{
+    background-color: brown;
+}
+
+.btn2{
+    background-color: blue;
+}

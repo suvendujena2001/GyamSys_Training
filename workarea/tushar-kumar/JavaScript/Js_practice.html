@@ -11,14 +11,14 @@
         }
 
         #byid {
-            border: 1px solid black;
-            padding: 16px;
+            border: 2px solid black;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Welcome</h1>
+    <h2>Create element by getElementById()</h2>
     <div id="syllabus"></div>
     <h2>The getElementsByTagName() change the second p element</h2>
 
@@ -60,9 +60,10 @@
     let degree = 'B.tech';
     const fname = 'Patna';
     // alert('Welcome to JavaScript Training')
-    document.getElementById('syllabus').innerText = 'ECMA Script';
     document.getElementById('syllabus').innerHtml = '<ul><li>ECMA SCRIPT</li><li>DATA TYPES></li></ul>';
-
+    
+    // createElementByID
+     document.getElementById('syllabus').innerText = 'ECMA Script';
     // createElement()
     const para = document.createElement("p");
     para.innerText = "Created a Paragraph by createElement().";

@@ -10,3 +10,6 @@
 
 # Day 5 - 09/02/2024
 ## Uploaded an assignment in the workarea where we have to implement all the things that has been covered in html and css.
+
+# Day 6 - 12/02/2024
+## Uploaded an assignment in the workarea implementing basics oj JavaScript.

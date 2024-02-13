@@ -25,6 +25,7 @@ function operation(buttonValue) {
 buttons.forEach(button => {
     let buttonValue = button.innerText;
     button.addEventListener('click', function () {
-        operation(buttonValue);
+        operation(buttonValue); // here we created a new variable because in JS arrays are passed as call by reference 
+        rather than call by value.
     });
 });

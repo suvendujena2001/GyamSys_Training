@@ -82,6 +82,7 @@ a{
 }
 .show{
     display:block;
+    transition: 1s smooth;
 }
 
 #main1>div{
@@ -164,7 +165,7 @@ footer{
     
     .nav{
         display: none;
-        transition: 1s,smooth;
+        transition: all 1s ease-in-out;
     }
 
     #flex div{
@@ -240,5 +241,6 @@ footer{
     }
     .show{
         display: block;
+        transition: 1s smooth;
     }
 }

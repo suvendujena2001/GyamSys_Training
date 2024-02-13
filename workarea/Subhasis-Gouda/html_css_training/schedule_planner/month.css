@@ -1,7 +1,14 @@
+
+header {
+    position: relative;
+    width: 100%;
+    margin: auto;
+
+}
 body 
 {
+    padding-top: 80px;
     background-image: url(p2.jpg);
-    
     background-size: cover;
 }
 .t1{
@@ -33,7 +40,7 @@ body
     padding: 10px;
 }
 #s2{
-    color: rgb(26, 53, 51);
+    /*color: rgb(26, 53, 51);*/
     margin-top: 75px;
     padding: 10px;
     align-items: center;
@@ -134,6 +141,9 @@ body
     .week {
         padding: 10px;
     }
+    .t3{
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -155,6 +165,9 @@ body
     }
     .week {
         padding: 15px;
+    }
+    .t3{
+        align-items: center;
     }
 }
 @media screen and (min-width: 1024px) {

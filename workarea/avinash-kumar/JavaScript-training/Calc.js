@@ -24,9 +24,9 @@ a=b;
 console.log(a,b)
 
 
-setTimeout(function() {
-   console.log("i am inside function");
-},10000)
+// setTimeout(function() {
+//    console.log("i am inside function");
+// },10000)
 
 function func3(){
     console.log("key is pressed");
@@ -86,9 +86,52 @@ function func7(){
         console.log(x,y,z);
     }
     func8();
-    console.log(z);
+    //console.log(z);
 }
 func7();
+
+
+//Assignment date 14-02-2024
+
+let arrr=[10,15,20,13,15,20];
+
+console.log(arrr);
+
+arrr.push(1);
+console.log(arrr);
+
+arrr.pop();
+console.log(arrr);
+
+arrr.shift();
+console.log(arrr);
+
+arrr.unshift(10);
+console.log(arrr);
+
+console.log(arrr[4]);
+console.log(arrr.at(4));
+
+var arrrr=[200,300];
+
+var final=arrr.concat(arrrr);
+
+console.log(final);
+
+console.log(final.slice(2,4));
+
+console.log(final.indexOf(200));
+console.log(final.lastIndexOf(20));
+
+
+function testing(value,i,final){return value==20};
+
+console.log(final.find(testing));
+
+console.log(final.findIndex(testing));
+
+console.log(final.findLastIndex(testing));
+
 
 
 //CALCULATOR codes

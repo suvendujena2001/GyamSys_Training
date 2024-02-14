@@ -33,12 +33,13 @@
             <input type="button" value="00" onclick="solve('00')">
             <input type="button" value="0" onclick="solve('0')">
             <input type="button" value="." onclick="solve('.')">
-            <input type="button" value="=" onclick="result()">
+            <input type="button" value="=" onclick="result()" onkeyup="func3()">
 
         </div>
         <br>
         <br>
         <br>
+        <input type="text"  onblur="func4()" id="color-change" placeholder="write-change-colour">
         <div id="result-container">
     <!-- <h2>Result: <span class="result-text"></span></h2>   -->
         </div>

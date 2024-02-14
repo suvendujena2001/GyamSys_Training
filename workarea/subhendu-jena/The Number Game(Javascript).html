@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Game!</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn3.vectorstock.com/i/1000x1000/88/37/set-of-red-number-icons-vector-21318837.jpg">
+    <style>
+      .abc{
+        border: 10px solid black;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color:chocolate;
+      }
+      #heading{
+        background-color:brown ;
+      }
+
+      #bt1, #bt2{
+  background-color: #04AA6D;
+  border: 2px dashed darkslateblue;
+  color:bisque;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration:solid;
+  font-size: 16px;
+  margin-right: 10%;
+  
+}
+
+#bt3{
+  background-color:brown; 
+  border:2px dashed darkslateblue;
+  color:bisque;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: solid;
+  font-size: 16px;
+}
+#id1{
+  display: flex;
+  justify-content: center;
+}
+#id2{
+  text-align: center;
+}
+footer{
+  text-align: center;
+  padding: 3px;
+  background-color:crimson;
+  color:cornsilk;
+  margin-bottom:5%
+}
+
+.left {
+  background-color:darkcyan;
+  color:black;
+  font-size: larger;
+  padding: 20px;
+  float: left;
+  width: 25%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color:blanchedalmond;
+  color:black;
+  font-size: larger;
+  padding: 20px;
+  float: left;
+  width: 50%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color:cornflowerblue;
+  color: black;
+  padding: 20px;
+  float: left;
+  width: 25%; /* The width is 20%, by default */
+  font-size: larger;
+}
+
+    </style>
+</head>
+
+<body style="background-color:goldenrod;">
+
+  <header>
+  <h1 style="text-align: center; color:cornsilk;"><span id="heading"><u>THE NUMBER GAME</u></span></h1>
+  </header>
+  <main><section class="abc">
+  <p style="text-align: center;color:azure; font-size: x-large;"><b>The rules of the game:</b></p>
+  
+  
+  <p><pre style="text-align: center;">
+    The first player presses the "Player-1" button. 
+    The second player presses the "Player-2" button.
+    Random numbers are generated for both the players; 
+    The player with greater number wins; 
+    And if the numbers are equal, then it's a tie.
+  </pre>
+  </p>
+  <div id="id1">
+   
+    <div>
+    <button id="bt1" onclick="document.getElementById('demo1').innerHTML = getRndInteger1(1,10)">Player-1</button>
+    <p id="demo1" style="color: darkslateblue;font-family: 'Courier New', Courier, monospace;font-size: x-large;font-weight: bold; text-align: center;"></p>
+    </div>
+
+    <div>
+    <button id="bt2" onclick="document.getElementById('demo2').innerHTML = getRndInteger2(1,10)">Player-2</button>
+    <p id="demo2" style="color: darkslateblue;font-size: x-large;font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;"></p>
+    </div>
+
+    </div>
+    
+    <div id="id2">
+    <button id="bt3" onclick="document.getElementById('demo3').innerHTML= giveComparison()">Compare Numbers</button>
+    <p id="demo3" style="color:darkslateblue; font-size: x-large; font-family:'Courier New', Courier, monospace; font-weight: bold;"></p>
+    </div>
+
+    </section>
+    </main>
+
+    <footer>
+        <p style="font-weight: bold;">Created By: Subhendu Kumar Jena🖤
+        <p>Connect with me!<br>It's Already Time</p>
+        <button id="jCaes" style="cursor: pointer;" onmouseover="doTime()" onmouseout="doUntime()"><img src="https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png" height="30" width="30"></button>
+    </footer>
+
+      <section style="display:flex;">
+      <span class="left">
+          <button style="cursor: pointer; float: right;" onclick="doGyansys()"><img src="https://th.bing.com/th/id/OIP.xU-OMZ9XA2WEmtM8H0vU4wHaD4?rs=1&pid=ImgDetMain" height="50" width="50"></button><a href="https://gyansys.com/" target="_blank"><p>GyanSys Inc.</p></a>
+      </span>
+      
+      <span class="main">
+      <button style="cursor: pointer;float: right;" onclick="doLinkedin()"><img src="https://cdn2.iconfinder.com/data/icons/linkedin-ui-flat/48/LinkedIn_UI-02-1024.png" height="50" width="50"></button><a href="https://in.linkedin.com/in/subhendu-kumar-jena-090096206" target="_blank"><p>LinkedIn</p></a>
+      </span>
+      
+      <span class="right">
+          <button style="cursor: pointer;float: right;" onclick="doGithub()"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" height="50" width="50"></button><a href="https://github.com/subhendujena2001" target="_blank"><p>GitHub</p></a>
+      </span>
+      </section>
+
+    <div style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: x-large;">
+      Toggling Letters:<form>
+        <input type="text" onkeydown="myKeyDown(this)" onkeyup="myKeyUp(this)" size="70" style="height: 50px;">
+      </form>
+    </div>
+    <script>
+      var rand1;
+      var rand2;
+        function getRndInteger1(min, max) {
+             rand1= Math.floor(Math.random() * (max - min + 1) ) + min;
+          return rand1;
+        }
+        function getRndInteger2(min, max) {
+             rand2= Math.floor(Math.random() * (max - min + 1) ) + min;
+          return rand2;
+        }
+
+        function giveComparison(){
+            var text="";
+            if(rand1>rand2)
+            text="Player 1 wins";
+            else if(rand2>rand1)
+            text="Player 2 wins";
+            else if(rand1==rand2)
+            text="It's a tie!";
+            else
+            text="Error: Replay Game!"
+        return text;
+        }
+        function doGyansys(){
+          location.assign("https://gyansys.com/");
+        }
+        function doLinkedin(){
+          location.href="https://in.linkedin.com/in/subhendu-kumar-jena-090096206/"
+        }
+
+        function doGithub(){
+          location.href="https://github.com/subhendujena2001"
+          }
+        function doTime(){
+          document.getElementById("jCaes").textContent = Date();
+        }  
+
+        function myKeyUp(id) {
+          //alert("You pressed a key inside the input field");
+          id.value = id.value.toUpperCase();
+        }
+
+        function myKeyDown(id) {
+          //alert("You pressed a key inside the input field");
+          id.value = id.value.toLowerCase();
+        }
+        //function doUntime(){
+        //  document.getElementById("jCaes").textContent=<img src='https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png'></img>;
+        //}
+
+
+
+        //Call by Value and Reference Examples in JavaScript
+        let a = 5;
+        let b;
+        b = a;
+        a = 3;
+        console.log(a);
+        console.log(b);
+        
+
+        var arr=[1,2,3,4,5];
+        let sum=0;
+        for(var i=0;i<arr.length;i++){
+          sum+=arr[i];
+        }
+        console.log(sum);
+
+        //object creation in javascript and displaying them
+        var Intern={
+          name: "Subhendu",
+          id: 2156,
+          salary: 22000,
+          company: "GyanSys",
+          dept:"Microsoft"
+        };
+
+        console.log(Intern.name);
+        console.log(Intern.id);
+        console.log(Intern.salary);
+        console.log(Intern.company);
+        console.log(Intern.dept);
+
+
+        //using filter() and map() in javascript
+           
+        let number1 = [5, 10, 15, 20, 25, 30]; 
+        let numbersGreaterThan20 =  
+        number1.filter(num => num > 20); 
+        console.log(numbersGreaterThan20);
+
+        const number2 = [5, 10, 15, 20, 25, 30]; 
+        const multipliedNumbers = 
+	      number2.map(num => num * 3); 
+        console.log(multipliedNumbers)
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Information</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+  <h1>Car Information</h1>
+  <p>Make: <span id="make"></span></p>
+  <p>Model: <span id="model"></span></p>
+  <p>Year: <span id="year"></span></p>
+  <button onclick="updateMake()">Update Make</button>
+  <button onclick="updateModel()">Update Model</button>
+  <button onclick="updateYear()">Update Year</button>
+
+<script>
+ 
+  var car = {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2020
+  };
+
+  
+  function updateMake() {
+    var newMake = prompt("Enter new make:");
+    if (newMake !== null && newMake.trim() !== "") {
+      car.make = newMake;
+      displayCarInformation();
+    }
+  }
+
+
+  function updateModel() {
+    var newModel = prompt("Enter new model:");
+    if (newModel !== null && newModel.trim() !== "") {
+      car.model = newModel;
+      displayCarInformation();
+    }
+  }
+
+ 
+  function updateYear() {
+    var newYear = parseInt(prompt("Enter new year:"));
+    if (!isNaN(newYear)) {
+      car.year = newYear;
+      displayCarInformation();
+    }
+  }
+
+  
+  function displayCarInformation() {
+    document.getElementById('make').innerText = car.make;
+    document.getElementById('model').innerText = car.model;
+    document.getElementById('year').innerText = car.year;
+  }
+
+  displayCarInformation();
+</script>
+</body>
+</html>

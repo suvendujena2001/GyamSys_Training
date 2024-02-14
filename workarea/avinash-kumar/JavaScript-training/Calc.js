@@ -6,13 +6,13 @@ let arr=[10,20,30,30,50]
 
 console.log(arr);
 
-//copy by reference
+//call by reference
 let copyarr=arr;
 copyarr.push(40)
 console.log(arr);
 console.log(copyarr);
 
-//copy by value
+//call by value
 let anothercopyarr=Array.from(arr)
 anothercopyarr.push(60);
 console.log(anothercopyarr)

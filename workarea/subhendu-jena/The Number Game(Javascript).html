@@ -49,9 +49,36 @@ footer{
   padding: 3px;
   background-color:crimson;
   color:cornsilk;
-  position:relative;
-  margin-top:10%;
+  margin-bottom:5%
 }
+
+.left {
+  background-color:darkcyan;
+  color:black;
+  font-size: larger;
+  padding: 20px;
+  float: left;
+  width: 25%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color:blanchedalmond;
+  color:black;
+  font-size: larger;
+  padding: 20px;
+  float: left;
+  width: 50%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color:cornflowerblue;
+  color: black;
+  padding: 20px;
+  float: left;
+  width: 25%; /* The width is 20%, by default */
+  font-size: larger;
+}
+
     </style>
 </head>
 
@@ -60,10 +87,10 @@ footer{
   <header>
   <h1 style="text-align: center; color:cornsilk;"><span id="heading"><u>THE NUMBER GAME</u></span></h1>
   </header>
-  <main>
+  <main><section class="abc">
   <p style="text-align: center;color:azure; font-size: x-large;"><b>The rules of the game:</b></p>
   
-  <section class="abc">
+  
   <p><pre style="text-align: center;">
     The first player presses the "Player-1" button. 
     The second player presses the "Player-2" button.
@@ -74,15 +101,15 @@ footer{
   </p>
   <div id="id1">
    
-    <span>
+    <div>
     <button id="bt1" onclick="document.getElementById('demo1').innerHTML = getRndInteger1(1,10)">Player-1</button>
     <p id="demo1" style="color: darkslateblue;font-family: 'Courier New', Courier, monospace;font-size: x-large;font-weight: bold; text-align: center;"></p>
-    </span>
+    </div>
 
-    <span>
+    <div>
     <button id="bt2" onclick="document.getElementById('demo2').innerHTML = getRndInteger2(1,10)">Player-2</button>
     <p id="demo2" style="color: darkslateblue;font-size: x-large;font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;"></p>
-    </span>
+    </div>
 
     </div>
     
@@ -95,8 +122,24 @@ footer{
     </main>
 
     <footer>
-        Created By: Subhendu Kumar Jena🖤
+        <p style="font-weight: bold;">Created By: Subhendu Kumar Jena🖤
+        <p>Connect with me!</p>
+        <button id="jCaes" style="cursor: pointer;" onmouseover="doTime()" onmouseout="doUntime()"><img src="https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png" height="30" width="30"></button>
     </footer>
+
+    <section style="display:flex;">
+      <span class="left">
+          <button style="cursor: pointer; float: right;" onclick="doGyansys()"><img src="https://th.bing.com/th/id/OIP.xU-OMZ9XA2WEmtM8H0vU4wHaD4?rs=1&pid=ImgDetMain" height="50" width="50"></button><a href="https://gyansys.com/" target="_blank"><p>GyanSys Inc.</p></a>
+      </span>
+      
+      <span class="main">
+      <button style="cursor: pointer;float: right;" onclick="doLinkedin()"><img src="https://cdn2.iconfinder.com/data/icons/linkedin-ui-flat/48/LinkedIn_UI-02-1024.png" height="50" width="50"></button><a href="https://in.linkedin.com/in/subhendu-kumar-jena-090096206" target="_blank"><p>LinkedIn</p></a>
+      </span>
+      
+      <span class="right">
+          <button style="cursor: pointer;float: right;" onclick="doGithub()"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" height="50" width="50"></button><a href="https://github.com/subhendujena2001" target="_blank"><p>GitHub</p></a>
+      </span>
+      </section>
     <script>
       var rand1;
       var rand2;
@@ -115,10 +158,28 @@ footer{
             text="Player 1 wins";
             else if(rand2>rand1)
             text="Player 2 wins";
+            else if(rand1==rand2)
+            text="It's a tie!";
             else
-            text="It's a tie";
+            text="Error: Replay Game!"
         return text;
         }
+        function doGyansys(){
+          location.assign("https://gyansys.com/");
+        }
+        function doLinkedin(){
+          location.href="https://in.linkedin.com/in/subhendu-kumar-jena-090096206/"
+        }
+
+        function doGithub(){
+          location.href="https://github.com/subhendujena2001"
+          }
+        function doTime(){
+          document.getElementById("jCaes").textContent = Date();
+        }  
+        //function doUntime(){
+        //  document.getElementById("jCaes").textContent=<img src='https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png'></img>;
+        //}
         </script>
 </body>
 </html>

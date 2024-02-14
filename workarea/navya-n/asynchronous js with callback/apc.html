@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Asynchrono>us java script
+        </title>
+        <style>
+            body{
+                font-family:Arial, Helvetica, sans-serif;
+                text-align: center;
+            }
+            #timer{
+                font-size: 448px;
+                font-weight:bold;
+                margin-top:20px;
+            }
+            button{
+                margin-top:0 10px;
+                padding:10px;
+                font-size:16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>countdown timer</h1>
+        <input type="number" id="time" value="10">
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+        <div id="timer"></div>
+        <script>
+            const timeinput=document.getElementById('time');
+            const startbutton=document.getElementById('start');
+            const stopbutton=document.getElementById('stop');
+            const timediv=document.getElementById('timer');
+            let timer;
+            function countdown(time)
+            {
+                if(time===0){
+                   timediv.textContent="time's up!";
+                   return;
+                }
+                timediv.textContent=time;
+                timer=setTimeout(()=>countdown(time-1),1000);
+            }
+           startbutton.addEventListener("click",()=>{
+            const time=parseInt(timeinput.value);
+            if(time<=0){
+                alert("please enter a valid time(greater than 0).");
+                return;
+            }
+            countdown(time);
+           });
+           stopbutton.addEventListener("click",()=>{
+            clearTimeout(timer);
+            timerdiv.textContent="";
+           });
+        </script>
+    </body>
+</html>
+    
+    

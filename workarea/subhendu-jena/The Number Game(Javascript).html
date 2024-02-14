@@ -196,6 +196,39 @@ footer{
         //function doUntime(){
         //  document.getElementById("jCaes").textContent=<img src='https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png'></img>;
         //}
+
+
+
+        //Call by Value and Reference Examples in JavaScript
+        let a = 5;
+        let b;
+        b = a;
+        a = 3;
+        console.log(a);
+        console.log(b);
+        
+
+        var arr=[1,2,3,4,5];
+        let sum=0;
+        for(var i=0;i<arr.length;i++){
+          sum+=arr[i];
+        }
+        console.log(sum);
+
+        //object creation in javascript and displaying them
+        var Intern={
+          name: "Subhendu",
+          id: 2156,
+          salary: 22000,
+          company: "GyanSys",
+          dept:"Microsoft"
+        };
+
+        console.log(Intern.name);
+        console.log(Intern.id);
+        console.log(Intern.salary);
+        console.log(Intern.company);
+        console.log(Intern.dept);
         </script>
 </body>
 </html>

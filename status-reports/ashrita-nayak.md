@@ -9,6 +9,5 @@
 
 **Assignments were given and we had to upload it on Github. 
 
-## Week 2 (27-Nov-2023 to 1-Dec-2023)
-- Completed freeCodeCamp for C# 
-- Learnt Database Basics
+## Week 2 (12th Feb 2024 to 16th Feb 2024)
+**

@@ -1,0 +1,14 @@
+This is a custom cheatsheet
+
+*git --version
+	to get version
+
+*git init
+	to initialise
+ 	
+*git status
+	to get status  
+
+*git add file
+
+*git add *.txt

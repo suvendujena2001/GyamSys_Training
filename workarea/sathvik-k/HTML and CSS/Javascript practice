@@ -1,0 +1,102 @@
+// Never forget the syntax:
+
+
+// Variables
+let greeting = 'Hello';
+const PI = 3.14;
+var age = 25; // Avoid using var, prefer let and const
+
+// Functions
+function sayHello(name) {
+  console.log(`${greeting}, ${name}!`);
+}
+
+sayHello('John');
+
+// Control Flow
+
+// if-else statement
+let isEven = (num) => {
+  if (num % 2 === 0) {
+    console.log(`${num} is even.`);
+  } else {
+    console.log(`${num} is odd.`);
+  }
+};
+
+isEven(7);
+
+// switch statement
+function getColorCode(color) {
+  switch (color) {
+    case 'red':
+      return '#FF0000';
+    case 'green':
+      return '#00FF00';
+    case 'blue':
+      return '#0000FF';
+    default:
+      return 'Unknown color';
+  }
+}
+
+console.log(getColorCode('red'));
+
+// Objects
+
+let person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30,
+  greet: function() {
+    console.log(`Hello, ${this.firstName} ${this.lastName}!`);
+  }
+};
+
+person.greet();
+
+// Arrays
+
+let numbers = [1, 2, 3, 4, 5];
+
+// Array methods
+console.log(numbers.map((num) => num * 2)); // [2, 4, 6, 8, 10]
+
+// Asynchronous Programming with Promises
+
+// Promise example
+let fetchData = (url) => {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then(response => response.json())
+      .then(data => resolve(data))
+      .catch(error => reject(error));
+  });
+};
+
+// Usage
+fetchData('https://jsonplaceholder.typicode.com/todos/1')
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+// ES6 Features
+
+// Arrow functions
+let add = (a, b) => a + b;
+console.log(add(3, 4)); // 7
+
+// Template literals
+let name = 'Alice';
+let message = `Hello, ${name}!`;
+console.log(message);
+
+// Destructuring
+let { firstName, lastName } = person;
+console.log(`${firstName} ${lastName}`);
+
+// Rest and Spread operators
+function sum(...numbers) {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4));

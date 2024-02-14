@@ -123,11 +123,11 @@ footer{
 
     <footer>
         <p style="font-weight: bold;">Created By: Subhendu Kumar Jena🖤
-        <p>Connect with me!</p>
+        <p>Connect with me!<br>It's Already Time</p>
         <button id="jCaes" style="cursor: pointer;" onmouseover="doTime()" onmouseout="doUntime()"><img src="https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png" height="30" width="30"></button>
     </footer>
 
-    <section style="display:flex;">
+      <section style="display:flex;">
       <span class="left">
           <button style="cursor: pointer; float: right;" onclick="doGyansys()"><img src="https://th.bing.com/th/id/OIP.xU-OMZ9XA2WEmtM8H0vU4wHaD4?rs=1&pid=ImgDetMain" height="50" width="50"></button><a href="https://gyansys.com/" target="_blank"><p>GyanSys Inc.</p></a>
       </span>
@@ -140,6 +140,12 @@ footer{
           <button style="cursor: pointer;float: right;" onclick="doGithub()"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" height="50" width="50"></button><a href="https://github.com/subhendujena2001" target="_blank"><p>GitHub</p></a>
       </span>
       </section>
+
+    <div style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: x-large;">
+      Toggling Letters:<form>
+        <input type="text" onkeydown="myKeyDown(this)" onkeyup="myKeyUp(this)" size="70" style="height: 50px;">
+      </form>
+    </div>
     <script>
       var rand1;
       var rand2;
@@ -177,6 +183,16 @@ footer{
         function doTime(){
           document.getElementById("jCaes").textContent = Date();
         }  
+
+        function myKeyUp(id) {
+          //alert("You pressed a key inside the input field");
+          id.value = id.value.toUpperCase();
+        }
+
+        function myKeyDown(id) {
+          //alert("You pressed a key inside the input field");
+          id.value = id.value.toLowerCase();
+        }
         //function doUntime(){
         //  document.getElementById("jCaes").textContent=<img src='https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png'></img>;
         //}

@@ -1,19 +1,21 @@
 // Example of call by value
-function modifyValue(value) {
-    value = value * 2;
-    console.log("Inside function:", value); // Output: Inside function: 20
+let num1 = 10;
+
+function increment(num) {
+  num++;
 }
 
-let num = 10;
-modifyValue(num);
-console.log("Outside function:", num); // Output: Outside function: 10
+increment(num1);
+console.log(num1); // Output: 10 (unchanged)
+
 
 // Example of call by reference
+let obj = { value: 10 };
+
 function modifyObject(obj) {
-    obj.prop = "modified";
-    console.log("Inside function:", obj); // Output: Inside function: { prop: 'modified' }
+  obj.value = 20;
 }
 
-let myObject = { prop: "original" };
-modifyObject(myObject);
-console.log("Outside function:", myObject); // Output: Outside function: { prop: 'modified' }
+modifyObject(obj);
+console.log(obj.value); // Output: 20 (changed)
+

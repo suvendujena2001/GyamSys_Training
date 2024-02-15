@@ -243,6 +243,49 @@ footer{
 	      number2.map(num => num * 3); 
         console.log(multipliedNumbers)
 
+        //using the JavaScript Array functions:
+        //Arr.Push(), arr.pop(), arr.shift(), arr.unshift(value), arr.concat(array), arr.slice(value)or (value,value),arr.indexOf(value)
+        //arr.lastIndexOf(), arr.find(method),arr.findIndex(), arr.findLastIndex()
+
+        var namesOfInterns=["Avinash","Ayush","Ashrita","Chindu","Swagat","Subhendu","Swayam"];
+        namesOfInterns.push("Sivakumar");
+        console.log(namesOfInterns);
+        namesOfInterns.pop();
+        console.log(namesOfInterns);
+        namesOfInterns.shift();
+        console.log(namesOfInterns);
+        namesOfInterns.unshift("Gyansys");
+        console.log(namesOfInterns);
+        var namesOfModules=["SAP","Microsoft","Salesforce","Data Analytics"];
+        var namesOfManagers=["Deepak","Kamlesh","Lipishree","Forgot"];
+        var allInOne=namesOfInterns.concat(namesOfModules,namesOfManagers);
+        console.log(allInOne);
+
+        let l1=namesOfInterns.length;
+        let l2=namesOfModules.length;
+        let l3=namesOfManagers.length;
+
+        console.log(allInOne.slice(0,l1));
+        console.log(allInOne.slice(l1,(l1+l2)));
+        console.log(allInOne.slice((l1+l2),(l1+l2+l3)));
+
+        console.log(allInOne.indexOf("Kamlesh"));
+        console.log(namesOfManagers.indexOf("Kamlesh"));
+
+        allInOne.push("Ashrita");
+        console.log(allInOne);
+        console.log(allInOne.indexOf("Ashrita"));
+        console.log(allInOne.lastIndexOf("Ashrita"));
+
+        var trial=[67,87,32,90,45,50];
+        console.log(trial);
+        function happy(trial){
+          return trial>40;
+        }
+
+        console.log(trial.find(happy));
+        console.log(trial.findIndex(happy));
+        console.log(trial.findLastIndex(happy));
         </script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd assignment_js</title>
+</head>
+<body>
+<script>
+   function first() {
+    console.log(1)
+  }
+  function second() {
+    console.log(2)
+  }
+  function third() {
+    console.log(3)
+  }
+// Execute the functions
+first()
+second()
+third() 
+function tring() {
+  console.log(1)
+}
+function bell() {
+  setTimeout(() => {
+    console.log(2)
+  }, 0)
+}
+function cat() {
+  console.log(3)
+}
+// Execute the functions
+tring()
+bell()
+cat()
+// Call by value example
+function updateValue(value) {
+  value = 10;
+  console.log('Inside function - Value:', value);
+}
+let num = 5;
+console.log('Before function call - Value:', num);
+updateValue(num);
+console.log('After function call - Value:', num);
+// Call by reference example
+function updateArray(arr) {
+  arr.push(4);
+  console.log('Inside function - Array:', arr);
+}
+
+let numbers = [1, 2, 3];
+console.log('Before function call - Array:', numbers);
+updateArray(numbers);
+console.log('After function call - Array:', numbers);
+var user9 = {
+     firstName: "MITALI",
+     lastName: "KANUNGO",
+     dateOfBirth: 2014  
+  };
+  console.log(user9);
+  var user27 = {
+   firstName: "Sangharsh",
+   lastName: "Mehta",
+   dateOfBirth: 2018,
+   getName: function(){
+      return "User's name: " + this.firstName + " " + this.lastName;
+   }
+};
+console.log(user27.getName());
+// program to display numbers from 9 to 18
+const n = 18;
+for (let i = 9; i <= n; i++) {
+    console.log(i);     // printing the value of i
+}
+let students = ['koel', 'kanupriya', 'kirtan'];
+// using forEach
+students.forEach(myFunction);
+function myFunction(item) 
+{
+ console.log(item);
+}
+const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Using filter to get even numbers
+const evendigits = digits.filter((digits) => digits % 2 === 0);
+console.log("Even digits:", evendigits);
+
+// Using map to square each number
+const squareddigits = digits.map((digits) => digits * digits);
+console.log("Squared digits:", squareddigits);
+
+</script>
+</body>
+</html>

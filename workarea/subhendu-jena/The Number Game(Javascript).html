@@ -78,11 +78,21 @@ footer{
   width: 25%; /* The width is 20%, by default */
   font-size: larger;
 }
-
+.footr{
+  position: floating;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size:larger;
+  padding: 3px 1px;
+  background-color:crimson;
+  color:cornsilk;
+}
     </style>
 </head>
 
-<body style="background-color:goldenrod;">
+<body style="background-color:goldenrod;background-image: url();" >
 
   <header>
   <h1 style="text-align: center; color:cornsilk;"><span id="heading"><u>THE NUMBER GAME</u></span></h1>
@@ -118,15 +128,15 @@ footer{
     <p id="demo3" style="color:darkslateblue; font-size: x-large; font-family:'Courier New', Courier, monospace; font-weight: bold;"></p>
     </div>
 
-    </section>
+    </section><br/>
     </main>
 
-    <footer>
-        <p style="font-weight: bold;">Created By: Subhendu Kumar Jena🖤
-        <p>Connect with me!<br>It's Already Time</p>
-        <button id="jCaes" style="cursor: pointer;" onmouseover="doTime()" onmouseout="doUntime()"><img src="https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png" height="30" width="30"></button>
-    </footer>
-
+    <div style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: x-large; font-weight: bold;">
+      Toggling Letters:<form>
+        <input type="text" onkeydown="myKeyDown(this)" onkeyup="myKeyUp(this)" size="70" style="height: 50px; border:10px solid rosybrown;">
+      </form>
+    </div>
+<br/>
       <section style="display:flex;">
       <span class="left">
           <button style="cursor: pointer; float: right;" onclick="doGyansys()"><img src="https://th.bing.com/th/id/OIP.xU-OMZ9XA2WEmtM8H0vU4wHaD4?rs=1&pid=ImgDetMain" height="50" width="50"></button><a href="https://gyansys.com/" target="_blank"><p>GyanSys Inc.</p></a>
@@ -140,12 +150,19 @@ footer{
           <button style="cursor: pointer;float: right;" onclick="doGithub()"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" height="50" width="50"></button><a href="https://github.com/subhendujena2001" target="_blank"><p>GitHub</p></a>
       </span>
       </section>
+      <br/>
 
-    <div style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: x-large;">
-      Toggling Letters:<form>
-        <input type="text" onkeydown="myKeyDown(this)" onkeyup="myKeyUp(this)" size="70" style="height: 50px;">
-      </form>
-    </div>
+ 
+
+    <section class="abc"><div class="footr">
+        <p style="font-weight: bold;">
+          Created By: Subhendu Kumar Jena🖤</p>
+        <p>Connect with me!<br>
+          Mouse over Clock</p>
+        <button id="jCaes" style="cursor: pointer;" onmouseover="doTime()" onmouseout="doUntime()"><img src="https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png" height="30" width="30"></button>
+			<br/>Visitor's Count :- <a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=a7ke5rwjr1pe5mxyukkguk83lmexk87t" border="0" title="free hit counter" alt="free hit counter"></a>
+		</div></section>
+</body>
     <script>
       var rand1;
       var rand2;

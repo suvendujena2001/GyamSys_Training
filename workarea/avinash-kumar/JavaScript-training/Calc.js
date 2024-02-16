@@ -121,6 +121,7 @@ console.log(final);
 console.log(final.slice(2,4));
 
 console.log(final.indexOf(200));
+console.log("ji");
 console.log(final.lastIndexOf(20));
 
 
@@ -131,6 +132,8 @@ console.log(final.find(testing));
 console.log(final.findIndex(testing));
 
 console.log(final.findLastIndex(testing));
+
+
 
 
 

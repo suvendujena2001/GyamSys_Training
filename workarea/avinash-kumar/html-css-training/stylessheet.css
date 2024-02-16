@@ -7,8 +7,8 @@ body{
     background-size: cover;
     color: white;
     min-height: 100vh;
-    
 }
+
 
 header{
     text-align: center;
@@ -16,9 +16,7 @@ header{
 }
 #flex{
     border: 2px solid greenyellow;
-    display: flex;
-    
-    
+    display: flex;    
 }
 
 #flex div{
@@ -35,6 +33,7 @@ a{
     border: 1px solid white;
     border-radius: 8px;
     display: none;
+    
 }
 .container{
     display: flex;
@@ -47,7 +46,11 @@ a{
 .sec1, .sec2{
     flex-basis: 50%;
 }
-
+.sec1 img{
+    background-color: aqua;
+    filter: blur(0.8px);
+  -webkit-filter: blur(0.8px);
+}
 #main1{
     display: flex;
     color: white;
@@ -124,7 +127,7 @@ details>ul{
 footer{
     border: 2px solid red;
     text-align: center;
-    color: rgb(255, 65, 65);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -133,7 +136,7 @@ footer{
     color: white;
 }
 
-#btn1{
+#btn1 ,.label{
     height: 50px;
     width: 75%;
     background-color: black;
@@ -152,11 +155,18 @@ footer{
     display: flex;
     flex-direction: column;
 }
+.nav div:hover{
+    background-color: rgb(176, 176, 176);
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius:25px ;
+}
 
 @media screen and (min-width:300px) and (max-width:600px) {
     body{
         margin: 5px;
         min-height: 100vh;
+        width: 98%;
     }
     #flex{
         border: 2px solid greenyellow;
@@ -230,7 +240,7 @@ footer{
     footer{
         border: 2px solid red;
         text-align: center;
-        color: rgb(255, 65, 65);
+        color: rgb(255, 255, 255);
         
     }
     .sec2{

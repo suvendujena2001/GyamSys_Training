@@ -34,10 +34,15 @@
     <h2>Get element by id</h2>
     <p id="intro">Learning id</p>
     <p id="demo"></p>
+    <div id="container">
+      <h1>APPLYING AJAX</h1>
+      <button type="button" onclick="load()">content change</button>
+    </div>
     <script>
       const element = document.getElementById("intro");
       document.getElementById("demo").innerHTML =
         "The text from the intro paragraph is: " + element.innerHTML;
     </script>
+    <script src="script.js"></script>
   </body>
 </html>

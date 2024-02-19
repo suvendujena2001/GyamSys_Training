@@ -1,11 +1,13 @@
 let accounts = [];
 
         function showLogin() {
+            document.getElementById("loginTab").style.display = "none";
             document.getElementById("loginForm").style.display = "block";
             document.getElementById("createAccountForm").style.display = "none";
         }
 
         function showCreateAccount() {
+            document.getElementById("loginTab").style.display = "none";
             document.getElementById("loginForm").style.display = "none";
             document.getElementById("createAccountForm").style.display = "block";
         }

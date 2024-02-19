@@ -22,6 +22,12 @@ body{
     cursor: pointer;
 }
 
+.btn:hover{
+    background-color: rgb(17, 251, 68);
+    color:white;
+    transition: 1s;
+}
+
 #details{
     font-size: larger;
     font-weight: bolder;

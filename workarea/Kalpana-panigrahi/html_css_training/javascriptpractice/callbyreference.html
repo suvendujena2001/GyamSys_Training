@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Modifier</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  button {
+    padding: 20px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px;
+  }
+</style>
+</head>
+<body>
+  <h1>Array Modifier</h1>
+  <p>Array: <span id="arrayDisplay"></span></p>
+  <button id="addValue">Add Value (Call by Value)</button>
+  <button id="removeValue">Remove Value (Call by Reference)</button>
+
+<script>
+  
+  var numbers = [1, 2, 3, 4, 5];
+
+  
+  function addValue(array, value) {
+    var newArray = array.slice(); 
+    newArray.push(value);
+  
+    document.getElementById('arrayDisplay').innerText = newArray.join(', ');
+  }
+
+  
+  function removeValue(array) {
+    array.pop();
+  
+    document.getElementById('arrayDisplay').innerText = array.join(', ');
+  }
+
+
+  document.getElementById('addValue').addEventListener('click', function() {
+    var newValue = parseInt(prompt("Enter a value to add:"));
+    if (!isNaN(newValue)) {
+      addValue(numbers, newValue);
+    } else {
+      alert("Please enter a valid number!");
+    }
+  });
+
+ 
+  document.getElementById('removeValue').addEventListener('click', function() {
+    if (numbers.length > 0) {
+      removeValue(numbers);
+    } else {
+      alert("Array is empty!");
+    }
+  });
+
+
+  document.getElementById('arrayDisplay').innerText = numbers.join(', ');
+</script>
+</body>
+</html>

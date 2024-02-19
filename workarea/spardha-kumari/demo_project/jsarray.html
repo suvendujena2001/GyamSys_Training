@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>JavaScript Arrays</h1>
+    <h2>The forEach() Method</h2>
+    <p>forEach() calls a function for each element in an array:</p>
+    <p>Multiply the value of each element with 10:</p>
+    <p id="foreachh"></p>    
+
+<h5>The filter() Method</h5>
+<p>Get every element in the array that has a value of 18 or more:</p>
+<p id="demo"></p>
+
+<h5>The shift() Method</h5>
+<p>shift() returns the removed array element:</p>
+<p id="shiftt"></p>
+
+<p>Array.slice() returns selected array elements as a new array:</p>
+
+<p id="sl"></p>
+
+
+<h5>findLastIndex()</h5>
+
+<p>Click "Test" to return the index of the last array element that has a value above this number:</p>
+
+<p><input type="number" id="toCheck" value="18"></p>
+
+<button onclick="myFunction()">Test</button>
+
+<p id="lastIn"></p>
+
+<script>
+
+const numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction)
+document.getElementById("foreachh").innerHTML = numbers;
+function myFunction(item, index, arr) {
+  arr[index] = item * 10;
+}
+
+const ages = [32, 33, 16, 40];
+document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+function checkAdult(ages) {
+  return ages >= 18;
+}
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var fd = fruits.shift();
+document.getElementById("shiftt").innerHTML = fd;
+
+const things = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const myBest =things.slice(-3, -1);
+document.getElementById("sl").innerHTML = myBest;
+
+
+const map1 = new Map();
+
+map1.set('a', 1);
+map1.set('b', 2);
+map1.set('c', 3);
+
+console.log(map1.get('a'));
+map1.set('a', 97);
+console.log(map1.get('a'));
+console.log(map1.size);
+map1.delete('b');
+console.log(map1.size);
+
+const count = [4, 12, 16, 20];
+
+function checkValue(x) {
+  return x > document.getElementById("toCheck").value;
+}
+
+function myFunction() {
+  document.getElementById("lastIn").innerHTML =count.findLastIndex(checkValue);
+}
+
+</script>
+
+</body>
+</html>

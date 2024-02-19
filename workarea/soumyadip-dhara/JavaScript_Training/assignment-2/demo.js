@@ -77,3 +77,32 @@ console.log('array 2 before mapping: '+ arr2);
 var mapp=arr2.map(i=>i*3);
 console.log('mapped values: '+ filt);
 console.log('array 2 after maping: '+ mapp);
+
+
+//push,pop,shift, unshift, concat, slice 
+
+var arr3=[3,2,6,4,3,9,8,6,4];
+console.log(arr3);
+arr3.push(40);
+console.log(arr3);
+arr3.shift();
+console.log(arr3);
+arr3.unshift(8);
+console.log(arr3);
+var arr4=[100,300,345,3746,8939];
+var arr5=arr3.concat(arr4);
+console.log(arr5);
+console.log(arr5.slice(5));
+console.log(arr5.slice(3,8));
+
+
+//find,findIndex, findLastIndex
+
+const  found = arr5.find((element) => element > 40);
+console.log(found);
+
+const  foundindex = arr5.findIndex((element) => element == 6);
+console.log(foundindex);
+
+const  foundlastindex = arr5.findLastIndex((element) => element == 6);
+console.log(foundlastindex);

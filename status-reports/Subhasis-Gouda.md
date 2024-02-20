@@ -103,4 +103,23 @@ Training and Self practice on the following topics
 6. Api
 7. alert, setroute, Prompt, Set index
 8. Hoisting
- 
+
+---
+
+## week 2 (12/2/2024 - 17/2/2024)
+
+---
+
+### Java Script
+1. AJAX CALL
+2. Shift and Unshift
+3. slicing
+4. call backs
+5. objects
+6. lexical environment
+7. scope
+8. event control
+9. promises
+10. class
+11. modules
+

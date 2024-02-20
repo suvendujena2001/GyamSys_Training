@@ -13,16 +13,15 @@ let accounts = [];
         }
 
         document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting
+            event.preventDefault(); 
 
-            // Your login logic here (e.g., check username and password)
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
 
-            // Example login check (replace with your actual login logic)
-            const account = accounts.find(acc => acc.username === username && acc.password === password);
+   
+            var account = accounts.find(acc => acc.username === username && acc.password === password);
             if (account) {
-                // Redirect to the second page after successful login
+              
                 window.location.href = "month.html";
             } else {
                 alert("Invalid username or password. Please try again.");
@@ -30,14 +29,14 @@ let accounts = [];
         });
 
         document.getElementById("createAccountForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting
+            event.preventDefault(); 
 
-            // Your account creation logic here
+           
             const newUsername = document.getElementById("newUsername").value;
             const newPassword = document.getElementById("newPassword").value;
 
-            // Example account creation (replace with your actual account creation logic)
+            
             accounts.push({ username: newUsername, password: newPassword });
             alert("Account created successfully. Please login.");
-            showLogin(); // Switch back to the login form
+            showLogin(); 
         });

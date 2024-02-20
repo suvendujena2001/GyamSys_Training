@@ -20,3 +20,5 @@
 
 ** Assignments were given on Javascript and I completed it and pushed onto Github.
 
+## Week 2 (19th Feb 2024 to 23rd Feb 2024)
+

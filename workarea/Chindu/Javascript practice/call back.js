@@ -1,19 +1,13 @@
-// Function that takes two numbers and a callback function to perform an operation on them
-function calculate(num1, num2, operationCallback) {
-    const result = operationCallback(num1, num2);
-    console.log("Result:", result);
+// Example of a callback function
+function greet(name, callback) {
+  console.log('Hello, ' + name + '!');
+  callback();
 }
 
-// Callback function to add two numbers
-function add(a, b) {
-    return a + b;
+// Callback function
+function sayGoodbye() {
+  console.log('Goodbye!');
 }
 
-// Callback function to multiply two numbers
-function multiply(a, b) {
-    return a * b;
-}
-
-// Using the calculate function with different callback functions
-calculate(5, 3, add); // Output: Result: 8
-calculate(5, 3, multiply); // Output: Result: 15
+// Calling the greet function with a callback
+greet('Alice', sayGoodbye);

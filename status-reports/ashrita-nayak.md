@@ -10,4 +10,15 @@
 **Assignments were given and we had to upload it on Github. 
 
 ## Week 2 (12th Feb 2024 to 16th Feb 2024)
-**
+** Evaluation test on HTML & CSS was taken on the first day of the week. 
+
+** The instructor started to take sessions on Javascript and covered various topics.
+
+** Sessions on unit testing, verification started from this week.
+
+** Database session was conducted and we were provided materials for going through SQL.
+
+** Assignments were given on Javascript and I completed it and pushed onto Github.
+
+## Week 3 (19th Feb 2024 to 23rd Feb 2024)
+

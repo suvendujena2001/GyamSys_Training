@@ -44,13 +44,6 @@
 #id2{
   text-align: center;
 }
-footer{
-  text-align: center;
-  padding: 3px;
-  background-color:crimson;
-  color:cornsilk;
-  margin-bottom:5%
-}
 
 .left {
   background-color:darkcyan;
@@ -78,11 +71,75 @@ footer{
   width: 25%; /* The width is 20%, by default */
   font-size: larger;
 }
+.footr{
+  position: floating;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size:larger;
+  padding: 3px 1px;
+  background-color:crimson;
+  color:cornsilk;
+}
 
+
+/*style added for experiment*/
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  opacity: 0.7;
+  position: sticky;
+  top:0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#demo{
+  text-align: center;
+}
+@keyframes gradient {
+			0% {
+					background-position: 0% 50%;
+			}
+			50% {
+					background-position: 100% 50%;
+			}
+			100% {
+					background-position: 0% 50%;
+			}
+	}
+/*ended style experiment*/
     </style>
 </head>
 
-<body style="background-color:goldenrod;">
+
+<!--added for experiment--><ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Coming Soon</a></li>
+  <li><a href="#contact">Coming Soon</a></li>
+  <li><a href="#about">Coming Soon</a></li>
+</ul><!--end-->
+<body style="background: linear-gradient(65deg, #864141 , #067467 , #3c86e7, #000000);
+background-size: 400% 400%;
+animation:gradient 10s ease infinite;">
 
   <header>
   <h1 style="text-align: center; color:cornsilk;"><span id="heading"><u>THE NUMBER GAME</u></span></h1>
@@ -118,15 +175,15 @@ footer{
     <p id="demo3" style="color:darkslateblue; font-size: x-large; font-family:'Courier New', Courier, monospace; font-weight: bold;"></p>
     </div>
 
-    </section>
+    </section><br/>
     </main>
 
-    <footer>
-        <p style="font-weight: bold;">Created By: Subhendu Kumar Jena🖤
-        <p>Connect with me!<br>It's Already Time</p>
-        <button id="jCaes" style="cursor: pointer;" onmouseover="doTime()" onmouseout="doUntime()"><img src="https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png" height="30" width="30"></button>
-    </footer>
-
+    <div style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: x-large; font-weight: bold;">
+      Dancing Text:<form>
+        <input type="text" onkeydown="myKeyDown(this)" onkeyup="myKeyUp(this)" size="70" style="height: 50px; border:10px solid rosybrown;">
+      </form>
+    </div>
+<br/>
       <section style="display:flex;">
       <span class="left">
           <button style="cursor: pointer; float: right;" onclick="doGyansys()"><img src="https://th.bing.com/th/id/OIP.xU-OMZ9XA2WEmtM8H0vU4wHaD4?rs=1&pid=ImgDetMain" height="50" width="50"></button><a href="https://gyansys.com/" target="_blank"><p>GyanSys Inc.</p></a>
@@ -140,12 +197,26 @@ footer{
           <button style="cursor: pointer;float: right;" onclick="doGithub()"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" height="50" width="50"></button><a href="https://github.com/subhendujena2001" target="_blank"><p>GitHub</p></a>
       </span>
       </section>
+      <br/>
 
-    <div style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: x-large;">
-      Toggling Letters:<form>
-        <input type="text" onkeydown="myKeyDown(this)" onkeyup="myKeyUp(this)" size="70" style="height: 50px;">
-      </form>
-    </div>
+ 
+
+    <section class="abc"><div class="footr">
+        <p style="font-weight: bold;">
+          Created By: Subhendu Kumar Jena🖤</p>
+        <p>Connect with me!<br>
+          Mouse over Clock</p>
+        <button id="jCaes" style="cursor: pointer;" onmouseover="doTime()" onmouseout="doUntime()"><img src="https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png" height="30" width="30"></button>
+			<br/>Visitor's Count :- <a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=a7ke5rwjr1pe5mxyukkguk83lmexk87t" border="0" title="free hit counter" alt="free hit counter"></a>
+		</div></section>
+
+
+    <br/>
+    <div id="demo">
+      <h1>The XMLHttpRequest Object</h1>
+      <button type="button" onclick="loadDoc()">Change Content</button>
+      </div>
+</body>
     <script>
       var rand1;
       var rand2;
@@ -197,6 +268,17 @@ footer{
         //  document.getElementById("jCaes").textContent=<img src='https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png'></img>;
         //}
 
+        //AJAX example
+        function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("demo").innerHTML =this.responseText;
+            }
+          }
+        xhttp.open("GET", "AJAX.txt", true);
+        xhttp.send();
+      }
 
 
         //Call by Value and Reference Examples in JavaScript
@@ -286,6 +368,33 @@ footer{
         console.log(trial.find(happy));
         console.log(trial.findIndex(happy));
         console.log(trial.findLastIndex(happy));
+
+
+
+        //closure example
+        /*function test()
+        {
+          let tested=10;
+          function testing(trial)
+          {
+            return trial+10;
+          }
+          return testing(test)
+        }
+        console.log(test());*/
+        function add() {
+          let counter = 20;
+          function plus() 
+          {
+            counter += 15;
+          }
+          plus();  
+          return counter;
+        }
+
+        console.log(add());
+
+        
         </script>
 </body>
 </html>

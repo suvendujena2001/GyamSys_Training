@@ -1,5 +1,5 @@
-## Weekly status report(Feb 5 to Feb 11)
-# HTML
+# Weekly status report(Feb 5 to Feb 11)
+## HTML
 1. Basics of HTML 
    - Paragraph
    - Tags
@@ -26,19 +26,95 @@
    - tr
    - th
 7.Form , Button, DOM
-# CSS
+## CSS
 1. Styling (inline,stylesheet,external stylesheet)
 2. Class, id, box model
 3. Relation(parent, child,siblings, descendants), attributs
 4. Properties, flex box
 5. Responsive page design, media queries, events and pseudo elements.
 6.  Doing assignment project (JOB APPLICATION WEB PAGE).
-# c#
+## c#
 1. Basic syntax, output, comments, variables, datatypes.
 2. Type casting, user input, operators, math, string, Booleans
 3. if...else , switch case, while loop, do while loop,break/continue
-# JAVASCRIPT
+## JAVASCRIPT
 1. Basic syntax
 2. outputs, statements, comments, variables, operators, let, const, var, datatypes
 3. functions, objects
 4. events, string
+
+# Weekly status report(Feb 12 to Feb 18)
+## JAVASCRIPT
+1. Control statement and loops
+2. Primitive data types and non-primitive data types
+3. Numbers , string and string methods
+4. Null and undefined
+5. Objects and how to access objects
+6. Execution and creation phase, call stack, lexical and variable environment
+7. This scope, Global scope
+8. Event control (eg. OnClick, OnKeyPress,OnKeyDown, OnDoubleClick,OnFocus, Onload)
+9. Array methods(eg. cancat, unshift, slice, shift, pop, find,at, indexof), Map, Filter,Deep copy, shallow Copy
+10. Foreach, Callback, await, Promises, BOM
+11. Basic of AJAX 
+
+## DBMS
+1. What is database and difference between DBMS and RDBMS
+2. Level of Abstraction (physical and logical level)
+3. Advantages of DBMS over coventional file system
+4. Atomicity, Concurency , simple, data redundancy, security, difficult to access, data inconsistency
+5. Integrity Constraint (candidate key, Primary key, Foreign key, super key)
+
+## SQL
+### SQL Syntax
+1. ***Keywords***:  SELECT, INTO, UPDATE, DELETE, DROP, ASC, DESC, etc.
+2. ***Identifiers***: Identifiers are the names of the database objects like table name, schema name, function name, etc.
+3. ***Clauses:*** Expressions in SQL produce either scalar values, or columns and rows of data.
+4. ***Boolean Conditions:*** TRUE or FALSE.
+5. ***Queries:*** Statements that start with the SELECT clause are called queries because they retrieve data from the underlying database.
+6. ***Statements:***  INSERT, UPDATE, DROP, DELETE statements are called SQL statements because they modify the underlying database structure or data.
+### SQL Classification
+1. ***DDL(data defination language)***
+
+
+| Statement | Description |
+|-----------|-------------|
+|   CREATE  |Create a new object(table, procedure, function, view etc.) in the database |
+|   ALTER   |Modify the structure of database table |
+|   DROP    |Delete database Objects |
+|   RENAME  |Rename database Objects  |
+|   TRUNCATE |Remove all records of a table |
+
+2. ***DML – (Data Manipulation Language)***
+
+| Statement | Description |
+|-----------|-------------|
+|   SELECT  |Retrieve rows/columns from a table. |
+|   INSERT  |Insert new data to a table. |
+|   UPDATE  |Update existing records of table |
+|   DELETE  |Delete existing records from table.  |
+|  MERGE  |INSERT new rows or UPDATE existing rows in a table based on the specified conditions. |
+
+3. ***TCL– Transaction Control Language***
+
+| Statement | Description |
+|-----------|-------------|
+|   COMMIT |Permanently save transaction changes to the database.|
+|  ROLLBACK  |Restore the database to its original state since the last COMMIT. |
+|   SAVEPOINT|Create a SAVEPOINT to be later used by ROLLBACK Command to undo changes up to that point. |
+
+4. ***DCL– Data Control Language***
+
+
+| Statement | Description |
+|-----------|-------------|
+|  GRANT |	Gives privileges to the user for accessing data.|
+|  REVOKE |	Take back given privileges from the user. |
+|   COMMENT|Specify comments on Database tables and columns. |
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure implementation </title>
+</head>
+<body>
+    <script>
+        function outerfunction(initial){
+            let num = initial;
+            function innerfunction(newNumb){
+                let numb = newNumb;
+
+                return num*numb;
+            };
+            return innerfunction;
+        }
+
+
+
+        var old = outerfunction(20);
+        console.log(old(20));
+         
+        var final = old(10);
+        console.log(final);
+
+        // var final1 = old(20);
+        // console.log(final1);
+    </script>
+</body>
+</html>

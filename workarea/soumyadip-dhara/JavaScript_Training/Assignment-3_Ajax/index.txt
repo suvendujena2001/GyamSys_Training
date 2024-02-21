@@ -1,0 +1,52 @@
+<div class="first_part">
+    <div class="left">
+        <h2>What is AJAX?</h1>
+            <ul>
+                <li>AJAX = Asynchronous JavaScript And XML.</li>
+                <li>AJAX is not a programming language.</li>
+                <li>AJAX just uses a combination of:
+                    <ul>
+                        <li>A browser built-in XMLHttpRequest object (to request data from a web server)</li>
+                        <li>JavaScript and HTML DOM (to display or use the data)</li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+
+    <div class="right">
+        <img src="ajax.jpg" alt="ajax image">
+    </div>
+
+</div>
+
+<div>
+    <h2>The XMLHttpRequest Object</h2>
+    <p>All modern browsers support the XMLHttpRequest object. 
+    The XMLHttpRequest object can be used to exchange data with a server 
+    behind the scenes. This means that it is possible to update parts of a web page, 
+    without reloading the whole page.</p>
+</div>
+
+<div>
+    <h3>Create an XMLHttpRequest Object</h3>
+    <p>All modern browsers (Chrome, Firefox, Edge (and IE7+), Safari, Opera) have a 
+    built-in XMLHttpRequest object.</p>
+</div>
+
+
+<div>
+    <h2>Syntax for creating an XMLHttpRequest object:</h2>
+    <code>variable = new XMLHttpRequest();</code>
+    
+    <h3>Example</h3>
+    <p>var xhttp = new XMLHttpRequest();</p>
+</div>
+
+<div>
+    <h2>Access Across Domains</h2>
+    <p>For security reasons, modern browsers do not allow access across domains.
+    This means that both the web page and the XML file it tries to load, must be located on the same server.
+    The examples on W3Schools all open XML files located on the W3Schools domain.
+    If you want to use the example above on one of your own web pages, the XML files you load must 
+    be located on your own server.</p>
+</div>

@@ -8,7 +8,7 @@ meanwhile side by side doing certification on C# from microsoft website and curr
 
 **2nd week**
 
-It's the start and we were introduced to database concepts in an evening session.
+we were introduced to database concepts in an evening session.
 other day we had discussions on various array operations in javascript along with event loop and how a javascript runs
 a program.
 
@@ -16,3 +16,4 @@ a program.
 **3rd week**
 Evaluation on javascript and sql
 sass concept
+introduction to typescript-wrapper iver javascript with more type safety and oop applications(react & angular)

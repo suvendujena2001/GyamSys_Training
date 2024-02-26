@@ -1,47 +1,40 @@
-// promise.js
-(function () {
-  fetch('../config/word-config.json')
-    .then(response => response.json())
-    .then((result) => {
-      wordApiConfiguration = result;
-      console.log("Word API Configuration:", wordApiConfiguration);
-      // Call getRandomWord after wordApiConfiguration is fetched
-      getRandomWord(); 
-    });
 
-  fetch('../config/dictionary-config.json')
-    .then(response => response.json())
-    .then((result) => {
-      dictionaryApiConfiguration = result;
-      console.log("Dictionary API Configuration:", dictionaryApiConfiguration);
-      // Call getRandomWord after dictionaryApiConfiguration is fetched
-      getRandomWord(); 
-    });
-})();
 
-function getRandomWord() {
-  let wordApiURL = getWordApi();
+async function getRandomWord() {
+  try {
+    const word = await fetchRandomWord();
+    updateDOM(word);
+
+    const meanings = await fetchWordMeanings(word);
+    updateDictionaryDetails(word, meanings);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function fetchRandomWord() {
+  const wordApiURL = getWordApi();
   console.log("Word API URL:", wordApiURL);
-  fetch(wordApiURL)
-    .then(wordResponse => wordResponse.json())
-    .then((wordData) => {
-      console.log("Word Data:", wordData);
-      updateDOM(wordData.word);
-      return fetch(getDictionaryApiUrl() + '/'+wordData.word);
-    })
-    .then(dictionaryResponse => dictionaryResponse.json())
-    .then(dictionaryData => {
-      console.log("Dictionary Data:", dictionaryData);
-      const dictionaryInfo = dictionaryData[0];
-      const meaningsToPrint = dictionaryInfo.meanings.map(item => {
-        return {
-          partOfSpeech: item.partOfSpeech,
-          definitions: item.definitions.map(def => def.definition).join(', ')
-        };
-      });
-      updateDictionaryDetails(dictionaryInfo.word, meaningsToPrint);
-    })
-   // .catch(error => console.log(error));
+  const response = await fetch(wordApiURL);
+  const data = await response.json();
+  console.log("Word Data:", data);
+  return data.word;
+}
+
+async function fetchWordMeanings(word) {
+  const apiUrl = getDictionaryApiUrl() +'/'+ word;
+  console.log("Dictionary API URL:", apiUrl);
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+  console.log("Dictionary Data:", data);
+  
+  const dictionaryInfo = data[0];
+  return dictionaryInfo.meanings.map(item => {
+    return {
+      partOfSpeech: item.partOfSpeech,
+      definitions: item.definitions.map(def => def.definition).join(', ')
+    };
+  });
 }
 
 function updateDOM(word) {

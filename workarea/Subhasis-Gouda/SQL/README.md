@@ -1,6 +1,6 @@
-## Here you can find my sql practice queries.
 
----
+
+## Here you can find my sql practice queries.
 
 ### Some syntax of SQL
 
@@ -23,3 +23,22 @@
 |14| TO DELETE A RECORD | DELETE FROM Employee WHERE EmpId = 4; |
 |15| TO TRUNCATE A TABLE | TRUNCATE TABLE Employee; |
 |16| TO ASSIGN A NULL VALUE TO A COLUMN | SELECT * FROM Employee WHERE PhoneNo IS NULL; SELECT * FROM Employee WHERE Email IS NOT NULL; |
+|17| TO MERGE TWO TABLES INTO THIRD TABLE |MERGE INTO Employee TARGET USING Consultant SOURCE ON TARGET.EmpId = SOURCE.EmpId WHEN MATCHED THEN UPDATE TARGET.FirstName = SOURCE.FirstName, TARGET.LastName = SOURCE.LastName WHEN NOT MATCHED THEN INSERT into Employee(EmpId, FirstName, LastName) VALUES(SOURCE.EmpId, SOURCE.FirstName, SOURCE.LastName);|
+|18| TO SELECT A RECORD | SELECT column1, column2,...columnN FROM table_name WHERE conditions |
+|19| GROUP | SELECT column1, column2,...columnN FROM table_name [WHERE] [GROUP BY column1, column2...columnN] [HAVING] [ORDER BY]|
+---
+
+### Some operators ( CAN BE USED FOR WHERE CONDITION )
+
+| S.NO | Operator | Description |
+|------|----------|-------------|
+| 1 | =	    |  Equal. |
+| 2 | >	    |  Greater than. |
+| 3 | <	    |  Less than. |
+| 4 | >=	    |  Greater than or equal. |
+| 5 | <=	    |  Less than or equal. |
+| 6 | <> or !=|	Not equal. In some databases, the != is used to compare values which are not equal. |
+| 7 | BETWEEN	|  Between some range. |
+| 8 | LIKE	|  Search for a pattern. |
+| 9 | IN	    |  To specify multiple possible values for a column. |
+---

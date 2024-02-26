@@ -21,4 +21,13 @@
 ** Assignments were given on Javascript and I completed it and pushed onto Github.
 
 ## Week 3 (19th Feb 2024 to 23rd Feb 2024)
+** The instructor taught us about the other concpets of Javascript.
+
+** On the second day of the week, we were evaluated on the Javascript and  SQL part.
+
+** Sessions were taken on agile methodology, Postman &  Jira and demo was shown in the class.
+
+** Session regarding Sass & Typescript was taken by the instructor.
+
+** On the last working day of the week, we were given assignments to complete.
 

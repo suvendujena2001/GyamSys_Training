@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="month.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script>
+        var tempTable = '';
+        // for(var i; i < 31; i++)
+        {
+            tempTable += `<td><textarea name="text-${i}" id="${i}"></textarea>`
+        
+        }
         function saveToFile() {
             var textAreas = document.querySelectorAll('textarea');
             var content = '';
@@ -203,25 +209,25 @@
             </div>
             </table>
         </span> 
-        <span class="todo_list">
+        <span class="note">
             <table class="t3"  border="2px" style="border-color:rgb(23, 52, 43) ; border-collapse: collapse;">
             <thead>
-                <tr style="text-align: center;"><td><h3>Todo list</h3></td></tr>
+                <tr style="text-align: center;"><td><h3>notes here</h3></td></tr>
             </thead>
             <tbody>
-                <tr><td><textarea name="todo_data 1" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 2" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 3" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 4" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 5" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 6" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 7" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 8" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 9" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 10" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 11" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 12" id="w7" cols="55" rows="2" ></textarea></td></tr>
-                <tr><td><textarea name="todo_data 13" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 1" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 2" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 3" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 4" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 5" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 6" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 7" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 8" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 9" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 10" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 11" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 12" id="w7" cols="55" rows="2" ></textarea></td></tr>
+                <tr><td><textarea name="note_data 13" id="w7" cols="55" rows="2" ></textarea></td></tr>
             </tbody>
             </table>
         </span>
@@ -234,7 +240,7 @@
         <button onclick="document.getElementById('bd').style.backgroundImage='url(\'Dark1.jpg\')'; document.getElementById('bd').style.color='white';">Dark</button><hr>
         <div style="text-align: center;">Developed by Subhasis Gouda</div>
         <div style="text-align: center;">Contact me at <br> <a style="color: rgb(14, 25, 21);" href="mailto:Subhasis.gouda@gyansys.com">Subhasis.gouda@gyansys.com</a></div>
-        <div style="text-align: center;"><a style="color: rgb(14, 25, 21);" href="www.linkedin.com/in/subhasis-gouda-9aaa1b211">linkden</a></div>
+        <div style="text-align: center;"><a style="color: rgb(14, 25, 21);" href="https://www.linkedin.com/in/subhasis-gouda-9aaa1b211">linkedin</a></div>
     </div>
     
 </footer>

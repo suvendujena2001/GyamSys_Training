@@ -10,3 +10,5 @@ ALTER TABLE scholar drop COLUMN City, Experience;
 select * from scholar;
 sp_rename scholar,students;
 select * from students;
+
+UPDATE students set scholarship=3000;

@@ -86,3 +86,37 @@ Node Js)
 3. Training on JavaScript Concepts(Closures,  AJAX and XHR)
 4. Working of Websites and their underlying principles(fetch data with the help of APIs , status codes, HTTP/HTTPS, Hosting, scaling etc.) and concept of load balancer.
 5. Revision of SQL queries (self-practice).
+
+
+## WEEK 3(19-FEB-2024 to 25-FEB-2024)
+
+### DAY - 1 (Feb 19, 2024)
+
+1. Training on javascript concepts like Async/await , Promises, Modules and BOM(Browser Object Model)
+2. Training on Testing Concepts like Agile and Waterfall model.
+3. SQL queries revision
+
+### DAY - 2 (Feb 20, 2024)	
+
+1. Evaluation on JavaScript
+2. Evaluation on SQL
+3. Self Learning on JavaScript(Arrow function, class, Modules , JSON, Debugging, Object properties, methods) and SQL
+
+### DAY - 3 (Feb 21, 2024)	
+
+1. Training on SASS(Introduction and concepts)
+2. Training on TypeScript(Introduction and Concepts)
+3. SQL Revision(queries, clauses and statements)
+4. Training on testing, Introduction to POSTMAN platform, APIs, Status Codes
+
+### DAY - 4 (Feb 22, 2024)	
+
+1. Practicing SQL queries, statements and clauses.
+2. JavaScript revision(ajax, closures, callbacks and )
+3. Learning SQL queries(INSERT, UPDATE, DELETE, TRUNCATE,  MERGE, SELECT, WHERE, GROUPBY, HAVING AND ORDERBY)
+
+### DAY - 5 (Feb 23, 2024)	
+
+1. Training on Testing(JIRA)
+2. Training on how to implement the JavaScript concepts(callbacks, closures and Promises)
+3. Training and databases concepts, software development good practices

@@ -35,6 +35,7 @@ a{
     display: none;
     
 }
+
 .container{
     display: flex;
     flex-direction: row;
@@ -161,7 +162,11 @@ footer{
     border: 1px solid black;
     border-radius:25px ;
 }
-
+#welcome{
+    text-align: center;
+    height:20px;
+    color:white;
+}
 @media screen and (min-width:300px) and (max-width:600px) {
     body{
         margin: 5px;
@@ -248,9 +253,13 @@ footer{
     }
     #icon{
         display: block;
+        transition: 0.8s;
+    }
+    .nav{
+        transition: 0.8s;
     }
     .show{
         display: block;
-        transition: 1s smooth;
+        transition:0.8s;
     }
 }

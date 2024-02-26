@@ -119,4 +119,5 @@ Node Js)
 
 1. Training on Testing(JIRA)
 2. Training on how to implement the JavaScript concepts(callbacks, closures and Promises)
-3. Training and databases concepts, software development good practices
+3. Training and databases concepts(Use SSMS for implementing queries like JOINS, Indexes  etc ), software development good practices(Agile process)
+        

@@ -62,22 +62,6 @@ function getExamples(meaningsArr) {
     })
     .join("");
 }
-// function getAudio(meaningsArr) {
-//   let arr = [];
-//   return meaningsArr
-//     .map((meaning) => {
-//       arr = Object.entries(meaning);
-//       return `<p><span class='font-weight-bold'>${arr[0][0]}:</span> 
-//       ${arr[0][1]
-//         .map((val) => {
-//           return `<p>${val.meanings}
-//   </p>`;
-//         })
-//         .join("")}
-//       `;
-//     })
-//     .join("");
-// }
 
 function updateDOM(word) {
   var para = document.getElementById("word");

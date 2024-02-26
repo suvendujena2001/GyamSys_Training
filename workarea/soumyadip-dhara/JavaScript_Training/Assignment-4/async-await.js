@@ -21,11 +21,13 @@ async function getRandomWord(){
 
     if(dictresponse.status==404)
     {
-        document.querySelector('.ok').style.display="none";
-        document.querySelector('.dicterror').innerText="The meaning not found";
+        document.querySelector('.partofspeech').innerText = 'Part of speech : Not Found';
+        document.querySelector('.definition').innerText = 'Definition: Not Found';
     }
     else{
         var gdata=await dictresponse.json();
+        document.querySelector('.partofspeech').innerText='';
+        document.querySelector('.definition').innerHTML='';
         document.querySelector('.partofspeech').innerText = 'Part of Speech: '+gdata[0].meanings[0].partOfSpeech;
         document.querySelector('.definition').innerHTML = 'Definintion: '+gdata[0].meanings[0].definitions[0].definition;
     }

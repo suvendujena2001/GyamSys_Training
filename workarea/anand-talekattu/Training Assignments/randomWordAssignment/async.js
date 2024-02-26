@@ -19,15 +19,24 @@ generateButton.addEventListener('click', async () => {
       throw new Error('Error in API request');
     }
     const data2 = await response2.json();
-
+    const meaning=data2[0].meanings.map(abc => {
+        return {
+          partOfSpeech: abc.partOfSpeech,
+          definitions: abc.definitions.map(def => def.definition).join(', ')
+        };
+      });
+      
+    
+    meaning.map(a=>{
     const tr = document.createElement('tr'); 
-    const td1 = document.createElement('td');
-    td1.textContent = data2[0].meanings[0].partOfSpeech;
+    const td1 = document.createElement('td');  
+    td1.textContent = a.partOfSpeech;
     const td2 = document.createElement('td');
-    td2.textContent = data2[0].meanings[0].definitions[0].definition;
+    td2.textContent = a.definitions;
     tr.appendChild(td1);
     tr.appendChild(td2);
-    tableBody.appendChild(tr);
+    tableBody.appendChild(tr);});
+    
   } catch (error) {
     console.error(error);
   }

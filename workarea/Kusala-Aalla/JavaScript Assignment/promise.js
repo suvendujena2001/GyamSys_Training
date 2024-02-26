@@ -38,8 +38,8 @@ function updateDictionaryDetails(word,meanings) {
    let word = document.getElementById("word");
    word.querySelector("#word").innerText='';
    word.querySelector("#meaning").innerText= meanings[0].definitions[0].definition;
-   word.querySelector('.partofspeech').innerText = 'Part of Speech: '+partOfSpeech;
-   word.querySelector('.definition').innerHTML = 'Definition: '+meanings[0].definitions[0].definition;
+   word.querySelector('#partofspeech').innerText = 'Part of Speech: '+partOfSpeech;
+   word.querySelector('#definition').innerHTML = 'Definition: '+meanings[0].definitions[0].definition;
    
 }
   

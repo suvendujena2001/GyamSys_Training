@@ -13,9 +13,8 @@ async function getRandomWord() {
     const dictionaryData = await dictionaryResponse.json();
     console.log(dictionaryData);
 
-    const { meanings, phonetics } = dictionaryData[0];
-    console.log(phonetics[0].audio);
-
+    const { meanings } = dictionaryData[0];
+   
     const meaningsArr = meanings.map((meaning) => ({
       [meaning.partOfSpeech]: meaning.definitions,
     }));

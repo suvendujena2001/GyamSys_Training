@@ -1,5 +1,5 @@
 let wordApiURL = "";
-
+//async await function
 async function getRandomWord() {
   try {
     wordApiURL = getWordApi();

@@ -67,9 +67,9 @@ FROM CustomerOrders;
 */
 
 ---Constraints on a table
-/*CREATE TABLE example_table (
+/* CREATE TABLE example_table (
     email VARCHAR(100) UNIQUE,
     phone_number VARCHAR(15) UNIQUE
-);*/
+); */
 
 select * from orders;

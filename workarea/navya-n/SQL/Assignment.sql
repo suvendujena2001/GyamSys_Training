@@ -41,3 +41,23 @@ select * from HumanResources.Shift
 select * from Person.Address
 exec sp_rename 'Person.Address.PostalCode' , 'ZIPCode'
 
+--create db,table and add constraint
+create database EmployeeRecords;
+
+
+use EmployeeRecords
+Go
+create table Employee(
+ID int NOT NULL,
+Name nvarchar(25),
+Email nvarchar(30),
+Phone int,
+CONSTRAINT PK_id PRIMARY KEY CLUSTERED (ID)
+)
+
+--adding records
+USE EmployeeRecords
+go
+
+insert into Employee values(2172,'Navya','navya.narayan@gyansys.com',6360374059);
+select * from Employee;

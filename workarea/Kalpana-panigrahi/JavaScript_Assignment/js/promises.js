@@ -44,4 +44,3 @@ function updateDictionaryDetails(word,meanings) {
    <td>${meaning.definitions[0].example}</td> `;   
   }); 
 }
-  

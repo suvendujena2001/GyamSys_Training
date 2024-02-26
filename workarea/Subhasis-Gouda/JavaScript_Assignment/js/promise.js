@@ -9,7 +9,7 @@ function getRandomWord() {
     return fetch(getDictionaryApiUrl()+'/'+wordData.word);
   })
   .then(dictionaryResponse => dictionaryResponse.json())
-.then(dictionaryData => {
+  .then(dictionaryData => {
   const dictionaryInfo = dictionaryData[0];
   const meaningLength = dictionaryInfo.meanings.length;
   let meaningsToPrint = [];
@@ -25,6 +25,8 @@ function getRandomWord() {
 })
   .catch(error => console.log(error));
 }
+
+
 
 function updateDOM(word) {
   var para = document.getElementById('word');

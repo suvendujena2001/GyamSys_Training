@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <form>
+       
+        <fieldset>
+
+        <legend> Enquiry Form </legend>
+        NAME: <input type="text" value="KALPANA" readonly=""  placeholder="Please Enter Your Name....." required="" autofocus=""/>
+        <br/>
+        <br/>
+        ADDRESS: <textarea name="address" maxlength="100"></textarea>
+        <br/>
+        <br/>
+        GENDER: <input type="radio" value="m" name="gender"/>Male
+        <input type="radio" value="f" name="gender"/>Female
+        <input type="radio" value="o" name="gender"/>Other
+        <br/>
+        <br/>
+        Country: 
+        <select>
+            <option>Please select your country</option>
+            <optgroup label="Asia">
+                <option value="india"> India </option>
+                <option value="srilanka"> Sri Lanka </option>
+            </optgroup>
+            
+            <option value="usa"> USA </option>
+        </select>
+        Color:
+        <input type="color" name="color">
+        <br/>
+        <br/>
+        Email:
+        <input type="email" name="email"/>
+      
+        <br/>
+        <br/>
+        Password:
+        <input type="password" name="password">
+        <br/>
+        <br/>
+       AGE:
+        <input type="number" name="number" min="1" max="25"/>
+        <br/>
+        <br/>
+        Secret:
+        <input type="hidden" name="hidden">
+        <br/>
+        <br/>
+        Hobbies:
+        <input type="checkbox" name="Hobbies[]" checked=" "> Dancing
+        <input type="checkbox" name="Hobbies[]">Singing
+        <br/>
+        <br/>
+        <input type="file" name="image"/>
+        <br/>
+        <br/>
+
+
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+    </fieldset>
+
+        
+
+    
+    </form>
+</body>
+</html>

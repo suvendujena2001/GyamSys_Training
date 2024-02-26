@@ -3,7 +3,7 @@
 -- 1.Create a database.
 create database soumyadip;
 -- 2.Using that database
-use db;
+use soumyadip;
 -- 3.Create a table in that database 
 create table employee(empid integer not null primary key, fname varchar(30), lname varchar(30), address varchar(50),phoneno varchar(10));
 -- 4. insert values into the table
@@ -12,13 +12,15 @@ insert into employee values(1,'soumyadip','dhara','west bengal','9382063695';);
 alter table employee add (pincode varchar(6),salary integer);
 -- 6. Rename column
 alter table employee rename column pincode to zipcode;
+EXEC sp_rename 'pincode', 'zipcode', 'COLUMN';
 -- 7.Change the column datatype size
 alter table employee alter column fname varchar(50);
 -- 8. Delete a column
 alter table employee drop column salary;
 -- 9.Rename a table
 alter table employee rename to employees;
--- 10. elete a table
+exec sp_rename 'employee','employees';
+-- 10. Delete a table
 drop table employees;
 -- 11. Finding null values in a column
 select * from employees where zipcode is null;
@@ -36,7 +38,7 @@ insert into employees(empid,fname,lname)values(3,'mukund','kumar');
 -- 16. Insert Multiple records
 insert into employees values(3,'abc','efg','6373665274'),(4,'xyz','mno','8735263835');
 -- 17.Insert values from another table.
-insert into employees(empid,fname,lname) select custid,c_fname,c_lname from customer;      -- ***DOUBT***
+insert into employees(empid,fname,lname) select custid,c_fname,c_lname from customer;
 -- 18. Update coulumn values.
 update employees set zipcode='637258' where empid=1;
 -- 19. update multiple column values

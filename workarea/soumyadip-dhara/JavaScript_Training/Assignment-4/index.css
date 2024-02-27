@@ -36,3 +36,35 @@ body{
     margin-left: 80px;
     color: color-mix(in srgb, rgb(4, 78, 252) 50%, rgb(255, 0, 208) 50%);
 }
+
+.func_btn{
+    padding: 15px;
+    color: blueviolet;
+    font-size: 20px;
+    background-color: rgb(10, 11, 11);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 2px 5px rgb(248, 191, 191);
+}
+
+.func_btn:hover{
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}
+
+.Home_btn{
+    padding: 15px;
+    color: blueviolet;
+    font-size: 20px;
+    background-color: rgb(10, 11, 11);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 2px 5px rgb(248, 191, 191);
+}
+
+.Home_btn:hover{
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}

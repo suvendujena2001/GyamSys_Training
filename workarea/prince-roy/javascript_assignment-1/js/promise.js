@@ -1,3 +1,5 @@
+let audioUrl = '';
+
 async function getRandomWord() {
   try {
     const response = await fetch(getWordApi());
@@ -17,7 +19,8 @@ async function getRandomWord() {
           `${response.status} Opps! The word is not registered in the dictionary. Try some other word.`
         );
 
-      const { meanings } = dictionaryData[0];
+      const { meanings, phonetics } = dictionaryData[0];
+      audioUrl = phonetics[0].audio;
 
       const meaningsArr = meanings.map((meaning) => ({
         [meaning.partOfSpeech]: meaning.definitions,
@@ -53,15 +56,39 @@ function getMeaningsStr(meaningsArr) {
     .join('');
 }
 
+function getExamples(meaningsArr) {
+  let arr = [];
+  return meaningsArr
+    .map((meaning) => {
+      arr = Object.entries(meaning);
+      console.log(arr[0][1]);
+      return `
+      <p><span class='font-weight-bold'>${arr[0][1].length === 0 ? '' : arr[0][0]}:</span> 
+      ${arr[0][1].map((val) => `<p>${val.example ? val.example : ''}</p>`).join('')}
+      </p>
+      `;
+    })
+    .join('');
+}
+
 function updateDictionaryDetails(word = '', meaningsArr = []) {
   // Write your code here
   const wordDetails = document.querySelector('#word-details');
 
+  const btnAudio = new Audio(audioUrl);
+
   wordDetails.innerHTML = '';
   wordDetails.innerHTML = `
                 <td id="word">${word}</td>
-                <td id="pronunciation"></td>
+                <td id="pronunciation">
+                  ${audioUrl && `<img class='audioImg' src='volume-high-solid.svg' alt='' />`}
+                </td>
                 <td id="meaning">${getMeaningsStr(meaningsArr)}</td>
-                <td id="example"></td>
+                <td id="example">${getExamples(meaningsArr)}</td>
               `;
+
+  const audioBtn = document.querySelector('.audioImg');
+  audioBtn.addEventListener('click', () => {
+    btnAudio.play();
+  });
 }

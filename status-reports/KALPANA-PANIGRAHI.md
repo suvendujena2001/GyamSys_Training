@@ -111,6 +111,57 @@
 |  REVOKE |	Take back given privileges from the user. |
 |   COMMENT|Specify comments on Database tables and columns. |
 
+# Weekly status report(Feb 19 to Feb 25)
+## SQL
+1. SELECT QUERY 
+   - WHERE Clause
+   - GROUP BY Clause
+   - HAVING Clause
+   - ORDER BY Clause
+2. SQL JOINS
+   - INNER JOIN
+   - LEFT JOIN
+   - RIGHT JOIN
+   - FULL JOIN
+3. SQL OPERATORS 
+   - BETWEEN Operator
+   - IN Operator
+   - LIKE Operator
+   - Intersect Operator
+   - Minus Operator
+   - Union Operator
+   - Union All Operator
+   - Distinct
+## SDLC
+- Flow of SDLC
+- Waterfall Methodology
+- Agile Methodology
+- Basic About JIRA and AZURE
+- API Testing
+
+## REVISION ON PYTHON
+1. Syntax
+2. Python Comments
+3. Python Variable
+4. Python Data Types
+5. Python Numbers
+6. String
+7. Booleans
+8. Operatoes
+9. Python Lists
+10. Tuples
+11. Sets
+12. Dictionary
+13. If..Else statement
+14. While Loop
+15. For Loop
+16. Functions
+17. Arrays
+    
+
+ 
+
+
 
 
 

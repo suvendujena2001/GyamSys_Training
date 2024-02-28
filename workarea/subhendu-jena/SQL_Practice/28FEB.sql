@@ -36,7 +36,25 @@ INSERT INTO AdventureReaders VALUES(1,2345,3),
 							(5,5432,1),
 							(6,1231,4);
 
+SELECT StudentsID, Count(BooksId) as 'No. of Books' FROM AdventureReaders GROUP BY StudentsID;
+SELECT StudentsID, Count(BooksId) as 'No. of Books' FROM AdventureReaders GROUP BY StudentsID HAVING COUNT(BooksId)>=2;
+SELECT StudentsID, Count(BooksId) as 'No. of Books' FROM AdventureReaders GROUP BY StudentsID ORDER BY COUNT(BooksId) DESC;
+
 SELECT 
 *
 FROM AdventureStudents
 INNER JOIN AdventureReaders ON AdventureStudents.StudentsID=AdventureReaders.StudentsID;
+
+CREATE TABLE AdventureInterns (Name varchar(20),InternID int NOT NULL, Company varchar (20));
+
+SELECT * FROM AdventureInterns;
+
+INSERT INTO AdventureInterns VALUES('Subhendu',2345,'GyanSys'),
+							('Arman',1234,'Plivo'),
+							('Vinu',2231,'ITC Infotech'),
+							('Ritvik',1235,'IBS Software'),
+							('Shriyans',5432,'Securonix'),
+							('Raj Ronak',1231,'KFintech');
+INSERT INTO AdventureInterns VALUES('Pratik',2345,'GyanSys');
+
+UPDATE AdventureInterns SET Company='NSL Hub' WHERE InternId=2345;

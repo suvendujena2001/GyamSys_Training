@@ -1,7 +1,7 @@
 
 # Progress Report - Subhendu Jena
 
-## Week 1
+## WEEK 1
 
 ### MarkDown
   - Researched about the ***MarkDown*** and learned the ***basic syntax***.
@@ -53,7 +53,7 @@
           - committed changes (for multiple commits)
              - git reset <-commit hash->
              - git reset --hard <-commit hash->
-          - git log (displays all the log activity on the Git
+          - git log (displays all the log activity on the Git)
   - Understood how to resolve conflicts during merge operations.
 
 ### HTML and CSS
@@ -63,4 +63,36 @@
    - Revised the basics of CSS and the syntax.
    - External CSS, Internal CSS and Inline CSS
    - Revised styling using CSS.
-   - Went through advanced CSS and Flexbox concepts.
+   - Went through advanced CSS and Flexbox concepts.    
+
+## Office-WEEK 1(5-FEB-2024 to 11-FEB-2024)
+   - Onboarding.
+   - Readiness evaluation.
+   - CEO Interaction with Interns.
+   - Training on HTML and CSS from Sivakumar.
+   - Talks with Applied Material Manager Rameswaran.
+   - Training by Sivakumar on html and CSS(Selectors, Pseudo elements, Pseudo class, Box Model CSS).
+   - Training by Sivakumar on concepts like (z-index, opacity, media-queries) and External CSS.
+   - Introduction to JavaScript and DOM API in JavaScript.
+   - Assignment on implementation of concepts covered in training.
+
+## Office-WEEK 2(12-FEB-2024 to 18-FEB-2024)
+   - Software Installation(Visual Studio 2022 Community Edition, SQL Server 2022 Express Edition, SQL Server Management Studio, Git for Windows and Node Js).
+   - Debugging in JavaScript,Dev tools, shallow copy and deep copy,Callbacks in JavaScript,Implement map and filter.
+   - Array Methods (shift, unshift, slice etc.), Hoisting in Javascript(var, let, const, function declaration etc.) and Mechanism of JavaScript(Execution Context, Environments, this, records).
+   - Testing and SDLC, Introduction to JIRA and AZURE DEV TOOLS.
+   - What is SQL, create table, alter table, rename columns, modify column, delete columns, rename table, drop table, null value. Session by Syednasser.
+   - Interaction with AVP about the Machine Lerning and gave names for python developers.
+   - Training on JavaScript Concepts(Closures, AJAX and XHR)
+   - Working of Websites and their underlying principles(fetch data with the help of APIs , status codes, HTTP/HTTPS, Hosting, scaling etc.) and concept of load balancer. 
+
+## Office-WEEK 3(19-FEB-2024 to 25-FEB-2024)
+   - Training on javascript concepts like Async/await , Promises, Modules and BOM(Browser Object Model) by Sivakumar.
+   - Training on Testing Concepts like Agile and Waterfall model by Abhishek Olety.
+   - Evaluation on JavaScript and Evaluation on SQL.
+   - Learning on JavaScript(Arrow function, class, Modules , JSON, Debugging, Object properties, methods).
+   - Training on SASS(Introduction and concepts) and Training on TypeScript(Introduction and Concepts).
+   - Training on testing, Introduction to POSTMAN platform, APIs, Status Codes.
+   - Learning SQL queries(INSERT, UPDATE, DELETE, TRUNCATE, MERGE, SELECT, WHERE, GROUPBY, HAVING AND ORDERBY).
+   - Session with Sivakumar about Ticketing and Development and Production Support.
+   - JIRA and Azure DevOps Revision by Abhishek.

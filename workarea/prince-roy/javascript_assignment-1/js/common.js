@@ -3,12 +3,12 @@ let dictionaryApiConfiguration = {};
 
 async function init() {
   try {
-    let response = await fetch('../config/word-config.json');
+    let response = await fetch('config/word-config.json');
     wordApiConfiguration = await response.json();
 
     if (!response.ok) throw new Error(`${response.status} Opps! Word config not found.`);
 
-    response = await fetch('../config/dictionary-config.json');
+    response = await fetch('config/dictionary-config.json');
     dictionaryApiConfiguration = await response.json();
 
     if (!response.ok) throw new Error(`${response.status} Opps! Dictionary config not found.`);

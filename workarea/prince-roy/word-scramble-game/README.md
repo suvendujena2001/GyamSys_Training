@@ -48,6 +48,7 @@ Users Stories:
 - Mobile-first workflow
 - ES6 Classess
 - [Sass](https://sass-lang.com/documentation/) - For styles
+- [TypeScript](https://www.typescriptlang.org/docs/handbook/2/basic-types.html) - For type definations
 
 ## Author
 

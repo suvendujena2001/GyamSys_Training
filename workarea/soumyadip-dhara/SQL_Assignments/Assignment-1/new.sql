@@ -81,3 +81,89 @@ select * from employees order by zipcode desc;
 --36 . order by multiple column
 select * from employees order by fname asc, zipcode desc;
 
+
+--SQL part--3
+
+--inner join 2 tables
+select person.persons.prefix,person.persons.Firstname,person.persons.middlename,person.persons.lastname,
+person.personphone.phonenumber from person.persons 
+inner join person.personphone on person.persons.businessentityid=person.personphone.businessentityid;
+
+--inner join 3 tables
+select person.persons.prefix,person.persons.Firstname,person.persons.middlename,person.persons.lastname,
+person.personphone.phonenumber,person.emailaddress.emailaddress from person.persons 
+inner join person.personphone on person.persons.businessentityid=person.personphone.businessentityid 
+inner join person.emailaddress on person.persons.businessentityid=person.emailaddress.businessentityid;
+
+--Left join
+select top 100 * from production.productdocument;
+select product.productid,product.Name,product.color,product.standardcost,document.documentnode
+from production.product product left join production.productdocument document
+on product.productid=document.productid;
+
+--right join
+select product.productid,product.Name,product.color,product.standardcost,document.documentnode
+from production.product product right join production.productdocument document
+on product.productid=document.productid;
+
+--full join
+select product.productid,product.Name,product.color,product.standardcost,document.documentnode
+from production.product product full join production.productdocument document
+on product.productid=document.productid;
+
+--between operator
+select product.productid,product.Name,product.color,product.standardcost
+from production.product product where product.standardcost between 10 and 100;
+
+-- in operaor
+select product.productid,product.Name,product.color,product.standardcost
+from production.product product 
+where standardcost in(select standardcost from production.product where standardcost>0);
+
+--not in operator
+select product.productid,product.Name,product.color,product.standardcost
+from production.product product 
+where standardcost not in(select standardcost from production.product where standardcost>0);
+
+--like operator
+--starting with s
+select product.productid,product.Name,product.color,product.standardcost
+from production.product product 
+where product.name like('s%');
+--ending with e
+select product.productid,product.Name,product.color,product.standardcost
+from production.product product 
+where product.name like('%e');
+--contain o
+select product.productid,product.Name,product.color,product.standardcost
+from production.product product 
+where product.name like('%o%');
+--second letter o
+select product.productid,product.Name,product.color,product.standardcost
+from production.product product 
+where product.name like('_o%');
+--second last letter o
+select product.productid,product.Name,product.color,product.standardcost
+from production.product product 
+where product.name like('%o_');
+
+--creating a new table from an existing table to perform intersect,union,except
+SELECT * INTO abcd FROM person.persons;
+select * from abcd;
+--deleting some rows to perform intersect,union,except
+delete from abcd where businessentityid > 500; 
+--Intersect Operator
+select * from person.persons intersect select * from abcd;
+
+-- union opeartor
+SELECT * FROM person.persons union select * from abcd;
+
+--union all
+SELECT * FROM person.persons union all select * from abcd;
+
+--minus/except oprator
+SELECT * FROM person.persons  except select * from abcd;
+
+--distinct
+select distinct color from production.product;
+

@@ -1,7 +1,7 @@
 
 # Progress Report - Subhendu Jena
 
-## WEEK 1
+## ONLINE TRAINING AND PRACTICE
 
 ### MarkDown
   - Researched about the ***MarkDown*** and learned the ***basic syntax***.

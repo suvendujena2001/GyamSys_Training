@@ -13,6 +13,11 @@ namespace TrainingDotNet
             int a = 10;
             Console.WriteLine(a);
             Console.ReadLine();
+
+
+            string b = "Hellow";
+            Console.WriteLine(b);
+            Console.ReadLine();
         }
     }
 }

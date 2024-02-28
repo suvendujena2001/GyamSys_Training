@@ -1,3 +1,23 @@
 h1{
-    color: aliceblue;
+    color: rgb(174, 174, 174);
 }
+
+body{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(91, 91, 91);
+}
+
+#navbar, h1, input, button{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid beige;
+}
+input, button{
+    border-radius: 20px;
+    
+}
+

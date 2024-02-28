@@ -9,9 +9,11 @@ function funclogin(){
     let a=user.value;
     let b=pass.value;
     // console.log(a,b);
-   users= fetch(url)
+   fetch(url)
     .then(res=> res.json())
+    
     .then((data)=>{
+        console.log(data);
        // console.log(a,b);
         //console.log(data);
         //console.log(data[0].username,data[0].password)
@@ -33,9 +35,3 @@ function funclogin(){
 }
 console.log(users)
 
-window.onload=function(){
-    what();
-    function what(){
-        document.getElementById('welcome').innerText=`welcome `;
-    }
-}

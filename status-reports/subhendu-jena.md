@@ -63,7 +63,20 @@
    - Revised the basics of CSS and the syntax.
    - External CSS, Internal CSS and Inline CSS
    - Revised styling using CSS.
-   - Went through advanced CSS and Flexbox concepts.    
+   - Went through advanced CSS and Flexbox concepts.
+
+### Foundational C# with Microsoft .NET
+   - Core Concepts of C#
+   - Using various Data Types in C#
+   - Working with conditions, loops, arrays
+   - Data Handling, Functions, Parameters
+   - Debugging and Exception Handling
+   - Completed the 36 hours of course on freeCodeCamp and earned the certification.
+
+### Databases
+   - Write SQL Queries for CRUD(CREATE, READ, UPDATE, DELETE or DROP) operations.
+   - ALTER and UPDATE Tables
+   - Use build-in functions to group aggregated results(GROUP BY, HAVING, ORDER BY, COUNT(), SUM()).
 
 ## Office-WEEK 1(5-FEB-2024 to 11-FEB-2024)
    - Onboarding.

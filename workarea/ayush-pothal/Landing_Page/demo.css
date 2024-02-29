@@ -1,0 +1,109 @@
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #faf4f4;
+    text-align: center;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(9, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #6f6e6e;
+  }
+  body{
+    background-color:white;
+  }
+  img{
+    width:100%;
+    height:auto;
+  }
+  .signup{
+     font-size:18px;
+  }
+  .icon{
+    max-width:70%;
+    max-height: 70%;
+    
+  }
+  .container{
+    max-width:80%;
+    margin:0 auto;
+  }
+  .main{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .content{
+    background-color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:60%;
+    
+  }
+  .tag{
+    background-color: green;
+    padding: 5px 5px;
+    color: white;
+    align-self: flex-start;
+  }
+  .content h1{
+    font-size: 50px;
+    line-height:1.2;
+    font-weight: 400;
+  }
+  button{
+    padding: 10px 10px;
+    border: none;
+    transition: 1s ease-in-out;
+  }
+  button:hover{
+    opacity:0.6;
+    transition: 1s ease-in-out;
+  }
+  .btn{
+    background-color: rgb(226, 192, 140);
+  }
+  @media(max-width:786px)
+  {
+    .container{
+      width:100%;
+    }
+    .main{
+      flex-direction: column;
+    }
+    .icon{
+      width:85%;
+    }
+    .content{
+      gap:10px;
+      padding:10px;
+    }
+    .content h1{
+      font-size:30px;
+    }
+  }
+  .features
+  {
+    margin-top: 10px;
+    display: flex;
+  }
+  .feature
+  {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+  }

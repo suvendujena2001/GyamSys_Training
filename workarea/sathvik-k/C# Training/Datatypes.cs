@@ -18,6 +18,11 @@ namespace HelloWorld
       Colsole.WriteLine(myLetter);
       Colsole.WriteLine(myBool);
       Colsole.WriteLine(myText);
+
+
+
+      const int myNum = 15; //const can't be modified.
+      myNum = 20; // error
       
     }
   }

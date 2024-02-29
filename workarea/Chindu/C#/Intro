@@ -1,0 +1,39 @@
+.NET IS A ECOSYSTEM.BEC we can develop mobile applins ,desktop applns,web applications,cloud applicns,
+
+difference b/w .net framework and .net
+
+->.NET framework
+
+*platform dependency(window OS)
+*
+=>.NET core(but now it is called as .NEt it was renamed as .NET by microsoft.)
+*works in any of the platform like cross(CROSS PLATFORM) ,windows,linux and mac platfroms.
+
+ *open source
+
+=>Ecosystem
+
+*bec .NET supports 60+languages.//why ecosystem.
+
+*90% apllications in .net use c sharp(c#),F#,VB(visual basic).
+*Runtime
+*Libraries
+
+=>Runtime
+
+*.Net use core CLR/CLR(common language runtime)
+*if we write code in c#,F#,or VB
+ it converts it into CIL(comoon intermediate language) -> CLR -> Machine code then -> this is processed by processor and is converted into binary  language and last provides the output.
+
+C# - developed by MS ,runs only under .NET,
+
+MVC
+
+Web API
+
+ASP.NET Core
+
+Console
+
+Winform
+

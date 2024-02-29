@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylessheet.css">
+</head>
+
+<body>
+    <div id="mainclass"></div>
+    <header>
+        <div id="flex">
+            
+            <div id="icon">
+                <img src="icon.png" alt="" onclick="funct2()">
+            </div>
+            <div class="nav">
+                <div><a href="indes.html">Home</a></div>
+                <div><a href="about.html">About Us</a></div>
+                <div><a href="contact.html">Contact</a></div>
+                <div><a href="login.html">Login</a></div>
+                <div><a href="SignUp.html">Sign Up</a></div>
+                <div class="cont">Call +91 1234567899 To Place Order</div>
+            </div>
+        </div>
+    </header>
+    <h2 id="welcome"></h2>
+    <div class="container">
+        <div class="sec1">
+            <img class="logo"
+                src="data:image/png;base64,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"
+                alt="not found">
+            <p>Select What You Want To Order</p>
+            <details>
+                <summary>Indian</summary>
+                <ul class="menu1">
+                    <li>Roti</li>
+                    <li>Chicken curry</li>
+                    <li>Paneer Butter Masala</li>
+                    <li>Daal</li>
+                    <li>Rice</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Italy</summary>
+                <ul class="menu2">
+                    <li>Pasta</li>
+                    <li>Truffles</li>
+                    <li>Spaghetti </li>
+                    <li>Gelato</li>
+                    <li>Pizza</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Continental</summary>
+                <ul class="menu3  ">
+                    <li>chickpea soup</li>
+                    <li>Prawn Pie</li>
+                    <li>Roast Lamb Salad.</li>
+                </ul>
+            </details>
+        </div>
+        <div class="sec2">
+            <main>
+                <h3>Order Details</h3>
+                <div id="main1">
+                    <div class="content">
+                        <ul>
+                            <li>chickpea soup</li>
+                            <li>Roti</li>
+                            <li>Pasta</li>
+                            <li>Spaghetti</li>
+                            <li>Pizza</li>
+                            <li>Paneer Butter Masala</li>
+                        </ul>
+                    </div>
+                    <div class="Rupees">
+
+                        <ul>
+                            <li>$10</li>
+                            <li>$20</li>
+                            <li>$2</li>
+                            <li>$3</li>
+                            <li>$1</li>
+                            <li>$2</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <h2 id="total">Total Amount:$33</h2>
+            </main>
+
+            <button id="btn1" onclick="func1()">Pay $33</button>
+            <div class="hidden">
+                <h3>You need to pay $33</h3>
+                <button>click here to pay</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="foot">
+            <h4>CopyRight@GyanSys</h4>
+        </div>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>

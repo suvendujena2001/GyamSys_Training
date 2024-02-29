@@ -11,7 +11,7 @@ async function getRandomWord() {
     const dictionaryData = await dictionaryResponse.json();
     
     const dictionaryInfo = dictionaryData[0];
-    const meaningLength = dictionaryInfo.meanings.length;
+    // const meaningLength = dictionaryInfo.meanings.length;
     let meaningsToPrint = [];
     let meaning = {};
     dictionaryInfo.meanings.map(item => {

@@ -96,3 +96,14 @@ VALUES
     (82, 'Avery', 'McCarthy', 'Female', '1983-02-07', '2009-07-15', 'Operations', 'Operations Manager', 66000.00),
     (83, 'Quinn', 'England', 'Male', '1993-10-11', '2018-03-24', 'IT', 'IT Manager', 76000.00),
     (84, 'Jordan', 'Hayden', 'Male', '1986-05-26', '2011-11-02', 'Customer Service', 'Customer Service Manager', 69000.00);
+
+
+
+
+
+
+
+
+
+
+    

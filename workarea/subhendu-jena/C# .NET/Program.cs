@@ -10,6 +10,9 @@ namespace FirstConsoleApp
     {
         static void Main(string[] args)
         {
+
+            //Initial
+            
             Console.WriteLine("Hello World");
             Console.WriteLine("I am Subhendu Kumar Jena");
             char a = '@';
@@ -22,8 +25,9 @@ namespace FirstConsoleApp
             Console.Read();
 
 
-
-            string studentName = "Sophia Johnson";
+//from Microsoft learn module
+            
+string studentName = "Sophia Johnson";
 string course1Name = "English 101";
 string course2Name = "Algebra 101";
 string course3Name = "Biology 101";

@@ -36,3 +36,11 @@ string firstName = "John ";
 string lastName = "Doe";
 string name = firstName + lastName;
 Console.WriteLine(name);
+
+
+//Using method:
+
+string firstName = "John ";
+string lastName = "Doe";
+string name = string.Concat(firstName, lastName);
+Console.WriteLine(name);

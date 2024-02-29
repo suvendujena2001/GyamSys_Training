@@ -68,3 +68,23 @@ In this case, when you change one of them, the other object is also affected. Th
 The memory allocation on the stack is deallocated when the control moves out from the method, i.e., once the method completes its execution. On the other hand, the memory allocation, which is done on the heap, needs to be de-allocated by the garbage collector.
 
 When an object stored on the heap is no longer used, that means the object does not have any reference pointing. Then, the object is eligible for garbage collection. The garbage collector will de-allocate this object from the heap at some point.
+
+## Stack Memory Key Points:
+- Allocation: Stack memory is allocated for static memory allocation and local variables. It’s managed by the CPU, making it faster and more efficient.
+- Usage: When a method is called, a block of memory (a stack frame) is allocated on the stack for its local variables and parameters. When the method call returns, the block becomes unused and can be used for the next method call.
+- Lifespan: Variables stored in the stack are only available during the lifetime of the method call.
+- Type of Data: It stores value types in C#. These include primitive data types (like int, double, char), structs, and references to objects (the references themselves, not the objects).
+
+## Heap Memory Key Points:
+- Allocation: Heap memory is used for dynamic memory allocation, which includes objects and complex data structures that require more flexibility and are managed by the garbage collector in .NET.
+- Usage: Objects are allocated on the heap, and memory is managed at runtime. New objects are created using the new keyword, and the garbage collector automatically frees up heap memory when objects are no longer in use.
+- Lifespan: Objects on the heap live from when they are created until they are no longer used and are garbage collected.
+- Type of Data: It stores reference types like objects, arrays, and class instances.
+
+## Key Differences Between Stack and Head Memory in .NET:
+- Management: Stack memory is automatically managed by the system, whereas heap memory is dynamically allocated and deallocated by the garbage collector.
+- Speed: Stack memory is generally faster than heap memory because of its organization and the way it’s managed.
+- Size: The stack has size limits based on the thread, but the heap can dynamically grow as needed (limited by the 
+  system’s available memory).
+- Access: Stack memory access is more straightforward and faster, while heap memory requires more complex management.
+- Storage: Value types are stored in stack memory, while reference types are stored in heap memory.

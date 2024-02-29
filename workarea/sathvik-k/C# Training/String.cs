@@ -24,3 +24,15 @@ Console.WriteLine("The length of the txt string is: " + txt.Length);
 string txt = "Hello World";
 Console.WriteLine(txt.ToUpper());   // Outputs "HELLO WORLD"
 Console.WriteLine(txt.ToLower());   // Outputs "hello world"
+
+
+
+
+// String Concatenation
+// The + operator can be used between strings to combine them. This is called concatenation:
+
+// ExampleGet your own C# Server
+string firstName = "John ";
+string lastName = "Doe";
+string name = firstName + lastName;
+Console.WriteLine(name);

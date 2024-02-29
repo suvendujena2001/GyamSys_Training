@@ -5,10 +5,3 @@ C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\C#_Training\Practice-1\
 C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\C#_Training\Practice-1\Practice-1\obj\Debug\Practice-1.csproj.CoreCompileInputs.cache
 C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\C#_Training\Practice-1\Practice-1\obj\Debug\Practice-1.exe
 C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\C#_Training\Practice-1\Practice-1\obj\Debug\Practice-1.pdb
-C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-1\Practice-1\bin\Debug\Practice-1.exe.config
-C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-1\Practice-1\bin\Debug\Practice-1.exe
-C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-1\Practice-1\bin\Debug\Practice-1.pdb
-C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-1\Practice-1\obj\Debug\Practice-1.csproj.AssemblyReference.cache
-C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-1\Practice-1\obj\Debug\Practice-1.csproj.CoreCompileInputs.cache
-C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-1\Practice-1\obj\Debug\Practice-1.exe
-C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-1\Practice-1\obj\Debug\Practice-1.pdb

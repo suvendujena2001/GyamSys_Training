@@ -179,6 +179,39 @@ namespace Practice_1
             Console.WriteLine("\n");
 
 
+            //Array in C#
+            //1D array
+            string[] arr = { "abc", "bcd", "efg" };
+            foreach(string item in arr)
+            {
+                Console.Write(item+" ");
+            }
+            Console.WriteLine("\n");
+
+            //2D Array
+            int[,] arr_2d = { { 2, 4, 3 }, { 6, 4, 7 }, { 6, 3, 7 } };
+            for(int i2=0;i2<arr_2d.GetLength(0);i2++)
+            {
+                for(int j2=0;j2<arr_2d.GetLength(1);j2++)
+                {
+                    Console.Write(arr_2d[i2,j2]+" ");
+                }
+                Console.WriteLine("\n");
+            }
+
+            //Jagged Arrays -- array of arrays
+
+            int[][] jagged_arr = { new int[] { 1, 2, 3, 4 }, new int[] { 11, 34, 67 }, new int[] { 89, 23 }, new int[] { 0, 45, 78, 53, 99 } };
+            for (int ja = 0; ja < jagged_arr.Length; ja++)
+            {
+                System.Console.Write($"Row({ja}): Elements of array {ja+1}: ");
+
+                for (int jk = 0; jk < jagged_arr[ja].Length; jk++)
+                {
+                    System.Console.Write($"{jagged_arr[ja][jk]} ");
+                }
+                System.Console.WriteLine("\n");
+            }
             Console.ReadLine();
         }
     }

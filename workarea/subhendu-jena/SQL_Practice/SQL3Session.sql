@@ -36,3 +36,18 @@ SELECT * FROM EMPLOYEE WHERE EmpName LIKE '%u%';
 
 SELECT * FROM EMPLOYEE WHERE EmpSalary IN(2000,35000,70000,50000);
 
+
+SELECT emp.EmpName, emp.EmpSalary, dep.DeptId, dep.DeptName FROM EMPLOYEE emp LEFT JOIN DEPT dep ON emp.EmpDeptId=dep.DeptID
+UNION
+SELECT emp.EmpName, emp.EmpSalary, dep.DeptId, dep.DeptName FROM EMPLOYEE emp RIGHT JOIN DEPT dep ON emp.EmpDeptId=dep.DeptID ORDER BY DeptId;
+
+
+SELECT emp.EmpName, emp.EmpSalary, dep.DeptId, dep.DeptName FROM EMPLOYEE emp LEFT JOIN DEPT dep ON emp.EmpDeptId=dep.DeptID
+INTERSECT
+SELECT emp.EmpName, emp.EmpSalary, dep.DeptId, dep.DeptName FROM EMPLOYEE emp RIGHT JOIN DEPT dep ON emp.EmpDeptId=dep.DeptID ORDER BY DeptID;
+
+
+--SELECT * FROM DEPT
+--INTERSECT
+--SELECT * FROM EMPLOYEE;
+

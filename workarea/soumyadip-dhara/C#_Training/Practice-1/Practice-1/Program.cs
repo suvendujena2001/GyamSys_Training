@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -179,6 +181,8 @@ namespace Practice_1
             Console.WriteLine("\n");
 
 
+            //******* C# Assignment:*********
+
             //Array in C#
             //1D array
             string[] arr = { "abc", "bcd", "efg" };
@@ -201,7 +205,13 @@ namespace Practice_1
 
             //Jagged Arrays -- array of arrays
 
-            int[][] jagged_arr = { new int[] { 1, 2, 3, 4 }, new int[] { 11, 34, 67 }, new int[] { 89, 23 }, new int[] { 0, 45, 78, 53, 99 } };
+            int[][] jagged_arr = { new int[] { 3, 1, 9, 32 },
+                                   new int[] { 91, 4, 73 }, 
+                                   new int[] { 62, 2223 }, 
+                                   new int[] { 0, 6345, 378, 6753, 9999 },
+                                   new int[] { 69,638,3737},
+                                   new int[] { 647}
+                                 };
             for (int ja = 0; ja < jagged_arr.Length; ja++)
             {
                 System.Console.Write($"Row({ja}): Elements of array {ja+1}: ");
@@ -212,7 +222,151 @@ namespace Practice_1
                 }
                 System.Console.WriteLine("\n");
             }
+
+            //Param Object array
+            Obj_param_Array obj = new Obj_param_Array();
+            obj.result("param", "array",
+                       "param object array",
+                            "array", "999");
+
+            Console.WriteLine("\n");
+
+            //Param Integer Array
+            int Additon(params int[] Numbers)
+            {
+                int total = 0;
+                foreach (int pi in Numbers)
+                {
+                    total += pi;
+                }
+                return total;
+            }
+            int sum = Additon(3, 5, 2, 1, 4, 5, 2, 1);
+            Console.WriteLine(sum);
+
+            // Array List
+
+            ArrayList myList = new ArrayList();
+
+            // Adding elements to ArrayList 
+            myList.Add(2);
+            myList.Add(4);
+            myList.Add(6);
+            myList.Add(8);
+            myList.Add(10);
+            myList.Add(12);
+            myList.Add(14);
+            myList.Add(16);
+            myList.Add(18);
+            myList.Add(20);
+
+            Console.WriteLine("The initial ArrayList: ");
+
+            foreach (int ali in myList)
+            {
+                Console.Write(ali+" ");
+            }
+            Console.WriteLine("\n");
+            // removing 4 elements starting from index 0 --- syntax- RemoveRange(strting_position, number_of_elements_to_be_removed); 
+            myList.RemoveRange(3,3);
+
+            Console.WriteLine("The ArrayList after Removing elements: ");
+
+            foreach (int mli in myList)
+            {
+                Console.Write(mli+" ");
+            }
+            Console.WriteLine("\n");
+
+            //Hashtables
+            Hashtable my_hashtable2 = new Hashtable() {
+                                      {1, "hello"},
+                                          {2, 234},
+                                        {3, 230.45},
+                                         {4, null}};
+
+            Console.WriteLine("Key and Value pairs from my_hashtable2:");
+
+            foreach (var ele2 in my_hashtable2.Keys)
+            {
+                Console.WriteLine($"{ele2} and {my_hashtable2[ele2]}");
+            }
+
+            Console.WriteLine($"Third key value of the hashtable: {my_hashtable2[3]}");   // Accessing the hashtable for key=3
+            Console.WriteLine("\n");
+
+            //Sorted List
+            SortedList my_list = new SortedList() {
+                                  { "2.09", 234 },
+                                  { "6.21", 395 },
+                                  { "6.31", 405 },
+                                  { "5.67", 100 },
+                                  { "2", 454 }};
+
+            foreach (DictionaryEntry pair in my_list)
+            {
+                Console.WriteLine($"{pair.Key} and {pair.Value}");
+            }
+            Console.WriteLine("\n");
+
+            //Stack in C#
+            Stack my_stack = new Stack();
+            my_stack.Push("Implentation of");
+            my_stack.Push("Stack");
+            my_stack.Push("In C#");
+            my_stack.Push(1234);
+            my_stack.Push(99999);
+
+            my_stack.Pop();
+            foreach (var elem in my_stack)
+            {
+                Console.WriteLine(elem);
+            }
+            Console.WriteLine("\n");
+            //Queue in C#
+            Queue my_queue = new Queue();
+            my_queue.Enqueue("Hi");
+            my_queue.Enqueue("Hello!!");
+            my_queue.Enqueue("I am");
+            my_queue.Enqueue("Soumyadip");
+            my_queue.Enqueue("My Intern ID");
+            my_queue.Enqueue(2152);
+
+            my_queue.Dequeue();
+            foreach(var q in my_queue)
+            {
+                Console.WriteLine(q);
+            }
+            Console.WriteLine("\n");
+
+            //Bit Array in C#
+            BitArray my_bitarray = new BitArray(3,true); // 3 bits are set to true
+            BitArray my_bitarray2 = new BitArray(4); // 4 bits are set to false
+            Console.WriteLine("3 bits initialize with true: \n");
+            foreach (var tba in my_bitarray)
+            {
+                Console.WriteLine(tba);
+            }
+            Console.WriteLine("4 bits initialize with false: \n");
+            foreach (var fba in my_bitarray2)
+            {
+                Console.WriteLine(fba);
+            }
+
+
             Console.ReadLine();
         }
+    }
+
+    class Obj_param_Array
+    {  
+        public void result(params object[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            { 
+                Console.WriteLine(arr[i]);
+            }
+        }
+
     }
 }

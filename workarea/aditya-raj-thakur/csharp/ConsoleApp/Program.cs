@@ -14,14 +14,14 @@ class Program
         Console.WriteLine(marks3);
 
 
-      /* Console.WriteLine(marks3);
+        Console.WriteLine(marks3);
         Console.WriteLine ($"your roll no:{ roll}"); // String interpolation.
         Console.WriteLine(roll1);
         Console.WriteLine(roll2);
-        Console.Read();*/
+        Console.Read();
 
 
-        /*  
+          
          IF -ELSE IF BLOCK
 
         Random random = new Random();
@@ -40,7 +40,7 @@ class Program
         {
             Console.WriteLine("Your subscription has expired.");
         }
-        Console.Read(); */
+        Console.Read(); 
 
         // ARRAYS-
         string[] fraudulentOrderIDs = { "A123", "B456", "C789" };
@@ -48,7 +48,46 @@ class Program
         Console.WriteLine($"First: {fraudulentOrderIDs[0]},Second: {fraudulentOrderIDs[1]},Third: {fraudulentOrderIDs[2]}");
         fraudulentOrderIDs[0] = "F000";//reassigning 1st element.
         Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
-        Console.WriteLine($"First: {fraudulentOrderIDs[0]},Second: {fraudulentOrderIDs[1]},Third: {fraudulentOrderIDs[2]}");*/
+        Console.WriteLine($"First: {fraudulentOrderIDs[0]},Second: {fraudulentOrderIDs[1]},Third: {fraudulentOrderIDs[2]}");
+        
+        FOR -EACH LOOP
+
+
+        int[] inventory = { 200, 450, 700, 175, 250 };
+        
+        int sum = 0;
+        int bin = 0;
+        foreach (int items in inventory)
+        {
+            sum += items;
+            bin++;
+            Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
+        }
+
+        Console.WriteLine($"We have {sum} items in inventory.");*/
+
+        string originalMessage = "The quick brown fox jumps over the lazy dog.";
+
+        char[] message = originalMessage.ToCharArray();
+        Array.Reverse(message);
+
+        int letterCount = 0;
+
+        foreach (char letter in message)
+        {
+            if (letter == 'o')
+            {
+                letterCount++;
+            }
+        }
+
+        string newMessage = new String(message);
+
+        Console.WriteLine(newMessage);
+        Console.WriteLine($"'o' appears {letterCount} times");
+
+
+
         Console.Read();
     }
 }

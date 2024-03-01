@@ -1,0 +1,15 @@
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.AssemblyInfo.cs
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.sourcelink.json
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.exe
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.deps.json
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.runtimeconfig.json
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.dll
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.pdb
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.dll
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\refint\ConsoleApp.dll
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.pdb
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.genruntimeconfig.cache
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\ConsoleApp\obj\Debug\net8.0\ref\ConsoleApp.dll

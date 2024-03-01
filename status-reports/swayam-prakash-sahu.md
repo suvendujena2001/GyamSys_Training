@@ -161,29 +161,28 @@ Node Js)
 
 1. SQL PRACTICE
 2. LEARNING C# CONCEPTS
-
-.NET Memory Management
-Value Types and Reference Types
-Arrays
-Multi-Dimensional Arrays
-Jagged Arrays
-Param Arrays
- 
-Collections
-ArrayList
-Hashtable
-SortedList
-Stack
-Queue
-BitArray
+(.NET Memory Management,
+Value Types and Reference Types,
+Arrays,
+Multi-Dimensional Arrays,
+Jagged Arrays,
+Param Arrays,
+Collections,
+ArrayList,
+Hashtable,
+SortedList,
+Stack,
+Queue,
+BitArray)
 
 3. SASS PRACTICE
-a.Preprocessing
-b.Variables
-c.Nesting
-d.Partials
-e.Modules
-f.Mixins
-g.Inheritance
-h.Operators
+   
+a. Preprocessing
+b. Variables
+c. Nesting
+d. Partials
+e. Modules
+f. Mixins
+g. Inheritance
+h. Operators
         

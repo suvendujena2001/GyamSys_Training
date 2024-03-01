@@ -1,0 +1,15 @@
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\bin\Debug\net8.0\csharp.exe
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\bin\Debug\net8.0\csharp.deps.json
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\bin\Debug\net8.0\csharp.runtimeconfig.json
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\bin\Debug\net8.0\csharp.dll
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\bin\Debug\net8.0\csharp.pdb
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\csharp.AssemblyInfoInputs.cache
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\csharp.AssemblyInfo.cs
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\csharp.csproj.CoreCompileInputs.cache
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\csharp.sourcelink.json
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\csharp.dll
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\refint\csharp.dll
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\csharp.pdb
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\csharp.genruntimeconfig.cache
+C:\Web D\get-2024-microsoft\workarea\aditya-raj-thakur\csharp\obj\Debug\net8.0\ref\csharp.dll

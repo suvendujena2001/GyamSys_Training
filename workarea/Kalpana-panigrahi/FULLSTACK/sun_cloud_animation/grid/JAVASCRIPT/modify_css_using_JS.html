@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style type="text/css">
+        #main{
+            color: red;
+            font-size: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" onmouseenter="modify()" onmouseleave="unmodify()">
+        Hello
+
+    </div>
+    <button onclick="start()"> Start</button>
+    <button onclick="stop()"> Stop</button>
+    <button onclick="openwindow()">Open w3 school</button>
+    <button onclick="closewindow()">close w3 school</button>
+</body>
+<script type="text/javascript">
+    var win;
+
+    function modify(){
+        document.getElementById('main').style.fontSize = "100px";
+    }
+    function unmodify(){
+        document.getElementById('main').style.fontSize = "30px";
+    }
+    var my;
+    function start(){
+        my= setTimeout(
+            function(){
+                document.write("<h1>i am kalpana</h1>");
+            },1000
+
+        );
+
+    }
+    function stop(){
+        clearTimeout(my);
+        alert("time out stop")
+    }
+
+    function openwindow(){
+      win =   window.open("https://www.w3schools.com/")
+    }
+    function closewindow(){
+        win.Close()
+    }
+</script>
+</html>

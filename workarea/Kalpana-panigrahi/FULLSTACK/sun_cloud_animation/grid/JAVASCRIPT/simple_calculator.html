@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--
+     Name : <i id="result"> </i>
+    <br/>
+    <br/>
+
+    <button onclick="call()">Call</button>
+    <br/>
+    <br/>
+   -->
+   <h1 id="res"></h1>
+   <button onclick="pop()"> POP </button>
+   <button onclick="push()"> PUSH </button>
+   <button onclick="slice()"> SLICE </button>
+   <button onclick="reverse()"> REVERSE </button>
+</body>
+<script type="text/javascript">
+   /* function call(){
+        var result = prompt("Enter Your name","")
+        //document.write(result)
+        document.getElementById('result').innerHTML = result;
+    }
+    var car=[]
+    car = ["car1", "car2", "car3","car4","car4"]
+    //document.write(car[1])
+    car.forEach(cars);
+
+    function cars(item){
+        document.write(item+"<br/>")
+    }*/
+    var car=[]
+    car = ["car1", "car2", "car3","car4","car4"]
+    var demo= car
+    document.getElementById('res').innerHTML = demo
+    function pop(){
+        demo.pop()
+        document.getElementById('res').innerHTML = demo
+    }
+    function push(){
+         var x = prompt("please enter")
+        demo.push(x)
+        document.getElementById('res').innerHTML = demo
+    }
+    function slice(){
+         var x = demo.slice(1)
+        
+        document.getElementById('res').innerHTML = x
+    }
+    function reverse(){
+         var x = demo.reverse(1)
+        
+        document.getElementById('res').innerHTML = x
+    }
+
+
+
+
+   
+</script>
+</html>

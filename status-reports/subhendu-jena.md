@@ -78,7 +78,7 @@
    - ALTER and UPDATE Tables
    - Use build-in functions to group aggregated results(GROUP BY, HAVING, ORDER BY, COUNT(), SUM()).
 
-## Office-WEEK 1(5-FEB-2024 to 11-FEB-2024)
+## Office-WEEK 1(5-FEB-2024 to 09-FEB-2024)
    - Onboarding.
    - Readiness evaluation.
    - CEO Interaction with Interns.
@@ -89,7 +89,7 @@
    - Introduction to JavaScript and DOM API in JavaScript.
    - Assignment on implementation of concepts covered in training.
 
-## Office-WEEK 2(12-FEB-2024 to 18-FEB-2024)
+## Office-WEEK 2(12-FEB-2024 to 16-FEB-2024)
    - Software Installation(Visual Studio 2022 Community Edition, SQL Server 2022 Express Edition, SQL Server Management Studio, Git for Windows and Node Js).
    - Debugging in JavaScript,Dev tools, shallow copy and deep copy,Callbacks in JavaScript,Implement map and filter.
    - Array Methods (shift, unshift, slice etc.), Hoisting in Javascript(var, let, const, function declaration etc.) and Mechanism of JavaScript(Execution Context, Environments, this, records).
@@ -99,7 +99,7 @@
    - Training on JavaScript Concepts(Closures, AJAX and XHR)
    - Working of Websites and their underlying principles(fetch data with the help of APIs , status codes, HTTP/HTTPS, Hosting, scaling etc.) and concept of load balancer. 
 
-## Office-WEEK 3(19-FEB-2024 to 25-FEB-2024)
+## Office-WEEK 3(19-FEB-2024 to 23-FEB-2024)
    - Training on javascript concepts like Async/await , Promises, Modules and BOM(Browser Object Model) by Sivakumar.
    - Training on Testing Concepts like Agile and Waterfall model by Abhishek Olety.
    - Evaluation on JavaScript and Evaluation on SQL.
@@ -109,3 +109,15 @@
    - Learning SQL queries(INSERT, UPDATE, DELETE, TRUNCATE, MERGE, SELECT, WHERE, GROUPBY, HAVING AND ORDERBY).
    - Session with Sivakumar about Ticketing and Development and Production Support.
    - JIRA and Azure DevOps Revision by Abhishek.
+
+## Office-WEEK 4(26-FEB-2024 to 01-MARCH-2024)
+   - API Testing and JIRA Fundamentals.
+   - Quality Assurance training completed.
+   - Training on SSMS ans SQL.
+   - C# .NET Training by Suman.
+   - Training on BLACK BOX Testing and WHITE BOX testing.
+   - C# TRAINING (NULL-COALESCING OPERATOR, NULLABLE OPERATOR, ARRAYS and Methods)
+   - C# CONCEPTS (.NET Memory Management, Value Types and Reference Types, Arrays, Multi-Dimensional Arrays, Jagged Arrays, Param Arrays, Collections, ArrayList, Hashtable, SortedList, Stack, Queue, BitArray).
+   - Quality Assuarance Evaluation.
+   - SQL Week 2 and Week 3 Evaluation.
+   

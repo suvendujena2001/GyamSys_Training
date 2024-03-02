@@ -5,6 +5,7 @@ When we declare a variable in a .NET application, it allocates some memory in th
 - Value of the Variable.
 
 here we declare a variable of type int and assign a value 101.
+
 ![there is an image here](https://dotnettutorials.net/wp-content/uploads/2020/05/word-image-55.png?ezimgfmt=ng:webp/ngcb8)
 
 The above image shows a high-level overview of what is happening in the memory. But depending on the data type (i.e., depending on the value type and reference type ), the memory may be allocated either in the stack or in the heap memory.
@@ -20,14 +21,14 @@ When the first statement is executed, the compiler allocates some memory in the 
 ![](https://dotnettutorials.net/wp-content/uploads/2020/05/word-image-57.png?ezimgfmt=ng:webp/ngcb8)
 
 Statement 2:
-When the second statement is executed, it stacks this memory allocation (memory allocation for variable y) on top of the first memory allocation (memory allocation for variable x). You can think about the stack as a series of plates or dishes put on top of each other. Please have a look at the following diagram for a better understanding.
+When the second statement is executed, it stacks this memory allocation (memory allocation for variable y) on top of the first memory allocation (memory allocation for variable x). You can think about the stack as a series of plates or dishes put on top of each other.
 
 ![](https://dotnettutorials.net/wp-content/uploads/2020/05/word-image-58.png?ezimgfmt=ng:webp/ngcb8)
 
 The Stack Memory allocation and de-allocation in .NET uses the Last In, First Out Principle. In other words, we can say that the memory allocation and de-allocation are done only at one end of the memory, i.e., the top of the stack.
 
 Statement3:
-In the 3rd statement, we have created an object of SomeClass. When the 3rd statement is executed, it internally creates a pointer on the stack memory, and the actual object is stored in a different memory location called Heap memory. The Heap Memory location does not track running memory. Heap is used for dynamic memory allocation. For a better understanding, please have a look at the below image.
+In the 3rd statement, we have created an object of SomeClass. When the 3rd statement is executed, it internally creates a pointer on the stack memory, and the actual object is stored in a different memory location called Heap memory. The Heap Memory location does not track running memory. Heap is used for dynamic memory allocation. For a better understanding, have a look at the below image.
 
 ![](https://dotnettutorials.net/wp-content/uploads/2020/05/word-image-59.png?ezimgfmt=ng:webp/ngcb8)
 
@@ -48,7 +49,7 @@ So, the reference data type holds references to other multiple values, and each 
 ![](https://dotnettutorials.net/wp-content/uploads/2020/05/word-image-61.png?ezimgfmt=ng:webp/ngcb8)
 
 ## Value Types and Reference Types in C#.NET
-As we understood the concept of Stack and Heap, Now, let us move forward and understand the concept value types and reference types in C#. The Value types are the types that hold both data and memory in the same location. On the other hand, a reference type is a type that has a pointer that points to the actual memory location.
+The Value types are the types that hold both data and memory in the same location. On the other hand, a reference type is a type that has a pointer that points to the actual memory location.
 
 ## Understanding Value Type in C#:
 Let us understand value type with an example. Please have a look at the following image. As you can see in the image, first, we create an integer variable with the name x, and then we assign this x integer value to another integer variable named y. In this case, the memory allocation for these two variables will be done inside the stack memory.

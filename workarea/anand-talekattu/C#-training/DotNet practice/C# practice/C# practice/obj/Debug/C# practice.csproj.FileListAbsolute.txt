@@ -1,0 +1,7 @@
+C:\Users\AnandMallikarjun\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\anand-talekattu\C#-training\DotNet practice\C# practice\C# practice\bin\Debug\C# practice.exe.config
+C:\Users\AnandMallikarjun\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\anand-talekattu\C#-training\DotNet practice\C# practice\C# practice\bin\Debug\C# practice.exe
+C:\Users\AnandMallikarjun\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\anand-talekattu\C#-training\DotNet practice\C# practice\C# practice\bin\Debug\C# practice.pdb
+C:\Users\AnandMallikarjun\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\anand-talekattu\C#-training\DotNet practice\C# practice\C# practice\obj\Debug\C# practice.csproj.AssemblyReference.cache
+C:\Users\AnandMallikarjun\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\anand-talekattu\C#-training\DotNet practice\C# practice\C# practice\obj\Debug\C# practice.csproj.CoreCompileInputs.cache
+C:\Users\AnandMallikarjun\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\anand-talekattu\C#-training\DotNet practice\C# practice\C# practice\obj\Debug\C# practice.exe
+C:\Users\AnandMallikarjun\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\anand-talekattu\C#-training\DotNet practice\C# practice\C# practice\obj\Debug\C# practice.pdb

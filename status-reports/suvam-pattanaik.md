@@ -188,6 +188,15 @@
 
     5. Loop statements in C# like - while , do-while , for-loop ,where and how to use beak and continue , introduction to methods and its different types - without parameter and parameterized methods. 
 
+### 1 MARCH:
+
+    1. Practice of C# - const variables , nullable variables ,while , do-while loop , for loop statement.
+
+    2. Evaluation test on SQL -PART : 3 - different types of join , operators in sql .
+
+    3. Completing the basic operation and a simple project using C# from freeCodeCamp.
+    
+
     
   
   

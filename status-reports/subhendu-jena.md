@@ -78,6 +78,12 @@
    - ALTER and UPDATE Tables
    - Use build-in functions to group aggregated results(GROUP BY, HAVING, ORDER BY, COUNT(), SUM()).
 
+## Self-Training and Practice
+   - Completed POSTMAN API Fundamentals Student Expert(Earned Badge and Certification).
+   - Started practicing DOCKER and basics of Containerization.
+   - Started YAML Scripting.
+   - Learn and Practice LINUX(on VMWare).
+   
 ## Office-WEEK 1(5-FEB-2024 to 09-FEB-2024)
    - Onboarding.
    - Readiness evaluation.
@@ -120,4 +126,3 @@
    - C# CONCEPTS (.NET Memory Management, Value Types and Reference Types, Arrays, Multi-Dimensional Arrays, Jagged Arrays, Param Arrays, Collections, ArrayList, Hashtable, SortedList, Stack, Queue, BitArray).
    - Quality Assuarance Evaluation.
    - SQL Week 2 and Week 3 Evaluation.
-   

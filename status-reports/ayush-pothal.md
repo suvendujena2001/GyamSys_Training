@@ -42,8 +42,8 @@
 - Async/Await
 - BOM
 - AJAX
-## TypeSCript
-## Sass
+### TypeScript
+### Sass
 ## SQL
 - DDL Statements
 - DML Statements

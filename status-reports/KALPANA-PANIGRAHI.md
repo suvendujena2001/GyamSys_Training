@@ -1,4 +1,4 @@
-# Weekly status report(Feb 5 to Feb 11)
+# Week 1  status report(Feb 5 to Feb 11)
 ## HTML
 1. Basics of HTML 
    - Paragraph
@@ -43,7 +43,7 @@
 3. functions, objects
 4. events, string
 
-# Weekly status report(Feb 12 to Feb 18)
+# Week 2 status report(Feb 12 to Feb 18)
 ## JAVASCRIPT
 1. Control statement and loops
 2. Primitive data types and non-primitive data types
@@ -111,7 +111,7 @@
 |  REVOKE |	Take back given privileges from the user. |
 |   COMMENT|Specify comments on Database tables and columns. |
 
-# Weekly status report(Feb 19 to Feb 25)
+# Week 3 status report(Feb 19 to Feb 25)
 ## SQL
 1. SELECT QUERY 
    - WHERE Clause
@@ -157,6 +157,31 @@
 15. For Loop
 16. Functions
 17. Arrays
+    
+# Week 4 status report(Feb 26 to Mar 3)
+## CSS
+ 1. CSS ICONS, Min-Width, Max Width, Overflow, Navigation Bar
+ 2. Rounded Corner, Shadows, Gradients
+ 3. Transitions
+ 4. Animations, Buttons
+## Bootstrap
+1. Grid, Tables
+2. Images, Buttons, Button Groups
+3. Progress Bars
+4. List Groups
+5. DropDowns
+6. Navbar
+7. Forms
+8. Input, Filter
+9. Pager, Labels
+## C#
+1. Basic syntax, output, comments, variables, datatypes.Type casting, user input, operators, math, string, Booleans.if...else , switch case, while loop, do while loop,break/continue (revision).
+2. Array, Multi-Dimensional Arrays, Jagged Arrays and Param Arrays.
+3. Array List, Hashtable, SortedList, Stack, Queue, BitArray.
+4. Return Types and methods
+
+   
+
     
 
  

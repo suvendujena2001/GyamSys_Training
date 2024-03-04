@@ -36,10 +36,12 @@
 
 ** An evaluation test was taken on SQL and further PPTs were shared. Then a session regarding SSMS was taken, and our doubts were also cleared.
 
-** Evaluation test on Unit tetsing part was taken.
+** Evaluation test on Unit testing part was taken.
 
 ** Training on Backend development started and we were taught DOTNET.
 
 ** We were given to practise C# and upload the same on Github.
 
 ** On the last working day, we gave another SQL evaluation test.
+
+## Week 5 (4th March 2024 to 8th March 2024)

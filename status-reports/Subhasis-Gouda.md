@@ -214,7 +214,7 @@ Practice on the following topics.
 
 Practice on the following topics 
 
-1. Basic striucture
+1. Basic structure
 2. Input and Output
 3. Data Types
 4. Type conversion

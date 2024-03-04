@@ -78,7 +78,7 @@
    - ALTER and UPDATE Tables
    - Use build-in functions to group aggregated results(GROUP BY, HAVING, ORDER BY, COUNT(), SUM()).
 
-## Self-Training and Practice:
+## Self-Training and Practice(Daily)
    - Completed POSTMAN API Fundamentals Student Expert(Earned Badge and Certification).
    - Started practicing DOCKER and basics of Containerization.
    - Started YAML Scripting.

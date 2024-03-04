@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,25 +9,33 @@ namespace FirstConsoleApp
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
 
-            //Initial
-            
+        //implementing both array params and return types.
+        public static int add(params int[] ListNumbers)
+        {
+            int total = 0;
+
+            // foreach loop 
+            foreach (int i in ListNumbers)
+            {
+                total += i;
+            }
+            return total;
+        }
+        static void Main(string[] args)
+        {   //initial
             Console.WriteLine("Hello World");
             Console.WriteLine("I am Subhendu Kumar Jena");
             char a = '@';
-            int b = 23;
+            int bat = 23;
             bool c = false;
-            double d = 8.7;
+            double dates = 8.7;
             decimal tre = 3.45454M;
             string name = "Subhendu";
-            Console.WriteLine(name + " " + b + " " + d + " " + c);
-            Console.Read();
-
-
-//from Microsoft learn module
+            Console.WriteLine(name + " " + bat+ " " + dates + " " + c);
             
+
+//from Microsoft learn module (String interpolation)
 string studentName = "Sophia Johnson";
 string course1Name = "English 101";
 string course2Name = "Algebra 101";
@@ -70,8 +79,159 @@ Console.WriteLine($"{course2Name} {course2Grade} {course2Credit}");
 Console.WriteLine($"{course3Name} {course3Grade} {course3Credit}");
 Console.WriteLine($"{course4Name} {course4Grade} {course4Credit}");
 Console.WriteLine($"{course5Name} {course5Grade} {course5Credit}");
-Console.Read();
 
-        }
-    }
+//for each
+int[] a_array = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+foreach (int items in a_array)
+{
+Console.WriteLine(items);
+}
+
+//type conversions
+int i = 75;
+float f = 53.005f;
+double d = 2345.7652;
+bool b = true;
+
+Console.WriteLine(i.ToString());
+Console.WriteLine(f.ToString());
+Console.WriteLine(d.ToString());
+Console.WriteLine(b.ToString());
+
+
+int day =5;
+switch (day)
+{
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednesday");
+        break;
+    case 4:
+        Console.WriteLine("Thursday");
+        break;
+    case 5:
+        Console.WriteLine("Friday");
+        break;
+    case 6:
+        Console.WriteLine("Saturday");
+        break;
+    case 7:
+        Console.WriteLine("Sunday");
+        break;
+}
+
+int sum;
+// passing three parameters
+sum = Program.add(1, 2, 3);
+Console.WriteLine("Sum of 1,2,3 is:\t{0}", sum);
+
+// passing five parameters
+sum = Program.add(3, 5, 2, 6, 2);
+Console.WriteLine("Sum of 3,5,2,6,2 is:\t{0}", sum);
+
+
+
+ArrayList myList = new ArrayList();
+
+// Adding elements to ArrayList 
+myList.Add("Hello");
+myList.Add("World");
+myList.Add("A");
+myList.Add("B");
+myList.Add("C");
+myList.Add("D");
+myList.Add("E");
+myList.Add("F");
+
+Console.WriteLine("Count : " + myList.Count);
+Console.WriteLine("Capacity : " + myList.Capacity);
+
+
+// Create a hashtable
+// Using Hashtable class
+Hashtable my_hashtable1 = new Hashtable();
+
+// Adding key/value pair 
+// in the hashtable
+// Using Add() method
+my_hashtable1.Add("A1", "Welcome");
+my_hashtable1.Add("A2", "to");
+my_hashtable1.Add("A3", "GeeksforGeeks");
+
+Console.WriteLine("Key and Value pairs from my_hashtable1:");
+
+foreach (DictionaryEntry ele1 in my_hashtable1)
+{
+    Console.WriteLine("{0} and {1} ", ele1.Key, ele1.Value);
+}
+
+// Create another hashtable
+// Using Hashtable class
+// and adding key/value pairs
+// without using Add method
+Hashtable my_hashtable2 = new Hashtable() {
+                            {1, "hello"},
+                                {2, 234},
+                            {3, 230.45},
+                                {4, null}};
+
+Console.WriteLine("Key and Value pairs from my_hashtable2:");
+
+foreach (var ele2 in my_hashtable2.Keys)
+{
+    Console.WriteLine("{0} and {1}", ele2,
+                    my_hashtable2[ele2]);
+}
+
+SortedList my_slist = new SortedList();
+
+// Adding key/value pairs in SortedList
+my_slist.Add(1.02, "This");
+my_slist.Add(1.07, "Is");
+my_slist.Add(1.04, "SortedList");
+my_slist.Add(1.01, "Tutorial");
+
+foreach (DictionaryEntry pair in my_slist)
+{
+    Console.WriteLine("{0} and {1}",
+                pair.Key, pair.Value);
+}
+Console.WriteLine();
+
+// Remove value having 1.07 key
+my_slist.Remove(1.07);
+
+// After Remove() method
+foreach (DictionaryEntry pair in my_slist)
+{
+    Console.WriteLine("{0} and {1}",
+                pair.Key, pair.Value);
+}
+Console.WriteLine();
+
+// Remove element at index 2
+my_slist.RemoveAt(2);
+
+// After RemoveAt() method
+foreach (DictionaryEntry pair in my_slist)
+{
+    Console.WriteLine("{0} and {1}",
+                pair.Key, pair.Value);
+}
+Console.WriteLine();
+
+// Remove all key/value pairs
+my_slist.Clear();
+Console.WriteLine("The total number of key/value pairs" +
+            " present in my_slist:{0}", my_slist.Count);
+Console.ReadLine();
+
+
+}
+}
 }

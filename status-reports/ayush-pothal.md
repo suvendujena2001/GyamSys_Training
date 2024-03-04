@@ -1,6 +1,6 @@
 # Progress Report - Ayush Kumar Pothal
 
-# Week 1
+# Week 1 (05-02-2024 to 11-02-2024)
 - Git and Github Basics
 - Learnt git init, pull, push, commit, add Commands
 - Markdown language Basics
@@ -14,7 +14,7 @@
 - Responsive
 - Grid
 
-# Week 2
+# Week 2 (12-02-2024 to 18-02-2024)
 
 ## JavaScript
 - JS Introduction
@@ -35,7 +35,7 @@
 - Unit Testing
 - Defect Life Cycle
 
-# Week 3
+# Week 3 (19-02-2024 to 25-02-2024)
 
 ## JavaScript
 - Promises
@@ -55,7 +55,7 @@
 - White Box Testing
 - Black Box Testing
 
-# Week 4
+# Week 4 (26-02-2024 to 03-03-2024)
 
 ## SQL
 - SQL Joins

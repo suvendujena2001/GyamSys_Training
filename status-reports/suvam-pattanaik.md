@@ -195,6 +195,19 @@
     2. Evaluation test on SQL -PART : 3 - different types of join , operators in sql .
 
     3. Completing the basic operation and a simple project using C# from freeCodeCamp.
+
+
+### 2 MARCH :
+
+    1. Completing the assignment on collections in C# comprising of:ArrayList ,Hashtable , stack,queue, sortedlist ,bitarray.
+
+    2. Self practice on value type and reference type in C#.
+
+    3. self Practice on C# in  Freecodecamp .
+
+    4. Evaluation test on C# - Basics , data-types ,collection framework .
+
+    
     
 
     

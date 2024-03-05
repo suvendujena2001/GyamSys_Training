@@ -13,7 +13,15 @@ class Program
             Console.WriteLine(array[i]);
         }
     }
-     static void printArray(ArrayList arr)
+    static int add(int a,int b) 
+    {
+        return a + b;
+    }
+    static int add(int a, int b,int c)
+    {
+        return a + b + c;
+    }
+    static void printArray(ArrayList arr)
     {
         foreach (var item in arr)
         {
@@ -48,7 +56,7 @@ class Program
      
             
         }
-        */
+        
 
 
         ArrayList arrayList = new ArrayList();
@@ -83,10 +91,41 @@ class Program
         Program p1 = new Program();
 
         p1.result("Avinash", "Aditya",
-                        100, "100");
+                        100, "100");*/
+
+        Hashtable hst = new Hashtable();
 
 
+        hst.Add(1, "Avinash");
+        hst.Add(2, "Harsh");
+        hst.Add(3, "Rohit");
+        hst.Add(4, "Avi");
 
+        Console.WriteLine(hst);
+
+        foreach (DictionaryEntry item in hst) 
+        {
+            Console.WriteLine("{0},{1}",item.Key, item.Value);
+        }
+        //method overloading
+
+        //Console.WriteLine(add(1, 2));
+        //Console.WriteLine(add(1, 2,6));
+
+        try
+        {
+            string a = "hello";
+            int b = Convert.ToInt32(a);
+            
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            Console.WriteLine("hello we are in final block");
+        }
 
     }
     

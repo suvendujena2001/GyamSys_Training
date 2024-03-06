@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsAppCalculator
+namespace WindowsFormsAppCalculator
 {
     partial class Form1
     {
@@ -53,7 +53,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = "First Number";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -63,7 +63,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.label2.Text = "Second Number";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox2
@@ -106,7 +106,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 33);
             this.button1.TabIndex = 8;
-            this.button1.Text = "result";
+            this.button1.Text = "Enter";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

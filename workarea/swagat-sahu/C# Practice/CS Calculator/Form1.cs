@@ -80,7 +80,7 @@ namespace WindowsFormsAppCalculator
             }
             else
             {
-                Console.WriteLine("Invalid cerator");
+                Console.WriteLine("Invalid Operator");
             }
         }
 

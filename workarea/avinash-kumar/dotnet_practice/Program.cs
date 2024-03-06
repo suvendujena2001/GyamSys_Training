@@ -10,12 +10,12 @@ class Program
         for (int i = 0; i < array.Length; i++)
         {
 
-            Console.WriteLine(array[i]);
+                Console.WriteLine(array[i]);
         }
     }
     static int add(int a,int b) 
     {
-        return a + b;
+            return a + b;
     }
     static int add(int a, int b,int c)
     {
@@ -25,7 +25,7 @@ class Program
     {
         foreach (var item in arr)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(item,item);
         }
 
     }

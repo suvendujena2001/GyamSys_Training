@@ -294,6 +294,14 @@ Console.WriteLine("Double: " + myNum2);
 Console.WriteLine();
 
 
+
+Class1 c2=new Class1();
+string a1=c2.Lastname;
+Console.WriteLine(a1);
+//Console.WriteLine(c2.Firstname); // produces error since it is declared as private in Class1
+Console.WriteLine(c2.getFullName());
+Console.WriteLine(c2.getFirstName());
+Console.WriteLine(c2.getLastName());
 Console.ReadLine();
 }
 }

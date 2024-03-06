@@ -22,6 +22,18 @@ total += i;
 }
 return total;
 }
+//overloaded methods
+static int PlusMethod(int x, int y)
+{
+return x + y;
+}
+
+static double PlusMethod(double x, double y)
+{
+return x + y;
+}
+
+
 static void Main(string[] args)
 {   //initial practice
 Console.WriteLine("Hello World");
@@ -254,6 +266,33 @@ Console.WriteLine();
 my_slist.Clear();
 Console.WriteLine("The total number of key/value pairs" +
 " present in my_slist:{0}", my_slist.Count);
+Console.WriteLine();
+
+//exception handling
+Console.WriteLine("Exception Handling:");
+try
+{
+int[] myNumbers = { 1, 2, 3 };
+Console.WriteLine(myNumbers[10]);
+}
+catch (Exception e)
+{
+Console.WriteLine(e);
+Console.WriteLine(e.Message);
+//throw e;
+}
+
+finally//optional usage
+{
+Console.WriteLine();
+}
+
+int myNum1 = PlusMethod(8, 5);
+double myNum2 = PlusMethod(4.3, 6.26);
+Console.WriteLine("Int: " + myNum1);
+Console.WriteLine("Double: " + myNum2);
+Console.WriteLine();
+
 
 Console.ReadLine();
 }

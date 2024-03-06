@@ -25,7 +25,7 @@ class Program
     {
         foreach (var item in arr)
         {
-            Console.WriteLine(item,item);
+            Console.WriteLine(item,item,item);
         }
 
     }

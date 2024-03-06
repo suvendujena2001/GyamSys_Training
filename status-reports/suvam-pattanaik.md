@@ -196,8 +196,9 @@
 
     3. Completing the basic operation and a simple project using C# from freeCodeCamp.
 
+## Week -5 (4 MARCH - 10 MARCH 2024)
 
-### 2 MARCH :
+### 4 MARCH :
 
     1. Completing the assignment on collections in C# comprising of:ArrayList ,Hashtable , stack,queue, sortedlist ,bitarray.
 
@@ -206,6 +207,28 @@
     3. self Practice on C# in  Freecodecamp .
 
     4. Evaluation test on C# - Basics , data-types ,collection framework .
+
+### 5 MARCH :
+
+    1. Completing the learning module shared on  topics of SQL comrpising of various aggregate  functions like - count ,max,min.
+
+    2. Practicing the above queries on SSMS - COUNT , MAX , MIN , SUM , AVG
+
+    3. Session on C# regarding : try-catch-finally-throw , various access-modifiers , various constructors present in C# , ways in which we can overload a method .
+
+    4. A brief on how to use winforms and create basic app from it .
+
+### 6 MARCH :
+
+    1. Completing the learning module on C# .
+
+    2. Practicing winforms and basics on it .
+
+    3. Implementing try-catch and finally keyword in the code , where to use various access-modifiers with a class and objects .
+
+    4. Implemented how method overloading works and how we can use various constructors in a class .
+
+    
 
     
     

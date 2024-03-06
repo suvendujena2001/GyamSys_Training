@@ -1,0 +1,30 @@
+operations on an array:
+
+listofinterns=[1,2,3,4,5,6,7,8,9,10];
+listofinterns // [1,2,3,4,5,6,7,8,9,10]
+
+listofinterns[4] // 5
+
+var fte=[100,200,300];
+var listofallEmployees = listofinterns.concat(fte);
+
+listofinterns // [1,2,3,4,5,6,7,8,9,10,100,200,300]
+
+listofinterns.slice(1); //[2,3,4,5,6,7,8,9,10,100,200,300]
+
+listofinterns.slice(2,4); // [3,4] (ending index is excluded)
+
+listofinterns.slice(1,4); // [2,3,4]
+
+var empNames=['Abhishek','Aditya','Anand','Avinash','Ayush','Chindu'];
+empNames.indexOf('Anand') // 2
+empNames.push('Anand');
+empNames.lastIndexOf('Anand'); // 6
+
+CALLBACK
+
+function testing(value,i,arr) {return value=='Ayush';}
+empNames.find(testing); // 'Ayush'
+
+findIndex()
+findLastIndexOf()

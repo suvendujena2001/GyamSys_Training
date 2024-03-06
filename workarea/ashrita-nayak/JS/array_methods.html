@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>various array methods</title>
+</head>
+<body>
+<script>
+ // Create an initial array
+let fruits = ['apple', 'banana', 'orange'];
+// Push: Adds elements to the end of an array
+fruits.push('grape');
+console.log('Push:', fruits);
+// Pop: Removes the last element from an array
+let poppedElement = fruits.pop();
+console.log('Pop:', fruits, 'Popped Element:', poppedElement);
+// Shift: Removes the first element from an array
+let shiftedElement = fruits.shift();
+console.log('Shift:', fruits, 'Shifted Element:', shiftedElement);
+// Unshift: Adds elements to the beginning of an array
+fruits.unshift('kiwi', 'melon');
+console.log('Unshift:', fruits);
+// Concat: Concatenates arrays
+let moreFruits = ['pear', 'peach'];
+let combinedArray = fruits.concat(moreFruits);
+console.log('Concat:', combinedArray);
+// Slice: Extracts a portion of an array
+let slicedArray = combinedArray.slice(2, 5);
+console.log('Slice:', slicedArray);
+// indexOf: Returns the first index at which a given element can be found
+let indexOfOrange = combinedArray.indexOf('orange');
+console.log('indexOf:', indexOfOrange);
+// lastIndexOf: Returns the last index at which a given element can be found
+let lastIndexOfBanana = combinedArray.lastIndexOf('banana');
+console.log('lastIndexOf:', lastIndexOfBanana);
+// find: Returns the first element that satisfies the provided testing function
+let foundElement = combinedArray.find(fruit => fruit.length > 5);
+console.log('find:', foundElement);
+// findIndex: Returns the index of the first element that satisfies the provided
+// testing function
+let foundIndex = combinedArray.findIndex(fruit => fruit.length > 5);
+console.log('findIndex:', foundIndex);
+// findLastIndex: Returns the index of the last element that satisfies the provided 
+//testing function
+let foundLastIndex = combinedArray.reverse().findIndex(fruit => fruit.length > 5);
+console.log('findLastIndex:', foundLastIndex);
+</script>
+</body>
+</html>

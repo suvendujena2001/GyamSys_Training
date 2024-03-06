@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Java Script</title>
+    <style>
+        body {
+            background-color: rgb(210, 247, 154);
+        }
+
+        #byid {
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Create element by getElementById()</h2>
+    <div id="syllabus"></div>
+    <h2>The getElementsByTagName() change the second p element</h2>
+
+    <p>Click "Change" .</p>
+    <p><button onclick="myFunction()">Change</button></p>
+
+    <div id="byid">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sapiente..</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, hic..</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, et.</p>
+    </div>
+
+    <!-- GetElementsByClassName(): -->
+
+    <h2>GetElementsByClassName()</h2>
+
+    <p>Change the background color of all elements with class</p>
+
+    <div class="bgclr">
+        A div ceated by class='bgclr'.
+    </div>
+    <div class="bgclr">
+        A div ceated by class='bgclr'.
+    </div>
+    <div class="bgclr">
+        A div ceated by class='bgclr'.
+    </div>
+
+
+    <p>A <span class="bgclr">span</span> element with class="bgclr".</p>
+</body>
+<script>
+    function testing() {
+        let x = 10;
+        var y = 20;
+        const z = 30;
+    }
+    var firstname = 'Tushar';
+    let degree = 'B.tech';
+    const fname = 'Patna';
+    // alert('Welcome to JavaScript Training')
+    document.getElementById('syllabus').innerHtml = '<ul><li>ECMA SCRIPT</li><li>DATA TYPES></li></ul>';
+    
+    // createElementByID
+     document.getElementById('syllabus').innerText = 'ECMA Script';
+    // createElement()
+    const para = document.createElement("p");
+    para.innerText = "Created a Paragraph by createElement().";
+    // Append to body:
+    document.body.appendChild(para);
+
+    // getElementbyTagName()
+    function myFunction() {
+        const element = document.getElementById("byid");
+        element.getElementsByTagName("p")[1].style.fontSize = "24px";
+    }
+    // getElementbyclass()
+    const bgc = document.getElementsByClassName("bgclr");
+    for (let i = 0; i < bgc.length; i++) {
+        bgc[i].style.backgroundColor = "pink";
+    }
+
+</script>
+
+</html>

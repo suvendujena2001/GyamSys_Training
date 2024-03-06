@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        .box{
+          
+            height: 200px;
+            width: 200px;
+            border: 2px solid gray;
+            margin: auto;
+            position: relative;
+        }
+        .add{
+            width: 100%;
+            font-size: 30px;
+            background-color: rgb(80, 72, 72);
+            color: white;
+            position: absolute;
+            left: 0px;
+            bottom: -40px;
+            opacity: 0;
+            transition: 1s;    
+        }
+        .box:hover .add{
+            bottom: 0px;
+            opacity: 1;
+        }
+        span{
+            color: red;
+          /*  display: none;
+            display: inline; 
+            display:inline-block;*/
+            
+            display: list-item;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <img src="img.jpg" width="100%"/>
+        <input type="button" name="" value="Add To Cart" class="add"/>
+
+    </div>
+    <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Nesciunt fugit perspiciatis adipisci <span>mollitia ipsum neque dignissimos 
+            totam nemo aliquid.</span> 
+        Ipsa iusto quod nemo magnam veritatis tenetur dolorem, reprehenderit ratione quo!</p>
+    </div>
+</body>
+</html>

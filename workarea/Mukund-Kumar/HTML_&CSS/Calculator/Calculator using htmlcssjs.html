@@ -7,40 +7,34 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div class="calculator">
+    <div class="Calculator">
         <!--Calculator's display comes first-->
-        <div class="display">
-            <input type="text" placeholder="0" id="input" disabled />
+        <div class = "display">
+            <div class = "calculator-grid ">
+                <textarea type="text" id = "inputtext" placeholder="0"></textarea>
+                <button>C</button>
+                <button></button>
+                <button>DEL</button>
+                <button>+</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>-</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>*</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>/</button>
+                <button>00</button>
+                <button>0</button>
+                <button>.</button>
+                <button>=</button>
+            </div> 
         </div>
-        <!--next the buttons -->
-        <div class="buttons">
-            <button value="%" class="operation-button">%</button>
-            <button value="CE" class="operation-button">CE</button>
-            <button value="C"  class="operation-button">C</button>
-            <button value="del" class="operation-button" id="del"><img src="C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop" alt="download.png" width="10%" height="10%"></button>
-            <br>
-            <button value="7" class="digit-button">7</button>
-            <button value="8" class="digit-button">8</button>
-            <button value="9" class="digit-button">9</button>
-            <button value="*" class="digit-button">x</button>
-            <br>
-            <button value="4" class="digit-button">4</button>
-            <button value="5" class="digit-button">5</button>
-            <button value="6" class="digit-button">6</button>
-            <button value="-" class="digit-button">-</button>
-            <br>
-            <button value="1" class="digit-button">1</button>
-            <button value="2" class="digit-button">2</button>
-            <button value="3" class="digit-button">3</button>
-            <button value="+" class="digit-button">+</button>
-            <br>
-            <button value="-" class="sign-button">+/-</button>
-            <button value="0" class="digit-button">0</button>
-            <button value="." class="digit-button">.</button>
-            <button value="=" class="operation-button" id="equal">=</button>
-        </div>
-        
-
+    <script src="calculator.js"></script>
     </div>
 </body>
 </html>

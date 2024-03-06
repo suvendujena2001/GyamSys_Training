@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      .bi {
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        background-repeat: no-repeat;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <script>
+      function myfunc() {
+        document.getElementById("change").innerHTML = "JAVASCRIPT";
+      }
+    </script>
+  </head>
+  <body class="bi" style="background-image: url(OIP.jpg)">
+    <h1 id="change">Welcome to scripting language</h1>
+    <!-- <button type="button"
+      onclick='document.getElementById("change").innerHTML="language is called javascript"'>Click</button>
+    </button>/-->
+    <button type="button" onclick="myfunc()">Click</button><br />
+
+    <h2>Get element by id</h2>
+    <p id="intro">Learning id</p>
+    <p id="demo"></p>
+    <div id="container">
+      <h1>APPLYING AJAX</h1>
+      <button type="button" onclick="load()">content change</button>
+    </div>
+    <script>
+      const element = document.getElementById("intro");
+      document.getElementById("demo").innerHTML =
+        "The text from the intro paragraph is: " + element.innerHTML;
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

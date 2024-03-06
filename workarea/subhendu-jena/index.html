@@ -41,7 +41,7 @@
     width: 320px;
     height: 130px;
     padding: 5px;
-    border: 6px solid red;
+    border: 6px dashed rgb(59, 61, 235);
     margin: 10;
     color:black;
     font-size: larger;
@@ -55,7 +55,7 @@
   }
 
   div p{
-    color:steelblue;
+    color:cornsilk;
     font-size: larger;
   }
 #indexing{
@@ -76,6 +76,44 @@ div img {
     align-items: center;
     gap: 40px;
     text-align: justify;
+}
+
+{
+  box-sizing: border-box;
+}
+
+.left {
+  background-color:darkcyan;
+  color:black;
+  font-size: larger;
+  padding: 20px;
+  float: left;
+  width: 25%;
+}
+
+.main {
+  background-color:dodgerblue;
+  color:black;
+  font-size: larger;
+  padding: 20px;
+  float: left;
+  width: 50%;
+}
+
+.right {
+  background-color:cornflowerblue;
+  color: black;
+  padding: 20px;
+  float: left;
+  width: 25%; 
+  font-size: larger;
+}
+
+
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }
 
     </style>
@@ -119,7 +157,7 @@ div img {
 
 
     <section style="text-align: center;">
-       <h1 style="color:rgb(252, 139, 192);"><span style="border: solid;">Login to Buy Books:</span></h1>
+       <h1 style="color:rgb(36, 0, 17);"><span style="border: solid;">Login to Buy Books:</span></h1>
         <form>
             <label>Name:</label>
             <input type="text" name="Name" id="name" /><br/>
@@ -136,7 +174,7 @@ div img {
     </section>
 
     <section style="text-align: center;">
-        <h2 style="color: rgb(252, 139, 192);"><span style="border: solid;">Harry Potter and The Goblet of Fire:</span></h2><br/>
+        <h2 style="color: rgb(196, 46, 86);"><span style="border: solid;">Harry Potter and The Goblet of Fire:</span></h2><br/>
 
 <img src="https://i5.walmartimages.com/asr/a1645c74-72ff-4b4e-a598-5be7ad4481f4_1.aa688a67c7b76f2c6813079a345c581b.jpeg" width="350" height="263" alt="Klematis">
 <div id="new2" style="margin-left: 36%;">Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry, and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete.</div>
@@ -145,7 +183,7 @@ div img {
 
     <div style="color: crimson;font-size: x-large; text-align: justify;" >
             Weekly Author's note:<br/>
-            <img src="https://www.famousauthors.org/famous-authors/amish-tripathi.jpg" style="margin-left: 25%;" width="800" height="600" alt="Amish Was Here">
+            <img src="https://www.famousauthors.org/famous-authors/amish-tripathi.jpg" style="margin-left: 25%; opacity: 0.678;" width="800" height="600" alt="Amish Was Here" >
             <p id="indexing">
                 “But remember, no matter how good your marketing skills are, a bad book would not work. So, you need both solid writing and good marketing. It cannot be either of the two,” says the author whose books have sold seven million copies and been translated into 20 Indian and international languages since 2010.
                 I find nothing wrong in being called a ‘Hindu’ writer, but I dislike the implicit assumption in that terminology.”
@@ -157,12 +195,23 @@ Mixing enormous research of the ancient Indic texts with history, mythology, eth
 While a gripping thriller, Scion, unsurprisingly, comes with a subtext that is as relevant in our times as it was in the days of Ram Chandra. Amish speaks to Antara Das and Sandipan Deb in a to-and-fro email interview about his latest book, on the philosophies implicit in his writing and the resonance that mythological fiction has for our times.
 
 Why did you decide to do a series on Lord Ram?
-
-I don’t select my subjects. I believe they are decided by fate. I just go with the flow. When my publisher and I signed the contract for a new series in early 2013, I did not know what I would be writing about, and the publisher was aware of that. At a literature festival in Mumbai more than a year and a half ago, an incident occurred that upset me. It upset me enough to write an article in Hindustan Times at that time, explaining why I respect Lord Ram while readily accepting that what he did with Sita Maa was unfair. And I also decided that day that I will write my next series on Lord Ram.
-
-Beneath the story of Scion of Ikshvaku, you are talking about ideal governance and society, and you cover a huge distance, from Manu Smriti to anarcho-capitalism. Do you have any leanings towards any philosophy, from one end of the spectrum to the other?
-            </p>
+</p>
     </div>
 </main>
+<footer>
+    <section style="display:flex;">
+        <span class="left">
+            <img style="float:right" src="https://th.bing.com/th/id/OIP.xU-OMZ9XA2WEmtM8H0vU4wHaD4?rs=1&pid=ImgDetMain" height="50" width="50"><a href="https://gyansys.com/"><p>GyanSys Inc.</p></a>
+        </span>
+        
+        <span class="main">
+        <img style="float:right" src="https://cdn2.iconfinder.com/data/icons/linkedin-ui-flat/48/LinkedIn_UI-02-1024.png" height="50" width="50"><a href="https://in.linkedin.com/in/subhendu-kumar-jena-090096206"><p>LinkedIn</p></a>
+        </span>
+        
+        <span class="right">
+            <img style="float:right" src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" height="50" width="50"><a href="https://github.com/subhendujena2001"><p>GitHub</p></a>
+        </span>
+        </section>
+</footer>
 </body>
 </html>

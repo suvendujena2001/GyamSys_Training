@@ -48,7 +48,15 @@ Postman is an API platform for building and using APIs.
 	- Now sending the request and viewing the response.
 4. Response:
     - The JSON response body with an array of object (books).
+
+
 Request Methods:
 
+| Method | name | Operation |
+|--------|------|-----------|
+| GET | Retrieve data | (Read) |
+| POST | Send data | (Create) |
+| PUT/PATCH | Update data | (Update)  PUT usually replaces an entire resource, whereas PATCH usually is for partial updates |
+| DELETE | Delete | data (Delete) |
  
 

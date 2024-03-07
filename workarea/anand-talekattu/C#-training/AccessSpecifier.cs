@@ -6,6 +6,7 @@ namespace MyApp1
         private int Id=101;
         public string name="Anand";
         protected int age=21;
+        internal string city="Pune";
         public void Display1()
         {
             //Private Member Accessible with the Containing Type only

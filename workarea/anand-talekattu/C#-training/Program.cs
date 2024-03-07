@@ -7,10 +7,15 @@ namespace MyApp
     { 
         static void Main(string[] args)
         {
-            DemoClass demoClass =new DemoClass();
-            demoClass.display();
-            AccessSpecifierClass2 asc2=new AccessSpecifierClass2();
-            asc2.Display2();
+           AccessSpecifierClass1 obj=new AccessSpecifierClass1();
+           Console.WriteLine(obj.city);
+
+
+
+            // DemoClass demoClass =new DemoClass();
+            // demoClass.display();
+            // AccessSpecifierClass2 asc2=new AccessSpecifierClass2();
+            // asc2.Display2();
              
             // PropertyDemo PropertyDemo = new PropertyDemo();
             // //We cannot access the private data members

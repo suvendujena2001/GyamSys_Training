@@ -33,3 +33,39 @@ Derived Class in Same Assembly: YES<br>
 Non-Derived Class in Same Assembly: NO<br>
 Derived Class in Other Assemblies: YES<br>
 Non-Derived Class in Other Assemblies: NO<br>
+
+## Internal Access Specifier or Access Modifier in C#:
+Whenever a member is declared with Internal Access Specifier in C#, then it is available anywhere within the containing assembly. It’s a compile-time error to access an internal member from outside the containing assembly.
+
+So, the scope of the internal members in C#.NET is as follows:
+
+With the Class: YES<br>
+Derived Class in Same Assembly: YES<br>
+Non-Derived Class in Same Assembly: YES<br>
+Derived Class in Other Assemblies: NO<br>
+Non-Derived Class in Other Assemblies: NO<br>
+
+## Protected Internal Access Specifier or Access Modifier in C#:
+Protected Internal Members in C# can be accessed anywhere within the same assembly i.e. in which it is declared or from within a derived class from another assembly. So, we can think, it is a combination of Protected and Internal access specifiers.
+
+So, the scope of the protected internal members in C#.NET is as follows:
+
+With the Class: YES<br>
+Derived Class in Same Assembly: YES<br>
+Non-Derived Class in Same Assembly: YES<br>
+Derived Class in Other Assemblies: YES<br>
+Non-Derived Class in Other Assemblies: NO<br>
+
+## Private Protected Access Specifier or Access Modifier in C#:
+The private protected members are accessible within the class and within the derived class of the same assembly but cannot be accessed from non-derived class of same assembly or any class from another assembly.
+
+So, the scope of the private protected members in C#.NET is as follows:
+
+With the Class: YES<br>
+Derived Class in Same Assembly: YES<br>
+Non-Derived Class in Same Assembly: NO<br>
+Derived Class in Other Assemblies: NO<br>
+Non-Derived Class in Other Assemblies: NO<br>
+
+## Access Specifiers with Type in C#:
+We can use all 6 access specifiers with type members in C# but type allows only two access specifiers i.e. Internal and Public. It is a compile-time error to use private, protected, protected internal, and private protected access specifiers with types. So, the only allowed access specifiers for a type is internal and public and if we have not specified any access specifier, then by default it is going to be internal.

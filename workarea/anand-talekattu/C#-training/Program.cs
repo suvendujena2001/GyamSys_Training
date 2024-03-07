@@ -6,18 +6,18 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            DataTypes dataDisplay=new DataTypes();
-            dataDisplay.displayDataTypes();
+            // DataTypes dataDisplay=new DataTypes();
+            // dataDisplay.displayDataTypes();
 
             //TypeCasting typeCasting=new TypeCasting();
             //typeCasting.implicitDisplay();
             //typeCasting.explicitDisplay();
 
-            //FunctionDemo functionDemo=new FunctionDemo();
-            //functionDemo.add(5,29);
-            //functionDemo.add(5, 29.1f);
-            //functionDemo.add(5.1f, 29.1f);
-            //functionDemo.add(5, 6,7);
+            FunctionDemo functionDemo=new FunctionDemo();
+            functionDemo.add(5,29);
+            functionDemo.add(5, 29.1f);
+            functionDemo.add(5.1f, 29.1f);
+            functionDemo.add(5, 6,7);
 
             //Command line arguments
             //Console.WriteLine($"First Command Line Argument {args[0]}");

@@ -1,0 +1,17 @@
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.exe
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.deps.json
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.runtimeconfig.json
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.dll
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.pdb
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.Form1.resources
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.csproj.GenerateResource.cache
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.AssemblyInfoInputs.cache
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.AssemblyInfo.cs
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.dll
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\refint\WinFormsApp.dll
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.pdb
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.genruntimeconfig.cache
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\ref\WinFormsApp.dll
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.Properties.Resources.resources

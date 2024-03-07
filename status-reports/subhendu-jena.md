@@ -78,11 +78,12 @@
     2. ALTER and UPDATE Tables
     3. Use build-in functions to group aggregated results(GROUP BY, HAVING, ORDER BY, COUNT(), SUM()).
 
-## Self-Training and Practice(Daily)
+## Self-Training and Practice(Others)
     1. Completed POSTMAN API Fundamentals Student Expert(Earned Badge and Certification).
     2. Started practicing DOCKER and basics of Containerization.
     3. Started YAML Scripting.
     4. Learn and Practice LINUX(on VMWare).
+    5. Completed YAML Scripting.
 
 ## Office-WEEK 1(5-FEB-2024 to 09-FEB-2024)
     1. Onboarding.

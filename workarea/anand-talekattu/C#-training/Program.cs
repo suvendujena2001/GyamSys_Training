@@ -1,23 +1,28 @@
 ﻿using System;
-
+using System.ComponentModel.DataAnnotations;
+using MyApp1;
 namespace MyApp
 {
     internal class Program
     { 
         static void Main(string[] args)
         {
-
-            PropertyDemo PropertyDemo = new PropertyDemo();
-            //We cannot access the private data members
-            //So, using public properties (SET Accessor) we are setting 
-            //the values of private data members
-            PropertyDemo.EmpId = 101;
-            PropertyDemo.EmpName = "Pranaya";
-            //Using public properties (Get Accessor) we are Getting 
-            //the values of private data members
-            Console.WriteLine("PropertyDemo Details:");
-            Console.WriteLine("PropertyDemo id:" + PropertyDemo.EmpId);
-            Console.WriteLine("PropertyDemo name:" + PropertyDemo.EmpName);
+            DemoClass demoClass =new DemoClass();
+            demoClass.display();
+            AccessSpecifierClass2 asc2=new AccessSpecifierClass2();
+            asc2.Display2();
+             
+            // PropertyDemo PropertyDemo = new PropertyDemo();
+            // //We cannot access the private data members
+            // //So, using public properties (SET Accessor) we are setting 
+            // //the values of private data members
+            // PropertyDemo.EmpId = 101;
+            // PropertyDemo.EmpName = "Pranaya";
+            // //Using public properties (Get Accessor) we are Getting 
+            // //the values of private data members
+            // Console.WriteLine("PropertyDemo Details:");
+            // Console.WriteLine("PropertyDemo id:" + PropertyDemo.EmpId);
+            // Console.WriteLine("PropertyDemo name:" + PropertyDemo.EmpName);
 
             //  // we can call the add method directly or through class name
             // StaticDemo.Add(); //Calling Add Method using Class Name
@@ -53,5 +58,11 @@ namespace MyApp
             //Console.WriteLine($"Second Command Line Argument {args[1]}");
             //Console.WriteLine($"Third Command Line Argument {args[2]}");
         }
+    }
+
+    public class DemoClass:AccessSpecifierClass1{
+      public void display(){
+        Console.WriteLine(age);
+      }
     }
 }

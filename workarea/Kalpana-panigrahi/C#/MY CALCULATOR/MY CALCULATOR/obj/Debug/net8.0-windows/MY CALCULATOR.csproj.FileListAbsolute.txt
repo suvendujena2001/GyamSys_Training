@@ -1,0 +1,16 @@
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\bin\Debug\net8.0-windows\MY CALCULATOR.exe
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\bin\Debug\net8.0-windows\MY CALCULATOR.deps.json
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\bin\Debug\net8.0-windows\MY CALCULATOR.runtimeconfig.json
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\bin\Debug\net8.0-windows\MY CALCULATOR.dll
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\bin\Debug\net8.0-windows\MY CALCULATOR.pdb
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY_CALCULATOR.Form1.resources
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY CALCULATOR.csproj.GenerateResource.cache
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY CALCULATOR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY CALCULATOR.AssemblyInfoInputs.cache
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY CALCULATOR.AssemblyInfo.cs
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY CALCULATOR.csproj.CoreCompileInputs.cache
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY CALCULATOR.dll
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\refint\MY CALCULATOR.dll
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY CALCULATOR.pdb
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\MY CALCULATOR.genruntimeconfig.cache
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\MY CALCULATOR\MY CALCULATOR\obj\Debug\net8.0-windows\ref\MY CALCULATOR.dll

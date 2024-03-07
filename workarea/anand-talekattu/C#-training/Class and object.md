@@ -54,7 +54,7 @@ namespace ClassObjectsDemo
 - Partial Class
 - Static Class
 
-## What is a Constructor in C#?
+## Constructor in C#
 It is a special method present inside a class responsible for initializing the variables of that class.
 The name of the constructor method is exactly the same name as the class in which it was present. 
 The constructor method does not return any value. That means it is a non-value returning method. 

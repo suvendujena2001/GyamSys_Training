@@ -14,3 +14,5 @@
  - Learned about CSS.
  - Learned basics about Javascript.
 
+> Completed and passed [Foundational C# with Microsoft Certification.](https://www.freecodecamp.org/certification/fcc6489365f-f584-48a6-9b36-2783d8547867/foundational-c-sharp-with-microsoft)
+

@@ -45,3 +45,10 @@
 ** On the last working day, we gave another SQL evaluation test.
 
 ## Week 5 (4th March 2024 to 8th March 2024)
+** Sessions on Backend development was taken. We were asked to practice the codes. I practised the taught topics  and uploaded my codes on GitHub for evaluation.
+
+** SQL PPTs were shared and we were asked to go through it.
+
+** We gave an evaluation test on SQL and DOTNET.
+
+** On the last working day, we gave another SQL and DOTNET evaluation test.

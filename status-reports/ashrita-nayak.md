@@ -52,3 +52,5 @@
 ** We gave an evaluation test on SQL and DOTNET.
 
 ** On the last working day, we gave another SQL and DOTNET evaluation test.
+
+## Week 6 (11th March 2024 to 15th March 2024)

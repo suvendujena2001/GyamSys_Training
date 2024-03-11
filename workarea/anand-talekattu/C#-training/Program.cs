@@ -7,6 +7,13 @@ namespace MyApp
   {
     static void Main(string[] args)
     {
+       Address address = new Address("B1-3029", "BBSR", "Odisha");
+       Employee employee = new Employee(1001, "Ramesh", address);
+       employee.Display();
+
+      // Cuboid cuboid=new Cuboid(2,3,4);
+      // Console.WriteLine(cuboid.Volume());
+
       // Console.WriteLine("Transaction doing SBI Bank");
       // IBank sbi = AbstractionDemo.GetBankObject("SBI");
       // sbi.ValidateCard();

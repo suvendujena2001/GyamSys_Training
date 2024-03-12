@@ -2,87 +2,33 @@
 
 ---
 
+# Month of February
+
+---
 ## Week 1 (5/2/2024 - 11/2/2024)
 
 Induction, Team lunch
-
 Practice on Git, Html and C# basic 
-
 Training and Self practice on the following topics
 
-### HTML
-1. Paragraph
-2. Tags
-3. boiler plate
-   - head
-   - meta tags
-5. Tags
-6. Lists
-   - Ordered list
-   - Unordered list
-   - Nested list
-7. Anchor tag
-8. Image
-9. Inline elements
-    - div
-    - span
-    - hr
-    - br
-    - sup
-    - sub
-10. Entities
-11. Semantic Markup
-    - main
-    - nav
-    - article
-    - section
-12. Table
-13. Forms
-14. Buttons
-15. DOM
-    
+1. ### HTML
+Learnt and practiced this topics
+Paragraph, Tags, boiler plate, head, meta tags, Tags, Lists (Ordered list, Unordered list, Nested list)
+Anchor tag, Image, Inline elements ( div, span, hr, br, sup, sub), Entities, Semantic Markup, main, nav, article, section
+Table, Forms and Buttons DOM.
 
-Training and Self practice on the following topics
+2. ### CSS
+Learnt and Self practiced on the following topics
+Styling, (inline style, Stylesheet, External stylesheet), box Model, Class, Id, Relation ( Parent, Child, Siblings, Descendants )
+Attributes, Properties, Flex box, Responsive page, Media queries, Events, Animations, Pseudo Elements, Pseudo Class, Animations
+Transition, Padding and Margin.
 
-### CSS
-1. Styling
-   - inline style
-   - Stylesheet
-   - External stylesheet
-2. box Model
-3. Class
-4. Id
-5. Relation ( Parent, Child, Siblings, Descendants )
-6. Attributes
-7. Properties
-8. Flex box
-9. Responsive page
-   - Media queries
-10. Events
-11. Animations
-12. Pseudo Elements
-13. Pseudo Class
-14. Animations
-15. Transition
-16. padding
-17. Margin
+3. ### Java Script
+Learnt and practiced on the following topics
+Evolution of Javascript, Data types, Loop, If statements, variable (var, const, let)
+Api, alert, setroute, Prompt, Set index, Hoisting.
 
-Training and Self practice on the following topics
-
-### Java Script
-1. Evolution of Javascript
-2. Data types
-3. Loop
-4. If statements
-5. variable
-   -  var
-   -  const
-   -  let
-6. Api
-7. alert, setroute, Prompt, Set index
-8. Hoisting
-
-### Project
+4. ### Project
     
 - Revising the above topics and Building a Schedule Planner Website
 - Hosting the website on Github
@@ -93,45 +39,21 @@ Training and Self practice on the following topics
 
 ---
 
-Training and Self practice on the following topics
+1. ### Java Script
+1. Learnt and practiced on the following topics
+DOM, Event loop, Callback queue, Call by value and reference, Debugger, Execution callstack, Object, Map, Filter
+Array operation ( Push, Pop, Slice, Concat, Find )
+AJAX, Closures, APi - status codes, Hosting, Scalling, Load balancer
 
-### Java Script
-1. DOM
-2. Event loop
-3. Callback queue
-4. Call by value and reference
-5. Debugger
-6. Execution callstack
-7. Object
-   - Map
-   - Filter
-8. Array 
-   - Push
-   - Pop
-   - Slice
-   - Concat
-   - Find
-9. AJAX
-10. Closures
-11. APi - status codes
-12. Hosting, Scalling, Load balancer
+2. implemented these concepts on the Schedule planner project and desined a load and save notes feature
 
-### SQL
-1. Data Base
-2. RDBMS
-3. Transaction Management
-4. Create Database
-5. Create Table
-   - Insert
-   - Alter
-   - Rename
-   - Modify
-   - Delete
-   - Rename
-   - Drop
-   - Null
+2. ### SQL
+1. Learnt and practiced on the following topics
+Data Base, RDBMS, Transaction Management, Create Database, Create Table
+2. implemented table operations ( Insert, Alter, Rename, Modify, Delete, Rename, Drop, Null)
 
-### Testing
+3. ### Testing
+Learnt the following topics on testing
 1. Unit testing
 2. Verification
 3. SDLC
@@ -140,44 +62,26 @@ Training and Self practice on the following topics
    - Azure ticketing
    - Jira ticketing
 
-### Project
-Update on the project
-1. Added file saving and loading using JavaScript.
-
 ---
 
 ## Week 3 (19-02-2024 - 25-02-2024)
 
 ---
 
-Training and Self practice on the following topics
+1. ### Java Script
+1. Learnt and practiced on the following topics
+Async/Await, Promises, Modules, Browser Object Modelling, SASS, TypeScript.
+2. implemented loops and modules to create a schedule area in updated project.
 
-### Java Script
-1. Async/Await
-2. Promises
-3. Modules
-4. Browser Object Modelling
-5. SASS
-6. TypeScript
+2. ### SQL
+Learnt and practiced on the following topics of sql
+Crud Operation on Database (Truncate, Drop, Delete, Where, Operators,Groupby,Having)
 
-### SQL
-1. Operation on Database
-   - Truncate
-   - Drop
-   - Delete
-   - Where
-   - Operators 
-   - Groupby
-   - Having
+3. ### Testing 
+Learnt the following topics of testing
+Waterfall Methodology, Agile Methodology, Postman Platform, Jira
 
-### Testing 
-1. Waterfall Methodology
-2. Agile Methodology
-3. Postman Platform
-4. Jira
-
-
-### Project
+4. ### Project
 Update on the project
 1. Created a Login Page using Object and DOM
 
@@ -187,46 +91,58 @@ Update on the project
 
 ---
 
-### Java Script
-1. Auhtentication
-2. Authorization
-3. Cryptographic Hashing Function
-4. Password Salt
-5. Middle Ware
-6. API 
-   - Geolocation 
-   - Form Validation
-   - Browse History API
+1. ### Java Script
+Leant and Practiced the following topics
+Auhtentication, Authorization, Cryptographic Hashing Function, Password Salt, Middle Ware API (Geolocation, Form Validation, Browse History API)
 
-### SQL 
+2. ### SQL 
 
-Basics of SSMS.
-Practice on the following topics.
-
-1. Joins
+1. learnt the Basics of SSMS.
+2. Practiced the following topics.
+Joins
    - Inner
    - Full
    - Left
    - Right
-2. Operators
+Operators
+3. Restored the Adventure Work database and executed Joins, Views, Stored Procedures.
+   
+3. ### Dot NET (C#)
 
-### Dot NET (C#)
+Learnt and Practiced on the following topics 
+Basic structure, Input and Output, Data Types, Type conversion, Operators, If-Else, Switch
+Loops( For, For each, While, Do While), Array, Functions, collections - Array List
 
-Practice on the following topics 
+---
 
-1. Basic structure
-2. Input and Output
-3. Data Types
-4. Type conversion
-5. Operators
-6. If-Else
-7. Switch
-8. Loops
-   - For
-   - For each
-   - While
-   - Do While
-9. Array
-10. Functions
-11. collection
-    - Array List
+# Month of March
+
+---
+
+## Week 1 (4/03/2024 - 10/03/2024)
+
+1. ### C# Dot NET 
+
+1. Learnt and practiced the loops (foreach)
+2. Practiced Jagged array, Param array, Array list, Hash tables, Methodes.
+3. Learnt and Practiced classes and objects, Constructors and destructors, Access modifiers (Public, Private, Protected and Internals).
+4. Learnt and Practiced method overloading, exception handling (try, catch, finally and throw) 
+5. Learnt Winfom a basic Application like Events, Controls - textbox, lables, buttons.
+6. Implemented this on a Basic calculator application using switchcase.
+
+2. ### SQL 
+   Practiced on (AVG, SUM, MIN, MAX, COUNT) functions.
+
+3. ### Postman Api
+1. Practiced and implemented Creating a Workspace, creating a collection, Variables, Query Parameters, Multiple query Parameters, Path-variables, GET command.
+2. Implemented POST command, Authorization header, Sending data, setting variables programmatically, PATCH and DELETE command
+3. Completed the Postman API Fundamentals Student Expert [certification](https://badgr.com/public/assertions/0UtJiKwVQnazxVE3O7AZyw?identity__email=goudasonu00@gmail.com).
+
+## Week 2 (11/03/2024 - 17/03/2024)
+
+1. ### C# Dot NET
+1. Working on WinForms Dental clinic management project
+2. working on the UI of pages and creating a database to store the patient data.
+3. Training on C# Inheritance, data tables, Datasets, Data row, Enum.
+4. Self-Practice on inheritance and data sets and enums
+   

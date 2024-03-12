@@ -1,6 +1,7 @@
 ## Employee Table
 
 | EmpId | FirstName | LastName | Email | Salary | DeptId | HireDate |
+| ----- | --------- | -------- | ----- | ------ | ------ | -------- |
 | 1 | 'John' | 'King' | 'jking@test.com' | 24000 | 10 | 2018-12-25 |
 | 2 | 'James' | 'Bond' | NULL | 17000 | 20 | 2018-12-25 |
 | 3 | 'Neena' | 'Kochhar' | 'neena@test.com' | 15000 | 20 | 2017-08-25 |
@@ -11,6 +12,7 @@
 ## Department Table
 
 | DeptId | Name |
+| ------ | ---- |
 | 10 | 'Finance' |
 | 20 | 'HR' |
 | 70 | 'SAP" |
@@ -18,6 +20,7 @@
 ## Employee_backup
 
 | EmpId | FirstName | LastName | Email | Salary | HireDate |
+| ----- | --------- | -------- | ----- | ------ | -------- |
 | 1 | John | King | jking@test.com | 24000 | 2018-12-25
 | 2 | James | Bond | NULL | 17000 | 2018-12-25
 | 3 | Neena | Kochhar | neena@test.com | 15000 | 2017-08-25

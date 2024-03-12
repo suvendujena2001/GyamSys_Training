@@ -1,1 +1,17 @@
+using System;
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // CIRCLE
 
+            double pi = 3.14;
+            Console.WriteLine("Enter the radius of circle");            
+            double radius=double.Parse(Console.ReadLine());
+            double area = pi * radius * radius;
+            Console.WriteLine($"The Area of the given Circle is {area}");
+        }
+    }
+}

@@ -7,9 +7,13 @@ namespace MyApp
   {
     static void Main(string[] args)
     {
-       Address address = new Address("B1-3029", "BBSR", "Odisha");
-       Employee employee = new Employee(1001, "Ramesh", address);
-       employee.Display();
+         int[] initialArray = { 2, 4, 6 };
+        ArrayDemo arrayDemo=new ArrayDemo(initialArray);
+        Console.WriteLine(arrayDemo.arr1[0]);
+
+      //  Address address = new Address("B1-3029", "BBSR", "Odisha");
+      //  Employee employee = new Employee(1001, "Ramesh", address);
+      //  employee.Display();
 
       // Cuboid cuboid=new Cuboid(2,3,4);
       // Console.WriteLine(cuboid.Volume());

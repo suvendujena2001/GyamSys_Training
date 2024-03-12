@@ -1,10 +1,79 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Numerics;
 
 namespace dotnet_practice;
 
+class Animal
+{
+    public void eat()
+    {
+        Console.WriteLine("eating...");
+    }
+}
+class Dog : Animal
+{
+    public void bark()
+    {
+        Console.WriteLine("Dog is barking");
+    }
+}
+class Mammal : Animal
+{
+    public void Run()
+    {
+        Console.WriteLine("Mammal is running.");
+    }
+}
+
+class Horse : Mammal
+{
+    public void Gallop()
+    {
+        Console.WriteLine("Horse is galloping.");
+    }
+}
+interface I1
+{
+    void Method1();
+}
+
+interface I2
+{
+    void Method2();
+}
+
+class MyClass : I1, I2
+{
+    public void Method1()
+    {
+        Console.WriteLine("Method1 is called.");
+    }
+
+    public void Method2()
+    {
+        Console.WriteLine("Method2 is called.");
+    }
+}
+
+abstract class Abstractclass{
+    string name;
+    void print(string s);
+}
+private class Nameprint: Abstractclass
+{
+    void Nameprint(string s)
+    {
+        name = s;
+    }
+    void printf(string s)
+    {
+        Console.WriteLine(name);
+    }
+    
+}
 class Program
 {
+
     public void result(params object[] array)
     {
         for (int i = 0; i < array.Length; i++)
@@ -126,6 +195,20 @@ class Program
         {
             Console.WriteLine("hello we are in final block");
         }
+
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+
+        Horse horse = new Horse();  
+        horse.eat();
+        horse.Gallop();
+
+        MyClass myClass = new MyClass();
+        myClass.Method2();
+        myClass.Method1();  
+
+
 
     }
     

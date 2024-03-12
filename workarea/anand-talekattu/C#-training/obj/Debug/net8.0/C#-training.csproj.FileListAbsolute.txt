@@ -1,0 +1,15 @@
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\bin\Debug\net8.0\C#-training.exe
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\bin\Debug\net8.0\C#-training.deps.json
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\bin\Debug\net8.0\C#-training.runtimeconfig.json
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\bin\Debug\net8.0\C#-training.dll
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\bin\Debug\net8.0\C#-training.pdb
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\C#-training.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\C#-training.AssemblyInfoInputs.cache
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\C#-training.AssemblyInfo.cs
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\C#-training.csproj.CoreCompileInputs.cache
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\C#-training.sourcelink.json
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\C#-training.dll
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\refint\C#-training.dll
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\C#-training.pdb
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\C#-training.genruntimeconfig.cache
+C:\Users\AnandMallikarjun\OneDrive - GyanSys Inc\Desktop\GET training\get-2024-microsoft\workarea\anand-talekattu\C#-training\obj\Debug\net8.0\ref\C#-training.dll

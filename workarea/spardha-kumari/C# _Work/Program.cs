@@ -1,33 +1,66 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("hello");
-Console.Read();
-Console.WriteLine(123);
-Console.WriteLine("true");
-Console.WriteLine(true);//True
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-//Assigning a value is also referred to as "setting the variable", or simply, a "set" operation.
-string firstName;
-firstName = "Bob";
-Console.WriteLine(firstName);
-firstName = "Liem";
-Console.WriteLine(firstName);
-firstName = "Isabella";
-Console.WriteLine(firstName);
-firstName = "Yasmin";
-Console.WriteLine(firstName);
-//\n sequence will add a new line, and a \t sequence will add a tab.
+namespace Oops_app
+{
+   /*  class Point
+    {
+        internal int x;
+        internal int y;
+        public void Test()
+        {
+            Point p = new Point();
+            
+        }
 
-Console.WriteLine("Hello \"World\"!");
-Console.WriteLine("c:\\source\\repos");
+    }*/
 
-Console.WriteLine("Generating invoices for customer \"Contoso Corp\" ...\n");
-Console.WriteLine("Invoice: 1021\t\tComplete!");
-Console.WriteLine("Invoice: 1022\t\tComplete!");
-Console.WriteLine("\nOutput Directory:\t");
+    class Car
+    {
+        internal string model;
+        internal string color;
+        internal int price;
 
-int version = 11;
-string updateText = "Update to Windows";
-string message = $"{updateText} {version}";
-Console.WriteLine(message);
+        internal void PrintInfo()
+        {
+            Console.WriteLine("Model"+model); Console.WriteLine("color"+color);
+            Console.WriteLine("price"+price); 
+            Console.WriteLine("see how the internal access modifiers work");
+            Console.ReadLine();
+        }
+    }
+
+    //class Program:Point { 
+    class Program { 
+        static void Main()
+        {
+           // Point p1 = new Point();
+            Program p2 = new Program();
+            Car c1 = new Car();
+            c1.model = "Ferrari";
+            c1.color = "Pink";
+            c1.price = 500000000;
+            c1.PrintInfo();
 
 
+            
+
+        }
+    }
+}
+/*namespace N
+{
+    class Sample
+    {
+        public void Display()
+        {
+            Oops_app.Point p = new Oops_app.Point();
+           // p.x and p.y can be accessed.
+        }
+        public static void Main() { }
+    }
+}
+*/

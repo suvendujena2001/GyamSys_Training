@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <div id="counter"></div>
+    <button id="btn"> Counter</button>
+</body>
+<script type="text/javascript">
+    /*var person = {
+        firstname :"kalpana",
+        lastname : "panigrahi",
+        fullname : function(){
+            return this.firstname+this.lastname
+        }
+    };
+    document.write("<h1>" + person.fullname())*/
+    var i=0
+    document.getElementById('btn').addEventListener("click", 
+    function(){
+        document.getElementById('counter').innerHTML = i;
+        i++
+    }
+    )
+    document.getElementById('btn').addEventListener("mouseenter",colorchange);
+    function colorchange(){
+        document.getElementById('counter').style.backgroundColor = "red"
+    }
+
+
+</script>
+</html>

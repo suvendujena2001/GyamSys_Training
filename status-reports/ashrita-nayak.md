@@ -32,4 +32,25 @@
 ** On the last working day of the week, we were given assignments to complete.
 
 ## Week 4 (26th Feb 2024 to 1st March 2024)
+** JavaScript & SQL assignments were done and were uploaded on Github.
 
+** An evaluation test was taken on SQL and further PPTs were shared. Then a session regarding SSMS was taken, and our doubts were also cleared.
+
+** Evaluation test on Unit testing part was taken.
+
+** Training on Backend development started and we were taught DOTNET.
+
+** We were given to practise C# and upload the same on Github.
+
+** On the last working day, we gave another SQL evaluation test.
+
+## Week 5 (4th March 2024 to 8th March 2024)
+** Sessions on Backend development was taken. Topics such as Foreach, Arrays - (Multi-Dimensional Arrays, Jagged Arrays, Param Arrays), Methods, Return Types, Collections - (Array List, Hashtable, SortedList, Stack, Queue, BitArray) were taught. We were asked to practice the codes. I practised the taught topics  and uploaded my codes on GitHub for evaluation.
+
+** SQL PPTs were shared and we were asked to go through it.
+
+** We gave an evaluation test on SQL and DOTNET.
+
+** On the last working day, we gave another SQL and DOTNET evaluation test.
+
+## Week 6 (11th March 2024 to 15th March 2024)

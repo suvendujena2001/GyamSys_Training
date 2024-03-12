@@ -120,4 +120,69 @@ Node Js)
 1. Training on Testing(JIRA)
 2. Training on how to implement the JavaScript concepts(callbacks, closures and Promises)
 3. Training and databases concepts(Use SSMS for implementing queries like JOINS, Indexes  etc ), software development good practices(Agile process)
+
+## WEEK 4(26-FEB-2024 to 03-MAR-2024)
+
+### DAY - 1 (Feb 26, 2024)
+
+1. SQL Week 2 evaluation 
+2. API testing 
+3. Training On SSMS and SQL
+4. Self  Learning SSMS
+5. SQL queries and statements practice
+6. Understanding JIRA Fundamentals
+
+### DAY - 2 (Feb 27, 2024)	
+
+1. Learning SQL 
+2. .NET Training (Introduction)by Suman
+3. Self learning C# and .NET(Introduction, Basics)
+4. Self learning POSTMAN API(How API works, Types of API, REST API, status codes).
+5. Self Learning on Unit Testing, Black box and White Box (introduction)
+
+### DAY - 3 (Feb 28, 2024)	
+
+1. Testing Fundamentals (Verification and Validation)
+2. API Fundamentals
+3. .NET AND C# training
+4. SQL Practice on SSMS and training
+5. Self Learning Bootstrap and jQuery Basics
+6. Types of White Box techniques and SDLC models
+
+### DAY - 4 (Feb 29, 2024)
+
+1. Evaluation on Unit Testing(POSTMAN, AGILE, WHITEBOX AND BLACKBOX, JIRA)
+2. C# TRAINING (NULL-COALESCING OPERATOR, NULLABLE OPERATOR, ARRAYS and Methods) 
+3. Self learning C# Concepts 
+4. Self learning Typescript Concepts
+5. SQL PRACTICE ON SSMS ()
+
+### DAY - 5 (Feb 01, 2024)
+
+1. SQL PRACTICE
+2. LEARNING C# CONCEPTS
+(.NET Memory Management,
+Value Types and Reference Types,
+Arrays,
+Multi-Dimensional Arrays,
+Jagged Arrays,
+Param Arrays,
+Collections,
+ArrayList,
+Hashtable,
+SortedList,
+Stack,
+Queue,
+BitArray)
+
+3. SASS PRACTICE
+   
+a. Preprocessing
+b. Variables
+c. Nesting
+d. Partials
+e. Modules
+f. Mixins
+g. Inheritance
+h. Operators
         

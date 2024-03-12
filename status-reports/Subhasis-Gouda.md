@@ -2,23 +2,11 @@
 
 ---
 
-## week 1 (5/2/2024 - 11/2/2024)
-
----
-
-## Day 1
+## Week 1 (5/2/2024 - 11/2/2024)
 
 Induction, Team lunch
 
----
-
-## Day 2
-
 Practice on Git, Html and C# basic 
-
----
-
-## Day 3
 
 Training and Self practice on the following topics
 
@@ -53,9 +41,6 @@ Training and Self practice on the following topics
 14. Buttons
 15. DOM
     
----
-
-## Day 4
 
 Training and Self practice on the following topics
 
@@ -81,13 +66,6 @@ Training and Self practice on the following topics
 15. Transition
 16. padding
 17. Margin
-    
-- Revising the above topics and Building a Schedule Planner Website
-- Hosting the website on Github
-
----
-
-## Day 5
 
 Training and Self practice on the following topics
 
@@ -104,22 +82,151 @@ Training and Self practice on the following topics
 7. alert, setroute, Prompt, Set index
 8. Hoisting
 
+### Project
+    
+- Revising the above topics and Building a Schedule Planner Website
+- Hosting the website on Github
+
 ---
 
-## week 2 (12/2/2024 - 17/2/2024)
+## week 2 (12/2/2024 - 18/2/2024)
+
+---
+
+Training and Self practice on the following topics
+
+### Java Script
+1. DOM
+2. Event loop
+3. Callback queue
+4. Call by value and reference
+5. Debugger
+6. Execution callstack
+7. Object
+   - Map
+   - Filter
+8. Array 
+   - Push
+   - Pop
+   - Slice
+   - Concat
+   - Find
+9. AJAX
+10. Closures
+11. APi - status codes
+12. Hosting, Scalling, Load balancer
+
+### SQL
+1. Data Base
+2. RDBMS
+3. Transaction Management
+4. Create Database
+5. Create Table
+   - Insert
+   - Alter
+   - Rename
+   - Modify
+   - Delete
+   - Rename
+   - Drop
+   - Null
+
+### Testing
+1. Unit testing
+2. Verification
+3. SDLC
+4. STLC
+5. Ticket
+   - Azure ticketing
+   - Jira ticketing
+
+### Project
+Update on the project
+1. Added file saving and loading using JavaScript.
+
+---
+
+## Week 3 (19-02-2024 - 25-02-2024)
+
+---
+
+Training and Self practice on the following topics
+
+### Java Script
+1. Async/Await
+2. Promises
+3. Modules
+4. Browser Object Modelling
+5. SASS
+6. TypeScript
+
+### SQL
+1. Operation on Database
+   - Truncate
+   - Drop
+   - Delete
+   - Where
+   - Operators 
+   - Groupby
+   - Having
+
+### Testing 
+1. Waterfall Methodology
+2. Agile Methodology
+3. Postman Platform
+4. Jira
+
+
+### Project
+Update on the project
+1. Created a Login Page using Object and DOM
+
+---
+
+## Week 4  (26-02-2024 - 03-03-2024)
 
 ---
 
 ### Java Script
-1. AJAX CALL
-2. Shift and Unshift
-3. slicing
-4. call backs
-5. objects
-6. lexical environment
-7. scope
-8. event control
-9. promises
-10. class
-11. modules
+1. Auhtentication
+2. Authorization
+3. Cryptographic Hashing Function
+4. Password Salt
+5. Middle Ware
+6. API 
+   - Geolocation 
+   - Form Validation
+   - Browse History API
 
+### SQL 
+
+Basics of SSMS.
+Practice on the following topics.
+
+1. Joins
+   - Inner
+   - Full
+   - Left
+   - Right
+2. Operators
+
+### Dot NET (C#)
+
+Practice on the following topics 
+
+1. Basic structure
+2. Input and Output
+3. Data Types
+4. Type conversion
+5. Operators
+6. If-Else
+7. Switch
+8. Loops
+   - For
+   - For each
+   - While
+   - Do While
+9. Array
+10. Functions
+11. collection
+    - Array List

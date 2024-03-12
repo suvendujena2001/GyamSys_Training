@@ -1,3 +1,7 @@
+/*WinForms is a graphical user interface (GUI) framework in C# for creating desktop applications. 
+To create a basic WinForms app, you design a UI using drag-and-drop controls from the toolbox onto a form, then write code to handle events and functionality. 
+    Key components include forms (windows), controls (buttons, textboxes, etc.), event handlers, and code-behind logic.*/
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

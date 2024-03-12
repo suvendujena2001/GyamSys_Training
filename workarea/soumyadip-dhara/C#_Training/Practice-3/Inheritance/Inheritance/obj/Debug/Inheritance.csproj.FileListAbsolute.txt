@@ -1,0 +1,7 @@
+C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-3\Inheritance\Inheritance\bin\Debug\Inheritance.exe.config
+C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-3\Inheritance\Inheritance\bin\Debug\Inheritance.exe
+C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-3\Inheritance\Inheritance\bin\Debug\Inheritance.pdb
+C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-3\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.AssemblyReference.cache
+C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-3\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.CoreCompileInputs.cache
+C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-3\Inheritance\Inheritance\obj\Debug\Inheritance.exe
+C:\Users\SoumyadipDhara\OneDrive - GyanSys Inc\Documents\get-2024-microsoft\workarea\soumyadip-dhara\C#_Training\Practice-3\Inheritance\Inheritance\obj\Debug\Inheritance.pdb

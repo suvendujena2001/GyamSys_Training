@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Numerics;
+using System.Data;
 
 namespace dotnet_practice;
 
@@ -17,7 +18,7 @@ class Dog : Animal
         Console.WriteLine("Dog is barking");
     }
 }
-class Snake : Animal
+class Mammal : Animal
 {
     public void Run()
     {
@@ -55,11 +56,11 @@ class MyClass : I1, I2
     }
 }
 
-abstract class Abstractclass{
+/*abstract class Abstractclass{
     string name;
     void print(string s);
 }
-private class Nameprint: Abstractclass
+ class Nameprint: Abstractclass
 {
     void Nameprint(string s)
     {
@@ -70,7 +71,7 @@ private class Nameprint: Abstractclass
         Console.WriteLine(name);
     }
     
-}
+}*/
 class Program
 {
 
@@ -208,8 +209,30 @@ class Program
         myClass.Method2();
         myClass.Method1();  
 
+        //DataTable
+
+        DataTable EmployeeDetails=new DataTable();
+        DataColumn EmployeeId=new DataColumn("EmployeeId",typeof(int));
+        EmployeeDetails.Columns.Add(EmployeeId);
+        DataColumn EmployeeName = new DataColumn("Name", typeof(string));
+        EmployeeDetails.Columns.Add(EmployeeName);
+        DataColumn EmployeeMobile = new DataColumn("EmpMobile", typeof(string));
+        EmployeeDetails.Columns.Add(EmployeeMobile);
+        EmployeeDetails.Rows.Add(1001, "Avinash", "9000322579");
+        EmployeeDetails.Rows.Add(1002, "Aditya", "9081223457");
+        EmployeeDetails.Rows.Add(1003, "Anitesh", "9000322579");
+        EmployeeDetails.Rows.Add(1004, "Raja", "9081223457");
+
+        foreach (DataRow row in EmployeeDetails.Rows)
+        {
+            foreach (DataColumn col in EmployeeDetails.Columns)
+            {
+                Console.Write(row[col] + "\t");
+            }
+            Console.WriteLine();
+        }
 
 
     }
-    
+
 }

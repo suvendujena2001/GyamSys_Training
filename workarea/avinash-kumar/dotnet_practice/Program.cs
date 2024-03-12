@@ -17,11 +17,11 @@ class Dog : Animal
         Console.WriteLine("Dog is barking");
     }
 }
-class Mammal : Animal
+class Snake : Animal
 {
     public void Run()
     {
-        Console.WriteLine("Mammal is running.");
+        Console.WriteLine("Snake is running.");
     }
 }
 

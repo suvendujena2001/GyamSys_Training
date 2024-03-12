@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PrinceRoy\\source\\repos\\OOPsApp\\OOPsApp\\OOPsApp.csproj",
+      "projectUniqueName": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\dotnet_practice\\OOPsApp\\OOPsApp\\OOPsApp.csproj",
       "projectName": "OOPsApp",
-      "projectPath": "C:\\Users\\PrinceRoy\\source\\repos\\OOPsApp\\OOPsApp\\OOPsApp.csproj",
+      "projectPath": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\dotnet_practice\\OOPsApp\\OOPsApp\\OOPsApp.csproj",
       "packagesPath": "C:\\Users\\PrinceRoy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PrinceRoy\\source\\repos\\OOPsApp\\OOPsApp\\obj\\",
+      "outputPath": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\dotnet_practice\\OOPsApp\\OOPsApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

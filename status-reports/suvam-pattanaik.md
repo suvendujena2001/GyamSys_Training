@@ -228,6 +228,30 @@
 
     4. Implemented how method overloading works and how we can use various constructors in a class .
 
+### 7 MARCH :
+
+    1. Winform Practice in visual studio
+
+    2. Learning module on free-code-camp (try-catch-finally implementation).
+
+### 8 MARCH :
+
+    1. Methods in C# , usuage in console and debugging the code on free-code-camp.
+
+    2.Evaluation test on C# and SQL comprising of aggregate functions.
+
+## Week -6 (11 MARCH - 17 MARCH 2024)
+
+### 11 MARCH :
+
+    1. POSTMAN and API learning .
+
+    2. Session on C# regarding - inheritance and its type - single , multilevel , multiple 
+
+    3. Abstract class VS Interface - how to differentiate
+
+    4. Discussed about - Sealed Class , Data-table , Dataset , Enum.
+
     
 
     

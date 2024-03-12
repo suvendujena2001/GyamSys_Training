@@ -45,10 +45,12 @@
 ** On the last working day, we gave another SQL evaluation test.
 
 ## Week 5 (4th March 2024 to 8th March 2024)
-** Sessions on Backend development was taken. We were asked to practice the codes. I practised the taught topics  and uploaded my codes on GitHub for evaluation.
+** Sessions on Backend development was taken. Topics such as Foreach, Arrays - (Multi-Dimensional Arrays, Jagged Arrays, Param Arrays), Methods, Return Types, Collections - (Array List, Hashtable, SortedList, Stack, Queue, BitArray) were taught. We were asked to practice the codes. I practised the taught topics  and uploaded my codes on GitHub for evaluation.
 
 ** SQL PPTs were shared and we were asked to go through it.
 
 ** We gave an evaluation test on SQL and DOTNET.
 
 ** On the last working day, we gave another SQL and DOTNET evaluation test.
+
+## Week 6 (11th March 2024 to 15th March 2024)

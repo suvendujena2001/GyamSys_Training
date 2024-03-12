@@ -1,38 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-public class Human
+﻿using System;
+using Iter.CollegeManagement.TeacherDetails;
+using Iter.CollegeManagement.StudentDetails;
+using Iter.CollegeManagement.SectionDetails;
+
+namespace Iter.CollegeManagement.Implemention
 {
-    public string Name { get; set; }
-
-    public string Id { get; set; }
-
-    public Human(int id, string name)
+    public class Program
     {
-        Id = id;
-        Name = name;
-    }
-}
+        public static void Main(string[] args)
+        {
+            Teacher t = new Teacher("Ashish", 35);
 
-public class Teacher : Human
-{
-    public Teacher(int id, string name)
-    {
-        base(id, name);
-    }
-}
+            Student s1 = new Student("Prince Roy", 21, "B.Tech");
+            Student s2 = new Student("Pritam Roy", 19, "BBA");
 
-public class Student: Human
-{
-    public Student(int id, string name)
-    {
-        base(id, name);
-    }
-}
+            List<Student> listOfStudents = new List<Student> { s1, s2 };
 
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        Student s = new Student(101, "Prince Roy");
-        Console.WriteLine(s);
+            Section section = new Section(t, listOfStudents);
+            section.display();
+
+            
+        }
     }
 }

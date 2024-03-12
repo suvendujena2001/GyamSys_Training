@@ -8,10 +8,34 @@ namespace MyApplication
             // CIRCLE
 
             double pi = 3.14;
-            Console.WriteLine("Enter the radius of circle");            
-            double radius=double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the radius of circle");
+            double radius = double.Parse(Console.ReadLine());
             double area = pi * radius * radius;
-            Console.WriteLine($"The Area of the given Circle is {area}");
+            Console.WriteLine($"Area of Circle is {area}");
+        
+            // SQUARE
+
+            Console.WriteLine("Enter the sidelength of square");
+            double side = double.Parse(Console.ReadLine());
+            double area_sq = Math.Pow(side,2);
+            Console.WriteLine($"Area of square is {area_sq}");
+
+            // RECTANGLE
+
+            Console.WriteLine("Enter length:");
+            double l=double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter breadth");
+            double b=double.Parse(Console.ReadLine());
+            double area_rect = l * b;
+            Console.WriteLine($"Area of rectangle is {area_rect}");
+
+            // RHOMBUS
+
+            Console.WriteLine("Enter diagonal1 and diagonal2: ");
+            double d1=double.Parse(Console.ReadLine());
+            double d2=double.Parse(Console.ReadLine());
+            double area_rhom = 0.5 * d1 * d2;
+            Console.WriteLine($"Area of rhombus is {area_rhom}");
         }
     }
 }

@@ -28,5 +28,6 @@ SELECT MAX(EmpSalary) AS "Highest Salary" FROM EMPLOYEE;
 --MIN
 SELECT MIN(EmpSalary) AS "Lowest Salary" FROM EMPLOYEE;
 
+
 --SUM
 SELECT SUM(EmpSalary) AS "Total Salary" FROM EMPLOYEE;

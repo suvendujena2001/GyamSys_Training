@@ -180,6 +180,31 @@
 3. Array List, Hashtable, SortedList, Stack, Queue, BitArray.
 4. Return Types and methods
 
+# Week 5  status report(Mar 4 to Mar 10)
+## C#
+1. Window Form tooltips
+2. Windows forms Label, CheckBox, Icons,  Inserting Picture, DataGridView,TextBox, CheckBox, Buttons,Panel
+3. Start Doing a project named "MarriageHall Booking Application" using Windows Forms.
+4. Inheritance in C#
+
+## POSTMAN API
+1. Environment Setup
+2. Authirzation
+3. WorkFlows
+4. GET Request
+5. POST Request
+6. PUT Request
+7. DELETE Request
+8. Variable Creation
+## SQL
+1. Avg function
+2. Min function
+3. Max Function
+4. Count function
+5. Sum
+   
+   
+
    
 
     

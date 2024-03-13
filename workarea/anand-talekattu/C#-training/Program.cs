@@ -7,9 +7,28 @@ namespace MyApp
   {
     static void Main(string[] args)
     {
-         int[] initialArray = { 2, 4, 6 };
-        ArrayDemo arrayDemo=new ArrayDemo(initialArray);
-        Console.WriteLine(arrayDemo.arr1[0]);
+        //  int[] initialArray = { 2, 4, 6 };
+        // ArrayDemo arrayDemo1=new ArrayDemo(initialArray);
+        //            // Check if arr2 is not null before accessing its elements
+        //     if (arrayDemo1.arr1 != null)
+        //     {
+        //         for (int i = 0; i < arrayDemo1.arr1.Length; i++)
+        //         {
+        //             Console.Write(arrayDemo1.arr1[i] + ",");
+        //         }
+        //         Console.WriteLine(" ");
+        //     }
+
+        //     // Check if arr2 is not null before using foreach
+        //     if (arrayDemo1.arr2 != null)
+        //     {
+        //         foreach (int a in arrayDemo1.arr2)
+        //         {
+        //             Console.Write(a + ",");
+        //         }
+        //         Console.WriteLine(" ");
+        //     }
+        // arrayDemo1.arrayDisplay();
 
       //  Address address = new Address("B1-3029", "BBSR", "Odisha");
       //  Employee employee = new Employee(1001, "Ramesh", address);

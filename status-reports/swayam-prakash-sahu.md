@@ -157,7 +157,7 @@ Node Js)
 4. Self learning Typescript Concepts
 5. SQL PRACTICE ON SSMS ()
 
-### DAY - 5 (Feb 01, 2024)
+### DAY - 5 (Mar 01, 2024)
 
 1. SQL PRACTICE
 2. LEARNING C# CONCEPTS

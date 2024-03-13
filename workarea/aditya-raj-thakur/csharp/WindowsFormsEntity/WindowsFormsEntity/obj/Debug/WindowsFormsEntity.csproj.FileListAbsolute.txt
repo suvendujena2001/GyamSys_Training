@@ -1,0 +1,15 @@
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\bin\Debug\WindowsFormsEntity.exe.config
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\bin\Debug\WindowsFormsEntity.exe
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\bin\Debug\WindowsFormsEntity.pdb
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\bin\Debug\EntityFramework.dll
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\bin\Debug\EntityFramework.xml
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\obj\Debug\WindowsFormsEntity.csproj.AssemblyReference.cache
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\obj\Debug\WindowsFormsEntity.Form1.resources
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\obj\Debug\WindowsFormsEntity.Properties.Resources.resources
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\obj\Debug\WindowsFormsEntity.csproj.GenerateResource.cache
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\obj\Debug\WindowsFormsEntity.csproj.CoreCompileInputs.cache
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\obj\Debug\WindowsFormsEntity.csproj.CopyComplete
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\obj\Debug\WindowsFormsEntity.exe
+C:\Web D\WindowsFormsEntity\WindowsFormsEntity\obj\Debug\WindowsFormsEntity.pdb

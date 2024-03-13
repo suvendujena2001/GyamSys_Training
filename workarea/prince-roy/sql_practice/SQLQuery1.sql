@@ -61,3 +61,20 @@ update Employee set HireDate='2021-10-17' where EmpId=6;
 
 select * from Employee where salary between 24000 and 60000;
 select * from Employee where FirstName between 'j%' and 'n%';
+
+select * from Employee where DeptId in (select DeptId from Department);
+
+select * from Employee where EmpId not in (1, 3, 5);
+
+select * from Employee where FirstName like 'a%';
+
+select * from Employee where FirstName like '%n';
+
+select * from Employee where FirstName like '%u%';
+
+select * from Employee where FirstName like '__h_';
+
+select * from Employee where FirstName like 'A[i, t, m]';
+
+select * from Employee where FirstName not like 'j%';
+

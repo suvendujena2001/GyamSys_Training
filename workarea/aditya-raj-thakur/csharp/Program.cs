@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections;
 
+
 class Program
 {    // Method
-    /*static int Method(int x, int y)
+    static int Method(int x, int y)
     {
         return x + y;
-    }*/
-    /*static void PrintValues(IEnumerable myList)
+    }
+    static void PrintValues(IEnumerable myList)
     {
         foreach (Object obj in myList)
         {
             Console.WriteLine(obj);
         }
-    }*/
+    }
     public static void Main(String[] args)
     {
         /* Random dice=new Random (); //instance of random class
@@ -304,7 +305,12 @@ class Program
                         pair.Key, pair.Value);
             }
             Console.WriteLine();
+        
 
-    Console.Read();
+        
+         Console.Read();
+       
+        
     }
 }
+       

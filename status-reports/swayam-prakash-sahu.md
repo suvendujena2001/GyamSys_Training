@@ -157,7 +157,7 @@ Node Js)
 4. Self learning Typescript Concepts
 5. SQL PRACTICE ON SSMS ()
 
-### DAY - 5 (Feb 01, 2024)
+### DAY - 5 (Mar 01, 2024)
 
 1. SQL PRACTICE
 2. LEARNING C# CONCEPTS
@@ -186,3 +186,39 @@ f. Mixins
 g. Inheritance
 h. Operators
         
+## WEEK 5(04-MAR-2024 to 10-MAR-2024)
+
+### DAY - 1 (Mar 4, 2024)
+
+1. Evaluation on C# concepts
+2. SQL practice on SSMS(Aggregation)
+3. self learning(value and referance types, collections, arrays, arraylist, jagged arrays, param arrays, hashtable)
+
+### DAY - 2 (Mar 5, 2024)	
+
+
+1. Self learning JavaScript ( expressions, data structures and data types, Classes, Variables and functions)
+2. Training by Suman on method overloading, exception handling(try, catch, finally and throw), Constructors and Destructors, Access modifiers(public, private, protected and internal), Properties, classes and objects
+3. Revising Database concepts(schema, architecture,keys,Normalization)
+
+### DAY - 3 (Mar 6, 2024)
+	
+1. SQL Practice
+2. WinForms Implementation
+3. Self Practice method overloading, Constructors and Destructors, Access modifiers, Properties, classes and objects
+4. JavaScript concepts revision
+5. SASS self practice
+
+### DAY - 4 (Mar 7, 2024)	
+
+1. c# basic formatting
+2. escape sequences
+3. concatenation, interpolation and strings in c#
+4. Self learning API POSTMAN 
+5. javascript(Lexical Structure, Expressions, Data Types, Classes, Variables)
+
+### DAY - 5 (Mar 8, 2024)
+
+1. c# (Arrays, Control variable scope and logic using code blocks)
+2. Evaluation on c# and sql
+3. Javascript(this, operator , Arrow Functions, Loops, Scopes, Arrays)

@@ -52,8 +52,7 @@ function getExamples(meaningsArr) {
   return meaningsArr.map((meaning) => {
       arr = Object.entries(meaning);
       return `<p>${arr[0][0]} 
-      ${arr[0][1]
-        .map((val) => {
+      ${arr[0][1].map((val) => {
           return `<p>${val.example?val.example:' '}</p>`;
         })
         .join("")}

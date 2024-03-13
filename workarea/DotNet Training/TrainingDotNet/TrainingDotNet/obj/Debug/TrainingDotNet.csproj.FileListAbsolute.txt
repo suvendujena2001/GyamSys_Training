@@ -6,3 +6,11 @@ C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workare
 C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\obj\Debug\TrainingDotNet.csproj.CoreCompileInputs.cache
 C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\obj\Debug\TrainingDotNet.exe
 C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\obj\Debug\TrainingDotNet.pdb
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\obj\Debug\TrainingDotNet.csproj.CopyComplete
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\bin\Debug\ClassLibraryOne.dll
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\bin\Debug\ClassLibraryOne.pdb
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\bin\Debug\EntityFramework.dll
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\bin\Debug\ClassLibraryOne.dll.config
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\bin\Debug\EntityFramework.xml
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\TrainingDotNet\bin\Debug\EntityFramework.SqlServer.xml

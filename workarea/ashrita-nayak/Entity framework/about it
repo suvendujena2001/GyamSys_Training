@@ -1,0 +1,16 @@
+Entity framework is a tool we use to access a database.
+In other words, it is an object/relational mapper we use to map the objects of our application with the relational data.
+In the old days, before EF, we had to do this mapping manually which involved opening a connection to the database, executing a command, reading the data and finally remember to close the connection.
+However, in case of object relational mapper,we don’t have to do this stuff anymore. So, we work at a higher level of abstraction.
+EF provides us a class called DB context which is a gateway to our database. 
+A Dbcontext can have one or more DB sets and these Dbsets represents tables in our database. 
+We use LINQ to query these Dbsets and entity framework will translate our LINQ queries to sql queries at run time.
+It means that we don't have to do these translations manually. 
+All the stuff is done by entity framework behind the scene.
+So, entity framework is responsible for opening a connection to the database, reads the data, maps it to objects and adds them to DB sets and return the DB context back to us. 
+As we add, modify or remove objects in these Dbsets, EF keeps track of these changes. 
+And when we ask it to persist the changes, again it will automatically generate SQL statements and executes them on our database. 
+So, this is all about Entity Framework. 
+Now, there are two ways or workflows to use EF. 
+One is called Databse first and the other
+one is called code first approach.

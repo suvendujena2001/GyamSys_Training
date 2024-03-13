@@ -179,6 +179,7 @@ namespace Inheritance
             Rectangle rect = new Rectangle(6, 12, "red");
             Console.WriteLine("Area of rectangle is " + rect.GetArea());
             Console.WriteLine("Color of rectangle is :" + rect.GetColor());
+            Console.WriteLine();
 
 
             Console.ReadLine();

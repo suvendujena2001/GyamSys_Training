@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 --From the following table write a query in SQL to retrieve all rows and columns from the employee table in the Adventureworks database.
 --Sort the result set in ascending order on jobtitle.
 --Table: HumanResources.Employee
@@ -120,5 +120,4 @@ SELECT ProductID, SUM(Quantity) as SUMM FROM AdventureWorks2022.Production.Produ
 --From the following table write a query in SQL to find the total quentity for a group of locationid multiplied by 10.
 --Sample table: production.productinventory
 
->>>>>>> origin/main
 SELECT SUM(Quantity) as 'Total Quantity' FROM AdventureWorks2022.Production.ProductInventory Group By (LocationID);

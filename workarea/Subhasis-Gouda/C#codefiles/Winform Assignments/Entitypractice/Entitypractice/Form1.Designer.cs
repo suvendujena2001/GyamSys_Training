@@ -35,13 +35,13 @@
             this.Job = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Nametb = new System.Windows.Forms.TextBox();
             this.Jobtb = new System.Windows.Forms.TextBox();
             this.Depttb = new System.Windows.Forms.TextBox();
             this.Joiningtb = new System.Windows.Forms.TextBox();
             this.Experiencetb = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +77,7 @@
             this.label1.Size = new System.Drawing.Size(222, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "TrainingDataBase";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+//            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -87,7 +87,7 @@
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+//            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Job
             // 
@@ -115,14 +115,7 @@
             this.label5.Size = new System.Drawing.Size(44, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Dept";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // Nametb
-            // 
-            this.Nametb.Location = new System.Drawing.Point(103, 391);
-            this.Nametb.Name = "Nametb";
-            this.Nametb.Size = new System.Drawing.Size(100, 26);
-            this.Nametb.TabIndex = 7;
+//            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Jobtb
             // 
@@ -151,7 +144,7 @@
             this.Experiencetb.Name = "Experiencetb";
             this.Experiencetb.Size = new System.Drawing.Size(42, 26);
             this.Experiencetb.TabIndex = 12;
-            this.Experiencetb.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            //this.Experiencetb.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button1
             // 
@@ -170,20 +163,29 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 14;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(103, 391);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 15;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 534);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Experiencetb);
             this.Controls.Add(this.Joiningtb);
             this.Controls.Add(this.Depttb);
             this.Controls.Add(this.Jobtb);
-            this.Controls.Add(this.Nametb);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Job);
@@ -191,7 +193,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+//            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -209,13 +211,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox Nametb;
         private System.Windows.Forms.TextBox Jobtb;
         private System.Windows.Forms.TextBox Depttb;
         private System.Windows.Forms.TextBox Joiningtb;
         private System.Windows.Forms.TextBox Experiencetb;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

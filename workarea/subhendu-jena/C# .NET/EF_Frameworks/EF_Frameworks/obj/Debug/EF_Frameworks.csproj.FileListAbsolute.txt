@@ -1,0 +1,15 @@
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\bin\Debug\EF_Frameworks.exe.config
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\bin\Debug\EF_Frameworks.exe
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\bin\Debug\EF_Frameworks.pdb
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\bin\Debug\EntityFramework.dll
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\bin\Debug\EntityFramework.xml
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\obj\Debug\EF_Frameworks.csproj.AssemblyReference.cache
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\obj\Debug\EF_Frameworks.Form1.resources
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\obj\Debug\EF_Frameworks.Properties.Resources.resources
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\obj\Debug\EF_Frameworks.csproj.GenerateResource.cache
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\obj\Debug\EF_Frameworks.csproj.CoreCompileInputs.cache
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\obj\Debug\EF_Frameworks.csproj.CopyComplete
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\obj\Debug\EF_Frameworks.exe
+C:\Users\SubhenduKumarJena\source\repos\EF_Frameworks\EF_Frameworks\obj\Debug\EF_Frameworks.pdb

@@ -127,3 +127,12 @@
     7. C# CONCEPTS (.NET Memory Management, Value Types and Reference Types, Arrays, Multi-Dimensional Arrays, Jagged Arrays, Param Arrays, Collections, ArrayList, Hashtable, SortedList, Stack, Queue, BitArray).
     8. Quality Assuarance Evaluation.
     9. SQL Week 2 and Week 3 Evaluation.
+
+## Office-WEEK 5(04-MARCH-2024 to 08-MARCH-2024)
+    1. Evaluation on C# concepts.
+    2. Completing the assignment on collections in C#: ArrayList ,Hashtable , stack,queue, sortedlist ,bitarray.
+    3. C# Training (method overloading, exception handling-try, catch, finally and throw; Constructors and Destructors, Access modifiers-public, private, protected and internal, Properties, classes and objects).
+    4. Winforms Training and Implementation (GUI on-screen Calculator).
+    5. Evaluation on C# and SQL.
+    6. Revised Javascript concepts.
+    7. SQL Practice on SSMS (basic statements and joins and aggregate functions).

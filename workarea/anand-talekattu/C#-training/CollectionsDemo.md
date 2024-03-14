@@ -7,7 +7,7 @@ Here we have created an array with the name A and with a size of 5. So, we can s
 ## Declare and Initialize an Array in the Same Statement
 `int[] A = { 1, 2, 3, 4, 5 };`<br>
 
- when we declare an array like int[] n = new int[3];, we need to assign values to it separately. Because `int[] n = new int[3];` will allocate space for 3 integers in the heap memory but there are no values in that space. To initialize it, assign a value to each of the elements of the array using its index position as shown below.<br>
+ when we declare an array like `int[] n = new int[3];` , we need to assign values to it separately. Because `int[] n = new int[3];` will allocate space for 3 integers in the heap memory but there are no values in that space. To initialize it, assign a value to each of the elements of the array using its index position as shown below.<br>
  n[0]=4;<br>
  n[1]=3;<br>
  n[2]=2;<br>
@@ -47,17 +47,19 @@ int[,] A = new int[2,3]
 ## Jagged Array in C#:
 Here in the jagged array, the column size will differ from row to row. That means if the first row contains 5 columns, then the second row may contain 4 columns while the third row may contain 10 columns. 
 
-Syntax:  `<type> [][] <name> = new <type> [rows][];`
-Example:
-`int [][] arr = new int[3][];`
-//Or
-`int [][] arr = {list of values};`
+Syntax:  `<type> [][] <name> = new <type> [rows][];`<br>
+Example:<br>
+`int [][] arr = new int[3][];`<br>
+//Or<br>
+`int [][] arr = {list of values};`<br>
 
 To declare a jagged array in C#, at the time of its declaration, we only need to specify the number of rows that you want in the array. For example
 `int [][] arr = new int[4][];`
 
 In the above array declaration, we are specifying that we want four rows in the array. Once you specify the number of rows that you want in the array, then you need to initialize each row with the number of columns by using a single-dimensional array as shown below.
-`arr[0] = new int[5]; // we want five columns in the first row
+```cs
+arr[0] = new int[5]; // we want five columns in the first row
 arr[1] = new int[6]; // we want six columns in the first row
 arr[2] = new int[4]; // we want four columns in the first row
-arr[3] = new int[5]; // we want five columns in the first row`
+arr[3] = new int[5]; // we want five columns in the first row
+```

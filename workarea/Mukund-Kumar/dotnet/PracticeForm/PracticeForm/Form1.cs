@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticeForm.Entity_Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,5 +35,57 @@ namespace PracticeForm
             this.clientTableAdapter1.Fill(this.trainingDBDataSet1.client);
 
         }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           TrainingDBEntities8 trainingDB=new TrainingDBEntities8();
+            List<employee> employees = trainingDB.employees.ToList();
+            comboBox1.DataSource = employees;
+            comboBox1.DisplayMember = "empName";
+            comboBox1.ValueMember = "empID";
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int[] columnData = (from DataGridViewRow row in dataGridView4.Rows
+                                where row.Cells[2].FormattedValue.ToString() != string.Empty
+                                select Convert.ToInt32(row.Cells[2].FormattedValue)).ToArray();
+
+
+            textBox1.Text = columnData.Sum().ToString();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int[] columnData = (from DataGridViewRow row in dataGridView3.Rows
+                                where row.Cells[2].FormattedValue.ToString() != string.Empty
+                                select Convert.ToInt32(row.Cells[2].FormattedValue)).ToArray();
+
+
+            textBox2.Text = columnData.Sum().ToString();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = Convert.ToString(Convert.ToDouble((Convert.ToDouble(textBox2.Text) / Convert.ToInt32(textBox1.Text))));
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

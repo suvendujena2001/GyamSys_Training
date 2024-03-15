@@ -252,7 +252,20 @@
 
     4. Discussed about - Sealed Class , Data-table , Dataset , Enum.
 
-    
+ ### 12 MARCH :
+
+     1. Implementation of Inheritance and types , data-table in C#.
+
+     2. Session on Entity-Framework and database first , code-first approach , various LINQ operations in C#.
+
+### 13 MARCH :
+
+    1. Implementation of Winform application , connecting it to a database to retrive and execute operation .
+
+    2. Session on database first approach of winforms , how to control various icons present in toolbox.
+
+### 14 MARCH :
+
 
     
     

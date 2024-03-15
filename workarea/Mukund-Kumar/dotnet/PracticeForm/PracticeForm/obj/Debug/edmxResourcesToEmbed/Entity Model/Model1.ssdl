@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TrainingDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'TrainingDB.dbo.client' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="client">
+          <Property Name="clientName" Type="varchar" MaxLength="20" />
+          <Property Name="clientID" Type="int" />
+          <Property Name="projectAmt" Type="int" />
+          <Property Name="empID" Type="int" />
+        </EntityType>-->
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="empID" />
+    </Key>
+    <Property Name="empID" Type="int" Nullable="false" />
+    <Property Name="empName" Type="varchar" MaxLength="20" />
+    <Property Name="salary" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+error 6004: The table 'TrainingDB.dbo.client' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__client__empID__44FF419A" />-->
+  <EntityContainer Name="TrainingDBModelStoreContainer">
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,15 @@
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\bin\Debug\EntityFrameworkProject.exe.config
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\bin\Debug\EntityFrameworkProject.exe
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\bin\Debug\EntityFrameworkProject.pdb
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\bin\Debug\EntityFramework.dll
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\bin\Debug\EntityFramework.xml
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\obj\Debug\EntityFrameworkProject.csproj.AssemblyReference.cache
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\obj\Debug\EntityFrameworkProject.Form1.resources
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\obj\Debug\EntityFrameworkProject.Properties.Resources.resources
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\obj\Debug\EntityFrameworkProject.csproj.GenerateResource.cache
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\obj\Debug\EntityFrameworkProject.csproj.CoreCompileInputs.cache
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\obj\Debug\EntityFrameworkProject.csproj.CopyComplete
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\obj\Debug\EntityFrameworkProject.exe
+C:\Users\KalpanaPanigrahi\OneDrive - GyanSys Inc\Documents\New folder\EntityFrameworkProject\EntityFrameworkProject\obj\Debug\EntityFrameworkProject.pdb

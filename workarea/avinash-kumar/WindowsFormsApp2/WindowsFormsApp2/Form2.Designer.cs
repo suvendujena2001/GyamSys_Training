@@ -46,6 +46,10 @@
             this.DepartmentName = new System.Windows.Forms.Label();
             this.DepartmentNameTxt = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Delete = new System.Windows.Forms.Button();
+            this.deltxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +71,6 @@
             this.EmployeeName.Size = new System.Drawing.Size(125, 20);
             this.EmployeeName.TabIndex = 0;
             this.EmployeeName.Text = "Employee Name";
-            this.EmployeeName.Click += new System.EventHandler(this.label2_Click);
             // 
             // EmployeeSalary
             // 
@@ -100,7 +103,7 @@
             this.EmployeeNameTxt.Name = "EmployeeNameTxt";
             this.EmployeeNameTxt.Size = new System.Drawing.Size(191, 26);
             this.EmployeeNameTxt.TabIndex = 1;
-            this.EmployeeNameTxt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+           // this.EmployeeNameTxt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // EmployeeDepartmentIdTxt
             // 
@@ -124,6 +127,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -132,17 +136,17 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(617, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(728, 383);
             this.dataGridView1.TabIndex = 3;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(764, 240);
+            this.dataGridView2.Location = new System.Drawing.Point(750, 243);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(301, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(509, 383);
             this.dataGridView2.TabIndex = 4;
             // 
             // label1
@@ -203,12 +207,53 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(459, 203);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(155, 34);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Fetch The data";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(43, 666);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(199, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Enter Id To delete the data";
+            // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(446, 647);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(155, 58);
+            this.Delete.TabIndex = 8;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // deltxt
+            // 
+            this.deltxt.Location = new System.Drawing.Point(264, 663);
+            this.deltxt.Name = "deltxt";
+            this.deltxt.Size = new System.Drawing.Size(162, 26);
+            this.deltxt.TabIndex = 9;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 669);
+            this.ClientSize = new System.Drawing.Size(1209, 893);
+            this.Controls.Add(this.deltxt);
+            this.Controls.Add(this.Delete);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView2);
@@ -229,6 +274,7 @@
             this.Controls.Add(this.EmployeeId);
             this.Name = "Form2";
             this.Text = "Form2";
+           // this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -256,5 +302,9 @@
         private System.Windows.Forms.Label DepartmentName;
         private System.Windows.Forms.TextBox DepartmentNameTxt;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.TextBox deltxt;
     }
 }

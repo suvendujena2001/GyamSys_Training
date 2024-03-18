@@ -112,7 +112,9 @@
 
 ---
 
+
 # Month of March
+
 
 ---
 
@@ -138,8 +140,12 @@
 ## Week 2 (11/03/2024 - 17/03/2024)
 
 1. ### C# Dot NET
-	1. Working on WinForms Dental clinic management project
+	1. Working on WinForms Dental clinic management project.
 	2. working on the UI of pages and creating a database to store the patient data.
 	3. Training on C# Inheritance, data tables, Datasets, Data row, Enum.
-	4. Self-Practice on inheritance and data sets and enums
-   
+	4. Self-Practice on inheritance (single, multiple, hierarchical), inteface, abstract class and data sets and enums.
+    5. Created a basic form application containing treeview, combobox, combolist, radiobuttons, datetimepicker, timer, progressbar.
+	6. learnt and practiced crud operation on Entity Framework.
+	7. learnt and practiced Database first approach, Code first approach, LINQ
+	7. Completed the assignment on entity framework to select the employee data using combobok and viewing it on data grid view.
+    8. Worked on patient page of Clininc management project using entity frame work to store and manipulate the patient data.

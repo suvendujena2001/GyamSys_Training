@@ -15,3 +15,4 @@ C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workare
 C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormTwo.resources
+C:\Users\SumanTummanapally\source\repos\kamleshrao-gs\get-2024-microsoft\workarea\DotNet Training\TrainingDotNet\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormThree.resources

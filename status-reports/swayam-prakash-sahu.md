@@ -222,3 +222,37 @@ h. Operators
 1. c# (Arrays, Control variable scope and logic using code blocks)
 2. Evaluation on c# and sql
 3. Javascript(this, operator , Arrow Functions, Loops, Scopes, Arrays)
+
+
+## WEEK 5(11-MAR-2024 to 17-MAR-2024)
+
+### DAY - 1 (Mar 11, 2024)
+
+1. Self Learning C# concepts and completing Certification course modules.
+2. Training by Suman on C#(Inheritance, Interfaces, DataTable etc.)
+3. Learnt about Winforms
+4. SQL practice questions solved for AdventureDB.
+
+### DAY - 2 (Mar 12, 2024)	
+
+1. Training on windows forms by Suman(labels, TextBox control, buttons - RadioButton control in a WinForms application etc)
+2. Completing freecodecamp C# certification(Write Your First Code Using C#, Create and Run Simple C# Console Applications )
+3. Scores discussion with Megha.
+
+### DAY - 3 (Mar 13, 2024)	
+
+1. Training on Windows forms(DataGridView control used for in WinForms development, Combo Box)
+2. Completing freecodecamp C# certification (Add Logic to C# Console Applications, Work with Variable Data in C# Console Applications)
+3. Javascript Concepts revision closures and callbacks
+
+### DAY - 4 (Mar 14, 2024)	
+
+1. Training by Suman on windows form (Timer control work in Windows Forms, TreeView control in a Windows Forms application)
+2. Completing freecodecamp C# certification (Create Methods in C# Console Applications, Debug C# Console Applications)
+3. Javascript concepts practice (Template Literals, Strict Mode)
+
+### DAY - 5 (Mar 15, 2024)	
+
+1. .NET and C# evaluation(winforms, inheritance, enums, Dataset and DataTable, Sealed class, abstract class and interfaces, Entity Frameworks)
+2. Self Learning C# and Windows forms concepts
+3. Revising javascript concepts

@@ -1,0 +1,15 @@
+C:\visual studio\WINDOWS-FORM\New project\New project\bin\Debug\New project.exe.config
+C:\visual studio\WINDOWS-FORM\New project\New project\bin\Debug\New project.exe
+C:\visual studio\WINDOWS-FORM\New project\New project\bin\Debug\New project.pdb
+C:\visual studio\WINDOWS-FORM\New project\New project\bin\Debug\EntityFramework.dll
+C:\visual studio\WINDOWS-FORM\New project\New project\bin\Debug\EntityFramework.SqlServer.dll
+C:\visual studio\WINDOWS-FORM\New project\New project\bin\Debug\EntityFramework.xml
+C:\visual studio\WINDOWS-FORM\New project\New project\bin\Debug\EntityFramework.SqlServer.xml
+C:\visual studio\WINDOWS-FORM\New project\New project\obj\Debug\New project.csproj.AssemblyReference.cache
+C:\visual studio\WINDOWS-FORM\New project\New project\obj\Debug\New_project.Form1.resources
+C:\visual studio\WINDOWS-FORM\New project\New project\obj\Debug\New_project.Properties.Resources.resources
+C:\visual studio\WINDOWS-FORM\New project\New project\obj\Debug\New project.csproj.GenerateResource.cache
+C:\visual studio\WINDOWS-FORM\New project\New project\obj\Debug\New project.csproj.CoreCompileInputs.cache
+C:\visual studio\WINDOWS-FORM\New project\New project\obj\Debug\New project.csproj.CopyComplete
+C:\visual studio\WINDOWS-FORM\New project\New project\obj\Debug\New project.exe
+C:\visual studio\WINDOWS-FORM\New project\New project\obj\Debug\New project.pdb

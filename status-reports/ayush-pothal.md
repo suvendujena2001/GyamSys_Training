@@ -69,3 +69,31 @@
 - Arrays - Multi-Dimensional Arrays, Jagged Arrays, Param Arrays
 - Methods and return types
 - Collections - Array List, Hashtable, SortedList, Stack, Queue, BitArray
+
+# Week 5 (04-03-2024 to 10-03-2024)
+
+## SQL
+- SQL Functions
+## C#
+- Method Overloading
+- Method Overriding
+- WinForms
+### Postman API Certification
+- Completed Postman API Fundamentals Student Expert certification
+
+# Week 6 (11-03-2024 to 17-03-2024)
+
+## C#
+- Entity Framework
+- Inheritance
+- Abstraction
+- Interface
+- Polymorphism
+- Sealed Class
+- Enums
+- Data Table
+- Data Set
+### Foundational C# with Microsoft Certification
+- Completed Foundational C# with Microsoft Certification
+
+

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingDotNet", "TrainingDotNet\TrainingDotNet.csproj", "{06351F6C-C6A7-46FD-A806-EB4DF91A19D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{6FD9AD71-483D-4B9B-A60B-B1CF5B8FBD69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary1\ClassLibrary.csproj", "{6FD9AD71-483D-4B9B-A60B-B1CF5B8FBD69}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp", "WindowsFormsApp1\WindowsFormsApp.csproj", "{51A573BB-20DC-46F2-8E01-C0DF0BC98A76}"
 EndProject

@@ -224,7 +224,7 @@ h. Operators
 3. Javascript(this, operator , Arrow Functions, Loops, Scopes, Arrays)
 
 
-## WEEK 5(11-MAR-2024 to 17-MAR-2024)
+## WEEK 6(11-MAR-2024 to 17-MAR-2024)
 
 ### DAY - 1 (Mar 11, 2024)
 

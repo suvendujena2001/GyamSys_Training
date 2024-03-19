@@ -57,3 +57,5 @@
 ** Sessions on Backend development was taken. Topics such as 	Entity Framework, Code First, Database First, LINQ, Inheritance- Single Inheritance, Multilevel Inheritance, Multiple Inheritance, Hybrid Inheritance, Method Overriding, Abstract Classes, Interface, Sealed Class, Data Table, Data Set, Enum, Winforms	Textbox, Lables, ListBox, RadioButton, CheckBox were taught. We were asked to practice the codes. I practised the taught topics  and uploaded my codes on GitHub for evaluation.
 
 ** On the last working day, we gave a DOTNET evaluation test.
+
+## Week 7 (18th March 2024 to 22nd March 2024)

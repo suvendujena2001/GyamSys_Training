@@ -1,0 +1,26 @@
+body[b-b2o5axw05s] {
+    font-family: Arial, sans-serif;
+}
+
+table[b-b2o5axw05s] {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th[b-b2o5axw05s], td[b-b2o5axw05s] {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th[b-b2o5axw05s] {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even)[b-b2o5axw05s] {
+    background-color: #f2f2f2;
+}
+
+tr:hover[b-b2o5axw05s] {
+    background-color: #ddd;
+}

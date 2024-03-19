@@ -1,0 +1,15 @@
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\bin\Debug\CRUD-Forms+EntityFramework.exe.config
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\bin\Debug\CRUD-Forms+EntityFramework.exe
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\bin\Debug\CRUD-Forms+EntityFramework.pdb
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\obj\Debug\CRUD-Forms+EntityFramework.csproj.AssemblyReference.cache
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\obj\Debug\CRUD_Forms_EntityFramework.Form1.resources
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\obj\Debug\CRUD_Forms_EntityFramework.Properties.Resources.resources
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\obj\Debug\CRUD-Forms+EntityFramework.csproj.GenerateResource.cache
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\obj\Debug\CRUD-Forms+EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\obj\Debug\CRUD-For.CAC385EE.Up2Date
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\obj\Debug\CRUD-Forms+EntityFramework.exe
+C:\Users\ManoharVampadapu\OneDrive - GyanSys Inc\Desktop\Demo\Training-Gyansys\.NET  Training\CRUD-Forms+EntityFramework\obj\Debug\CRUD-Forms+EntityFramework.pdb

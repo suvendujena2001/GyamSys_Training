@@ -121,3 +121,35 @@ SELECT ProductID, SUM(Quantity) as SUMM FROM AdventureWorks2022.Production.Produ
 --Sample table: production.productinventory
 
 SELECT SUM(Quantity) as 'Total Quantity' FROM AdventureWorks2022.Production.ProductInventory Group By (LocationID);
+
+--From the following tables write a query in SQL to find the persons whose last name starts with letter 'L'.
+--Return BusinessEntityID, FirstName, LastName, and PhoneNumber. Sort the result on lastname and firstname.
+--Sample table: Person.PersonPhone and Person.Person
+
+SELECT P.BusinessEntityID, P.FirstName, P.LastName, PH.PhoneNumber
+FROM Person.Person AS P
+RIGHT JOIN Person.PersonPhone AS PH
+ON P.BusinessEntityID = PH.BusinessEntityID
+WHERE P.LastName LIKE 'L%' 
+ORDER BY P.LastName, P.FirstName;
+
+--From the following table write a query in SQL to find the sum of subtotal column. 
+--Group the sum on distinct salespersonid and customerid. Rolls up the results into subtotal and running total. 
+--Return salespersonid, customerid and sum of subtotal column i.e. sum_subtotal.
+--Sample table: sales.salesorderheader
+
+SELECT SalesPersonID, CustomerID, sum(SubTotal) as sum_subtotal FROM Sales.SalesOrderHeader Group By ROLLUP(SalesPersonID, CustomerID);
+
+--From the following table write a query in SQL to find the sum of the quantity of all combination of group of distinct locationid and shelf column. 
+--Return locationid, shelf and sum of quantity as TotalQuantity.
+--Sample table: production.productinventory
+
+SELECT Distinct LocationId, Shelf, sum(Quantity) AS TotalQuantity FROM Production.ProductInventory Group By LocationID,Shelf;
+
+--From the following table write a query in SQL to find the sum of the quantity with subtotal for each locationid. 
+--Group the results for all combination of distinct locationid and shelf column. 
+--Rolls up the results into subtotal and running total. 
+--Return locationid, shelf and sum of quantity as TotalQuantity.
+--Sample table: production.productinventory
+
+SELECT LocationId, Shelf, sum(quantity) as TotalQuantity From Production.ProductInventory GROUP BY GROUPING SETS ( ROLLUP (LocationID, Shelf), CUBE (LocationID, Shelf) );

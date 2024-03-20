@@ -23,6 +23,19 @@ namespace CoreMVC_Practice.Controllers
             return View();
         }
 
+        public IActionResult Login(String Username, String Password)
+        {
+            if (Username == "admin" && Password == "password")
+            {
+                return RedirectToAction("Index", "Employee");
+            }
+            else
+            {
+                
+                return View("Index");
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

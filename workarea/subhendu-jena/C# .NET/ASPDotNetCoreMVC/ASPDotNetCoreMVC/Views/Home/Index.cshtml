@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+</div>
+
+@using (Html.BeginForm("Login", "Home"))
+{
+    <div class="col-md-12 row align-middle">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <table class="table table-sm table-borderless">
+                <tr>
+                    <td>User Name</td>
+                    <td>
+                        @Html.TextBox("UserName", null, new { @class = "form-control form-control-sm" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        @Html.Password("Password", null, new { @class = "form-control form-control-sm" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Login" class="btn btn-sm btn-secondary">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+}
+
+@Html.Label("lblName", "Please enter your name:")
+@Html.TextBox("txtName")
+<div>
+
+    <h1>WELCOME</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Employee ID
+                </th>
+                <th>
+                    Employee Name
+                </th>
+                <th>
+                    Location
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Swayam</td>
+                <td>Bengaluru</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Subhendu</td>
+                <td>Bhubaneswar</td>
+            </tr>
+        </tbody>
+
+    </table>

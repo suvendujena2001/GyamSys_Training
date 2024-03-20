@@ -31,8 +31,6 @@
             this.Aptgdv = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Savebtn = new System.Windows.Forms.Button();
-            this.ApDate = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,7 +47,7 @@
             this.Treatmenttb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Deletebtn = new System.Windows.Forms.Button();
-            this.maskedTimetb = new System.Windows.Forms.MaskedTextBox();
+            this.Appdatetime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.Aptgdv)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -87,24 +85,6 @@
             this.Savebtn.UseVisualStyleBackColor = false;
             this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
-            // ApDate
-            // 
-            this.ApDate.Location = new System.Drawing.Point(586, 77);
-            this.ApDate.Name = "ApDate";
-            this.ApDate.Size = new System.Drawing.Size(200, 26);
-            this.ApDate.TabIndex = 29;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Location = new System.Drawing.Point(516, 134);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 20);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Time";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -112,9 +92,9 @@
             this.label11.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label11.Location = new System.Drawing.Point(516, 75);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 20);
+            this.label11.Size = new System.Drawing.Size(204, 20);
             this.label11.TabIndex = 27;
-            this.label11.Text = "Date";
+            this.label11.Text = "Appointment Date and time";
             // 
             // label10
             // 
@@ -289,21 +269,20 @@
             this.Deletebtn.UseVisualStyleBackColor = false;
             this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
             // 
-            // maskedTimetb
+            // Appdatetime
             // 
-            this.maskedTimetb.Location = new System.Drawing.Point(586, 134);
-            this.maskedTimetb.Mask = "00:00";
-            this.maskedTimetb.Name = "maskedTimetb";
-            this.maskedTimetb.Size = new System.Drawing.Size(45, 26);
-            this.maskedTimetb.TabIndex = 100;
-            this.maskedTimetb.ValidatingType = typeof(System.DateTime);
+            this.Appdatetime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.Appdatetime.Location = new System.Drawing.Point(737, 75);
+            this.Appdatetime.Name = "Appdatetime";
+            this.Appdatetime.Size = new System.Drawing.Size(200, 26);
+            this.Appdatetime.TabIndex = 100;
             // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 630);
-            this.Controls.Add(this.maskedTimetb);
+            this.Controls.Add(this.Appdatetime);
             this.Controls.Add(this.Deletebtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Treatmenttb);
@@ -312,8 +291,6 @@
             this.Controls.Add(this.Aptgdv);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Savebtn);
-            this.Controls.Add(this.ApDate);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -338,8 +315,6 @@
         private System.Windows.Forms.DataGridView Aptgdv;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Savebtn;
-        private System.Windows.Forms.DateTimePicker ApDate;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -356,6 +331,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Deletebtn;
-        private System.Windows.Forms.MaskedTextBox maskedTimetb;
+        private System.Windows.Forms.DateTimePicker Appdatetime;
     }
 }

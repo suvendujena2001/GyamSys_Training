@@ -12,8 +12,7 @@
           <Property Name="AppId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="patient" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Treatment" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="AppDate" Type="date" Nullable="false" />
-          <Property Name="AppTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="AppDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Patienttable">
           <Key>
@@ -56,6 +55,9 @@
           <Property Name="UPass" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__Prescript__PatNa__48CFD27E' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__Prescript__PatNa__48CFD27E" />-->
         <EntityContainer Name="DentalCareModelStoreContainer">
           <EntitySet Name="Appointmenttable" EntityType="Self.Appointmenttable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Patienttable" EntityType="Self.Patienttable" Schema="dbo" store:Type="Tables" />
@@ -75,8 +77,7 @@
           <Property Name="AppId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="patient" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Treatment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="AppDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="AppTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="AppDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="Patienttable">
           <Key>
@@ -139,7 +140,6 @@
                 <ScalarProperty Name="patient" ColumnName="patient" />
                 <ScalarProperty Name="Treatment" ColumnName="Treatment" />
                 <ScalarProperty Name="AppDate" ColumnName="AppDate" />
-                <ScalarProperty Name="AppTime" ColumnName="AppTime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

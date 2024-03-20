@@ -7,16 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DentalCare
+namespace DentalCare.EntityFolder
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Treatmenttable
+    public partial class Prescriptiontable
     {
-        public int TreatmentId { get; set; }
+        public int PrescId { get; set; }
+        public string PatName { get; set; }
         public string TreatmentName { get; set; }
-        public int TreatmentCost { get; set; }
-        public string TreatmentDesc { get; set; }
+        public string TreatmentCost { get; set; }
+        public string Medicines { get; set; }
+        public int MedQty { get; set; }
     }
 }

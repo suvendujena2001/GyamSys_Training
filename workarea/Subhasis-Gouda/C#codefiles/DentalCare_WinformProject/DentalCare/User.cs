@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DentalCare.EntityFolder;
 namespace DentalCare
 {
     public partial class User : Form

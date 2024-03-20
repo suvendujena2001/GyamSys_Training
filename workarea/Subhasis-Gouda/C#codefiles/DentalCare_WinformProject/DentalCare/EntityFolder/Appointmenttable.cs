@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DentalCare
+namespace DentalCare.EntityFolder
 {
     using System;
     using System.Collections.Generic;
@@ -18,6 +18,5 @@ namespace DentalCare
         public string patient { get; set; }
         public string Treatment { get; set; }
         public System.DateTime AppDate { get; set; }
-        public System.TimeSpan AppTime { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DentalCare.EntityFolder;
 namespace DentalCare
 {
     public partial class Appointment : Form
@@ -41,8 +41,6 @@ namespace DentalCare
         {
             PatNamecb.SelectedItem = null;
             Treatmenttb.Text="";
-            ApDate= null;
-            maskedTimetb = null;
             Savebtn.Text = "Save";
             Deletebtn.Enabled= false;
         }
@@ -58,9 +56,9 @@ namespace DentalCare
                 appid = Convert.ToInt32(Aptgdv.Rows[e.RowIndex].Cells[0].Value);
                 PatNamecb.SelectedItem = Aptgdv.Rows[e.RowIndex].Cells[1].Value.ToString();
                 Treatmenttb.Text = Aptgdv.Rows[e.RowIndex].Cells[2].Value.ToString();
-                maskedTimetb.Text= Aptgdv.Rows[e.RowIndex].Cells[3].Value.ToString();
-                ApDate.Value = Convert.ToDateTime(Aptgdv.Rows[e.RowIndex].Cells[4].Value);
+                Appdatetime.Text= Aptgdv.Rows[e.RowIndex].Cells[3].Value.ToString();
                 updateflag = true;
+                Savebtn.Text = "Update";
                 Deletebtn.Enabled = true;
 
             }
@@ -76,20 +74,11 @@ namespace DentalCare
                     Appointmenttable ap = dc.Appointmenttables.Where(a => a.AppId == appid).FirstOrDefault();
                     ap.patient = PatNamecb.SelectedItem.ToString();
                     ap.Treatment = Treatmenttb.Text.ToString();
-                    string timeString = maskedTimetb.Text;
-                    if (TimeSpan.TryParseExact(timeString, "hh\\:mm", null, out TimeSpan selectedTime))
-                    {
-                        ap.AppTime = selectedTime;
-                        ap.AppDate = ApDate.Value;
-                        dc.Entry(ap).State = EntityState.Modified;
-                        dc.SaveChanges();
-                        updateflag = false;
-                        MessageBox.Show("patient data is updated successfully");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid time format. Please enter time in HH:mm format.");
-                    }
+                    ap.AppDate = Appdatetime.Value;
+                    dc.Entry(ap).State = EntityState.Modified;
+                    dc.SaveChanges();
+                    updateflag = false;
+                    MessageBox.Show("patient data is updated successfully");         
 
                 }
                 else
@@ -97,21 +86,11 @@ namespace DentalCare
 
                     aptbl.patient = PatNamecb.SelectedItem.ToString();
                     aptbl.Treatment = Treatmenttb.Text.ToString();
-                    
-                    if (TimeSpan.TryParseExact(maskedTimetb.Text, "hh\\:mm", null, out TimeSpan selectedTime))
-                    {
-                        string timeString = maskedTimetb.Text;
-                        aptbl.AppTime = selectedTime;
-                        aptbl.AppDate = ApDate.Value;
-                        dc.Appointmenttables.Add(aptbl);
-                        dc.SaveChanges();
-                        updateflag = false;
-                        MessageBox.Show("Appointment is added successfully");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid time format. Please enter time in HH:mm format.");
-                    }
+                    aptbl.AppDate = Appdatetime.Value;
+                    dc.Appointmenttables.Add(aptbl);
+                    dc.SaveChanges();
+                    updateflag = false;
+                    MessageBox.Show("Appointment is added successfully");
                 }
             }
             updategdv();

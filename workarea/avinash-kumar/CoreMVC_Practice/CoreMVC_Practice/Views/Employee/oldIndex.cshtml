@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+<h1>
+    Welcome to Employee List
+</h1>
+@Html.Label("Welcome Avinash")
+@Html.TextBox("hello avinash")
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                EmplId
+            </th>
+            <th>
+                EmployeeName
+            </th>
+            <th>
+                Salary
+            </th>
+            <th>
+                DeprtmentID
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Raju</td>
+            <td>20000</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ranjha</td>
+            <td>20000</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+<br/>
+Yes<input type="radio" value="Yes" />
+No<input type="radio" value="No" />
+<br />
+    <br />
+@Html.RadioButton("rdYes","Yes",true)
+<br />
+    <br />
+@Html.CheckBox("checkbox1")Tick This
+
+<br/>
+    @Html.ActionLink("Home", "Index","Home")
+    @Html.DisplayName("Avinash")
+    
+    @Html.TextArea("Description", null, new { @class = "form-control" })
+   
+
+   
+    <a href="https://www.google.com">Google</a>
+
+</div>

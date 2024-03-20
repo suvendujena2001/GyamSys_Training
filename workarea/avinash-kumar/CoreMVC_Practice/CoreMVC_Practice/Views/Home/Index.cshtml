@@ -2,8 +2,62 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+@using (Html.BeginForm("Login","Home"))
+{
+    <table class="table table-sm table-hover table-borderless">
+        <tr>
+            <td> User Name</td>
+            <td>
+                @Html.TextBox("Username")
+            </td>
+        </tr>
+        <tr>
+            <td> Password</td>
+            <td>
+                @Html.Password("Password")
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login" /></td>
+            <td>
+            
+            </td>
+        </tr>
+    </table>
+}
+
+
+
+
+
+
+@*<div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 <h3>Welcome to my web page</h3>
+
+@using (Html.BeginForm())
+{
+    Html.TextArea("write");
+    <input type="submit" value="post" />
+
+}
+<br />
+
+@Html.DropDownList("Gender",new List<SelectListItem>{
+    new SelectListItem{Value="1",Text="Male" ,Selected=true},
+    new SelectListItem{Value="2",Text="Female"},
+new SelectListItem{Value="3",Text="Others"},
+
+})
+<br />
+@Html.ListBox("Gender", new List<SelectListItem>{
+    new SelectListItem{Value="1",Text="Male" ,Selected=true},
+    new SelectListItem{Value="2",Text="Female"},
+new SelectListItem{Value="3",Text="Others"},
+
+})
+<br/>
+@Html.Password("Password")
+*@

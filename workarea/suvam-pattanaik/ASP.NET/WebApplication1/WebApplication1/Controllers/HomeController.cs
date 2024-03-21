@@ -15,20 +15,36 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
+
+            //ViewData["Message"] = "Hello from ViewData";
+            //ViewBag.Message = "Hello from viewbag";
+            //TempData["Message"] = "Hello from tempdata";
+
+            //ViewBag.message = string.Empty;
             return View();
         }
 
-        public IActionResult Login(string UserName , string Password)
+        public IActionResult Login(User user)
         {
-            if(UserName.ToLower()=="admin" && Password.ToLower() == "password")
+            user.ErrorMessage = string.Empty;
+            if (user != null && user.UserName != null && user.Password != null)
             {
-                return RedirectToAction("Index", "Employee");
+                if (user.UserName.ToLower() == "admin" && user.Password.ToLower() == "suvam")
+                {
+                    return RedirectToAction("Index", "Employee");
+                }
+                else
+                {
+                    user.ErrorMessage="Please enter valid username and password!!";
+                    return View("Index",user);
+                }
+
             }
             else
             {
-                return View("Index");
+                user.ErrorMessage="Please enter your username and password first!!!";
+                return View("Index",user);
             }
-            
         }
 
         public IActionResult Privacy()

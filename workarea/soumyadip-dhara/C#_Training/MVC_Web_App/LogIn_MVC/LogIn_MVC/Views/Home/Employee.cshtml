@@ -1,0 +1,48 @@
+﻿<style>
+    body{
+        background-color:aqua;
+    }
+    #form{
+        
+        padding-top:100px;
+    }
+</style>
+
+@using (Html.BeginForm("Login", "Home")){
+<form id="form">
+    <div class="col-md-12 row">
+
+        <div class="col-md-4">
+        </div>
+
+        <div class="col-md-4">
+            <table>
+                <tr>
+                    <td>UserName:</td>
+                    <td>
+                        @Html.TextBox("username")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        @Html.Password("Password")
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Login" class="btn btn-sm btn-secondary" />
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="col-md-4">
+        </div>
+    </div>
+</form>
+}

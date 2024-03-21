@@ -12,11 +12,7 @@ namespace WebApplication1.Controllers
             List<Employee> employee = db.Employees;
             return View(employee);
         }
-    public ActionResult Details(int id)
-        {
-            List<Employee> employee = db.Employees;
-            return View("Index", employee);
-        }
+    
 
     }
 

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "CoreMVC_Practice/1.0.0": {
         "dependencies": {
+          "BuildWebCompiler": "1.12.405",
           "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": "8.0.3",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2"
         },
@@ -15,6 +16,7 @@
           "CoreMVC_Practice.dll": {}
         }
       },
+      "BuildWebCompiler/1.12.405": {},
       "Humanizer/2.14.1": {
         "dependencies": {
           "Humanizer.Core.af": "2.14.1",
@@ -1648,6 +1650,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BuildWebCompiler/1.12.405": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1l1RK0jV+5QjJM22J5IGHm/EFaB3JN0WorKnLLP6HRnnf5H4sU4IBdBnMwN1OrVmww/3ir8fhbV0ZNGX6Uqn5w==",
+      "path": "buildwebcompiler/1.12.405",
+      "hashPath": "buildwebcompiler.1.12.405.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",

@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "BuildWebCompiler/1.12.405": {
+        "type": "package",
+        "build": {
+          "build/BuildWebCompiler.targets": {}
+        }
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -2303,6 +2309,29 @@
     }
   },
   "libraries": {
+    "BuildWebCompiler/1.12.405": {
+      "sha512": "1l1RK0jV+5QjJM22J5IGHm/EFaB3JN0WorKnLLP6HRnnf5H4sU4IBdBnMwN1OrVmww/3ir8fhbV0ZNGX6Uqn5w==",
+      "type": "package",
+      "path": "buildwebcompiler/1.12.405",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/BuildWebCompiler.targets",
+        "buildwebcompiler.1.12.405.nupkg.sha512",
+        "buildwebcompiler.nuspec",
+        "tools/net46/NUglify.dll",
+        "tools/net46/Newtonsoft.Json.dll",
+        "tools/net46/WebCompiler.exe",
+        "tools/netcoreapp2.0/NUglify.dll",
+        "tools/netcoreapp2.0/Newtonsoft.Json.dll",
+        "tools/netcoreapp2.0/WebCompiler.dll",
+        "tools/netcoreapp2.0/WebCompiler.runtimeconfig.json",
+        "tools/netstandard2.0/NUglify.dll",
+        "tools/netstandard2.0/Newtonsoft.Json.dll",
+        "tools/netstandard2.0/WebCompiler.dll"
+      ]
+    },
     "Humanizer/2.14.1": {
       "sha512": "/FUTD3cEceAAmJSCPN9+J+VhGwmL/C12jvwlyM1DFXShEMsBzvLzLqSrJ2rb+k/W2znKw7JyflZgZpyE+tI7lA==",
       "type": "package",
@@ -6431,6 +6460,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BuildWebCompiler >= 1.12.405",
       "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter >= 8.0.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.2"
     ]
@@ -6480,6 +6510,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "BuildWebCompiler": {
+            "target": "Package",
+            "version": "[1.12.405, )"
+          },
           "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
             "target": "Package",
             "version": "[8.0.3, )"

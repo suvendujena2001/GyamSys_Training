@@ -15,6 +15,10 @@ namespace CoreMVC_Practice.Controllers
 
         public IActionResult Index()
         {
+           // ViewData["Message"] = "Hello from viewdata";
+            //ViewBag.Message = "hello from viewbag";
+            //TempData["Message"] = "message from tempdata";
+            ViewBag.message=string.Empty;
             return View();
         }
 
@@ -23,16 +27,26 @@ namespace CoreMVC_Practice.Controllers
             return View();
         }
 
-        public IActionResult Login(String Username, String Password)
+        public IActionResult Login(User user)
         {
-            if (Username == "admin" && Password == "password")
+            ViewBag.message = string.Empty;
+            if (user != null && user.Username!=null && user.Password!=null)
             {
-                return RedirectToAction("Index", "Employee");
+                if (user.Username == "admin" && user.Password == "password")
+                {
+                    return RedirectToAction("Index", "Employee");
+                }
+                else
+                {
+                    ViewBag.message = "enter valid username and password";
+                    return View("Index");
+                }
             }
             else
             {
-                
+                ViewBag.message = "enter username and password";
                 return View("Index");
+
             }
         }
 

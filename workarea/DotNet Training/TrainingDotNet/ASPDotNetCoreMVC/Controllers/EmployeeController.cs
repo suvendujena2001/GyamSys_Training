@@ -5,17 +5,28 @@ namespace ASPDotNetCoreMVC.Controllers
 {
     public class EmployeeController : Controller
     {
-        EmployeeDbContext dbContext = new EmployeeDbContext();
+        private readonly EmployeeDbContext DbContext;
+
+        public EmployeeController(EmployeeDbContext dbContext)
+        {
+            DbContext = dbContext;
+        }
         public IActionResult Index()
         {
-            List<Employee> employees = dbContext.Employees;
+            List<Employee> employees = DbContext.Employees.ToList();
             return View(employees);
         }
 
-        [Route("Employee/Get/{EmpId}")]
-        public IActionResult Get(int? EmpId)
+        public IActionResult Create()
         {
-            List<Employee> employees = dbContext.Employees;
+            return View();
+        }
+
+
+        [Route("Employee/Get/{EmpId}")]
+        public IActionResult Get(int Id)
+        {
+            List<Employee> employees = DbContext.Employees.Where(e => e.Id == Id).ToList();
             return View("Index", employees);
         }
     }

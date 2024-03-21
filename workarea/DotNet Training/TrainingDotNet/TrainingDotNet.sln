@@ -9,7 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp", "WindowsFormsApp\WindowsFormsApp.csproj", "{51A573BB-20DC-46F2-8E01-C0DF0BC98A76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPDotNetCoreMVC", "ASPDotNetCoreMVC\ASPDotNetCoreMVC.csproj", "{566E9B39-EFB9-49A8-8241-60110C6171C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPDotNetCoreMVC", "ASPDotNetCoreMVC\ASPDotNetCoreMVC.csproj", "{566E9B39-EFB9-49A8-8241-60110C6171C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9D99672-DD2A-477A-8EA3-428DA16B42CD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

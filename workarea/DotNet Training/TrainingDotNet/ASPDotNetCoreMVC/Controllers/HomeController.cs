@@ -6,10 +6,12 @@ namespace ASPDotNetCoreMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly EmployeeDbContext DbContext;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(EmployeeDbContext dbContext, ILogger<HomeController> logger)
         {
+            DbContext = dbContext;
             _logger = logger;
         }
 
@@ -20,7 +22,8 @@ namespace ASPDotNetCoreMVC.Controllers
 
         public IActionResult Login(User user)
         {
-            if (user.UserName.ToLower() == "admin" && user.Password.ToLower() == "password")
+            User? userfromDb = DbContext.Users.Where(x => x.UserName == user.UserName && x.Password == user.Password).FirstOrDefault();
+            if (userfromDb != null)
             {
                 return RedirectToAction("Index", "Employee");
             }

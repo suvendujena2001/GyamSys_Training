@@ -236,3 +236,4 @@ C:\Users\AvinashKumar\Downloads\CoreMVC_Practice\CoreMVC_Practice\bin\Debug\net8
 C:\Users\AvinashKumar\Downloads\CoreMVC_Practice\CoreMVC_Practice\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\AvinashKumar\Downloads\CoreMVC_Practice\CoreMVC_Practice\obj\Debug\net8.0\CoreMVC_Practice.csproj.AssemblyReference.cache
 C:\Users\AvinashKumar\Downloads\CoreMVC_Practice\CoreMVC_Practice\obj\Debug\net8.0\CoreMVC_Practice.csproj.CopyComplete
+C:\Users\AvinashKumar\Downloads\CoreMVC_Practice\CoreMVC_Practice\obj\Debug\net8.0\scopedcss\Views\Employee\Index.cshtml.rz.scp.css

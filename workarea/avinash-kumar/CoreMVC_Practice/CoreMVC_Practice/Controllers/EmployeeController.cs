@@ -17,7 +17,7 @@ namespace CoreMVC_Practice.Controllers
 
         // GET: EmployeeController1/Details/5
         
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
             List<Employee> employees = dbcontext.Employees;
             return View("Index",employees);

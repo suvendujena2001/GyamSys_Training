@@ -9,6 +9,7 @@
             <td> User Name</td>
             <td>
                 @Html.TextBox("Username")
+               
             </td>
         </tr>
         <tr>
@@ -20,6 +21,8 @@
         <tr>
             <td><input type="submit" value="Login" /></td>
             <td>
+              
+                @Html.Label("message", ViewBag.message as string)
             </td>
         </tr>
     </table>

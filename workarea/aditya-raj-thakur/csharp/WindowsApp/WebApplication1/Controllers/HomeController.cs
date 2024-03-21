@@ -15,6 +15,7 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.message = string.Empty;
             return View();
         }
 
@@ -23,14 +24,15 @@ namespace WebApplication1.Controllers
             return View();
         }
         public IActionResult Login(String Username, String Password)
-        {
+        {    ViewBag.message = string.Empty;
+        
             if (Username == "admin" && Password == "password")
             {
                 return RedirectToAction("Index", "Employee");
             }
             else
             {
-
+                ViewBag.message = "enter valid username and password";
                 return View("Index");
             }
         }

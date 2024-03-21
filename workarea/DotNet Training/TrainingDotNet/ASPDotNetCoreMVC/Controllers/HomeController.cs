@@ -18,9 +18,9 @@ namespace ASPDotNetCoreMVC.Controllers
             return View();
         }
 
-        public IActionResult Login(string UserName, string Password)
+        public IActionResult Login(User user)
         {
-            if (UserName.ToLower() == "admin" && Password.ToLower() == "password")
+            if (user.UserName.ToLower() == "admin" && user.Password.ToLower() == "password")
             {
                 return RedirectToAction("Index", "Employee");
             }

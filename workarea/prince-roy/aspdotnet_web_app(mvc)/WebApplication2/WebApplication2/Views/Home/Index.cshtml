@@ -6,8 +6,5 @@
     <h1>Search</h1>
     <p>Search high-resolution images from Unsplash</p>
 
-    @using (Html.BeginForm())
-    {
-        <input type="text" name="userInput" placeholder="Enter your keywords..." aria-label="user-input" />  
-    }
+    @await Html.PartialAsync("_FormInput")
 </div>

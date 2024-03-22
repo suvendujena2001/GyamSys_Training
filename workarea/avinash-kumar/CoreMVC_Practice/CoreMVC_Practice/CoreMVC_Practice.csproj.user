@@ -11,5 +11,6 @@
     <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
+    <WebStackScaffolding_DbContextTypeFullName>CoreMVC_Practice.Models.EmployeeDbContext</WebStackScaffolding_DbContextTypeFullName>
   </PropertyGroup>
 </Project>

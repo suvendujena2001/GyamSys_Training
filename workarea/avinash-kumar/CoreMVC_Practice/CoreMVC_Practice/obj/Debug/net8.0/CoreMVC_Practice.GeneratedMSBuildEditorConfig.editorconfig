@@ -26,8 +26,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\AvinashKumar\Downloads\CoreMVC_Practice\CoreMVC_Practice
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/AvinashKumar/Downloads/CoreMVC_Practice/CoreMVC_Practice/Views/Employee/oldIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcb2xkSW5kZXguY3NodG1s
+[C:/Users/AvinashKumar/Downloads/CoreMVC_Practice/CoreMVC_Practice/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AvinashKumar/Downloads/CoreMVC_Practice/CoreMVC_Practice/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AvinashKumar/Downloads/CoreMVC_Practice/CoreMVC_Practice/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/AvinashKumar/Downloads/CoreMVC_Practice/CoreMVC_Practice/Views/Home/Index.cshtml]
@@ -53,10 +61,6 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/AvinashKumar/Downloads/CoreMVC_Practice/CoreMVC_Practice/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/AvinashKumar/Downloads/CoreMVC_Practice/CoreMVC_Practice/Views/Employee/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-zpu2o6vnu6
 
 [C:/Users/AvinashKumar/Downloads/CoreMVC_Practice/CoreMVC_Practice/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

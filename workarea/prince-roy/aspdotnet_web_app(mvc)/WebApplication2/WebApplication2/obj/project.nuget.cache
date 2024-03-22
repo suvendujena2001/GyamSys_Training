@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MEPcFQ1yaeS70OwaBJh/8UPricBesnEfsZYKbWEW7SXB/N1PNO7wuAo9XUGXP0GfzI4IeocQiqnpvWR0SQH7FQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PrinceRoy\\source\\repos\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PrinceRoy\\.nuget\\packages\\buildwebcompiler2022\\1.14.10\\buildwebcompiler2022.1.14.10.nupkg.sha512"
+  ],
+  "logs": []
+}

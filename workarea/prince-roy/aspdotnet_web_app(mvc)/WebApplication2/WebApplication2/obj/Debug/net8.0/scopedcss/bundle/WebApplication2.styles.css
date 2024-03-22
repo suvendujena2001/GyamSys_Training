@@ -1,5 +1,6 @@
+@import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css';
+
 /* _content/WebApplication2/Views/Home/Index.cshtml.rz.scp.css */
-@charset "UTF-8";
 .home-container[b-mtbovxntcd] {
   min-height: 100vh;
   display: flex;
@@ -22,12 +23,13 @@
   font-size: 0.75rem;
   font-weight: 300;
 }
-
-﻿form[b-mtbovxntcd] {
+/* _content/WebApplication2/Views/Shared/_FormInput.cshtml.rz.scp.css */
+@charset "UTF-8";
+﻿form[b-w0i8mwvigx] {
   width: min(55%, 600px);
 }
 
-input[b-mtbovxntcd] {
+input[b-w0i8mwvigx] {
   width: 100%;
   padding-inline: 0.8rem;
   padding-block: 1rem;
@@ -38,10 +40,10 @@ input[b-mtbovxntcd] {
   background-position: right 0.85rem center;
   box-shadow: 0 1rem 1rem -1rem #E5E7EB;
 }
-input[b-mtbovxntcd]::-webkit-input-placeholder {
+input[b-w0i8mwvigx]::-webkit-input-placeholder {
   color: #6C727F;
 }
-input:focus[b-mtbovxntcd] {
+input:focus[b-w0i8mwvigx] {
   outline: none;
 }
 /* _content/WebApplication2/Views/Shared/_Layout.cshtml.rz.scp.css */

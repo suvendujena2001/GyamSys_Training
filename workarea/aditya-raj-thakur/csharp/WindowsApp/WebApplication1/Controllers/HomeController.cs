@@ -7,10 +7,12 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly EmployeeDbContext Context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,EmployeeDbContext dbContext)
         {
             _logger = logger;
+            this.Context = dbContext;
         }
 
         public IActionResult Index()
@@ -23,12 +25,17 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult Login(String Username, String Password)
+        public IActionResult Login(User user)
         {    ViewBag.message = string.Empty;
+            User userdb = Context.Users.Where(x => x.Username == user.Username && x.Password == user.Password).FirstOrDefault();
         
-            if (Username == "admin" && Password == "password")
+            if (user!=null && user.Username != null && user.Password !=null)
             {
-                return RedirectToAction("Index", "Employee");
+                if(userdb!=null)
+                {
+                    return RedirectToAction("Index", "Employee");
+                }
+               return View("Index");
             }
             else
             {

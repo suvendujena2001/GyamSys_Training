@@ -1,17 +1,23 @@
 ﻿using CoreMVC_Practice.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoreMVC_Practice.Controllers
 {
     public class EmployeeController : Controller
     {
-        EmployeeDbContext dbcontext=new EmployeeDbContext();
+        public EmployeeDbContext DbContext { get; }
 
+        //EmployeeDbContext dbcontext=new EmployeeDbContext();
+        public EmployeeController(EmployeeDbContext dbContext) {
+            DbContext = dbContext;
+        }
         // GET: EmployeeController1
         public ActionResult Index()
         {
-            List<Employee> employees = dbcontext.Employees; 
+           List<Employee> employees = DbContext.Employees.ToList(); 
             return View(employees);
         }
 
@@ -19,36 +25,38 @@ namespace CoreMVC_Practice.Controllers
         
         public ActionResult Details(int? id)
         {
-            List<Employee> employees = dbcontext.Employees;
+            List<Employee> employees = DbContext.Employees.Where(e=> e.Id==id).ToList();
             return View("Index",employees);
         }
 
         // GET: EmployeeController1/Create
         
-        public ActionResult Create()
+        public ActionResult Create()    
         {
+            
             return View();
         }
 
         // POST: EmployeeController1/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Employee obj)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+                if (ModelState.IsValid)
+                {
+                    DbContext.Employees.Add(obj);
+                    DbContext.SaveChanges();
+                    return RedirectToAction("Index", "Employee");
+                }
+            return View();
+            
         }
 
         // GET: EmployeeController1/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            Employee emp = DbContext.Employees.Find(id); 
+            return View(emp);
         }
 
         // POST: EmployeeController1/Edit/5
@@ -58,6 +66,7 @@ namespace CoreMVC_Practice.Controllers
         {
             try
             {
+
                 return RedirectToAction(nameof(Index));
             }
             catch

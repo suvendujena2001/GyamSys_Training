@@ -6,10 +6,12 @@ namespace CoreMVC_Practice.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly EmployeeDbContext DbContext;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(EmployeeDbContext dbContext, ILogger<HomeController> logger)
         {
+            this.DbContext=dbContext;
             _logger = logger;
         }
 
@@ -28,11 +30,12 @@ namespace CoreMVC_Practice.Controllers
         }
 
         public IActionResult Login(User user)
-        {
+        {   
+            User userFromDb=DbContext.Users.Where(x => x.Username ==user.Username && x.Password==user.Password).FirstOrDefault();
             ViewBag.message = string.Empty;
             if (user != null && user.Username!=null && user.Password!=null)
             {
-                if (user.Username == "admin" && user.Password == "password")
+                if (userFromDb!=null)
                 {
                     return RedirectToAction("Index", "Employee");
                 }

@@ -1,4 +1,5 @@
 
+
 # Progress Report - Subhendu Jena
 
 ## ONLINE TRAINING AND PRACTICE
@@ -136,3 +137,12 @@
     5. Evaluation on C# and SQL.
     6. Revised Javascript concepts.
     7. SQL Practice on SSMS (basic statements and joins and aggregate functions).
+
+## Office- Week 6(11-March-2024 to 15-March-2024)
+    1. Training by Suman on C#(Inheritance, Interfaces, DataTable etc.)
+    2. SQL practice questions solved for AdventureDB.
+    3. Training on windows forms by Suman(labels, TextBox control, buttons - RadioButton control in a WinForms application etc).
+    4. Scores discussion with Megha.
+    5. Training on Windows forms(DataGridView control used for in WinForms development, Combo Box).
+    6. Training by Suman on windows form (Timer control work in Windows Forms, TreeView control in a Windows Forms application).
+    7. .NET and C# evaluation(winforms, inheritance, enums, Dataset and DataTable, Sealed class, abstract class and interfaces, Entity Frameworks).

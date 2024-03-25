@@ -1,4 +1,7 @@
-﻿@using (Html.BeginForm())
+﻿@model FormInputViewModel
+
+@using (Html.BeginForm("HandleQuery", "Search", FormMethod.Post))
 {
-    <input type="text" name="userInput" placeholder="Enter your keywords..." aria-label="user-input" />
+    @Html.AntiForgeryToken()
+    <input type="text" name="keywords" placeholder="Enter your keywords..." aria-label="search-keywords" />
 }

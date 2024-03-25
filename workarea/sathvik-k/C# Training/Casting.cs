@@ -24,11 +24,6 @@ double myDouble = myInt;       // Automatic casting: int to double
 Console.WriteLine(myInt);      // Outputs 9
 Console.WriteLine(myDouble);   // Outputs 9
 
-
-
-
-
-
 // Explicit Casting
 // Explicit casting must be done manually by placing the type in parentheses in front of the value:
 
@@ -36,7 +31,7 @@ Console.WriteLine(myDouble);   // Outputs 9
 double myDouble = 9.78;
 int myInt = (int) myDouble;    // Manual casting: double to int
 
-Console.WriteLine(myDouble);   // Outputs 9.78
+Console.WriteLine(myDouble);   // Outputs 9.78 iii
 Console.WriteLine(myInt);      // Outputs 9
 
 

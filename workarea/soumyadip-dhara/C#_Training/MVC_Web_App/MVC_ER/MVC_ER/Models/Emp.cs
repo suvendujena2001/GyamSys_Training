@@ -11,6 +11,6 @@ namespace MVC_ER.Models
         public string? Position { get; set; }
         public int? Salary { get; set; }
         public string? EmailId {  get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
     }
 }

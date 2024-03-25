@@ -8,7 +8,7 @@ namespace MVC_ER.Models
         {
 
         }
-        public DbSet<Emp> Employees { get; set; }
+        public DbSet<Emp> Employee { get; set; }
     }
 
 }

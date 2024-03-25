@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
+using System.ComponentModel;
 
 namespace CoreMVC_Practice.Controllers
 {
@@ -25,8 +27,8 @@ namespace CoreMVC_Practice.Controllers
         
         public ActionResult Details(int? id)
         {
-            List<Employee> employees = DbContext.Employees.Where(e=> e.Id==id).ToList();
-            return View("Index",employees);
+            Employee emp = DbContext.Employees.Find(id);
+            return View(emp);
         }
 
         // GET: EmployeeController1/Create
@@ -55,45 +57,35 @@ namespace CoreMVC_Practice.Controllers
         // GET: EmployeeController1/Edit/5
         public ActionResult Edit(int? id)
         {
-            Employee emp = DbContext.Employees.Find(id); 
+            Employee emp = DbContext.Employees.Find(id);
             return View(emp);
         }
 
         // POST: EmployeeController1/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Employee obj)
         {
-            try
+            if (ModelState.IsValid)
             {
-
-                return RedirectToAction(nameof(Index));
+                DbContext.Employees.Update(obj);
+                DbContext.SaveChanges();
+                return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(obj);
         }
 
         // GET: EmployeeController1/Delete/5
-        public ActionResult Delete(int id)
+       
+        
+        public ActionResult Delete(int? id)
         {
-            return View();
-        }
+            Employee emp = DbContext.Employees.Find(id);
+           
+                DbContext.Employees.Remove(emp);
+            DbContext.SaveChanges();
+            return RedirectToAction("Index");
 
-        // POST: EmployeeController1/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

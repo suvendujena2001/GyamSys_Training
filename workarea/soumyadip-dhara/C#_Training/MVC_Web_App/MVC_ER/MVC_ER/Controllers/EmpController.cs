@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using MVC_ER.Models;
 
 namespace MVC_ER.Controllers
@@ -15,7 +17,8 @@ namespace MVC_ER.Controllers
         // GET: EmpController
         public IActionResult Index()
         {
-            List<Emp> emps = Context.Employees.ToList();
+            var emps = Context.Employee.ToList();
+            //List<Emp> emps = Context.Employees.ToList();
             return View(emps);
         }
 
@@ -27,7 +30,7 @@ namespace MVC_ER.Controllers
                 return NotFound();
             }
 
-            var emp = Context.Employees.Find(id);
+            var emp = Context.Employee.Find(id);
 
             if (emp == null)
             {
@@ -48,20 +51,31 @@ namespace MVC_ER.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Emp emp)
         {
-            if (ModelState.IsValid)
+
+            if (!Context.Employee.Any(e => e.Id == emp.Id))
             {
-                Context.Employees.Add(emp);
+                Context.Employee.Add(emp);
                 Context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View();
+            else
+            {
+                ModelState.AddModelError("ID", "This ID already exists");
+                return View();
+            }
         }
 
         // GET: EmpController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
+            var emp = Context.Employee.Find(id);
 
-            return View();
+            if (emp == null)
+            {
+                return NotFound();
+            }
+
+            return View(emp);
         }
 
         // POST: EmpController/Edit/5
@@ -69,20 +83,36 @@ namespace MVC_ER.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
-            try
-            {
+                var employee = Context.Employee.Find(id);
+
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+
+                // Update the employee's properties with the values from the `IFormCollection`
+                employee.Name = collection["Name"];
+                employee.Position = collection["Position"];
+                employee.Salary = int.Parse(collection["Salary"]);
+                employee.EmailId = collection["EmailId"];
+                employee.Phone = collection["phone"];
+
+
+
+                // Save the updated employee back to the database
+                Context.SaveChanges();
+
+                // Add a success message to the `TempData` dictionary
+                TempData["Message"] = "Employee updated successfully.";
+
                 return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
         }
 
         // GET: EmpController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var emp = Context.Employee.Find(id);
+            return View(emp);
         }
 
         // POST: EmpController/Delete/5
@@ -90,14 +120,14 @@ namespace MVC_ER.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {
-            try
+            var emp= Context.Employee.Find(id);
+            if (emp == null)
             {
-                return RedirectToAction(nameof(Index));
+                return NotFound();
             }
-            catch
-            {
-                return View();
-            }
+            Context.Employee.Remove(emp);
+            Context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

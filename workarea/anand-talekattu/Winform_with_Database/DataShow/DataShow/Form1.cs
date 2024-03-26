@@ -168,28 +168,7 @@ namespace DataShow
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-        //private void SHOWALL1()
-        //{
-        //    try
-        //    {
-        //        using (SqlConnection con = new SqlConnection(@"data source=IN-GVF3NX3;Database=TrainingDb;User Id=sa;Password=sa;"))
-        //        {
-        //            string selectquery = "SELECT * FROM Employee";
-        //            SqlDataAdapter adpt = new SqlDataAdapter(selectquery, con);
-
-        //            DataTable table = new DataTable();
-        //            adpt.Fill(table);
-
-        //            dataGridView1.DataSource = table;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error: " + ex.Message);
-        //    }
-        //}
-
+       
         private void button3_Click(object sender, EventArgs e)
         {
             try

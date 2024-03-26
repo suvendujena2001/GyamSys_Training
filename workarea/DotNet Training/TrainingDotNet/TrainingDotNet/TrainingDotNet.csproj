@@ -62,11 +62,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ClassLibrary.csproj">
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
       <Project>{6fd9ad71-483d-4b9b-a60b-b1cf5b8fbd69}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>

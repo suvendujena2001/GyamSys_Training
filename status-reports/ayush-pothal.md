@@ -80,9 +80,11 @@
 - WinForms
 ### Postman API Certification
 - Completed Postman API Fundamentals Student Expert certification
+---
 
 # Week 6 (11-03-2024 to 17-03-2024)
 
+---
 ## C#
 - Entity Framework
 - Inheritance

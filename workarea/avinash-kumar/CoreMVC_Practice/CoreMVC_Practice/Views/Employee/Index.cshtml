@@ -1,64 +1,53 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<div>
-<h1>
-    Welcome to Employee List
-</h1>
-@Html.Label("Welcome Avinash")
-@Html.TextBox("hello avinash")
+﻿@model IEnumerable<CoreMVC_Practice.Models.Employee>
 
-<table>
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<p>
+   @Html.ActionLink("+ Add Employee", "Create", "Employee", null, new { @class = "btn btn-sm btn-secondary" })
+</p>
+<table class="table">
     <thead>
         <tr>
             <th>
-                EmplId
+                @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                EmployeeName
+                @Html.DisplayNameFor(model => model.Salary)
             </th>
             <th>
-                Salary
+                @Html.DisplayNameFor(model => model.Gender)
             </th>
             <th>
-                DeprtmentID
+                @Html.DisplayNameFor(model => model.Department)
             </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
+@foreach (var item in Model) {
         <tr>
-            <td>1</td>
-            <td>Raju</td>
-            <td>20000</td>
-            <td>2</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Ranjha</td>
-            <td>20000</td>
-            <td>1</td>
-        </tr>
+}
     </tbody>
 </table>
-<br/>
-Yes<input type="radio" value="Yes" />
-No<input type="radio" value="No" />
-<br />
-    <br />
-@Html.RadioButton("rdYes","Yes",true)
-<br />
-    <br />
-@Html.CheckBox("checkbox1")Tick This
-
-<br/>
-    @Html.ActionLink("Home", "")
-    @Html.DisplayName("Avinash")
-    
-    @Html.TextArea("Description", null, new { @class = "form-control" })
-   
-
-   
-
-</div>

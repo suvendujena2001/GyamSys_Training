@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("Login", "Home"))
+{
+    <table class="table table-sm table-hover table-borderless">
+        <tr>
+            <td> User Name</td>
+            <td>
+                @Html.TextBox("Username")
+            </td>
+        </tr>
+        <tr>
+            <td> Password</td>
+            <td>
+                @Html.Password("Password")
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login" /></td>
+            <td>
+            </td>
+        </tr>
+    </table>
+}

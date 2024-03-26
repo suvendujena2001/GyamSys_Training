@@ -266,12 +266,23 @@
 
 ### 14 MARCH :
 
+    1. Winform implementation through project .
 
-
+    2. Session on entity-framework : tree-view , tooltip ,radio button ,open file dialog-box.
 
 ### 15 MARCH :
 
-    
+    1. Self learning of C# concepts ,LINQ , inheritance , method overriding 
+
+    2. Evaluation  test on C# comprising LINQ , inheritance etc.
+
+## Week -7 (18 MARCH - 24 MARCH 2024)
+
+### 18 MARCH :
+
+    1. Implementation of  winform CRUD operation application .
+
+    2. Session on asp.net core MVC , handling of mvc controls with HTML .
     
 
     

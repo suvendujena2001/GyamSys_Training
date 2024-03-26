@@ -202,6 +202,52 @@
 3. Max Function
 4. Count function
 5. Sum
+
+# Week 6 status report(Mar 11 to Mar 17)
+## C#
+1. Constructure and Constructure in inheritance
+2. Access Modifier (Public, Private, Protected)
+3. Encapsulation
+4. Get abd Set method
+5. Static method
+6. Polymorphism (Run time and Compile time)
+7. Method overloading
+8. Operator overloading
+9. method overriding
+10. Practicing the Windows Form 
+## SQL
+1. Aliases
+2. Case
+3. Null function
+4. Drop DB
+5. Check
+
+# Week 7 status report(Mar 18 to Mar 24)
+## C#
+1. Sealed class
+2. Indexers
+3. Delegates
+4. Lambda Functions
+5. Abstract class and abstraction
+6. Explore more WinForm elements
+
+## ASP .NET Core MVC
+1. Introduction to core MVC
+2. Difference between ASP .NET core and ASP .NET core MVC
+3. Creating MVC project
+4. Understanding Directory Structure and Workflow
+5. Middleware
+6. Routing concepts
+7. Convention Based routing
+8. Attribute Based Routing
+9. Map, MapGet, MapPost, MapPut
+10. Controllers
+11. Action Methods
+12. View , Razor and Razor Engine
+    
+    
+    
+
    
    
 

@@ -4426,11 +4426,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\Web\\Web.DataAccess\\Web.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\get-2024-microsoft\\workarea\\abhishek-kumar\\dotnet\\Web\\Web.DataAccess\\Web.DataAccess.csproj",
       "projectName": "Web.DataAccess",
-      "projectPath": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\Web\\Web.DataAccess\\Web.DataAccess.csproj",
+      "projectPath": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\get-2024-microsoft\\workarea\\abhishek-kumar\\dotnet\\Web\\Web.DataAccess\\Web.DataAccess.csproj",
       "packagesPath": "C:\\Users\\AbhishekKumar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\Web\\Web.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\get-2024-microsoft\\workarea\\abhishek-kumar\\dotnet\\Web\\Web.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4452,8 +4452,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\Web\\Web.Models\\Web.Models.csproj": {
-              "projectPath": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\Web\\Web.Models\\Web.Models.csproj"
+            "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\get-2024-microsoft\\workarea\\abhishek-kumar\\dotnet\\Web\\Web.Models\\Web.Models.csproj": {
+              "projectPath": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\get-2024-microsoft\\workarea\\abhishek-kumar\\dotnet\\Web\\Web.Models\\Web.Models.csproj"
             }
           }
         }

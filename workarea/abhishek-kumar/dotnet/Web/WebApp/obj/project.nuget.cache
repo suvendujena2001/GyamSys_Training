@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gEdC4zJTdg0DsnYhnb1R9rJN9N16q86JJgZHFoXZJCrUm8J81aXRxFaKPkREIWMeTgjrqF3dOydoQuuK1WI3fA==",
+  "dgSpecHash": "1402dFc4W9HMl6cXN5/J2818RxaTrX11uB0T6CBqfwF/gbKqIh1T/d6OBBbsWUt4Suac33MYUSPHwJ1T5eAJpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\Web\\WebApp\\WebApp.csproj",
+  "projectFilePath": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\get-2024-microsoft\\workarea\\abhishek-kumar\\dotnet\\Web\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AbhishekKumar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\AbhishekKumar\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

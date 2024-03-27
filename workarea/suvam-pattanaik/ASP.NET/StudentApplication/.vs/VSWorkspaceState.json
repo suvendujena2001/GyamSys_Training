@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\StudentApplication",
+    "\\StudentApplication\\Data",
+    "\\StudentApplication\\Models",
+    "\\StudentApplication\\Models\\Entities"
+  ],
+  "SelectedNode": "\\StudentApplication\\Models\\Entities\\Student.cs",
+  "PreviewInSolutionExplorer": false
+}

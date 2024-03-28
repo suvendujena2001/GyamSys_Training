@@ -14,7 +14,7 @@ namespace EntityFramework
         //Connection String(used to connect to database)
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=((localdb)\\sqllocaldb;Database=RankenCustomers;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=IN-9P39GG3;Database=RankenCustomers;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

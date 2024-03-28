@@ -328,7 +328,9 @@
 
 ### 28 MARCH :
 
-    
+    1. Design of layout and controller in alloted project.
+
+    2. Session on webAPI ,integration with swagger and postman in web application.
   
   
 

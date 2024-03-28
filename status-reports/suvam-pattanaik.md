@@ -283,7 +283,50 @@
     1. Implementation of  winform CRUD operation application .
 
     2. Session on asp.net core MVC , handling of mvc controls with HTML .
-    
+
+### 19 MARCH :
+
+    1. Practice of controller , view and model through documentation of asp.net .
+
+    2. Session on various helper methods in HTML , how to pass value from controller to view .
+
+### 20 MARCH :
+
+    1. Practice of creating a login page using controller and view .
+
+    2. Difference between tempdata,viewdata,viewbag in controller ,how to show messages when user perform certain actions .
+
+### 21 MARCH :
+
+    1. Session on how can we connect database with asp.net application , code-first approach .
+
+### 22 MARCH :
+
+    1. Self practice of connecting database through code-first-approach .
+
+    2. Evaluation test on asp.net and mvc core.
+
+## Week -8 (25 MARCH - 31 MARCH 2024)
+
+### 25 MARCH :
+
+    1. Practice of Create operation using mvc and entity framework .
+
+    2. Distribution of projects , evaluation criteria and how to mark the progress of work done till date .
+
+### 26 MARCH :
+
+    1. Practice of CRUD operations in asp.net .
+
+    2. Session on how can we implement delete and details operations for a particular user in our applications .
+
+### 27 MARCH :
+
+    1. Design of database schema including various tables of our project through SSMS .
+
+    2. Evaluation of ER diagram by mentors .
+
+### 28 MARCH :
 
     
   

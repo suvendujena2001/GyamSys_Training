@@ -80,11 +80,9 @@
 - WinForms
 ### Postman API Certification
 - Completed Postman API Fundamentals Student Expert certification
----
 
 # Week 6 (11-03-2024 to 17-03-2024)
 
----
 ## C#
 - Entity Framework
 - Inheritance
@@ -98,4 +96,18 @@
 ### Foundational C# with Microsoft Certification
 - Completed Foundational C# with Microsoft Certification
 
+# Week 7 (18-03-2024 to 24-03-2024)
+
+## ASP.NET Core MVC
+- ASP .NET Core Overview
+- MVC Architecture
+- Basics of HTML
+- Razor view engine and it's controls
+- Applying CSS to the Razor controls
+-	Routing
+-	Creating Controller
+-	Creating Model
+-	Creating View
+-	Entity Framework Code First Approach
+-	Model binding
 

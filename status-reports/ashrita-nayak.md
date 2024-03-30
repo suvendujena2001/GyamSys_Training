@@ -64,7 +64,7 @@
 * On the last working day, we gave a ASP.NET CORE MVC evaluation test.
 
  ## Week 8 (25th March 2024 to 29th March 2024)
- * Topics such as 	TempData, ViewData, ViewBag, Model Binding, @Html.ValidationMessage, @Html.ValidationMessageFor, @Html.ValidationSummary,	Tag Helpers in ASP.NET Core, Validations from View, Validations from Model, ModelState, AddModelError, HttpGet, HttpPost, HttpPut, HttpDelete, IActionResult, Task, Synchronous and Asynchronous, WEB API, MVC Controllers VS API Controllers, etc  were taught throughout the week.
+ * Topics such as 	TempData, ViewData, ViewBag, Model Binding, @Html.ValidationMessage, @Html.ValidationMessageFor, @Html.ValidationSummary,	Tag Helpers in ASP.NET Core, Validations from View, Validations from Model, ModelState, AddModelError, HttpGet, HttpPost, HttpPut, HttpDelete, IActionResult, Task, Synchronous and Asynchronous, WEB API, MVC Controllers VS API Controllers, etc.  were taught throughout the week.
  * We were assigned individual projects to work upon from this week. I started doing my assigned project titled "Blog Platform" in which I first created the database in SSMS & got it verified from the mentors. I completed the database design part and uploaded the table diagram on GitHub. Then I started doing the API-Entity Framework part.
  *  On the last working day, we gave a ASP.NET CORE MVC evaluation test.
 

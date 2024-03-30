@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MvcIplApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b8bcedfa35df797d52367a37d21b5b076987107")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c06d7ba12b09ccbee1b3353a798a46d0b2ea9fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("MvcIplApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MvcIplApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

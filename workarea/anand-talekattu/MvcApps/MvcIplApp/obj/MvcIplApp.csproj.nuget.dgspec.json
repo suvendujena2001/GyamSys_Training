@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\C#.NET\\MvcApps\\MvcIplApp\\MvcIplApp.csproj": {}
+    "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\GET training\\get-2024-microsoft\\workarea\\anand-talekattu\\MvcApps\\MvcIplApp\\MvcIplApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\C#.NET\\MvcApps\\MvcIplApp\\MvcIplApp.csproj": {
+    "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\GET training\\get-2024-microsoft\\workarea\\anand-talekattu\\MvcApps\\MvcIplApp\\MvcIplApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\C#.NET\\MvcApps\\MvcIplApp\\MvcIplApp.csproj",
+        "projectUniqueName": "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\GET training\\get-2024-microsoft\\workarea\\anand-talekattu\\MvcApps\\MvcIplApp\\MvcIplApp.csproj",
         "projectName": "MvcIplApp",
-        "projectPath": "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\C#.NET\\MvcApps\\MvcIplApp\\MvcIplApp.csproj",
+        "projectPath": "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\GET training\\get-2024-microsoft\\workarea\\anand-talekattu\\MvcApps\\MvcIplApp\\MvcIplApp.csproj",
         "packagesPath": "C:\\Users\\AnandMallikarjun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\C#.NET\\MvcApps\\MvcIplApp\\obj\\",
+        "outputPath": "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\GET training\\get-2024-microsoft\\workarea\\anand-talekattu\\MvcApps\\MvcIplApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BootstrapIcons.AspNetCore": {
+              "target": "Package",
+              "version": "[1.11.0, )"
+            },
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
               "version": "[8.0.3, )"

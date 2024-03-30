@@ -7,9 +7,9 @@
 ---
 ## Week 1 (5/2/2024 - 11/2/2024)
 
-	Induction, Team lunch
-	Practice on Git, Html and C# basic 
-	Training and Self practice on the following topics
+Induction, Team lunch
+Practice on Git, Html and C# basic 
+Training and Self practice on the following topics
 
 1. ### HTML
 	Learnt and practiced this topics

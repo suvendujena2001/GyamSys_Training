@@ -13,6 +13,5 @@ namespace MvcIplApp.Models
         public string Coach { get; set; }
         public string Captain { get; set; }
         public string Venue { get; set; }
-        
     }
 }

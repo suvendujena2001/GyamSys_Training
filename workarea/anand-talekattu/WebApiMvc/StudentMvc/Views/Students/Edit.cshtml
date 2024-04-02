@@ -1,0 +1,80 @@
+﻿@model StudentMvc.Models.Student
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Branch" class="control-label"></label>
+                <input asp-for="Branch" class="form-control" />
+                <span asp-validation-for="Branch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="College" class="control-label"></label>
+                <input asp-for="College" class="form-control" />
+                <span asp-validation-for="College" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="button" value="Save" class="btn btn-primary" onclick="updateStudent()"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script>
+    function updateStudent(){
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        const id = $("#Id").val();
+        const raw = JSON.stringify({
+            "id": id,
+            "Name": $("#Name").val(),
+            "Branch": $("#Branch").val(),
+            "College": $("#College").val()
+        });
+
+        const requestOptions = {
+            method: "PUT",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow"
+        };
+
+        // fetch(`https://localhost:7088/api/StudentsApi/${id}`, requestOptions)
+        //     .then((response) => response.text())
+        //     .then((result) => console.log(result))
+        //     .catch((error) => console.error(error));
+        fetch(`https://localhost:7088/api/StudentsApi/${id}`, requestOptions) // Use the fetched ID
+            .then((response) => {
+                if (response.ok) {
+                    // Redirect to the Index page after successful update
+                    window.location.href = '/Students/Index';
+                } else {
+                    throw new Error('Failed to update student data');
+                }
+            })
+            .catch((error) => console.error(error));
+    }
+</script>

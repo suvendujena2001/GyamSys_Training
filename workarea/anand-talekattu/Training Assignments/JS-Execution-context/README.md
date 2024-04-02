@@ -90,7 +90,7 @@ Variables initialized with the var keyword are stored in the memory of the curre
 
 ```javascript
 console.log(greetings)
-var greetings="Hi, I am Anan. Nice to see you"
+var greetings="Hi, I am Anand. Nice to see you"
 ```
 > undefined
 

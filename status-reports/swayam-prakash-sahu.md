@@ -120,4 +120,139 @@ Node Js)
 1. Training on Testing(JIRA)
 2. Training on how to implement the JavaScript concepts(callbacks, closures and Promises)
 3. Training and databases concepts(Use SSMS for implementing queries like JOINS, Indexes  etc ), software development good practices(Agile process)
+
+## WEEK 4(26-FEB-2024 to 03-MAR-2024)
+
+### DAY - 1 (Feb 26, 2024)
+
+1. SQL Week 2 evaluation 
+2. API testing 
+3. Training On SSMS and SQL
+4. Self  Learning SSMS
+5. SQL queries and statements practice
+6. Understanding JIRA Fundamentals
+
+### DAY - 2 (Feb 27, 2024)	
+
+1. Learning SQL 
+2. .NET Training (Introduction)by Suman
+3. Self learning C# and .NET(Introduction, Basics)
+4. Self learning POSTMAN API(How API works, Types of API, REST API, status codes).
+5. Self Learning on Unit Testing, Black box and White Box (introduction)
+
+### DAY - 3 (Feb 28, 2024)	
+
+1. Testing Fundamentals (Verification and Validation)
+2. API Fundamentals
+3. .NET AND C# training
+4. SQL Practice on SSMS and training
+5. Self Learning Bootstrap and jQuery Basics
+6. Types of White Box techniques and SDLC models
+
+### DAY - 4 (Feb 29, 2024)
+
+1. Evaluation on Unit Testing(POSTMAN, AGILE, WHITEBOX AND BLACKBOX, JIRA)
+2. C# TRAINING (NULL-COALESCING OPERATOR, NULLABLE OPERATOR, ARRAYS and Methods) 
+3. Self learning C# Concepts 
+4. Self learning Typescript Concepts
+5. SQL PRACTICE ON SSMS ()
+
+### DAY - 5 (Mar 01, 2024)
+
+1. SQL PRACTICE
+2. LEARNING C# CONCEPTS
+(.NET Memory Management,
+Value Types and Reference Types,
+Arrays,
+Multi-Dimensional Arrays,
+Jagged Arrays,
+Param Arrays,
+Collections,
+ArrayList,
+Hashtable,
+SortedList,
+Stack,
+Queue,
+BitArray)
+
+3. SASS PRACTICE
+   
+a. Preprocessing
+b. Variables
+c. Nesting
+d. Partials
+e. Modules
+f. Mixins
+g. Inheritance
+h. Operators
         
+## WEEK 5(04-MAR-2024 to 10-MAR-2024)
+
+### DAY - 1 (Mar 4, 2024)
+
+1. Evaluation on C# concepts
+2. SQL practice on SSMS(Aggregation)
+3. self learning(value and referance types, collections, arrays, arraylist, jagged arrays, param arrays, hashtable)
+
+### DAY - 2 (Mar 5, 2024)	
+
+
+1. Self learning JavaScript ( expressions, data structures and data types, Classes, Variables and functions)
+2. Training by Suman on method overloading, exception handling(try, catch, finally and throw), Constructors and Destructors, Access modifiers(public, private, protected and internal), Properties, classes and objects
+3. Revising Database concepts(schema, architecture,keys,Normalization)
+
+### DAY - 3 (Mar 6, 2024)
+	
+1. SQL Practice
+2. WinForms Implementation
+3. Self Practice method overloading, Constructors and Destructors, Access modifiers, Properties, classes and objects
+4. JavaScript concepts revision
+5. SASS self practice
+
+### DAY - 4 (Mar 7, 2024)	
+
+1. c# basic formatting
+2. escape sequences
+3. concatenation, interpolation and strings in c#
+4. Self learning API POSTMAN 
+5. javascript(Lexical Structure, Expressions, Data Types, Classes, Variables)
+
+### DAY - 5 (Mar 8, 2024)
+
+1. c# (Arrays, Control variable scope and logic using code blocks)
+2. Evaluation on c# and sql
+3. Javascript(this, operator , Arrow Functions, Loops, Scopes, Arrays)
+
+
+## WEEK 6(11-MAR-2024 to 17-MAR-2024)
+
+### DAY - 1 (Mar 11, 2024)
+
+1. Self Learning C# concepts and completing Certification course modules.
+2. Training by Suman on C#(Inheritance, Interfaces, DataTable etc.)
+3. Learnt about Winforms
+4. SQL practice questions solved for AdventureDB.
+
+### DAY - 2 (Mar 12, 2024)	
+
+1. Training on windows forms by Suman(labels, TextBox control, buttons - RadioButton control in a WinForms application etc)
+2. Completing freecodecamp C# certification(Write Your First Code Using C#, Create and Run Simple C# Console Applications )
+3. Scores discussion with Megha.
+
+### DAY - 3 (Mar 13, 2024)	
+
+1. Training on Windows forms(DataGridView control used for in WinForms development, Combo Box)
+2. Completing freecodecamp C# certification (Add Logic to C# Console Applications, Work with Variable Data in C# Console Applications)
+3. Javascript Concepts revision closures and callbacks
+
+### DAY - 4 (Mar 14, 2024)	
+
+1. Training by Suman on windows form (Timer control work in Windows Forms, TreeView control in a Windows Forms application)
+2. Completing freecodecamp C# certification (Create Methods in C# Console Applications, Debug C# Console Applications)
+3. Javascript concepts practice (Template Literals, Strict Mode)
+
+### DAY - 5 (Mar 15, 2024)	
+
+1. .NET and C# evaluation(winforms, inheritance, enums, Dataset and DataTable, Sealed class, abstract class and interfaces, Entity Frameworks)
+2. Self Learning C# and Windows forms concepts
+3. Revising javascript concepts

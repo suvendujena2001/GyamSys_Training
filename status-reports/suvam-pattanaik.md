@@ -188,7 +188,149 @@
 
     5. Loop statements in C# like - while , do-while , for-loop ,where and how to use beak and continue , introduction to methods and its different types - without parameter and parameterized methods. 
 
-    
+### 1 MARCH:
+
+    1. Practice of C# - const variables , nullable variables ,while , do-while loop , for loop statement.
+
+    2. Evaluation test on SQL -PART : 3 - different types of join , operators in sql .
+
+    3. Completing the basic operation and a simple project using C# from freeCodeCamp.
+
+## Week -5 (4 MARCH - 10 MARCH 2024)
+
+### 4 MARCH :
+
+    1. Completing the assignment on collections in C# comprising of:ArrayList ,Hashtable , stack,queue, sortedlist ,bitarray.
+
+    2. Self practice on value type and reference type in C#.
+
+    3. self Practice on C# in  Freecodecamp .
+
+    4. Evaluation test on C# - Basics , data-types ,collection framework .
+
+### 5 MARCH :
+
+    1. Completing the learning module shared on  topics of SQL comrpising of various aggregate  functions like - count ,max,min.
+
+    2. Practicing the above queries on SSMS - COUNT , MAX , MIN , SUM , AVG
+
+    3. Session on C# regarding : try-catch-finally-throw , various access-modifiers , various constructors present in C# , ways in which we can overload a method .
+
+    4. A brief on how to use winforms and create basic app from it .
+
+### 6 MARCH :
+
+    1. Completing the learning module on C# .
+
+    2. Practicing winforms and basics on it .
+
+    3. Implementing try-catch and finally keyword in the code , where to use various access-modifiers with a class and objects .
+
+    4. Implemented how method overloading works and how we can use various constructors in a class .
+
+### 7 MARCH :
+
+    1. Winform Practice in visual studio
+
+    2. Learning module on free-code-camp (try-catch-finally implementation).
+
+### 8 MARCH :
+
+    1. Methods in C# , usuage in console and debugging the code on free-code-camp.
+
+    2.Evaluation test on C# and SQL comprising of aggregate functions.
+
+## Week -6 (11 MARCH - 17 MARCH 2024)
+
+### 11 MARCH :
+
+    1. POSTMAN and API learning .
+
+    2. Session on C# regarding - inheritance and its type - single , multilevel , multiple 
+
+    3. Abstract class VS Interface - how to differentiate
+
+    4. Discussed about - Sealed Class , Data-table , Dataset , Enum.
+
+ ### 12 MARCH :
+
+     1. Implementation of Inheritance and types , data-table in C#.
+
+     2. Session on Entity-Framework and database first , code-first approach , various LINQ operations in C#.
+
+### 13 MARCH :
+
+    1. Implementation of Winform application , connecting it to a database to retrive and execute operation .
+
+    2. Session on database first approach of winforms , how to control various icons present in toolbox.
+
+### 14 MARCH :
+
+    1. Winform implementation through project .
+
+    2. Session on entity-framework : tree-view , tooltip ,radio button ,open file dialog-box.
+
+### 15 MARCH :
+
+    1. Self learning of C# concepts ,LINQ , inheritance , method overriding 
+
+    2. Evaluation  test on C# comprising LINQ , inheritance etc.
+
+## Week -7 (18 MARCH - 24 MARCH 2024)
+
+### 18 MARCH :
+
+    1. Implementation of  winform CRUD operation application .
+
+    2. Session on asp.net core MVC , handling of mvc controls with HTML .
+
+### 19 MARCH :
+
+    1. Practice of controller , view and model through documentation of asp.net .
+
+    2. Session on various helper methods in HTML , how to pass value from controller to view .
+
+### 20 MARCH :
+
+    1. Practice of creating a login page using controller and view .
+
+    2. Difference between tempdata,viewdata,viewbag in controller ,how to show messages when user perform certain actions .
+
+### 21 MARCH :
+
+    1. Session on how can we connect database with asp.net application , code-first approach .
+
+### 22 MARCH :
+
+    1. Self practice of connecting database through code-first-approach .
+
+    2. Evaluation test on asp.net and mvc core.
+
+## Week -8 (25 MARCH - 31 MARCH 2024)
+
+### 25 MARCH :
+
+    1. Practice of Create operation using mvc and entity framework .
+
+    2. Distribution of projects , evaluation criteria and how to mark the progress of work done till date .
+
+### 26 MARCH :
+
+    1. Practice of CRUD operations in asp.net .
+
+    2. Session on how can we implement delete and details operations for a particular user in our applications .
+
+### 27 MARCH :
+
+    1. Design of database schema including various tables of our project through SSMS .
+
+    2. Evaluation of ER diagram by mentors .
+
+### 28 MARCH :
+
+    1. Design of layout and controller in alloted project.
+
+    2. Session on webAPI ,integration with swagger and postman in web application.
   
   
 

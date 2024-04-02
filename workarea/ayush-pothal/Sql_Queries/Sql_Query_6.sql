@@ -1,0 +1,33 @@
+--SQL Functions
+
+CREATE TABLE EMPLOYEE(EmpId integer,EmpName VARCHAR(100),EmpSalary integer, DeptId integer);
+
+INSERT INTO EMPLOYEE(EmpId,EmpName,EmpSalary,DeptId)
+VALUES(1,'ANAND',70000,1),
+(2,'KALPANA',10000,2),
+(3,'SUBHASIS',23000,2),
+(4,'MAMA',34000,1),
+(5,'SUVAM',87000,3),
+(6,'SWAYAM',67000,1),
+(7,'SWAGAT',83460,3),
+(8,'AYUSH',76000,3),
+(9,'SUBHENDU',30000,1),
+(10,'PANIGRAHI',70000,2);
+ 
+SELECT * FROM EMPLOYEE;
+
+--AVG
+SELECT AVG(EmpSalary) AS AVERAGE FROM EMPLOYEE;
+
+--COUNT
+SELECT COUNT(EmpName) AS "Total Employee" FROM EMPLOYEE;
+
+--MAX
+SELECT MAX(EmpSalary) AS "Highest Salary" FROM EMPLOYEE;
+
+--MIN
+SELECT MIN(EmpSalary) AS "Lowest Salary" FROM EMPLOYEE;
+
+
+--SUM
+SELECT SUM(EmpSalary) AS "Total Salary" FROM EMPLOYEE;

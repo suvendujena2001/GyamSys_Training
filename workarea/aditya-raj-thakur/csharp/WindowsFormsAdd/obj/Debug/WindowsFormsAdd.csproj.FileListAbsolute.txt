@@ -1,0 +1,15 @@
+C:\Web D\WindowsFormsAdd\bin\Debug\WindowsFormsAdd.exe.config
+C:\Web D\WindowsFormsAdd\bin\Debug\WindowsFormsAdd.exe
+C:\Web D\WindowsFormsAdd\bin\Debug\WindowsFormsAdd.pdb
+C:\Web D\WindowsFormsAdd\bin\Debug\EntityFramework.dll
+C:\Web D\WindowsFormsAdd\bin\Debug\EntityFramework.SqlServer.dll
+C:\Web D\WindowsFormsAdd\bin\Debug\EntityFramework.xml
+C:\Web D\WindowsFormsAdd\bin\Debug\EntityFramework.SqlServer.xml
+C:\Web D\WindowsFormsAdd\obj\Debug\WindowsFormsAdd.csproj.AssemblyReference.cache
+C:\Web D\WindowsFormsAdd\obj\Debug\WindowsFormsAdd.Form1.resources
+C:\Web D\WindowsFormsAdd\obj\Debug\WindowsFormsAdd.Properties.Resources.resources
+C:\Web D\WindowsFormsAdd\obj\Debug\WindowsFormsAdd.csproj.GenerateResource.cache
+C:\Web D\WindowsFormsAdd\obj\Debug\WindowsFormsAdd.csproj.CoreCompileInputs.cache
+C:\Web D\WindowsFormsAdd\obj\Debug\WindowsFormsAdd.csproj.CopyComplete
+C:\Web D\WindowsFormsAdd\obj\Debug\WindowsFormsAdd.exe
+C:\Web D\WindowsFormsAdd\obj\Debug\WindowsFormsAdd.pdb

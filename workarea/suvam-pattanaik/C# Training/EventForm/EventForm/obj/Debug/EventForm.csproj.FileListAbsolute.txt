@@ -1,0 +1,15 @@
+C:\visual studio\EventForm\EventForm\bin\Debug\EventForm.exe.config
+C:\visual studio\EventForm\EventForm\bin\Debug\EventForm.exe
+C:\visual studio\EventForm\EventForm\bin\Debug\EventForm.pdb
+C:\visual studio\EventForm\EventForm\bin\Debug\EntityFramework.dll
+C:\visual studio\EventForm\EventForm\bin\Debug\EntityFramework.SqlServer.dll
+C:\visual studio\EventForm\EventForm\bin\Debug\EntityFramework.xml
+C:\visual studio\EventForm\EventForm\bin\Debug\EntityFramework.SqlServer.xml
+C:\visual studio\EventForm\EventForm\obj\Debug\EventForm.csproj.AssemblyReference.cache
+C:\visual studio\EventForm\EventForm\obj\Debug\EventForm.Form1.resources
+C:\visual studio\EventForm\EventForm\obj\Debug\EventForm.Properties.Resources.resources
+C:\visual studio\EventForm\EventForm\obj\Debug\EventForm.csproj.GenerateResource.cache
+C:\visual studio\EventForm\EventForm\obj\Debug\EventForm.csproj.CoreCompileInputs.cache
+C:\visual studio\EventForm\EventForm\obj\Debug\EventForm.csproj.CopyComplete
+C:\visual studio\EventForm\EventForm\obj\Debug\EventForm.exe
+C:\visual studio\EventForm\EventForm\obj\Debug\EventForm.pdb

@@ -1,4 +1,4 @@
-# Weekly status report(Feb 5 to Feb 11)
+# Week 1  status report(Feb 5 to Feb 11)
 ## HTML
 1. Basics of HTML 
    - Paragraph
@@ -43,7 +43,7 @@
 3. functions, objects
 4. events, string
 
-# Weekly status report(Feb 12 to Feb 18)
+# Week 2 status report(Feb 12 to Feb 18)
 ## JAVASCRIPT
 1. Control statement and loops
 2. Primitive data types and non-primitive data types
@@ -111,7 +111,7 @@
 |  REVOKE |	Take back given privileges from the user. |
 |   COMMENT|Specify comments on Database tables and columns. |
 
-# Weekly status report(Feb 19 to Feb 25)
+# Week 3 status report(Feb 19 to Feb 25)
 ## SQL
 1. SELECT QUERY 
    - WHERE Clause
@@ -157,6 +157,102 @@
 15. For Loop
 16. Functions
 17. Arrays
+    
+# Week 4 status report(Feb 26 to Mar 3)
+## CSS
+ 1. CSS ICONS, Min-Width, Max Width, Overflow, Navigation Bar
+ 2. Rounded Corner, Shadows, Gradients
+ 3. Transitions
+ 4. Animations, Buttons
+## Bootstrap
+1. Grid, Tables
+2. Images, Buttons, Button Groups
+3. Progress Bars
+4. List Groups
+5. DropDowns
+6. Navbar
+7. Forms
+8. Input, Filter
+9. Pager, Labels
+## C#
+1. Basic syntax, output, comments, variables, datatypes.Type casting, user input, operators, math, string, Booleans.if...else , switch case, while loop, do while loop,break/continue (revision).
+2. Array, Multi-Dimensional Arrays, Jagged Arrays and Param Arrays.
+3. Array List, Hashtable, SortedList, Stack, Queue, BitArray.
+4. Return Types and methods
+
+# Week 5  status report(Mar 4 to Mar 10)
+## C#
+1. Window Form tooltips
+2. Windows forms Label, CheckBox, Icons,  Inserting Picture, DataGridView,TextBox, CheckBox, Buttons,Panel
+3. Start Doing a project named "MarriageHall Booking Application" using Windows Forms.
+4. Inheritance in C#
+
+## POSTMAN API
+1. Environment Setup
+2. Authirzation
+3. WorkFlows
+4. GET Request
+5. POST Request
+6. PUT Request
+7. DELETE Request
+8. Variable Creation
+## SQL
+1. Avg function
+2. Min function
+3. Max Function
+4. Count function
+5. Sum
+
+# Week 6 status report(Mar 11 to Mar 17)
+## C#
+1. Constructure and Constructure in inheritance
+2. Access Modifier (Public, Private, Protected)
+3. Encapsulation
+4. Get abd Set method
+5. Static method
+6. Polymorphism (Run time and Compile time)
+7. Method overloading
+8. Operator overloading
+9. method overriding
+10. Practicing the Windows Form 
+## SQL
+1. Aliases
+2. Case
+3. Null function
+4. Drop DB
+5. Check
+
+# Week 7 status report(Mar 18 to Mar 24)
+## C#
+1. Sealed class
+2. Indexers
+3. Delegates
+4. Lambda Functions
+5. Abstract class and abstraction
+6. Explore more WinForm elements
+
+## ASP .NET Core MVC
+1. Introduction to core MVC
+2. Difference between ASP .NET core and ASP .NET core MVC
+3. Creating MVC project
+4. Understanding Directory Structure and Workflow
+5. Middleware
+6. Routing concepts
+7. Convention Based routing
+8. Attribute Based Routing
+9. Map, MapGet, MapPost, MapPut
+10. Controllers
+11. Action Methods
+12. View , Razor and Razor Engine
+    
+    
+    
+
+   
+   
+
+   
+
     
 
  

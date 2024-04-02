@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataShow", "DataShow\DataShow.csproj", "{44D21593-F8E4-4567-91E6-9AA14329FECF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44D21593-F8E4-4567-91E6-9AA14329FECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D21593-F8E4-4567-91E6-9AA14329FECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D21593-F8E4-4567-91E6-9AA14329FECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D21593-F8E4-4567-91E6-9AA14329FECF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77DF2BA9-1A91-498A-9279-51C520968164}
+	EndGlobalSection
+EndGlobal

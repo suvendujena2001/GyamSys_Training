@@ -1,65 +1,60 @@
 using System;
-					
-public class Program
+
+public class HelloWorld
 {
-	public static void Main()
-	{
-		Console.WriteLine("Hello World");
-		/* Datatypes
-		int 4bytes
-		Long 8bytes
-		floating point number 4bytes
-		char 2bytes
-		boolean 1 bit
-		string 2bytes
-		  */
-	
-		int a=34;
-		float b=34.4F;
-		double c = 34.4D;
-		Console.WriteLine(a);
-		Console.WriteLine(b);
-		Console.WriteLine(c);
-		/* type casting */
-		int x =(int) 3.4;
-		double y = x;
-		Console.WriteLine(x);
-		/*  char to int to long to float to double*/ 
-		float varr = Convert.ToInt32(3.55);
-		string sx="34 is a number";
-		string name=Console.ReadLine();
-		Console.WriteLine("Hello"+name);
-		Console.ReadLine();
-		/* Operators in c#
-		Arithmetic Operators
-		Assignment operators
-		Logical operators
-		comparision operators
-		*/
-		//Arithmetic
-		int r=4;
-		int s=5;
-		Console.WriteLine("The Value of r+s is = " +(r+s));
-		Console.WriteLine("The Value of r-s is = " +(r-s));
-		Console.WriteLine("The Value of r/s is = " +(r/s));
-		Console.WriteLine("The Value of r*s is = " +(r*s));
-		Console.ReadLine();
-		//Logical Operator
-		Console.WriteLine(true||false);
-		Console.WriteLine(true&&false);
-		Console.WriteLine(false||false);
-		Console.WriteLine(true||true);
-		Console.ReadLine();
-		//Comparision Operator
-		Console.WriteLine(23>2);
-		Console.WriteLine(23>=2);
-		Console.WriteLine(23<=2);
-		Console.WriteLine(23==2);
-		Console.WriteLine(23!=2);
-		Console.ReadLine();
-		
-		int d= Math.Max(34,345);
-		int e= Math.Sqrt(39);
-		int t=Math.Abs(-38);
-		Console.WriteLine(d);
-		Console.ReadLine();
+    public static void Main(string[] args)
+    {
+        //ARITHMETIC OPERATORS
+       int a=10, b=5,c=7,d,e,f,g;
+         c = a+b;
+         d = a-b;
+         e = a/b;
+         f = a*b;
+         g = a%b;
+         Console.WriteLine(c);
+         Console.WriteLine(d);
+         Console.WriteLine(e);
+         Console.WriteLine(f);
+         Console.WriteLine(g);
+         
+         //RELATIONAL OPERATORS
+         
+         bool h = a == b;
+         Console.WriteLine(h);
+         
+         bool i = a != b;
+         Console.WriteLine(i);
+        
+         bool j = a > b;
+         Console.WriteLine(j);
+         
+         bool k = a < b;
+         Console.WriteLine(k);
+         
+         bool l = a >= b;
+         Console.WriteLine(l);
+         
+         bool m = a <= b;
+         Console.WriteLine(m);
+         
+         //LOGOCAL OPERATORS OR CONDITIONAL OPERATORS
+         
+         bool n = (a>b) && (a<b);
+         Console.WriteLine(n);
+         
+         bool o = (a>b) || (a<b);
+         Console.WriteLine(o);
+         
+         //ASSIGNMENT OPERATORS
+         int z = 4;
+         z += 1;
+         
+         // TERNARY OPERATORS
+         
+         string x = (z>3) ? "z is greater" : "z is smaller";
+         Console.WriteLine(x);
+         
+
+
+    }
+}

@@ -1,0 +1,73 @@
+﻿@model CoreMVC_Practice.Models.User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("Login","Home"))
+{
+    <div class="col-md-12 row">
+    
+            <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+    <table class="table table-sm table-hover table-borderless">
+        <tr>
+            <td> User Name</td>
+            <td>
+                @Html.TextBoxFor(m=>m.Username,new { @style="background-color:grey;color:white" , @class="form-control"})
+            </td>
+        </tr>
+        <tr>
+            <td> Password</td>
+            <td>
+                @Html.PasswordFor(m=>m.Password,new{@style="background-color:grey", @class="form-control"})
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login" /></td>
+            <td>
+             @Html.Label("message", ViewBag.message as string)
+            </td>
+        </tr>
+    </table>
+
+        </div>
+
+    </div>
+}
+
+
+
+
+
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<h3>Welcome to my web page</h3>
+
+@using (Html.BeginForm())
+{
+    Html.TextArea("write");
+    <input type="submit" value="post" />
+
+}
+<br />
+
+@Html.DropDownList("Gender",new List<SelectListItem>{
+    new SelectListItem{Value="1",Text="Male" ,Selected=true},
+    new SelectListItem{Value="2",Text="Female"},
+new SelectListItem{Value="3",Text="Others"},
+
+})
+<br />
+@Html.ListBox("Gender", new List<SelectListItem>{
+    new SelectListItem{Value="1",Text="Male" ,Selected=true},
+    new SelectListItem{Value="2",Text="Female"},
+new SelectListItem{Value="3",Text="Others"},
+
+})
+<br/>
+@Html.Password("Password")
+*@

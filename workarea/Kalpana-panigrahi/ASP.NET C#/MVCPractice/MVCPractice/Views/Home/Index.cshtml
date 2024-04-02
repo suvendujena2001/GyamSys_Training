@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var students = ViewData["Mystudent"] as List<StudentModel>;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@ViewData["data1"]
+<br/>
+@ViewData["data2"]
+<br/>
+@{
+    foreach (var item in (string[])ViewData["data3"])
+    {
+        <h3>@item</h3>
+    }
+}
+@{
+    foreach (var item in (List<string>)ViewData["data4"])
+    {
+        <h3>@item</h3>
+    }
+}
+@ViewBag.data1
+
+ <table>
+     <tr>
+         <th>Roll No</th>
+         <th>Namw</th>
+         <th>Gender</th>
+         <th>Class</th>
+     </tr>
+    @foreach (var std in students)
+    {
+        <tr>
+            <td>@std.RollNo</td>
+            <td>@std.Name</td>
+            <td>@std.Gender</td>
+            <td>@std.Standard</td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,15 @@
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\bin\Debug\PracticeForm.exe.config
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\bin\Debug\PracticeForm.exe
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\bin\Debug\PracticeForm.pdb
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\obj\Debug\PracticeForm.csproj.AssemblyReference.cache
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\obj\Debug\PracticeForm.Form1.resources
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\obj\Debug\PracticeForm.Properties.Resources.resources
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\obj\Debug\PracticeForm.csproj.GenerateResource.cache
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\obj\Debug\PracticeForm.csproj.CoreCompileInputs.cache
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\obj\Debug\PracticeForm.exe
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\obj\Debug\PracticeForm.pdb
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\bin\Debug\EntityFramework.dll
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\bin\Debug\EntityFramework.xml
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MukundKumar\OneDrive - GyanSys Inc\Desktop\Practice GET-Mukund\PracticeForm\PracticeForm\obj\Debug\PracticeForm.csproj.CopyComplete

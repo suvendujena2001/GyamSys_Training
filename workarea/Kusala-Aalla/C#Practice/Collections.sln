@@ -1,0 +1,100 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> genlist = new List<int>();
+            genlist.Add(30);
+            genlist.Add(60);
+            genlist.Add(90);
+            genlist.Add(120);
+            foreach (int x in genlist)
+            {
+             Console.WriteLine(x);
+             }
+
+            //Stack
+            Stack<string> steak = new Stack<string>();
+            steak.Push("Rare");
+             steak.Push("Medium Rare");
+             steak.Push("Medium");
+            steak.Push("Well done");
+
+            foreach (string s in steak)
+            {
+            Console.WriteLine(s);
+            }
+
+            //ArrayList 
+            ArrayList al = new ArrayList();
+            string str = "Like, Share, Subscribe";
+            int x = 11;
+            DateTime d = DateTime.Parse("2-mar-1990");
+            al.Add(str);
+            al.Add(x);
+            al.Add(d);
+
+            foreach (object o in al)
+            {
+             Console.WriteLine(o);
+             }
+
+            //Hashtable
+            Hashtable menu = new Hashtable();
+            menu.Add(1, "Pizza");
+            menu.Add(2, "Burger");
+            menu.Add(3, "Fries");
+            menu.Add(4, "Sandwich");
+
+             foreach (DictionaryEntry h in menu)
+             {
+              Console.WriteLine(h.Key + " " + h.Value);
+             }
+
+            //Sorted list
+            SortedList ngslist = new SortedList();
+            ngslist.Add("American", "Burger");
+            ngslist.Add("Lime", "Soda");
+            ngslist.Add("French", "Fries");
+            ngslist.Add("Onion", "Rings");
+
+            foreach (DictionaryEntry d in ngslist)
+            {
+             Console.WriteLine(d.Key + " " + d.Value);
+            }
+
+            //Stack
+            Stack steak = new Stack();
+            steak.Push("Rare");
+            steak.Push("Medium Rare");
+            steak.Push("Medium");
+            steak.Push("Well done");
+
+            foreach (object o in steak)
+             {
+             Console.WriteLine(o);
+            }
+
+            //Queue
+            Queue<string> genq = new Queue<string>();
+            genq.Enqueue("Mark");
+            genq.Enqueue("Bill");
+            genq.Enqueue("Xavier");
+            genq.Enqueue("Michael");
+
+             foreach (string s in genq)
+            {
+             Console.WriteLine(s);
+            }
+            Console.ReadLine();
+        }
+    }
+}

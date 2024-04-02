@@ -64,7 +64,7 @@ https://localhost:7051/api/Activities/{id}
 | Params     | Type |  Description  |
 |----------- | ------- | ------------- |
 | `id`  |  `int32` | *Required*. UserId to be fetched |  
-> Response body
+> ### Response body
 ```
 {
   "userId": 0,
@@ -88,7 +88,7 @@ https://localhost:7051/api/Activities/{id}
 | Params     | Type |  Description  |
 |----------- | ------- | ------------- |
 | `id`  |  `int32` | *Required*. UserId to be fetched |
-> Request body
+> ### Request body
 ```
 {
   "userId": 0,
@@ -102,7 +102,7 @@ https://localhost:7051/api/Activities/{id}
   "modifiedBy": 0
 }
 ```
-> Response body
+> ### Response body
 ```
 {
   "userId": 0,

@@ -1,0 +1,22 @@
+.pLikeButton
+{border: 1.5px solid brown;
+    background: red;
+    padding: 1.5rem;
+    border-radius: 2.5px;
+    font-size: 2rem;
+    color: yellow;
+    width: 40%;
+    cursor: pointer;
+    padding: 3.8px;
+}
+
+.technologyDiv
+{
+    border: 1.5px solid burlywood;
+    background: black;
+    padding: 3rem;
+    border-radius: 3.7px;
+    font-size: 3.2rem;
+    color: yellowgreen;
+}
+

@@ -1,0 +1,29 @@
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  color: black;
+  background-color: rgb(128, 133, 138);
+  font-size: 4em;
+}
+body{
+  font-size: 1.1em;
+  background-color: black;
+  color: aliceblue;
+}
+.Click{
+  background-color: rgb(74, 71, 86);
+  color: white;
+  font-size: 1.5em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  cursor: pointer;
+  margin-right: 70%;
+  padding: 20px;
+}

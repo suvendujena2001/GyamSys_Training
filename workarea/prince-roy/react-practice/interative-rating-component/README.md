@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/assets/design/desktop-preview.jpg.jpg)
+![](./src/assets/design/desktop-preview.jpg)
 
 ### Link
 

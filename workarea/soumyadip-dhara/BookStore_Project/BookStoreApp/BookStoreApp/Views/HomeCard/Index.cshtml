@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BookStoreApp.Models.Book>
+@{
+    ViewData["Title"] = "Store";
+}
+<h2 class="my-4">Store</h2>
+
+<div class="row">
+    @foreach (var book in Model)
+    {
+        <div class="col-3">
+            <div class="card my-2 store-card">
+                <a class="a-cleanup" asp-controller="HomeCard" asp-action="Details" asp-route-id="@book.BookID">
+                    <img src="@book.CoverImage" class="card-img-top card-img-custom" />
+                    <div class="card-body" style=" height:3em">
+                        <h5 class="mb-3">@book.Title</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-3">@book.Popularity <i class="fa-solid fa-star" style="color:yellow"></i></p>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-text">@book.Price.ToString("c")</span>
+                    </div>
+                    <div>
+                        <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                            <input type="hidden" name="id" value="@book.BookID" />
+                            <button type="submit" class="btn btn-primary float-end card-cart-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </form>
+                        <form asp-controller="WishList" asp-action="AddToWishList" method="post">
+                            <input type="hidden" name="id" value="@book.BookID" />
+                            <button type="submit" class="btn btn-secondary float-end wish_btn">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </form>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+</div>

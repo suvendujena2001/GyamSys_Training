@@ -10,6 +10,7 @@ namespace MvcIplApp.Data
             
         }
         public DbSet<Team> Teams { get; set; }
+   
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

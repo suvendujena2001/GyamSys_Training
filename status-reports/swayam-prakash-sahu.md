@@ -256,3 +256,36 @@ h. Operators
 1. .NET and C# evaluation(winforms, inheritance, enums, Dataset and DataTable, Sealed class, abstract class and interfaces, Entity Frameworks)
 2. Self Learning C# and Windows forms concepts
 3. Revising javascript concepts
+
+## WEEK 7(18-MAR-2024 to 24-MAR-2024)
+
+### DAY - 1 (Mar 18, 2024)
+
+1. Implementation of  winform CRUD operation application .
+2. Training on asp.net core MVC - Introduction to core MVC, Creating MVC project, handling of mvc controls with HTML 
+3. Learnt about LINQ queries
+4. Practiced how to implement Database first approach and Code first approach
+
+### DAY - 2 (Mar 19, 2024)
+
+1. Self-Practice of controller, view and model of ASP.NET MVC.
+2. Training Session ASP.NET MVC on various helper methods in HTML , how to pass value from controller to view .
+
+### DAY - 3 (Mar 20, 2024)
+
+1. Learnt Dropdown and DropdownFor, Checkbox and CheckboxFor, RadioButon and RadioButonFor, TextBox and TextArea, Lables, Display, Password, ListBox
+2. Understanding Directory Structure and Workflow(MVC Architecture)
+3. Training Session on ASP.NET MVC	 	 
+
+### DAY - 4 (Mar 21, 2024)
+
+1. learnt about Model Binding 
+2. Routing concepts - Convention Based routing, Attribute Based Routing
+3. Applying CSS to the Razor controls like style, class etc	 
+
+### DAY - 5 (Mar 22, 2024)
+
+1. Learnt about Controllers, Action Methods, View , Razor and Razor Engine
+2. Practiced crud operation using Entity Framework in ASP.NET MVC
+3. Evaluation on ASP.NET MVC
+

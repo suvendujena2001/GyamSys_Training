@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ct8UdONyTabODnH1/u+ieBAzPLgzGLBr8SJmSVFoB7VFPyXVKsSo+xRmurzlXIxaj1hrZdRuJm9dwelZQz7qBw==",
+  "dgSpecHash": "K+CcHMkKLw79yAwJTjIumE6NSXRlCOyikYGTDLyIwBH81Og0/1ycAn5uGK6p1ejdIGjKwZRS1qdiz7EHA43G7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\C#.NET\\MvcApps\\MvcIplApp\\MvcIplApp.csproj",
+  "projectFilePath": "C:\\Users\\AnandMallikarjun\\OneDrive - GyanSys Inc\\Desktop\\GET training\\get-2024-microsoft\\workarea\\anand-talekattu\\MvcApps\\MvcIplApp\\MvcIplApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AnandMallikarjun\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\AnandMallikarjun\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\AnandMallikarjun\\.nuget\\packages\\bootstrapicons.aspnetcore\\1.11.0\\bootstrapicons.aspnetcore.1.11.0.nupkg.sha512",
     "C:\\Users\\AnandMallikarjun\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\AnandMallikarjun\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\AnandMallikarjun\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

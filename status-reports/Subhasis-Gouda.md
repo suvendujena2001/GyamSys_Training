@@ -7,9 +7,9 @@
 ---
 ## Week 1 (5/2/2024 - 11/2/2024)
 
-	Induction, Team lunch
-	Practice on Git, Html and C# basic 
-	Training and Self practice on the following topics
+Induction, Team lunch
+Practice on Git, Html and C# basic 
+Training and Self practice on the following topics
 
 1. ### HTML
 	Learnt and practiced this topics
@@ -144,8 +144,32 @@
 	2. working on the UI of pages and creating a database to store the patient data.
 	3. Training on C# Inheritance, data tables, Datasets, Data row, Enum.
 	4. Self-Practice on inheritance (single, multiple, hierarchical), inteface, abstract class and data sets and enums.
-    5. Created a basic form application containing treeview, combobox, combolist, radiobuttons, datetimepicker, timer, progressbar.
+   	5. Created a basic form application containing treeview, combobox, combolist, radiobuttons, datetimepicker, timer, progressbar.
 	6. learnt and practiced crud operation on Entity Framework.
 	7. learnt and practiced Database first approach, Code first approach, LINQ
 	7. Completed the assignment on entity framework to select the employee data using combobok and viewing it on data grid view.
-    8. Worked on patient page of Clininc management project using entity frame work to store and manipulate the patient data.
+    	8. Worked on patient page of Clininc management project using entity frame work to store and manipulate the patient data.
+
+ 
+  ## Week 3 (18/03/2024 - 24/03/2024)
+
+1. ### C# Dot NET (ASP .NET MVC) 
+   - Completed the Login, User and startup page.
+   - Completed the Patient and appointment page of dental care project.
+   - Completed the dental care project and submitted on Git Hub
+   - learnt and practiced handelling of MVC controls with HTML.
+   - learnt and practiced various helper methods in MVC.
+   - learnt and practiced MVC action, page redirect, model and view.
+   - learnt and practiced Controllers of MVC and made a basic page containing login page and tables in MVC.
+   - learnt and practiced bootstrap classes in View.
+
+  ## Week 4 (25/03/2024 - 31/03/2024)
+
+1. ### C# Dot NET (ASP .NET MVC)
+   - Learnt creating directory structure and middleware, Routing.
+   - learnt and practiced controller and action method, View, Razor, Razor engine.
+   - Started the movie Database application database design schema. 
+   - learnt and practiced Layout view, master page, _viewstart, ViewBag, ViewData.
+   - Completed the database design for Movie Management Application Project
+   - learnt and practiced Temp Data, Models and Tag helpers.
+   - Started the UI design for login and user page of the Movie Database application.

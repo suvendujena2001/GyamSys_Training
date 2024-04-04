@@ -61,7 +61,11 @@
 ## Week 7 (18th March 2024 to 22nd March 2024)
 * On the first working day, sessions on ASP.NET CORE started. Topics such as ASP .NET Core Overview,	MVC Architecture, Basics of HTML, Razor view engine and it's controls like-	Dropdown and DropdownFor, Checkbox and CheckboxFor, RadioButon and RadioButonFor, TextBox and TextArea,	Lables, Display, Password, ListBox, ActionLink, BeginForm and many more controls, Creating Controller, Creating Model	 and 	Model Binding were taught throughout the week.
 * I practised the taught topics  and uploaded my codes on GitHub for evaluation. I made a project named "Student Portal" implementing the CRUD operations in ASP.NET CORE MVC.
-* On the last working day, we gave a ASP.NET CORE evaluation test.
+* On the last working day, we gave a ASP.NET CORE MVC evaluation test.
 
  ## Week 8 (25th March 2024 to 29th March 2024)
- 
+ * Topics such as 	TempData, ViewData, ViewBag, Model Binding, @Html.ValidationMessage, @Html.ValidationMessageFor, @Html.ValidationSummary,	Tag Helpers in ASP.NET Core, Validations from View, Validations from Model, ModelState, AddModelError, HttpGet, HttpPost, HttpPut, HttpDelete, IActionResult, Task, Synchronous and Asynchronous, WEB API, MVC Controllers VS API Controllers, etc.  were taught throughout the week.
+ * We were assigned individual projects to work upon from this week. I started doing my assigned project titled "Blog Platform" in which I first created the database in SSMS & got it verified from the mentors. I completed the database design part and uploaded the table diagram on GitHub. Then I started doing the API-Entity Framework part.
+ *  On the last working day, we gave a ASP.NET CORE MVC evaluation test.
+
+ ## Week 9 (1st April 2024 to 5th April 2024)

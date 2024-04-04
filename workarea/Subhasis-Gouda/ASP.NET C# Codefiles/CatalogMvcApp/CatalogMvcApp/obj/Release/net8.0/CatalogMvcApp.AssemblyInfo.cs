@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CatalogMvcApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7455ade9f54023efd9770222d905ee24e8b90497")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1c7d17275eeeee205e66bc80a045b64714162c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("CatalogMvcApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CatalogMvcApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -289,3 +289,34 @@ h. Operators
 2. Practiced crud operation using Entity Framework in ASP.NET MVC
 3. Evaluation on ASP.NET MVC
 
+## WEEK 8 (25-MAR-2024 to 31-MAR-2024)
+
+### DAY - 1 (Mar 25, 2024)
+
+1. Training on ASP.NET MVC
+2. Self Practice concepts of ASP.NET MVC like Scaffolding, Action Selectors(Action Name and Action Verbs), Action Filters.
+3. Self Learning Bootstrap
+
+### DAY - 2 (Mar 26, 2024)	
+
+1. Training on ASP.NET MVC
+2. Self Practice concepts in ASP.NET MVC TempData, ViewData and ViewBag, Model Binding, Validations from view and Model
+3. Self Learning Bootstrap
+
+### DAY - 3 (Mar 27, 2024)
+
+1. Training on ASP.NET MVC
+2. Working on Project Assignment step -1 Database Design
+
+### DAY - 4 (Mar 28, 2024)	
+
+1. Training on ASP.NET MVC
+2. Completed step-1 of Project Assignment Database Design
+3. Learnt jQuery concepts
+
+### DAY - 5 (Mar 29, 2024)	
+
+1. Self Practice on ASP.NET MVC concepts Like AJAX calls, HTML Helpers
+2. Self Practice ASP.NET Web API Concepts like Postman, Swagger, Routing, Parameter Binding and Testing API
+3. Working on Step 2 of Project Assignment(Entity Framework and API)
+4. Evaluation Week-8

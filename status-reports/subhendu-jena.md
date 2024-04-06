@@ -146,3 +146,20 @@
     5. Training on Windows forms(DataGridView control used for in WinForms development, Combo Box).
     6. Training by Suman on windows form (Timer control work in Windows Forms, TreeView control in a Windows Forms application).
     7. .NET and C# evaluation(winforms, inheritance, enums, Dataset and DataTable, Sealed class, abstract class and interfaces, Entity Frameworks).
+
+## Office- Week 6(18-March-2024 to 22-March-2024)
+    1. Training on asp.net MVC - Introduction to core MVC, Creating MVC project, handling of mvc controls with HTML.
+    2. Practiced how to implement Database first approach and Code first approach.
+    3. Training on ASP.NET MVC on various helper methods in HTML , how to pass value from controller to view.
+    4. Learnt Dropdown and DropdownFor, Checkbox and CheckboxFor, RadioButon and RadioButonFor, TextBox and TextArea, Lables, Display, Password, ListBox.
+    5. Learnt about Model Binding and Routing concepts.
+    6. Learnt about Controllers, Action Methods, View , Razor and Razor Engine.
+    7. Evaluation on ASP.NET.
+
+## Office- Week 6(25-March-2024 to 29-March-2024)
+    1. Project Assigned (Car Rental System).
+    2. Training on ASP.NET MVC TempData, ViewData and ViewBag, Model Binding, Validations from view and Model.
+    3. Database Design and Database Diagram for Project.
+    4. Training on ASP.NET MVC ASP.NET Web API Concepts like Postman, Swagger, Routing, Parameter Binding and Testing API.
+    5. API-Entity Framework connectivity.
+    6. Evaluation on .Net Core MVC and WebApi.

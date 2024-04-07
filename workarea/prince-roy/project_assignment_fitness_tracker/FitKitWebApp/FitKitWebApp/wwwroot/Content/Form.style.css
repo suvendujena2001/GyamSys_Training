@@ -1,4 +1,4 @@
-﻿.login-page-container {
+﻿.signup-page-container {
   min-height: 100vh;
   display: grid;
   gap: 1.5rem;
@@ -8,7 +8,7 @@
   margin-block: 2rem;
 }
 @media (min-width: 64rem) {
-  .login-page-container {
+  .signup-page-container {
     grid-template-columns: repeat(2, 1fr);
     margin-inline: 4rem;
     margin-block: 3rem;

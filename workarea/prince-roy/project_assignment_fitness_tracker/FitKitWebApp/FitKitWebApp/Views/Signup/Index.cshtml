@@ -1,0 +1,79 @@
+﻿@model FitKitWebApp.Models.UserCredentials
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Styles {
+    <link href="~/Content/Form.style.css" type="text/css" rel="stylesheet" />
+}
+
+<div class="login-page-container">
+    <div class="hero-container">
+        <div class="img-container">
+            <img src="~/images/undraw_indoor_bike_pwa4 (1).svg" alt="" />
+        </div>
+        <p>Already have an account? <a asp-area="" asp-controller="Login" asp-action="Index">Log in</a></p>
+        <p class="or">- OR -</p>
+        <div class="third-party-login">
+            <button type="button"><img src="~/images/Google.png" />Sign up with Google</button>
+            <button type="button"><img src="~/images/GitHub.png" />Sign up with GitHub</button>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <h1>Create your Free Account</h1>
+        <form method="post" class="form-container" asp-action="Index">
+            <div class="input-container">
+                <label asp-for="FirstName" class="label"></label>
+                <input asp-for="FirstName" type="text" class="input-tag" placeholder="Enter your Firstname here" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+
+            <div class="input-container">
+                <label asp-for="LastName" class="label"></label>
+                <input asp-for="LastName" type="text" class="input-tag" placeholder="Enter your Lastname here" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+
+            <div class="input-container">
+                <label asp-for="UserName" class="label"></label>
+                <input asp-for="UserName" type="text" class="input-tag" placeholder="Enter your Username here" />
+                <span asp-validation-for="UserName"></span>
+            </div>
+
+            <div class="input-container">
+                <label asp-for="UserEmail" class="label"></label>
+                <input asp-for="UserEmail" type="email" class="input-tag" placeholder="Enter your Email here" />
+                <span asp-validation-for="UserEmail"></span>
+            </div>
+
+            <div class="input-container">
+                <label asp-for="Password" class="label"></label>
+                <input asp-for="Password" type="password" class="input-tag" placeholder="Enter your Password here" />
+                <span asp-validation-for="Password"></span>
+            </div>
+
+            <div class="input-container">
+                <label asp-for="ConfirmPassword" class="label"></label>
+                <input asp-for="ConfirmPassword" type="password" class="input-tag" placeholder="Enter your Password here" />
+                <span asp-validation-for="ConfirmPassword"></span>
+            </div>
+
+            <input type="submit" class="create-btn" value="Create Account" />
+        </form>
+        @* <p>Already have an account? <a asp-area="" asp-controller="Login" asp-action="Index">Log in</a></p>
+        <p class="or">- OR -</p>
+        <div class="third-party-login">
+            <button type="button"><img src="~/images/Google.png" />Sign up with Google</button>
+            <button type="button"><img src="~/images/GitHub.png" />Sign up with GitHub</button>
+        </div> *@
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

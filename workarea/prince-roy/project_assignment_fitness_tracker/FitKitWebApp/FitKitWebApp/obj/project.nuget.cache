@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oW9xVWHQh701O+bhuhGoFe2WtzTy3omJU5dx4pjVIZYEpWfcWmbsuMU4LNITIek10RtNUMQhQVN6lt/2EO3eAg==",
+  "dgSpecHash": "FHzx/RHZCaCCy6Rx0Ku6O806JY/+lb3l47Czjr9D5e+nhzvemJPuSp1dY18PXvwfVAbP0pgLXsOBvJRP6J8/HQ==",
   "success": true,
   "projectFilePath": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\FitKitWebApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\PrinceRoy\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\PrinceRoy\\.nuget\\packages\\buildwebcompiler2022\\1.14.10\\buildwebcompiler2022.1.14.10.nupkg.sha512",
     "C:\\Users\\PrinceRoy\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\PrinceRoy\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

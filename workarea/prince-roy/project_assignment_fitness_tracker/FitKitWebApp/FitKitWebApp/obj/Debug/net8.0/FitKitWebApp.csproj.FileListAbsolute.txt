@@ -475,3 +475,4 @@ C:\frontend-challenges\get-2024-microsoft\workarea\prince-roy\project_assignment
 C:\frontend-challenges\get-2024-microsoft\workarea\prince-roy\project_assignment_fitness_tracker\FitKitWebApp\FitKitWebApp\obj\Debug\net8.0\FitKitWebApp.pdb
 C:\frontend-challenges\get-2024-microsoft\workarea\prince-roy\project_assignment_fitness_tracker\FitKitWebApp\FitKitWebApp\obj\Debug\net8.0\FitKitWebApp.genruntimeconfig.cache
 C:\frontend-challenges\get-2024-microsoft\workarea\prince-roy\project_assignment_fitness_tracker\FitKitWebApp\FitKitWebApp\obj\Debug\net8.0\ref\FitKitWebApp.dll
+C:\frontend-challenges\get-2024-microsoft\workarea\prince-roy\project_assignment_fitness_tracker\FitKitWebApp\FitKitWebApp\bin\Debug\net8.0\BCrypt.Net-Next.dll

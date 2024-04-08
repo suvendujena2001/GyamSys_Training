@@ -42,6 +42,10 @@ namespace FitKitWebApp.Controllers
                 user.ModifiedDate = DateTime.Now;
                 user.Active = true;
 
+                // Hashing
+                var hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
+                user.Password = hashedPassword;
+
                 var json = JsonConvert.SerializeObject(user);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -49,6 +53,7 @@ namespace FitKitWebApp.Controllers
 
                 if (response.IsSuccessStatusCode)
                 {
+                    ModelState.Clear();
                     return RedirectToAction("Index", "Home");
                 }
                 else

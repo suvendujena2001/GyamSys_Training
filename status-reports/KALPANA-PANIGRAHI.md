@@ -244,6 +244,40 @@
 10. Controllers
 11. Action Methods
 12. View , Razor and Razor Engine
+# Week 8 status report(Mar 25 to Mar 31)
+## ASP .NET Core MVC
+1. Layout View, _Layout.cshtml file
+2. View start file ans _ViewStart.cshtml
+3. How to pass data controller to view
+4. ViewBag , ViewData, TempData
+5. Bootstrap implementation
+6. Tag Helpers
+7. Creating form using tag helper
+## React
+1. Introduction to react
+2. React Render HTML
+3. React Component
+4. React JSX
+5. React Component
+6. React class
+7. React Props
+# Week 9 status report(April 1 to April 7)
+## ASP .NET Core MVC
+1. Creating form using tag helper
+2. Creating DropdownList, Radio Buttons.
+3.  TextArea, Label using Tag helpers
+4.  Model binding submitting form data
+## React
+1. React Conditionals
+2. React Lists
+3. React Forms
+4. React Router
+5. CSS styling (Inline CSS and MOdular CSS)
+6. React HOOKS
+7. useState
+8. Creating a Simple Expanse Tracker using React
+9. Creating a simple TODO application Using React
+   
     
     
     

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using BCrypt.Net;
 using FitKitAPI.Data;
 using FitKitAPI.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FitKitAPI.Controllers
 {
@@ -33,6 +29,21 @@ namespace FitKitAPI.Controllers
         public async Task<ActionResult<UserCredential>> GetUserCredential(int id)
         {
             var userCredential = await _context.UserCredential.FindAsync(id);
+
+            if (userCredential == null)
+            {
+                return NotFound();
+            }
+
+            return userCredential;
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<UserCredential>> GetUserCredential([FromBody] LoginDetails user)
+        {
+            var userCredential = await _context.UserCredential
+                .Where(u => u.UserName == user.UserName && u.Password == user.Password)
+                .FirstOrDefaultAsync();
 
             if (userCredential == null)
             {
@@ -78,6 +89,10 @@ namespace FitKitAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<UserCredential>> PostUserCredential(UserCredential userCredential)
         {
+            // Hashing and salting
+            var hashedPassword = BCrypt.Net.BCrypt.EnhancedHashPassword(userCredential.Password, HashType.SHA512);
+            userCredential.Password = hashedPassword;
+
             _context.UserCredential.Add(userCredential);
             await _context.SaveChangesAsync();
 

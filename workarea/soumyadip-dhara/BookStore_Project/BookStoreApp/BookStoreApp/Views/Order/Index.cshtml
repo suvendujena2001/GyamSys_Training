@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BookStoreApp.Models.Order>
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h2>Order History</h2>
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total Amount</th>
+                <th>Order Date</th>
+                <th>Status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                foreach (var orderDetail in order.OrderDetails)
+                {
+                    <tr>
+                        <td>@orderDetail.Book.Title</td>
+                        <td>@orderDetail.Quantity</td>
+                        <td>@orderDetail.UnitPrice.ToString("c")</td>
+                        <td>@order.TotalAmount.ToString("c")</td>
+                        <td>@order.OrderDate.ToShortDateString()</td>
+                        <td>@order.Status</td>
+
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Your wishlist is empty.</p>
+    <a asp-controller="HomeCard" asp-action="Index" asp-route-id="" class="btn btn-success"><i class="fa-solid fa-book"></i>Browse Books</a>
+}

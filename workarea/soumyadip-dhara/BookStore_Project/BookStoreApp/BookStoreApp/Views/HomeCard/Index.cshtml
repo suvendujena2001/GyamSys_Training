@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BookStoreApp.Models.Book>
+@{
+    ViewData["Title"] = "Store";
+}
+<h2 class="my-4">Store</h2>
+
+<form class="form-inline mt-3 mb-3 d-flex justify-content-end" method="get" action="@Url.Action("Search", "Books")">
+    <input class="form-control mr-sm-2 w-25 px-3" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+<div class="row">
+    @foreach (var book in Model)
+    {
+        <div class="col-3">
+            <div class="card my-2 store-card">
+                <a class="a-cleanup" asp-controller="HomeCard" asp-action="Details" asp-route-id="@book.BookID">
+                    <img src="@book.CoverImage" class="card-img-top card-img-custom" />
+                    <div class="card-body" style=" height:3em">
+                        <h5 class="mb-3">@book.Title</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-3">@book.Popularity <i class="fa-solid fa-star" style="color:yellow"></i></p>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-text">@book.Price.ToString("c")</span>
+                    </div>
+                    <div>
+                        <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                            <input type="hidden" name="id" value="@book.BookID" />
+                            <button type="submit" class="btn btn-primary float-end card-cart-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </form>
+                        <form asp-controller="WishList" asp-action="AddToWishList" method="post">
+                            <input type="hidden" name="id" value="@book.BookID" />
+                            <button type="submit" class="btn btn-secondary float-end wish_btn">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </form>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+</div>

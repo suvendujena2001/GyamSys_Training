@@ -42,10 +42,6 @@ namespace FitKitWebApp.Controllers
                 user.ModifiedDate = DateTime.Now;
                 user.Active = true;
 
-                // Hashing
-                var hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
-                user.Password = hashedPassword;
-
                 var json = JsonConvert.SerializeObject(user);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -53,20 +49,33 @@ namespace FitKitWebApp.Controllers
 
                 if (response.IsSuccessStatusCode)
                 {
-                    ModelState.Clear();
-                    return RedirectToAction("Index", "Home");
+                    //ModelState.Clear();
+                    json = JsonConvert.SerializeObject(new { UserName = user.UserName, Password = user.Password });
+                    data = new StringContent(json, Encoding.UTF8, "application/json");
+                    response = await _httpClient.PostAsync("api/login", data);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var tokenResponse = await response.Content.ReadAsStringAsync();
+                        var token = JsonConvert.DeserializeObject<TokenModel>(tokenResponse);
+
+                        HttpContext.Session.SetString("AccessToken", token.Token);
+
+                        return RedirectToAction("Index", "Home");
+                    }
                 }
                 else
                 {
                     var errorMessage = await response.Content.ReadAsStringAsync();
 
-                    return View("Error");
+                    return View(errorMessage);
                 }
             }
             catch (Exception ex)
             {
-                return View("Error");
+                return View(ex.Message);
             }
+
+            return View();
         }
     }
 }

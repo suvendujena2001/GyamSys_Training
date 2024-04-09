@@ -1,10 +1,12 @@
 ﻿using BookStoreApp.Data;
 using BookStoreApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreApp.Controllers
 {
+    [Authorize]
     public class HomeCardController : Controller
     {
         private readonly BookStoreAppContext _context;

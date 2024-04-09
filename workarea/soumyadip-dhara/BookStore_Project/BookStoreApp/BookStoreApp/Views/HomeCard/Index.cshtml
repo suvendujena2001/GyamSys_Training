@@ -4,6 +4,10 @@
 }
 <h2 class="my-4">Store</h2>
 
+<form class="form-inline mt-3 mb-3 d-flex justify-content-end" method="get" action="@Url.Action("Search", "Books")">
+    <input class="form-control mr-sm-2 w-25 px-3" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
 <div class="row">
     @foreach (var book in Model)
     {

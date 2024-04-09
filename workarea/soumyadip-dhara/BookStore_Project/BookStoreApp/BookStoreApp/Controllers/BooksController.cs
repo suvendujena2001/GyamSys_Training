@@ -7,9 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookStoreApp.Data;
 using BookStoreApp.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookStoreApp.Controllers
 {
+    [Authorize(Roles ="Admin")]
+    
     public class BooksController : Controller
     {
         private readonly BookStoreAppContext _context;
@@ -17,6 +21,28 @@ namespace BookStoreApp.Controllers
         public BooksController(BookStoreAppContext context)
         {
             _context = context;
+        }
+
+
+        public async Task<IActionResult> Search(string searchTerm)
+        {
+            var booksQuery = _context.Books.AsQueryable();
+
+            // Check if a search term is provided
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                // Filter books by title, ISBN, and author name containing the search term
+                booksQuery = booksQuery.Where(b =>
+                    EF.Functions.Like(b.Title, $"%{searchTerm}%") ||
+                    EF.Functions.Like(b.ISBN, $"%{searchTerm}%") ||
+                    EF.Functions.Like(b.AuthorName, $"%{searchTerm}%") ||
+                    EF.Functions.Like(b.GenreName,$"%{searchTerm}")
+                );
+            }
+
+            var books = await booksQuery.ToListAsync();
+
+            return View("Search",books);
         }
 
         // GET: Books
@@ -52,7 +78,9 @@ namespace BookStoreApp.Controllers
         {
             ViewData["AuthorID"] = new SelectList(_context.Authors, "AuthorID", "AuthorID");
             ViewData["GenreID"] = new SelectList(_context.Genres, "GenreID", "GenreID");
-            ViewData["UserId"] = new SelectList(_context.Users, "UserID", "UserID");
+            //ViewData["UserId"] = new SelectList(_context.Users, "UserID", "UserID");
+            ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier);
             return View();
         }
 
@@ -66,8 +94,14 @@ namespace BookStoreApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Book book)
         {
+            book.CreatedDate = DateTime.Now;
+            book.UpdatedDate = DateTime.Now;
+            
             if (ModelState.IsValid)
             {
+                //var UserUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                //book.UserUserId = "aa";
+                // book.UserUserId= User.FindFirstValue(ClaimTypes.NameIdentifier);
                 // Check if the author name already exists in the database
                 var existingAuthor = await _context.Authors.FirstOrDefaultAsync(a => a.AuthorName == book.AuthorName);
                 var existingGenre = await _context.Genres.FirstOrDefaultAsync(a => a.GenreName == book.GenreName);
@@ -137,7 +171,7 @@ namespace BookStoreApp.Controllers
             }
             ViewData["AuthorID"] = new SelectList(_context.Authors, "AuthorID", "AuthorID", book.AuthorID);
             ViewData["GenreID"] = new SelectList(_context.Genres, "GenreID", "GenreID", book.GenreID);
-            ViewData["UserId"] = new SelectList(_context.Users, "UserID", "UserID", book.UserId);
+            ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier);
             return View(book);
         }
 
@@ -146,7 +180,7 @@ namespace BookStoreApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BookID,ISBN,Title,AuthorID,AuthorName,GenreID,GenreName,CoverImage,Price,Page,Description,PublicationDate,Popularity,Availability,UserId,CreatedDate,UpdatedDate")] Book book)
+        public async Task<IActionResult> Edit(int id,Book book)
         {
             if (id != book.BookID)
             {
@@ -183,6 +217,11 @@ namespace BookStoreApp.Controllers
                     {
                         book.GenreID = existingGenre.GenreID; // Use existing author ID
                     }
+                    var existingBook = await _context.Books.AsNoTracking().FirstOrDefaultAsync(b => b.BookID == id);
+
+                    // Copy the CreatedDate from the existing book to the edited book
+                    book.CreatedDate = existingBook.CreatedDate;
+                    book.UpdatedDate = DateTime.Now;
                     _context.Update(book);
                     await _context.SaveChangesAsync();
                 }
@@ -201,7 +240,7 @@ namespace BookStoreApp.Controllers
             }
             ViewData["AuthorID"] = new SelectList(_context.Authors, "AuthorID", "AuthorID", book.AuthorID);
             ViewData["GenreID"] = new SelectList(_context.Genres, "GenreID", "GenreID", book.GenreID);
-            ViewData["UserId"] = new SelectList(_context.Users, "UserID", "UserID", book.UserId);
+            ViewData["UserId"] = User.FindFirstValue(ClaimTypes.NameIdentifier);
             return View(book);
         }
 

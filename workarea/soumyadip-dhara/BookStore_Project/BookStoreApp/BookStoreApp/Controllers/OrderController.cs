@@ -1,9 +1,12 @@
 ﻿using BookStoreApp.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace BookStoreApp.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
 
@@ -18,18 +21,19 @@ namespace BookStoreApp.Controllers
         public async Task<IActionResult> Index()
         {
             // Retrieve the wishlist items for the current user
-            int userId = GetCurrentUserId(); // Implement GetCurrentUserId() to get the current user ID
+            string userId = GetCurrentUserId(); // Implement GetCurrentUserId() to get the current user ID
             var orders = await _context.Orders
-                .Where(u=>u.UserID == userId)
+                .Where(u=>u.UserUserID == userId)
                 .Include(o => o.OrderDetails)
                 .ThenInclude(od => od.Book)
                 .ToListAsync();
 
             return View(orders);
         }
-        private int GetCurrentUserId()
+        private string GetCurrentUserId()
         {
-            return 1;
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return userid;
         }
     }
 }

@@ -5,7 +5,7 @@ namespace BookStoreApp.Models
     public class Order
     {
         public int OrderID { get; set; }
-        public int UserID { get; set; }
+        public string UserUserID { get; set; }
         public DateTime OrderDate { get; set; }
         public decimal TotalAmount { get; set; }
         public string Status { get; set; }

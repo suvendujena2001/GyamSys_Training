@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 public interface ICartService
 {
-    Task AddToCartAsync(int userId, int bookId);
+    Task AddToCartAsync(string userId, int bookId);
 }
 
 public class CartService : ICartService
@@ -16,11 +16,11 @@ public class CartService : ICartService
         _dbContext = dbContext;
     }
 
-    public async Task AddToCartAsync(int userId, int bookId)
+    public async Task AddToCartAsync(string userId, int bookId)
     {
         // Check if the item already exists in the cart
         var existingCartItem = await _dbContext.Carts
-            .FirstOrDefaultAsync(c => c.UserID == userId && c.BookID == bookId);
+            .FirstOrDefaultAsync(c => c.UserUserID == userId && c.BookID == bookId);
 
         if (existingCartItem != null)
         {
@@ -32,7 +32,7 @@ public class CartService : ICartService
             // If the item doesn't exist, create a new cart item
             var newCartItem = new Cart
             {
-                UserID = userId,
+                UserUserID = userId,
                 BookID = bookId,
                 Quantity = 1 // Initial quantity is 1
             };

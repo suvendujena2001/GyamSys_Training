@@ -20,7 +20,7 @@ namespace BookStoreApp.Models
         public decimal Popularity {  get; set; }
         public bool Availability { get; set; }
 
-        public int UserId {  get; set; }
+        public string UserUserId {  get; set; }
         public DateTime CreatedDate {  get; set; }
         public DateTime UpdatedDate { get; set; }
 

@@ -5,7 +5,7 @@ namespace BookStoreApp.Models
     public class Cart
     {
         public int CartID { get; set; }
-        public int UserID { get; set; }
+        public string UserUserID { get; set; }
         public int BookID { get; set; }
         public int Quantity { get; set; }
         [ValidateNever]

@@ -5,7 +5,7 @@ namespace BookStoreApp.Models
     public class Wishlist
     {
         public int WishlistID { get; set; }
-        public int UserID { get; set; }
+        public string UserId { get; set; }
         public int BookID { get; set; }
         [ValidateNever]
         public User User { get; set; }

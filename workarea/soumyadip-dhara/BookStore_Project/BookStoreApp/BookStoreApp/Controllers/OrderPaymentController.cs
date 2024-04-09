@@ -1,10 +1,13 @@
 ﻿using BookStoreApp.Data;
 using BookStoreApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace BookStoreApp.Controllers
 {
+    [Authorize]
     public class OrderPaymentController : Controller
     {
         private readonly BookStoreAppContext _context;
@@ -15,7 +18,7 @@ namespace BookStoreApp.Controllers
         [HttpGet]
         public async Task<IActionResult> Payment(decimal totalAmount)
         {
-            int userId = GetCurrentUserId();
+            string userId = GetCurrentUserId();
 
             // Retrieve user details from the database using the user ID
             var user = await _context.Users.FindAsync(userId);
@@ -30,18 +33,18 @@ namespace BookStoreApp.Controllers
         public async Task<IActionResult> Purchase()
         {
             // Get the current user ID
-            int userId = GetCurrentUserId();
+            string userId = GetCurrentUserId();
 
             // Retrieve items from the cart for the current user
             var cartItems = await _context.Carts
                 .Include(c => c.Book)
-                .Where(c => c.UserID == userId)
+                .Where(c => c.UserUserID == userId)
                 .ToListAsync();
 
             // Create a new order
             var order = new Order
             {
-                UserID = userId,
+                UserUserID = userId,
                 OrderDate = DateTime.Now,
                 TotalAmount = cartItems.Sum(c => c.Quantity * c.Book.Price),
                 Status = "Dispatched" // You can set the initial status as needed
@@ -70,11 +73,13 @@ namespace BookStoreApp.Controllers
 
             // Redirect to the payment page or any other page as needed
             return Json(new { success = true });
+            //return View("index","homecard");
         }
 
-        private int GetCurrentUserId()
+        private string GetCurrentUserId()
         {
-            return 1;
+            var userid= User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return userid;
         }
         //public IActionResult Index()
         //{

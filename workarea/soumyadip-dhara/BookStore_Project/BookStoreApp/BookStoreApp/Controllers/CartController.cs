@@ -2,7 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using BookStoreApp.Models;
 using BookStoreApp.Data;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
+[Authorize]
 public class CartController : Controller
 {
     private readonly ICartService _cartService;
@@ -16,9 +19,9 @@ public class CartController : Controller
     [HttpGet]
     public async Task<IActionResult> Index()
     {
-        int userId = GetCurrentUserId();
+        string userId = GetCurrentUserId();
         var carts = await _context.Carts
-            .Where(c => c.UserID == userId)
+            .Where(c => c.UserUserID == userId)
             .Include(c => c.Book)
             .ToListAsync();
 
@@ -28,9 +31,9 @@ public class CartController : Controller
     [HttpPost]
     public async Task<IActionResult> AddToCart(int id)
     {
-        int userId = GetCurrentUserId();
+        string userId = GetCurrentUserId();
 
-        var wishlistItem = await _context.Wishlists.FirstOrDefaultAsync(w => w.UserID == userId && w.BookID == id);
+        var wishlistItem = await _context.Wishlists.FirstOrDefaultAsync(w => w.UserId == userId && w.BookID == id);
         if (wishlistItem != null)
         {
             await _cartService.AddToCartAsync(userId, id);
@@ -43,9 +46,10 @@ public class CartController : Controller
         return RedirectToAction("Index", "HomeCard");
     }
    
-    private int GetCurrentUserId()
+    private string GetCurrentUserId()
     {
-        return 1;
+        var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        return userid;
     }
 
     [HttpPost]

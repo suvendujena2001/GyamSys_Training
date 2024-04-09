@@ -5,11 +5,11 @@
 }
 
 <div class="login-page-container">
-    <form class="form-container">
+    <form class="form-container" asp-action="Index" method="post">
         <div class="input-container">
-            <label asp-for="UserEmail" class="label"></label>
-            <input asp-for="UserEmail" type="email" class="input-tag" placeholder="Enter your Email here" />
-            <span asp-validation-for="UserEmail"></span>
+            <label asp-for="UserName" class="label"></label>
+            <input asp-for="UserName" class="input-tag" placeholder="Enter your User Name here" />
+            <span asp-validation-for="UserName"></span>
         </div>
 
         <div class="input-container">

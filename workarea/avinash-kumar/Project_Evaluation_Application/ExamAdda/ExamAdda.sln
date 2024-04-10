@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamAdda", "ExamAdda\ExamAdda.csproj", "{B24F5834-254D-44AF-8EA9-B6C51F60618A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B24F5834-254D-44AF-8EA9-B6C51F60618A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24F5834-254D-44AF-8EA9-B6C51F60618A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24F5834-254D-44AF-8EA9-B6C51F60618A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24F5834-254D-44AF-8EA9-B6C51F60618A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33CAB920-FAF0-4C2E-B8FA-F7FFD7388393}
+	EndGlobalSection
+EndGlobal

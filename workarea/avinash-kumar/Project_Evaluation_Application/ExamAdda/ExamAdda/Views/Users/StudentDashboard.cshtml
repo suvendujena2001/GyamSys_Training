@@ -1,0 +1,124 @@
+﻿@model WEBAPICodeFirst.Models.User
+@using Newtonsoft.Json
+@{
+    ViewData["Title"] = "StudentDashboard";
+}
+@{
+    if (TempData["put_message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>success</strong> @TempData["put_message"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}
+
+<div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+    <div class="row m-4">
+        <div class="col-auto">
+            <img class="image1" src="~/Images/student.png" alt="Image 2" />
+        </div>
+        <div class="col ml-5 mt-3">
+            <h1 class="mt-3">Welcome @Model.Name</h1>
+        </div>
+        <div class="col-auto mt-4">
+            <div class="dropdown text-right">
+                <a class="setting_icon btn dropdown-toggle bi bi-gear" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a id="profileLink" class="dropdown-item" asp-action="Details" asp-controller="Users" asp-route-id="@Model.Id">Profile</a>
+                    </li>
+
+                    <li><a class="dropdown-item" asp-action="Edit" asp-controller="Users" asp-route-id="@Model.Id">Edit Your Details</a></li>
+                    <li><a class="dropdown-item" asp-action="Index" asp-controller="Home">Logout</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div id="examDetailsContainer" class="row"></div>
+    
+
+    @* <div class="container mb-3">
+        <div class="card text-center" style="width: 18rem;">
+            <img src="https://www.finoit.com/wp-content/uploads/2022/11/future-of-java-programming-language.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Java</h5>
+
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Duration: </li>
+                <li class="list-group-item">Total Marks:</li>
+                <li class="list-group-item">Passing Marks:</li>
+            </ul>
+            <a href="#" class="card-link btn btn-primary mb-3">Start Test</a>
+        </div>
+    </div> *@
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        loadExamIds();
+    });
+
+    function loadExamIds() {
+        $.ajax({
+            url: 'https://localhost:7177/api/Exams', 
+            method: 'GET',
+            success: function (data) {
+                var examIds = data.map(function (exam) {
+                    return exam.examId;
+                });
+
+                loadExamDetails(examIds);
+            },
+            error: function (xhr, status, error) {
+                console.error('Failed to fetch exam IDs:', error);
+            }
+        });
+    }
+
+    function loadExamDetails(examIds) {
+        examIds.forEach(function (examId) {
+            $.ajax({
+                url: 'https://localhost:7177/api/Exams/' + examId, 
+                method: 'GET',
+                success: function (data) {
+                    var exam = data;
+
+                    var cardHtml = `
+                        <div class="col-md-4 col"> <!-- Adjust the column size as needed -->
+                            <div class="container mb-4">
+                                <div class="card text-center" style="width: 20rem;height:26rem;">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHBIdwoZFBnseg4YDtEd9PyhBSMIu2E22capAU_aRTg&s" class="card-img-top" style="width: 20rem;height:11rem; padding:10px"alt="${exam.examName}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${exam.examName}</h5>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Duration: 1hr</li>
+                                        <li class="list-group-item">Total Marks: ${exam.score}</li>
+                                        <li class="list-group-item">Passing Marks: 100</li>
+                                    </ul>
+                                    <a href="#" class="card-link btn btn-primary mb-3 m-2">Start Test</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        `;
+
+                    $('#examDetailsContainer').append(cardHtml);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Failed to fetch exam details:', error);
+                }
+            });
+        });
+    }
+
+</script>

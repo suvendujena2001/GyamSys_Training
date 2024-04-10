@@ -1,0 +1,258 @@
+﻿@model WEBAPICodeFirst.Models.User
+
+@{
+    ViewData["Title"] = "AdminDashboard";
+}
+
+
+
+@{
+    if (TempData["put_message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>success</strong> @TempData["put_message"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminDashboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+        <div class="row m-4">
+            <div class="col-auto ">
+                <img class="image2" src="~/Images/admin.png" alt="Image 3" />
+            </div>
+            <div class="col ml-3">
+                <h1 class="mt-3">Welcome To AdminDashboard</h1>
+            </div>
+            
+        </div>
+
+        <div class="navStudent">
+            <div class="div1 d-flex justify-content-between align-items-center">
+                <div class="mr-auto p-2">
+                    <h2>Hello  @Model.Name</h2>
+                </div>
+
+                <div class="div2">
+                    <div class="dropdown">
+                        <a class="setting_icon btn dropdown-toggle bi bi-gear" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a id="profileLink" class="dropdown-item" asp-action="Details" asp-controller="Users" asp-route-id="@Model.Id">Profile</a>
+                            </li>
+
+                            <li><a class="dropdown-item" asp-action="Edit" asp-controller="Users" asp-route-id="@Model.Id">Edit Your Details</a></li>
+                            <li><a class="dropdown-item" asp-action="Index" asp-controller="Home">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col text-left">
+                    <button type="button" class="btn btn-primary" id="createQuestionBtn">Create Question</button>
+                </div>
+                <div class="col text-center">
+                    <button type="button" class="btn btn-primary" id="seeAllQuestionsBtn">View Questions</button>
+                </div>
+                <div class="col text-right">
+                    <button type="button" class="btn btn-primary">View Results</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="contentArea" class="mt-4"></div>
+        <div id="allQuestionsContainer" class="mt-4 mb-4"></div>
+        <form id="createQuestionForm" class="container" style="display: none;">
+            <div class="form-group">
+                <label for="questionText">Question Text</label>
+                <textarea placeholder="Enter Your Question" type="text" class="form-control" id="questionText" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="optionA">Option A</label>
+                <textarea placeholder="Enter option A" type="text" class="form-control" id="optionA" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="optionB">Option B</label>
+                <textarea placeholder="Enter option B" type="text" class="form-control" id="optionB" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="optionC">Option C</label>
+                <textarea placeholder="Enter option c" type="text" class="form-control" id="optionC" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="optionD">Option D</label>
+                <textarea Placeholder="Enter option D" type="text" class="form-control" id="optionD" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="correctOption">Correct Option</label>
+                <textarea placeholder="Enter correct option" type="text" class="form-control" id="correctOption" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="marks">Marks</label>
+                <textarea placeholder="Enter Marks" type="number" class="form-control" id="marks" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exanID_fk">Exam Id</label>
+                <textarea placeholder="Enter Exam ID " type="number" class="form-control" id="exanID_fk" required></textarea>
+            </div>
+
+            <button type="submit" class="text-center btn btn-primary mb-5">Save</button>
+        </form>
+
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#createQuestionForm').show();
+            $('#createQuestionBtn').click(function () {
+                $('#createQuestionForm').toggle();
+                $('#allQuestionsContainer').hide();
+
+                $('#contentArea').append($('#createQuestionForm'));
+            });
+            //post the question
+            $('#createQuestionForm').submit(function (e) {
+                e.preventDefault();
+
+                var currentDate = new Date();
+                var createdDate = currentDate.toISOString();
+                var modifiedDate = createdDate;
+
+                var createdBy = @Model.Id;
+
+                var modifiedBy = @Model.Id;
+
+                var formData = {
+                    questionId: 0,
+                    questionText: $('#questionText').val(),
+                    optionA: $('#optionA').val(),
+                    optionB: $('#optionB').val(),
+                    optionC: $('#optionC').val(),
+                    optionD: $('#optionD').val(),
+                    correctOption: $('#correctOption').val(),
+                    marks: parseInt($('#marks').val()),
+                    createdDate: createdDate,
+                    createdBy: createdBy,
+                    modifiedDate: modifiedDate,
+                    modifiedBy: modifiedBy,
+                    exanID_fk: $('#exanID_fk').val()
+                };
+
+                $.ajax({
+                    url: 'https://localhost:7177/api/Questions',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function (response) {
+                        console.log('Form data posted successfully:', response);
+                        $('#createQuestionForm')[0].reset();
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Failed to post form data:', error);
+                    }
+                });
+            });
+
+
+
+            $('#seeAllQuestionsBtn').click(function () {
+                $('#allQuestionsContainer').toggle();
+                $('#createQuestionForm').hide();
+                $.ajax({
+                    url: 'https://localhost:7177/api/Questions',
+                    method: 'GET',
+                    success: function (questions) {
+                        console.log(questions[0].questionText);
+
+                        $('#allQuestionsContainer').empty();
+
+
+                        var tableHtml = '<table class="table">';
+                        tableHtml += '<thead>';
+                        tableHtml += '<tr>';
+                        tableHtml += '<th>Question Text</th>';
+                        tableHtml += '<th>Option A</th>';
+                        tableHtml += '<th>Option B</th>';
+                        tableHtml += '<th>Option C</th>';
+                        tableHtml += '<th>Option D</th>';
+                        tableHtml += '<th>Correct Option</th>';
+                        tableHtml += '<th>Marks</th>';
+                        tableHtml += '<th>Exam ID</th>';
+                        tableHtml += '<th>Actions</th>';
+                        tableHtml += '</tr>';
+                        tableHtml += '</thead>';
+                        tableHtml += '<tbody>';
+
+                        questions.forEach(function (question) {
+                            tableHtml += '<tr>';
+                            tableHtml += '<td>' + question.questionText + '</td>';
+                            tableHtml += '<td>' + question.optionA + '</td>';
+                            tableHtml += '<td>' + question.optionB + '</td>';
+                            tableHtml += '<td>' + question.optionC + '</td>';
+                            tableHtml += '<td>' + question.optionD + '</td>';
+                            tableHtml += '<td>' + question.correctOption + '</td>';
+                            tableHtml += '<td>' + question.marks + '</td>';
+                            tableHtml += '<td>' + question.exanID_fk + '</td>';
+                            tableHtml += '<td>';
+                            tableHtml += '<button type="button" class="btn btn-primary editQuestionBtn" data-question-id="' + question.QuestionId + '"><i class="fas fa-edit"></i></button>';
+                            tableHtml += '<button type="button" class="btn btn-danger deleteQuestionBtn" data-question-id="' + question.QuestionId + '"><i class="fas fa-trash-alt"></i></button>';
+                            tableHtml += '</td>';
+                            tableHtml += '</tr>';
+                        });
+
+                        tableHtml += '</tbody>';
+                        tableHtml += '</table>';
+
+                        $('#allQuestionsContainer').append(tableHtml);
+                    },
+                    error: function (xhr, status, error) {
+                        $('#allQuestionsContainer').html('<div class="alert alert-danger" role="alert">Failed to fetch questions. Error: ' + error + '</div>');
+                    }
+                });
+            });
+
+            // Event  for edit and delete buttons
+            $('#allQuestionsContainer').on('click', '.editQuestionBtn', function () {
+                var questionId = $(this).data('question-id');
+            });
+
+            $('#allQuestionsContainer').on('click', '.deleteQuestionBtn', function () {
+                var questionId = $(this).data('question-id');
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>

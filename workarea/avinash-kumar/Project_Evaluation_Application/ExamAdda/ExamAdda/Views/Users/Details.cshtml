@@ -1,0 +1,78 @@
+﻿<div id="userDetailsContainer"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var userId = '@ViewBag.UserId';
+        var userDetails;
+
+       
+        $.ajax({
+            url: 'https://localhost:7177/api/Users/' + userId,
+            type: 'GET',
+            success: function (responseData) {
+                userDetails = responseData;
+                renderUserDetails(userDetails); 
+            },
+            error: function () {
+                console.error('Error fetching user details.');
+            }
+        });
+
+        // Back to Dashboard button click event
+        $(document).on('click', '#dashboardButton', function () {
+            var dashboardUrl;
+            if (userDetails.role === 'Admin') {
+                dashboardUrl = '/Users/AdminDashboard?user=' + encodeURIComponent(JSON.stringify(userDetails));
+            } else if (userDetails.role === 'Student') {
+                dashboardUrl = '/Users/StudentDashboard?user=' + encodeURIComponent(JSON.stringify(userDetails));
+            } else {
+                console.error('Invalid role:', userDetails.role);
+                return;
+            }
+
+            // Redirect to the appropriate dashboard
+            window.location.href = dashboardUrl;
+        });
+
+        //Edit page when Edit button click event
+        $(document).on('click', '#editButton', function () {
+            if (userDetails) {
+                // Redirect to the Edit action in the controller
+                window.location.href = '@Url.Action("Edit", "Users")?id=' + userDetails.id;
+            } else {
+                console.error('User details not available.');
+            }
+        });
+        // Function to render user details
+        function renderUserDetails(userDetails) {
+            $('#userDetailsContainer').html(`
+                    <section class="text-center text-lg-start text-center">
+                        <div class="container py-4">
+                            <div class="row g-0 align-items-center loginpage">
+                                <div class="col-lg-6 mb-3 mb-lg-0">
+                                    <div class="card cascading-right" style="
+                                        background: hsla(0, 0%, 100%, 0.55);
+                                        backdrop-filter: blur(30px);
+                                    ">
+                                        <div class="card-body p-5 shadow-5 text-center">
+                                            <h2 class="fw-bold mb-5">Student Details</h2>
+                                            <img class="profile_img mb-2" src="@Url.Content("~/Images/UserProfile.png")" alt="User image">
+                                            <h3>${userDetails.name}</h3>
+                                            <div class="text-center mb-2">
+                                                <p class=""><strong class="pr-1">Email : </strong>${userDetails.email}</p>
+                                            </div>
+                                            <a id="editButton" class="btn btn-primary btn-block mb-4">Edit</a>
+                                            <a id="dashboardButton" class="btn btn-primary btn-block mb-4">Back to Dashboard</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                `);
+        }
+    });
+</script>
+

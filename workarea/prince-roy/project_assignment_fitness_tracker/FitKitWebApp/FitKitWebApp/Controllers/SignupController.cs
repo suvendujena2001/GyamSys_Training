@@ -60,7 +60,8 @@ namespace FitKitWebApp.Controllers
 
                         HttpContext.Session.SetString("AccessToken", token.Token);
 
-                        return RedirectToAction("Index", "Home");
+                        TempData["Name"] = $"{user.FirstName} {user.LastName}";
+                        return RedirectToAction("Index", "UserDetails");
                     }
                 }
                 else

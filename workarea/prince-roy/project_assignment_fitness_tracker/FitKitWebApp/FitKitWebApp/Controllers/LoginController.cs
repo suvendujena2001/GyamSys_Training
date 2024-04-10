@@ -17,7 +17,6 @@ namespace FitKitWebApp.Controllers
         {
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri(url);
-            //_httpClientFactory = httpClientFactory;
         }
 
         [HttpGet]
@@ -43,10 +42,6 @@ namespace FitKitWebApp.Controllers
                     HttpContext.Session.SetString("AccessToken", token.Token);
 
                     return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-
                 }
 
             }

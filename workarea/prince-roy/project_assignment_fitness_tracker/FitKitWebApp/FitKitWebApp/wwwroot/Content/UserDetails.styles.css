@@ -1,9 +1,9 @@
-﻿.login-page-container {
+﻿.details-container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(124, 131, 138, 0.2);
 }
 
 .form-container {
@@ -11,16 +11,6 @@
   display: grid;
   gap: 1rem;
   color: #7C838A;
-  background-color: white;
-  padding-block: 3rem 2rem;
-  padding-inline: 2rem;
-  border-radius: 8px;
-  box-shadow: 1rem 1rem 1rem -1rem #7C838A;
-}
-@media (min-width: 64rem) {
-  .form-container {
-    padding-inline: 2.8rem;
-  }
 }
 .form-container .input-container {
   display: grid;
@@ -39,8 +29,30 @@
 .form-container .input-tag::placeholder {
   font-family: "Manrope", sans-serif;
 }
-
-.login-btn {
+.form-container .input-tag:hover, .form-container .input-tag:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.6);
+}
+.form-container input::-webkit-outer-spin-button,
+.form-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #7C838A;
+  font-family: "Manrope", sans-serif;
+  background-image: url("~/images/down.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  border: none;
+  border-radius: 12px;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  background-color: rgba(176, 186, 195, 0.4);
+}
+.submit-btn {
   justify-self: center;
   background-color: #FF7443;
   outline: 3px solid transparent;

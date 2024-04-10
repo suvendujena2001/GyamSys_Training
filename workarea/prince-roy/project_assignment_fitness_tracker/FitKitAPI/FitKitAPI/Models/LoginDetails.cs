@@ -1,4 +1,5 @@
-﻿namespace FitKitAPI.Models
+﻿
+namespace FitKitAPI.Models
 {
     public class LoginDetails
     {

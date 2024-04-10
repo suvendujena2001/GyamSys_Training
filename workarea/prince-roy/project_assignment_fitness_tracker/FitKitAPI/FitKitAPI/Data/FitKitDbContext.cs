@@ -17,7 +17,7 @@ namespace FitKitAPI.Data
 
         public DbSet<Nutrition> Nutrition { get; set; } = default!;
 
-        public DbSet<UserCredential> UserCredential { get; set; } = default!;
+        public DbSet<UserCredential> UserCredential { get; set; }
 
     }
 }

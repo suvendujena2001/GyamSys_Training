@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Authentication
+@using System.Security.Claims
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    ClaimsPrincipal claimUser = HttpContextAccessor.HttpContext.User;
+}
+
+<ul class="navbar-nav">
+    @if (claimUser.Identity.IsAuthenticated)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">User</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Role</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Movies" asp-action="Index">Movies</a>
+        </li>
+        <li class="nav-item">
+            <a id="manage" class="nav-link text-dark" href="@Url.Action("Index", "Home")">Hello @claimUser.Identity.Name!</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LogOut">LogOut</a>
+        </li>
+    }
+    else
+    {
+      
+    }
+</ul>

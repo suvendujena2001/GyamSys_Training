@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FitKitAPI.Migrations
 {
     [DbContext(typeof(FitKitDbContext))]
-    [Migration("20240404182536_UserCredentials")]
+    [Migration("20240410094351_UserCredentials")]
     partial class UserCredentials
     {
         /// <inheritdoc />

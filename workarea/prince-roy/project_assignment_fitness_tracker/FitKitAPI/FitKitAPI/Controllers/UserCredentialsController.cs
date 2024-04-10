@@ -38,21 +38,6 @@ namespace FitKitAPI.Controllers
             return userCredential;
         }
 
-        [HttpPost("login")]
-        public async Task<ActionResult<UserCredential>> GetUserCredential([FromBody] LoginDetails user)
-        {
-            var userCredential = await _context.UserCredential
-                .Where(u => u.UserName == user.UserName && u.Password == user.Password)
-                .FirstOrDefaultAsync();
-
-            if (userCredential == null)
-            {
-                return NotFound();
-            }
-
-            return userCredential;
-        }
-
         // PUT: api/UserCredentials/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

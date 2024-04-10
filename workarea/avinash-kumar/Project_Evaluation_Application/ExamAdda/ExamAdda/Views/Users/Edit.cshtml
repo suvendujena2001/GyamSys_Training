@@ -1,0 +1,142 @@
+﻿@model WEBAPICodeFirst.Models.User
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<section class="text-center text-lg-start">
+    <div class="container py-4">
+        <div class="row g-0 align-items-center loginpage">
+            <div class="col-lg-6 mb-5 mb-lg-0 m-4 ">
+                <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+                <h3 class="text-center mt-1">Edit Your Details</h3>
+                    <form id="editForm" asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group m-3">
+                            <label asp-for="Name" class="control-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="Password" class="control-label">Enter new Password</label>
+                            <input asp-for="Password" type="password" class="form-control eye-hidden" placeholder="EnterYour Password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                       
+                        <div class="form-group  btn-block">
+                            <input type="submit" value="Save" class="btn btn-primary m-3" />Click To Save Your Changes
+                        </div>
+                    </form>
+                    
+                        <input id="dashboardButton" type="button" value="Dashboard" class="btn btn-primary m-3 btn-block" />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var userId = '@ViewBag.UserId';
+            var userDetails;
+            $.ajax({
+                url: 'https://localhost:7177/api/Users/' + userId,
+                type: 'GET',
+                success: function (responseData) {
+                    console.log(responseData);
+                    userDetails = responseData;
+                    populateForm(responseData);
+                },
+                error: function () {
+                    console.error('Error fetching user details.');
+                }
+            });
+
+            // Function to populate form fields with user data
+            function populateForm(userDetails) {
+                $('#editForm input[name="Id"]').val(userId);
+                $('#editForm input[name="Name"]').val(userDetails.name);
+                $('#editForm input[name="Email"]').val(userDetails.email);
+                $('#editForm input[name="Password"]').val("");
+            }
+            $(document).on('click', '#dashboardButton', function () {
+                var dashboardUrl;
+                if (userDetails.role === 'Admin') {
+                    dashboardUrl = '/Users/AdminDashboard?user=' + encodeURIComponent(JSON.stringify(userDetails));
+                } else if (userDetails.role === 'Student') {
+                    dashboardUrl = '/Users/StudentDashboard?user=' + encodeURIComponent(JSON.stringify(userDetails));
+                } else {
+                    console.error('Invalid role:', userDetails.role);
+                    return;
+                }
+
+                // Redirect to the appropriate dashboard
+                window.location.href = dashboardUrl;
+            });
+
+
+            $('#editForm').submit(function (event) {
+                event.preventDefault();
+
+                // Construct the JSON object from form fields
+                var formData = {
+                    id: $('#Id').val(), // Assuming there's an input field with ID "Id"
+                    name: $('#Name').val(),
+                    email: $('#Email').val(),
+                    password: $('#Password').val(),
+                    role: userDetails.role,
+                    createdDate: new Date(), // Set current date
+                    createdBy: userId, // Update with actual value if available
+                    modifiedDate: new Date(), // Set current date
+                    modifiedBy: userId, // Update with actual value if available
+                    active: false // Update with actual value if available
+                };
+
+                // Send the data to the API
+                $.ajax({
+                    url: 'https://localhost:7177/api/Users/' + userId,
+                    type: 'PUT',
+                    data: JSON.stringify(formData), 
+                    contentType: 'application/json',
+                    success: function () {
+                        console.log('User data updated successfully.');
+
+                        // Determine the destination dashboard based on the user's role
+                        var dashboardUrl;
+                        if (formData.role === 'Admin') {
+                            dashboardUrl = '/Users/AdminDashboard?user=' + JSON.stringify(formData);
+                        } else if (formData.role === 'Student') {
+                            dashboardUrl = '/Users/StudentDashboard?user=' + JSON.stringify(formData);
+                        } else {
+                            console.error('Invalid role:', formData.role);
+                            return;
+                        }
+
+                        // Redirect to the appropriate dashboard
+                        window.location.href = dashboardUrl;
+                    },
+                    error: function () {
+                        console.error('Error updating user data.');
+                    }
+                });
+            });
+
+        });
+    </script>
+}

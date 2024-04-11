@@ -1,0 +1,26 @@
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\bin\Debug\net8.0\appsettings.json
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\bin\Debug\net8.0\File Result.staticwebassets.runtime.json
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\bin\Debug\net8.0\File Result.exe
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\bin\Debug\net8.0\File Result.deps.json
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\bin\Debug\net8.0\File Result.runtimeconfig.json
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\bin\Debug\net8.0\File Result.dll
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\bin\Debug\net8.0\File Result.pdb
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\File Result.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\File Result.AssemblyInfoInputs.cache
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\File Result.AssemblyInfo.cs
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\File Result.csproj.CoreCompileInputs.cache
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\File Result.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\staticwebassets\msbuild.File Result.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\staticwebassets\msbuild.build.File Result.props
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.File Result.props
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.File Result.props
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\scopedcss\bundle\File Result.styles.css
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\File Result.dll
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\refint\File Result.dll
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\File Result.pdb
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\File Result.genruntimeconfig.cache
+C:\Users\SpardhaKumari\source\repos\File Result\File Result\obj\Debug\net8.0\ref\File Result.dll

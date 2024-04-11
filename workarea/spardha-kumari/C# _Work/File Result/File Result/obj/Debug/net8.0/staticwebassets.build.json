@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "YH8byAOFUsYrfgbjzgn+Q9uOO0oeVGE/k/Hp/XT0LAg=",
+  "Source": "File Result",
+  "BasePath": "_content/File Result",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "File Result\\wwwroot",
+      "Source": "File Result",
+      "ContentRoot": "C:\\Users\\SpardhaKumari\\source\\repos\\File Result\\File Result\\wwwroot\\",
+      "BasePath": "_content/File Result",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\SpardhaKumari\\source\\repos\\File Result\\File Result\\wwwroot\\Sample.pdf",
+      "SourceId": "File Result",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SpardhaKumari\\source\\repos\\File Result\\File Result\\wwwroot\\",
+      "BasePath": "_content/File Result",
+      "RelativePath": "Sample.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Sample.pdf"
+    }
+  ]
+}

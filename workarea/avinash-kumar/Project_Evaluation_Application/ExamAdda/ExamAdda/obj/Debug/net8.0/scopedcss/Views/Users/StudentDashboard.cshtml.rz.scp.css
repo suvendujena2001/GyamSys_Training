@@ -1,0 +1,16 @@
+div1[b-q8idy7caqn] {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div2[b-q8idy7caqn] {
+    height: 50px;
+    width: 50px;
+}
+
+select[b-q8idy7caqn] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}

@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/Content/Form.style.css",
+    "inputFile": "wwwroot/Content/Form.style.scss"
+  },
+  {
+    "outputFile": "wwwroot/Content/Login.styles.css",
+    "inputFile": "wwwroot/Content/Login.styles.scss"
+  },
+  {
+    "outputFile": "wwwroot/Content/UserDetails.styles.css",
+    "inputFile": "wwwroot/Content/UserDetails.styles.scss"
+  }
+]

@@ -69,3 +69,8 @@
  *  On the last working day, we gave a ASP.NET CORE MVC evaluation test.
 
  ## Week 9 (1st April 2024 to 5th April 2024)
+ * From the first working day, React sessions were started. Topics such as React Introduction, Rendering html elements in React, Add styles to those elements using modular css and inline style tag, useState hook, Conditional rendering and styling based on state changes, To-do list were taught throughout the week. I did the react coding and uploaded the same on Github.
+ * I completed the API-Entity Framework part of my assigned project and moved on to do the UI screens design part.
+ * On the last working day, we gave a React evaluation test.
+
+   ## Week 10 (8th April 2024 to 12th April 2024)

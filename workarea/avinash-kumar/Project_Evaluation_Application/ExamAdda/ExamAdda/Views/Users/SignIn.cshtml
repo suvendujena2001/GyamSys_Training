@@ -1,0 +1,92 @@
+﻿@model WEBAPICodeFirst.Models.User
+
+@{
+    ViewData["Title"] = "SignIn";
+}
+
+<section class="text-center text-lg-start text-center">
+    <div class="container py-4">
+        <div class="row g-0 align-items-center loginpage">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+                    <div class="card-body p-5 shadow-5 text-center">
+                        <h2 class="fw-bold mb-5">Login</h2>
+                        @using (Html.BeginForm("SignIn", "Users"))
+                        {
+
+                            <div class="form-outline mb-4">
+
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter Email" })
+
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter Password" })
+
+                            </div>
+
+                            <br />
+                            <div class="form-group">
+                                <input type="button" value="SignIn" class="btn btn-primary" onclick="signinuser()" />
+                            </div>
+                            <div id="error-message" class="text-danger"></div>
+                        }
+                        <br />
+                        @* <a asp-action="Index" asp-controller="Home" class="btn btn-primary btn-block mb-1">Home</a> *@
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    function signinuser() {
+        var settings = {
+            "url": "https://localhost:7177/api/Users/SignIn",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({
+                "email": $("#Email").val(),
+                "password": $("#Password").val()
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            //console.log(response);
+            
+            if (response) {
+                var serializedResponse = encodeURIComponent(JSON.stringify(response));
+                if (response.role === 'Student') {
+                    window.location.href = '@Url.Action("StudentDashboard", "Users")?user=' + serializedResponse;
+                } else if (response.role === 'Admin') {
+                    window.location.href = '@Url.Action("AdminDashboard", "Users")?user=' + serializedResponse;
+
+                } else {
+                    console.error("Invalid user role");
+
+                }
+            } else {
+                var errorMessage = "Incorrect username or password.";
+                $("#error-message").text(errorMessage);
+            }
+        }).fail(function (xhr, textStatus, errorThrown) {
+            if (xhr.status === 401) {
+                var errorMessage = "Incorrect username or password.";
+                $("#error-message").text(errorMessage);
+            } else {
+                var errorMessage = "Error: " + xhr.status + " - " + errorThrown;
+                $("#error-message").text(errorMessage);
+            }
+        });
+    }
+</script>

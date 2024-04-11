@@ -1,0 +1,26 @@
+.divstyles{
+    background: greenyellow;
+}
+.greenDiv{
+    background: burlywood;
+}
+.pLikeButton {
+    border: 1px solid red;
+    background: yellowgreen;
+    padding: 5px;
+    color: black;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 0.8rem;
+
+}
+
+.topicDiv{
+    border: 1px solid red;
+    background: wheat;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+
+}

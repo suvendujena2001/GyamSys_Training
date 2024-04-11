@@ -1,0 +1,26 @@
+.profilepic{
+    background-color: rgba(247, 154, 4, 0.443);
+    border: rgb(32, 32, 33) solid  3px;
+    
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery{
+    color:White;
+}
+.about{
+    color:rgb(243, 241, 241);
+}
+.about-body{
+    font-size: 15px;
+    color: rgb(245, 238, 238);
+}
+
+body{
+    background-image: url("./army.jpg");
+    background-size: cover;
+}

@@ -1,0 +1,393 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MotoRepair.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MotoRepair.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\css\\Signup.css",
+      "PackagePath": "staticwebassets\\css\\Signup.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\css\\signIn.css",
+      "PackagePath": "staticwebassets\\css\\signIn.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\Thumbs.db",
+      "PackagePath": "staticwebassets\\images\\Thumbs.db"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\about-abs-banner.png",
+      "PackagePath": "staticwebassets\\images\\about-abs-banner.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\about-banner.png",
+      "PackagePath": "staticwebassets\\images\\about-banner.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\about-shape.png",
+      "PackagePath": "staticwebassets\\images\\about-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\facebook.svg",
+      "PackagePath": "staticwebassets\\images\\facebook.svg"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\footer-shape-1.png",
+      "PackagePath": "staticwebassets\\images\\footer-shape-1.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\footer-shape-2.png",
+      "PackagePath": "staticwebassets\\images\\footer-shape-2.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\footer-shape-3.png",
+      "PackagePath": "staticwebassets\\images\\footer-shape-3.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\hero-banner.png",
+      "PackagePath": "staticwebassets\\images\\hero-banner.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\instagram.svg",
+      "PackagePath": "staticwebassets\\images\\instagram.svg"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\nav-before-img.png",
+      "PackagePath": "staticwebassets\\images\\nav-before-img.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\service-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\service-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\services-1.png",
+      "PackagePath": "staticwebassets\\images\\services-1.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\services-2.png",
+      "PackagePath": "staticwebassets\\images\\services-2.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\services-3.png",
+      "PackagePath": "staticwebassets\\images\\services-3.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\services-4.png",
+      "PackagePath": "staticwebassets\\images\\services-4.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\services-5.png",
+      "PackagePath": "staticwebassets\\images\\services-5.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\services-6.png",
+      "PackagePath": "staticwebassets\\images\\services-6.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\text-bars-dark.png",
+      "PackagePath": "staticwebassets\\images\\text-bars-dark.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\text-bars-light.png",
+      "PackagePath": "staticwebassets\\images\\text-bars-light.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\twitter.svg",
+      "PackagePath": "staticwebassets\\images\\twitter.svg"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\work-1.jpg",
+      "PackagePath": "staticwebassets\\images\\work-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\work-2.jpg",
+      "PackagePath": "staticwebassets\\images\\work-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\images\\work-3.jpg",
+      "PackagePath": "staticwebassets\\images\\work-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\js\\SignIn.js",
+      "PackagePath": "staticwebassets\\js\\SignIn.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\logo-removebg-preview.png",
+      "PackagePath": "staticwebassets\\logo-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\AbhishekKumar\\OneDrive - GyanSys Inc\\Desktop\\n\\MotoRepair\\wwwroot\\peter-broomfield-m3m-lnR90uM-unsplash.jpg",
+      "PackagePath": "staticwebassets\\peter-broomfield-m3m-lnR90uM-unsplash.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MotoRepair.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MotoRepair.props",
+      "PackagePath": "build\\MotoRepair.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MotoRepair.props",
+      "PackagePath": "buildMultiTargeting\\MotoRepair.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MotoRepair.props",
+      "PackagePath": "buildTransitive\\MotoRepair.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

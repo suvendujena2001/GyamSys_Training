@@ -1,0 +1,113 @@
+﻿/*
+
+body {
+    
+   
+    background-image: url("../peter-broomfield-m3m-lnR90uM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+}
+.login {
+    
+    padding:80px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+   
+    height: fit-content;
+ 
+    display: flex;
+   
+    flex-direction: column;
+    align-items: center;
+  
+}
+form {
+    display: inline-block;
+    block-size: fit-content;
+    margin-right:200px;
+  
+}
+*/
+body {
+    background-image: url("../peter-broomfield-m3m-lnR90uM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    padding: 40px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.8); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-right:700px;
+}
+    .login.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+    form input[type="text"],
+    form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        outline: none;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+   
+    background: linear-gradient(45deg, black, transparent);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+        form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+span {
+    color: white;
+    font-size: 14px;
+}
+
+    span a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        span a:hover {
+            text-decoration: underline;
+        }

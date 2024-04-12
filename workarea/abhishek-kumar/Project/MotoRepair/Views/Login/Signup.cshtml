@@ -1,0 +1,66 @@
+﻿@*  <html>
+     <head>
+ <link rel="stylesheet" href="~/css/Signup.css" />
+ </head>
+ <boyd>
+ <div class="container">
+   
+             <h1>Create Account</h1>
+           
+     
+             <form  method="post" asp-action="Signup">
+                 <label for="UserName">UserName</label><br />
+                 <input type="text" name="username" id="username" placeholder="UserName" /><br /><br />
+
+                 <label for=" Password">Password</label><br />
+                     <input type="password" name="password" placeholder="Password" id="password" /><br /><br />
+             <label for=" Password">Confirm Password</label><br />
+             <input type="password" name="password" placeholder=" Renter Password" id="password" /><br /><br />
+             <label for="UserType">Select User Type</label>
+             <select name="userType" id="UserType">
+                 <option value="Admin">Admin</option>
+                 <option value="Customer">Customer</option>
+                 <br />
+             </select><br /><br />
+                             <button >Sign Up</button><br /><br />
+             <span>Already have an account? <a href="login">Sign In</a></span>
+             
+         </form>
+    
+       
+         </div>
+  
+ </boyd>
+ </html> *@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/Signup.css">
+
+</head>
+<body>
+    <div class="container">
+        
+            <h1>Create Account</h1>
+            <form method="post" asp-action="Signup" >
+                <label for="UserName">UserName</label><br />
+                <input type="text" name="username" id="username" placeholder="UserName" /><br />
+                <label for="Password">Password</label><br />
+                <input type="password" name="password" placeholder="Password" id="password" /><br />
+                <label for="ConfirmPassword">Confirm Password</label><br />
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" id="confirmPassword" /><br />
+                <label for="UserType">Select User Type</label><br />
+                <select name="userType" id="UserType">
+                    <option value="Admin">Admin</option>
+                    <option value="Customer">Customer</option>
+                </select><br />
+                <button type="submit">Sign Up</button><br />
+                <span>Already have an account? <a asp-action="Index" asp-controller="Login">Sign In</a></span>
+            </form>
+        
+    </div>
+    
+</body>
+
+</html>
+

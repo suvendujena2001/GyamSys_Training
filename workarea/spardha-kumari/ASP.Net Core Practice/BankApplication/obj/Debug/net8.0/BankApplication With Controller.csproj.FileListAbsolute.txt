@@ -1,0 +1,26 @@
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\bin\Debug\net8.0\appsettings.json
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\bin\Debug\net8.0\BankApplication With Controller.staticwebassets.runtime.json
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\bin\Debug\net8.0\BankApplication With Controller.exe
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\bin\Debug\net8.0\BankApplication With Controller.deps.json
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\bin\Debug\net8.0\BankApplication With Controller.runtimeconfig.json
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\bin\Debug\net8.0\BankApplication With Controller.dll
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\bin\Debug\net8.0\BankApplication With Controller.pdb
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\BankApplication With Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\BankApplication With Controller.AssemblyInfoInputs.cache
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\BankApplication With Controller.AssemblyInfo.cs
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\BankApplication With Controller.csproj.CoreCompileInputs.cache
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\BankApplication With Controller.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\staticwebassets\msbuild.BankApplication With Controller.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\staticwebassets\msbuild.build.BankApplication With Controller.props
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BankApplication With Controller.props
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BankApplication With Controller.props
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\scopedcss\bundle\BankApplication With Controller.styles.css
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\BankApplication With Controller.dll
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\refint\BankApplication With Controller.dll
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\BankApplication With Controller.pdb
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\BankApplication With Controller.genruntimeconfig.cache
+C:\Users\SpardhaKumari\source\repos\BankApplication With Controller\BankApplication With Controller\obj\Debug\net8.0\ref\BankApplication With Controller.dll

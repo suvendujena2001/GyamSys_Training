@@ -21,6 +21,15 @@ export default function Blogs() {
         fetchBlog();
     }, [id]);
 
+    const handleDelete = async () => {
+        try {
+            await axios.delete(`https://localhost:7071/api/Blogs/${id}`);
+            window.location.href = "/";
+        } catch (error) {
+            console.error('Error deleting blog:', error);
+        }
+    };
+
     return (
         <div> <NavBar />
             <div className="Container">
@@ -31,6 +40,8 @@ export default function Blogs() {
                             <h2>{blog.title}</h2>
                             <p>{blog.description}</p>
                             <Link to="/" className='btn btn-primary createBtn'>Back to Home</Link>
+                            <button onClick={handleDelete} className='btn btn-danger createBtn'>Delete</button>
+
                         </div>
                     ) : (
                         <p>Loading...</p>

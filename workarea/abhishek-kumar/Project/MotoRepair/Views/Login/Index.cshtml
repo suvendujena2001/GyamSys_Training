@@ -1,0 +1,56 @@
+﻿@model MotoRepair.Models.Logindetails;
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/signIn.css"/>
+
+    </head>
+    
+    <body>
+        
+        <div class="form login">
+        <form method="post" asp-action="Login" asp-controller="Login" id="loginForm">
+            <header>Login</header><br />
+            <label for="UserName">UserName</label><br />
+            <input asp-for="UserName" type="text" placeholder="UserName" class="input" /><br />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        <label for="password">Password</label><br />
+            <input asp-for="Password" type="password" class="input" placeholder="Password" /><br />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        <button  type="submit">Login</button><br />
+            @*    <span asp-validation-summary="ModelOnly" class="text-danger"></span>*@
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+           
+
+     <a asp-controller="Login" asp-action="Signup"> Sign Up</a>
+            <span id="errorMessage" class="text-danger"></span>
+
+
+
+        </form>
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginContainer = document.querySelector('.login');
+            loginContainer.classList.add('active');
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            const username = document.getElementById('UserName').value;
+            const password = document.getElementById('Password').value;
+
+            if (!username || !password) {
+                event.preventDefault(); // Prevent form submission
+                document.getElementById('errorMessage').innerText = 'Please enter both username and password';
+            } else {
+                document.getElementById('errorMessage').innerText = ''; // Clear error message
+            }
+            console.log('Form submitted');
+        });
+
+
+    </script>
+
+           </body>
+
+
+</html>

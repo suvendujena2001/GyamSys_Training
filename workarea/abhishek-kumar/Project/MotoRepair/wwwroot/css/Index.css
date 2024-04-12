@@ -1,0 +1,100 @@
+﻿
+
+
+
+body {
+    background-image: url("../peter-broomfield-m3m-lnR90uM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    padding: 0 0;
+    height: 90px;
+    /* mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 20%, #ffffff 75%);*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+    nav ul {
+    }
+
+        nav ul li {
+            display: inline-block;
+            padding-top: 15px;
+        }
+
+            nav ul li a {
+                
+               
+                padding: 18px;
+                font-family: "Open Sans";
+                text-transform: uppercase;
+                color: white;
+                font-size: 18px;
+                text-decoration: none;
+                display: block;
+            }
+
+                nav ul li a:hover {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),inset 0 0 5px rgba(255, 255, 255, 0.6);
+                    background: rgba(255, 255, 255, 0.1);
+                    color: red;
+                }
+
+.btn {
+    padding: 18px 30px; 
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),inset 0 0 5px rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.1);
+        color: red;
+    }
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+ 
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(50px);
+    margin: 140px 0;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    animation: slideIn 1s ease forwards;
+    color: red;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease forwards;
+    color: white;
+}

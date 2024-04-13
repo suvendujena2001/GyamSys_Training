@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "4Gc/PA4lD5lwUADI1RTl9O7kZID/+qH8n1GZdH4jom0=",
+  "Source": "BankApplication With Controller",
+  "BasePath": "_content/BankApplication With Controller",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BankApplication With Controller\\wwwroot",
+      "Source": "BankApplication With Controller",
+      "ContentRoot": "C:\\Users\\SpardhaKumari\\source\\repos\\BankApplication With Controller\\BankApplication With Controller\\wwwroot\\",
+      "BasePath": "_content/BankApplication With Controller",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\SpardhaKumari\\source\\repos\\BankApplication With Controller\\BankApplication With Controller\\wwwroot\\Sample.pdf",
+      "SourceId": "BankApplication With Controller",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SpardhaKumari\\source\\repos\\BankApplication With Controller\\BankApplication With Controller\\wwwroot\\",
+      "BasePath": "_content/BankApplication With Controller",
+      "RelativePath": "Sample.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Sample.pdf"
+    }
+  ]
+}

@@ -74,3 +74,9 @@
  * On the last working day, we gave a React evaluation test.
 
    ## Week 10 (8th April 2024 to 12th April 2024)
+   * React session was taken on the first day and on Wednesday we were given a project to work upon which required both React & Dotnet.
+   * I was working upon my assigned project throughout the week.
+   * On the last working day, we gave a React evaluation test.
+
+    ## Week 11 (15th April 2024 to 19th April 2024)
+   

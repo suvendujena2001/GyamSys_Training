@@ -2,6 +2,7 @@ using BookStoreApp.Data;
 using BookStoreApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using OfficeOpenXml;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +13,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<BookStoreAppContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnect")));
 
-builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>() // Add support for roles
     .AddEntityFrameworkStores<BookStoreAppContext>();
 
@@ -22,6 +23,7 @@ builder.Services.AddScoped<ICartService, CartService>();
 
 
 var app = builder.Build();
+ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
 using (var scope = app.Services.CreateScope())
 {

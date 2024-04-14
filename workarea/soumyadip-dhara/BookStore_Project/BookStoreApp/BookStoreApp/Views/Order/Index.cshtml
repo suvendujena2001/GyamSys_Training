@@ -4,6 +4,24 @@
 }
 
 <h2>Order History</h2>
+
+<form method="get" action="@Url.Action("Index")">
+    <div class="d-flex justify-content-end">
+        <label for="startDate" class="m-2">From: </label>
+        <div class="form-group col-md-2">
+            <input type="date" class="form-control" id="startDate" name="startDate">
+        </div>
+        <label for="endDate" class="m-2">To:</label>
+        <div class="form-group col-md-2">
+            
+            <input type="date" class="form-control" id="endDate" name="endDate">
+        </div>
+        <div class="form-group col-md-1">
+            <button type="submit" class="btn btn-primary mx-2">Filter</button>
+        </div>
+    </div>
+</form>
+
 @if (Model.Any())
 {
     <table class="table">
@@ -15,7 +33,6 @@
                 <th>Total Amount</th>
                 <th>Order Date</th>
                 <th>Status</th>
-
             </tr>
         </thead>
         <tbody>
@@ -30,15 +47,18 @@
                         <td>@order.TotalAmount.ToString("c")</td>
                         <td>@order.OrderDate.ToShortDateString()</td>
                         <td>@order.Status</td>
-
                     </tr>
                 }
             }
         </tbody>
     </table>
+    <div class="d-flex justify-content-end">
+        <a href="@Url.Action("GenerateInvoice", new { startDate = DateTime.Now.AddDays(-7), endDate = DateTime.Now })" class="btn btn-success">Generate Invoice</a>
+    </div>
+
 }
 else
 {
-    <p>Your wishlist is empty.</p>
+    <h3>You have not ordered Anything Till Now.</h3>
     <a asp-controller="HomeCard" asp-action="Index" asp-route-id="" class="btn btn-success"><i class="fa-solid fa-book"></i>Browse Books</a>
 }

@@ -1,12 +1,3 @@
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.csproj.AssemblyReference.cache
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.AssemblyInfoInputs.cache
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.AssemblyInfo.cs
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.csproj.CoreCompileInputs.cache
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.RazorAssemblyInfo.cache
-C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.RazorAssemblyInfo.cs
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\appsettings.json
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\BookStoreApp.staticwebassets.runtime.json
@@ -278,6 +269,15 @@ C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\ne
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.csproj.AssemblyReference.cache
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.AssemblyInfoInputs.cache
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.AssemblyInfo.cs
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.csproj.CoreCompileInputs.cache
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.RazorAssemblyInfo.cache
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.RazorAssemblyInfo.cs
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\staticwebassets\msbuild.BookStoreApp.Microsoft.AspNetCore.StaticWebAssets.props
@@ -294,3 +294,7 @@ C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\ne
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.pdb
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\BookStoreApp.genruntimeconfig.cache
 C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\obj\Debug\net8.0\ref\BookStoreApp.dll
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\EPPlus.dll
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+C:\Users\SoumyadipDhara\Downloads\Project\BookStoreApp\BookStoreApp\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll

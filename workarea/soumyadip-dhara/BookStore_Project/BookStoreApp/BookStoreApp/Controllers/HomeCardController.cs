@@ -3,6 +3,9 @@ using BookStoreApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace BookStoreApp.Controllers
 {
@@ -10,20 +13,42 @@ namespace BookStoreApp.Controllers
     public class HomeCardController : Controller
     {
         private readonly BookStoreAppContext _context;
-        public HomeCardController(BookStoreAppContext context)
+        private readonly ICartService _cartService;
+
+        public HomeCardController(BookStoreAppContext context, ICartService cartService)
         {
             _context = context;
+            _cartService = cartService;
         }
 
         // GET: Books
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            var bookStoreAppContext = _context.Books
+            int pageSize = 4;
+            int pageNumber = page ?? 1;
+
+            var books = await _context.Books
                 .Include(b => b.Author)
                 .Include(b => b.Genre)
-                .Include(b => b.User);
-            return View(await bookStoreAppContext.ToListAsync());
+                .Include(b => b.User)
+                .ToListAsync();
+
+            var paginatedBooks = PaginatedList<Book>.Create(books.AsQueryable(), pageNumber, pageSize);
+
+            string currentUrl = HttpContext.Request.Path + HttpContext.Request.QueryString;
+            ViewData["CurrentUrl"] = currentUrl;
+
+            string userId = GetCurrentUserId();
+            var wishlistBookIds = await _context.Wishlists
+                .Where(w => w.UserId == userId)
+                .Select(w => w.BookID)
+                .ToListAsync();
+
+            ViewData["WishlistBookIds"] = wishlistBookIds;
+
+            return View(paginatedBooks);
         }
+
 
         public async Task<IActionResult> Details(int id)
         {
@@ -40,11 +65,109 @@ namespace BookStoreApp.Controllers
             {
                 return NotFound();
             }
+            string currentUrl = HttpContext.Request.Path + HttpContext.Request.QueryString;
+            ViewData["CurrentUrl"] = currentUrl;
+            string userId = GetCurrentUserId();
+            var wishlistBookIds = await _context.Wishlists
+                .Where(w => w.UserId == userId)
+                .Select(w => w.BookID)
+                .ToListAsync();
 
+            ViewData["WishlistBookIds"] = wishlistBookIds;
             return View(book);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddToCart(int id, string returnUrl)
+        {
+            string userId = GetCurrentUserId();
+            await _cartService.AddToCartAsync(userId, id);
 
+            // If the return URL is not provided, redirect to the default page
+            if (string.IsNullOrEmpty(returnUrl))
+            {
+                return RedirectToAction("Index", "HomeCard");
+            }
+
+            // Otherwise, redirect back to the same page
+            return Redirect(returnUrl);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> AddToWishList(int id, string returnUrl)
+        {
+            string userId = GetCurrentUserId();
+            var existingWishlistItem = await _context.Wishlists.FirstOrDefaultAsync(w => w.UserId == userId && w.BookID == id);
 
+            if (existingWishlistItem != null)
+            {
+                _context.Wishlists.Remove(existingWishlistItem);
+                await _context.SaveChangesAsync();
+                // If the return URL is not provided, redirect to the default page
+                if (string.IsNullOrEmpty(returnUrl))
+                {
+                    return RedirectToAction("Index", "HomeCard");
+                }
+                return Redirect(returnUrl);
+            }
+
+            var wishlistItem = new Wishlist
+            {
+                UserId = userId,
+                BookID = id
+            };
+            _context.Wishlists.Add(wishlistItem);
+            await _context.SaveChangesAsync();
+            if (string.IsNullOrEmpty(returnUrl))
+            {
+                return RedirectToAction("Index", "HomeCard");
+            }
+
+            return Redirect(returnUrl);
         }
+
+        private string GetCurrentUserId()
+        {
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return userid;
+        }
+    }
+
+
+
+    public class PaginatedList<T> : List<T>
+    {
+        public int PageIndex { get; private set; }
+        public int TotalPages { get; private set; }
+
+        public PaginatedList(List<T> items, int count, int pageIndex, int pageSize)
+        {
+            PageIndex = pageIndex;
+            TotalPages = (int)Math.Ceiling(count / (double)pageSize);
+
+            this.AddRange(items);
+        }
+
+        public bool HasPreviousPage
+        {
+            get
+            {
+                return (PageIndex > 1);
+            }
+        }
+
+        public bool HasNextPage
+        {
+            get
+            {
+                return (PageIndex < TotalPages);
+            }
+        }
+
+        public static PaginatedList<T> Create(IQueryable<T> source, int pageIndex, int pageSize)
+        {
+            var count = source.Count();
+            var items = source.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+            return new PaginatedList<T>(items, count, pageIndex, pageSize);
+        }
+    }
 }

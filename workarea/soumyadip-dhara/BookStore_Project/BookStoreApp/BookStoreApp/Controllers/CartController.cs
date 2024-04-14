@@ -55,8 +55,9 @@ public class CartController : Controller
     [HttpPost]
     public async Task<IActionResult> UpdateQuantity(int id, int quantity)
     {
+        var userid=GetCurrentUserId();
         var bookid = id;
-        var cartItem = await _context.Carts.FirstOrDefaultAsync(c => c.BookID == id);
+        var cartItem = await _context.Carts.FirstOrDefaultAsync(c => c.BookID == id && c.UserUserID==userid);
 
         if (cartItem == null)
         {
@@ -73,7 +74,8 @@ public class CartController : Controller
     [HttpPost]
     public async Task<IActionResult> RemoveFromCart(int id)
     {
-        var cartItem = await _context.Carts.FirstOrDefaultAsync(c => c.BookID == id);
+        var userid = GetCurrentUserId();
+        var cartItem = await _context.Carts.FirstOrDefaultAsync(c => c.BookID == id && c.UserUserID==userid);
 
         if (cartItem == null)
         {

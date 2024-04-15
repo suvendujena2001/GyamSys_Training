@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace MoviesDatabaseApplication.Controllers
 {
     [Authorize]
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public class HomeController : Controller
     {
 

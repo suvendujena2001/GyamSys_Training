@@ -8,10 +8,12 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using MoviesDatabaseApplication.Models;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore; // Add this for Entity Framework
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization; // Add this for Entity Framework
 
 namespace MoviesDatabaseApplication.Controllers
 {
+    
     public class AccessController : Controller
     {
         private readonly MoviesDatabaseContext _context;
@@ -49,7 +51,8 @@ namespace MoviesDatabaseApplication.Controllers
                 var authProperties = new AuthenticationProperties
                 {
                     AllowRefresh = true,
-                    IsPersistent = modelLogin.isloggedin
+                    IsPersistent = modelLogin.isloggedin,
+                    ExpiresUtc = DateTime.UtcNow.AddMinutes(5)
                 };
 
                 await HttpContext.SignInAsync(

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MoviesDatabaseApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+718e117bf496dd8454216124cea22aa1f9dbe0bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32e981aa32335f11cc87b59de7e6d2344cf548d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MoviesDatabaseApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MoviesDatabaseApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -320,3 +320,37 @@ h. Operators
 2. Self Practice ASP.NET Web API Concepts like Postman, Swagger, Routing, Parameter Binding and Testing API
 3. Working on Step 2 of Project Assignment(Entity Framework and API)
 4. Evaluation Week-8
+
+## WEEK 9 (01-APRIL-2024 to 07-APRIL-2024)
+
+### DAY - 1 (Apr 1, 2024)	
+
+1. React Training(React Hooks-useState, Virtual DOM, Lists, Styles)
+2. Working on Assignment Project
+3. .NET Web API Self Practice
+
+### DAY - 2 (Apr 2, 2024) 	
+
+1. React Training
+2. Self-Learning React concepts(Components Functional and Class, React Keys)
+3. Working on Assignment Project
+
+### DAY - 3 (Apr 3, 2024)
+
+1. React Training(Conditionally rendering components in React, Creating and using components in react, Passing in props to components, Using state and props to manipulate components, Todoapp project building)
+2. Self Learning React concepts(Rendering and Conditional rendering)
+3. Practicing Bootstrap
+4. Working on Assignment Project
+
+### DAY - 4 (Apr 4, 2024) 	
+
+1. React Training(Building Todo Application)
+2. Self-Learning React concepts like (React Hooks)
+3. Working on Assignment Project
+
+### DAY - 5 (Apr 5, 2024) 	
+
+1. React Evaluation week 9
+2. Self Learning React concepts
+3. Self Practing MVC concepts
+4. Working on project assignment

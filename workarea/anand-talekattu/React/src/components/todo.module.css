@@ -1,0 +1,52 @@
+.root {
+    border: 1px solid grey;
+    padding: 5px;
+    color: grey;
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .todoButton {
+    outline: none;
+    border: 1px solid grey;
+    background: white;
+    color: black;
+    padding: 0.3rem;
+    cursor: pointer;
+  }
+  .todoButton svg {
+    display: block;
+  }
+  
+  .createTodoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+    border: 1px solid grey;
+    padding: 0.5rem;
+    background: rgb(207, 207, 207);
+  }
+  
+  .createTodoForm .header {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .input {
+    font-size: 0.9rem;
+    outline: none;
+    padding: 0.2rem;
+    width: 80%;
+  }
+  .createTodoForm .buttonCont {
+    display: flex;
+    column-gap: 0.5rem;
+  }
+  .createTodoForm .buttonCont button {
+    outline: none;
+    border: 1px solid grey;
+    background: white;
+    color: black;
+    padding: 0.3rem;
+  }

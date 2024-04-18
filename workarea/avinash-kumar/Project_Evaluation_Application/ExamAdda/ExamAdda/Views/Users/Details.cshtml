@@ -39,7 +39,6 @@
         //Edit page when Edit button click event
         $(document).on('click', '#editButton', function () {
             if (userDetails) {
-                // Redirect to the Edit action in the controller
                 window.location.href = '@Url.Action("Edit", "Users")?id=' + userDetails.id;
             } else {
                 console.error('User details not available.');
@@ -57,14 +56,14 @@
                                         backdrop-filter: blur(30px);
                                     ">
                                         <div class="card-body p-5 shadow-5 text-center">
-                                            <h2 class="fw-bold mb-5">Student Details</h2>
+                                                <h2 class="fw-bold mb-5">${userDetails.role} Details</h2>
                                             <img class="profile_img mb-2" src="@Url.Content("~/Images/UserProfile.png")" alt="User image">
                                             <h3>${userDetails.name}</h3>
                                             <div class="text-center mb-2">
                                                 <p class=""><strong class="pr-1">Email : </strong>${userDetails.email}</p>
                                             </div>
-                                            <a id="editButton" class="btn btn-primary btn-block mb-4">Edit</a>
-                                            <a id="dashboardButton" class="btn btn-primary btn-block mb-4">Back to Dashboard</a>
+                                            <a id="editButton" class="btn btn-dark btn-block mb-4">Edit</a>
+                                            <a id="dashboardButton" class="btn btn-dark btn-block mb-4">Back to Dashboard</a>
                                         </div>
                                     </div>
                                 </div>

@@ -14,3 +14,21 @@ select[b-q8idy7caqn] {
     text-indent: 1px;
     text-overflow: '';
 }
+.examtable[b-q8idy7caqn] {
+    border: 1px solid blue;
+}
+.exam-cell[b-q8idy7caqn] {
+    display: flex;
+    align-items: center;
+}
+
+.exam-image[b-q8idy7caqn] {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px; 
+}
+
+.exam-name[b-q8idy7caqn] {
+    font-weight: bold;
+    
+}

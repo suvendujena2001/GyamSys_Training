@@ -29,7 +29,6 @@
 
 </head>
 <body>
-
     <div class="card cascading-right" style="
             background: hsla(0, 0%, 100%, 0.55);
             backdrop-filter: blur(30px);
@@ -38,10 +37,27 @@
             <div class="col-auto ">
                 <img class="image2" src="~/Images/admin.png" alt="Image 3" />
             </div>
-            <div class="col ml-3">
+            <div class="col-auto mt-3 ml-5">
                 <h1 class="mt-3">Welcome To AdminDashboard</h1>
             </div>
-            
+            <div class="col-auto mt-1" >
+                <div class="dropdown text-right" style="margin-left:11rem;">
+
+                    <a class="setting_icon btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="~/Images/icon.svg" height="50px" width="50px" />
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li>
+                            <a id="profileLink" class="dropdown-item" asp-action="Details" asp-controller="Users" asp-route-id="@Model.Id">Profile</a>
+                        </li>
+
+                        <li><a class="dropdown-item" asp-action="Edit" asp-controller="Users" asp-route-id="@Model.Id">Edit Your Details</a></li>
+                        <li><a class="dropdown-item" asp-action="Index" asp-controller="Home">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="navStudent">
@@ -50,32 +66,24 @@
                     <h2>Hello  @Model.Name</h2>
                 </div>
 
-                <div class="div2">
-                    <div class="dropdown">
-                        <a class="setting_icon btn dropdown-toggle bi bi-gear" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a id="profileLink" class="dropdown-item" asp-action="Details" asp-controller="Users" asp-route-id="@Model.Id">Profile</a>
-                            </li>
-
-                            <li><a class="dropdown-item" asp-action="Edit" asp-controller="Users" asp-route-id="@Model.Id">Edit Your Details</a></li>
-                            <li><a class="dropdown-item" asp-action="Index" asp-controller="Home">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
+        <div class="container bg-black p-1">
+            <div class="row mt-1 ml-2 mr-2 mb-1">
                 <div class="col text-left">
-                    <button type="button" class="btn btn-primary" id="createQuestionBtn">Create Question</button>
+                    <button type="button" class="btn btn-dark" id="createExamBtn">Add New Exam</button><span class="text-light ml-5">|</span>
                 </div>
-                <div class="col text-center">
-                    <button type="button" class="btn btn-primary" id="seeAllQuestionsBtn">View Questions</button>
+                <div class="col text-left">
+                    <button type="button" class="btn btn-dark" id="seeAllExamsBtn">View Exams</button><span class="text-light ml-5">|</span>
                 </div>
-                <div class="col text-right">
-                    <button type="button" class="btn btn-primary">View Results</button>
+                <div class="col text-left">
+                    <button type="button" class="btn btn-dark" id="createQuestionBtn">Add Question</button><span class="text-light ml-5">|</span>
+                </div>|
+                <div class="col text-left">
+                    <button type="button" class="btn btn-dark" id="seeAllQuestionsBtn">View Questions</button><span class="text-light ml-5">|</span>
+                </div>
+                <div class="col text-left">
+                    <button type="button" class="btn btn-dark" id="viewResultsBtn">View Results</button>
                 </div>
             </div>
         </div>
@@ -83,8 +91,18 @@
 
 
         <div id="contentArea" class="mt-4"></div>
-        <div id="allQuestionsContainer" class="mt-4 mb-4"></div>
+        <div id="allQuestionsContainer" class="mt-4 mb-4 border "></div>
+
+
         <form id="createQuestionForm" class="container" style="display: none;">
+            <div class="form-group">
+                <label for="examDropdown">Select Exam:</label>
+                <select class="form-control" id="examDropdown">
+                    <option value="">Select Exam</option>
+
+                    <!-- Exam options will be populated dynamically -->
+                </select>
+            </div>
             <div class="form-group">
                 <label for="questionText">Question Text</label>
                 <textarea placeholder="Enter Your Question" type="text" class="form-control" id="questionText" required></textarea>
@@ -112,20 +130,60 @@
 
             <div class="form-group">
                 <label for="correctOption">Correct Option</label>
-                <textarea placeholder="Enter correct option" type="text" class="form-control" id="correctOption" required></textarea>
+                <select class="form-control" id="correctOption" required>
+                    <option value="">Select Correct Option</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label for="marks">Marks</label>
                 <textarea placeholder="Enter Marks" type="number" class="form-control" id="marks" required></textarea>
             </div>
-            <div class="form-group">
-                <label for="exanID_fk">Exam Id</label>
-                <textarea placeholder="Enter Exam ID " type="number" class="form-control" id="exanID_fk" required></textarea>
-            </div>
+            @* <div class="form-group">
+            <label for="exanID_fk">Exam Id</label>
+            <textarea placeholder="Enter Exam ID " type="number" class="form-control" id="exanID_fk" required></textarea>
+            </div> *@
 
-            <button type="submit" class="text-center btn btn-primary mb-5">Save</button>
+            <button type="submit" class="text-center btn btn-dark mb-5">Save</button>
         </form>
+
+        <div id="ExamContainer" class="mt-4 mb-4">
+            <form id="createExamForm" class="container">
+                <div class="form-group">
+                    <label for="examName">Exam Name</label>
+                    <input type="text" class="form-control" id="examName" placeholder="Enter Exam Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="examDate">Exam Date</label>
+                    <input type="date" class="form-control" id="examDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="score">Marks</label>
+                    <input type="number" class="form-control" id="score" placeholder="Enter The Full Marks" required>
+                </div>
+                <div class="form-group">
+                    <label for="hours">Hours</label>
+                    <input type="number" class="form-control" id="hours" placeholder="Enter Hours" required>
+                </div>
+                <div class="form-group">
+                    <label for="passingMarks">Passing Marks</label>
+                    <input type="number" class="form-control" id="passingMarks" placeholder="Enter The Passing Marks" required>
+                </div>
+                <button type="submit" class="text-center btn btn-dark mb-5">Save</button>
+            </form>
+        </div>
+
+
+        @* //see result *@
+
+        <div id="ResultContainer" class="m-3 text-center "> </div>
+        <div id="allExamsContainer" class="m-3 text-center "> </div>
+
+
 
 
     </div>
@@ -133,13 +191,184 @@
 
     <script>
         $(document).ready(function () {
-            $('#createQuestionForm').show();
-            $('#createQuestionBtn').click(function () {
-                $('#createQuestionForm').toggle();
-                $('#allQuestionsContainer').hide();
+            $('#createExamForm').show();
+            $('#createQuestionForm').hide();
+            $('#allQuestionsContainer').hide();
+            $('#ResultContainer').hide();
+            $('#allExamsContainer').hide();
 
-                $('#contentArea').append($('#createQuestionForm'));
+            $('#createExamBtn').click(function () {
+                // Show the "Create Exam" form and hide other content
+                $('#createExamForm').show();
+                $('#createQuestionForm').hide();
+                $('#allQuestionsContainer').hide();
+                $('#ResultContainer').hide();
+                $('#allExamsContainer').hide();
+
             });
+
+
+            $('#seeAllExamsBtn').click(function () {
+
+                $('#createQuestionForm').hide();
+                $('#createExamForm').hide();
+                $('#allQuestionsContainer').hide();
+                $('#ResultContainer').hide();
+
+                $('#allExamsContainer').show();
+            });
+
+            // Event handler for "Create Question" button click
+            $('#createQuestionBtn').click(function () {
+                $('#createQuestionForm').show();
+                $('#createExamForm').hide();
+                $('#allQuestionsContainer').hide();
+                $('#ResultContainer').hide();
+
+                $('#allExamsContainer').hide();
+
+
+                // Populate the dropdown with exams
+                populateExamsDropdown();
+
+            });
+
+
+            $('#viewResultsBtn').click(function () {
+                $('#ResultContainer').show();
+                $('#allQuestionsContainer').hide();
+                $('#createQuestionForm').hide();
+                $('#createExamForm').hide();
+                $('#allExamsContainer').hide();
+
+            });
+
+
+            //post the exam
+            $('#createExamForm').submit(function (e) {
+                e.preventDefault();
+
+                var formData = {
+                    ExamName: $('#examName').val(),
+                    ExamDate: $('#examDate').val(),
+                    Score: parseInt($('#score').val()),
+                    Hours: parseInt($('#hours').val()),
+                    PassingMarks: parseInt($('#passingMarks').val()),
+                    CreatedDate: new Date().toISOString(),
+                    CreatedBy: @Model.Id,
+                    ModifiedDate: new Date().toISOString(),
+                    ModifiedBy: @Model.Id
+                    };
+
+                $.ajax({
+                    url: 'https://localhost:7177/api/Exams',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function (response) {
+                        console.log('Exam data posted successfully:', response);
+                        $('#createExamForm')[0].reset();
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Failed to post exam data:', error);
+                    }
+                });
+            });
+
+
+            //see all the exam
+
+            $('#seeAllExamsBtn').click(function () {
+                $('#allQuestionsContainer').hide();
+                $('#createQuestionForm').hide();
+                $('#createExamForm').hide();
+                $('#ResultContainer').hide();
+                $('#allExamsContainer').show();
+
+                // Make an AJAX request to fetch all exams
+                $.ajax({
+                    url: 'https://localhost:7177/api/Exams',
+                    method: 'GET',
+                    success: function (exams) {
+                        $('#allExamsContainer').empty();
+
+                        // Create HTML for displaying exams
+                        var tableHtml = '<table class="table table-bordered table-hover">';
+                        tableHtml += '<thead class="bg-secondary bg-gradient text-light">';
+                        tableHtml += '<tr>';
+                        tableHtml += '<th>Exam Name</th>';
+                        tableHtml += '<th>Exam Date</th>';
+                        tableHtml += '<th>Full Marks</th>';
+                        tableHtml += '<th>Hours</th>';
+                        tableHtml += '<th>Passing Marks</th>';
+                        tableHtml += '<th>Actions</th>';
+                        tableHtml += '</tr>';
+                        tableHtml += '</thead>';
+                        tableHtml += '<tbody>';
+
+                        // Iterate over each exam and add a row to the table
+                        exams.forEach(function (exam) {
+                            tableHtml += '<tr>';
+                            tableHtml += '<td>' + exam.examName + '</td>';
+                            tableHtml += '<td>' + exam.examDate + '</td>';
+                            tableHtml += '<td>' + exam.score + '</td>';
+                            tableHtml += '<td>' + exam.hours + '</td>';
+                            tableHtml += '<td>' + exam.passingMarks + '</td>';
+                            tableHtml += '<td>';
+                            tableHtml += '<button type="button" class="btn btn-primary editExamBtn m-2" data-exam-id="' + exam.examId + '"><i class="fas fa-edit "></i></button>';
+                            tableHtml += '<button type="button" class="btn btn-danger deleteExamBtn m-2 " data-exam-id="' + exam.examId + '"><i class="fas fa-trash-alt"></i></button>';
+                            tableHtml += '</td>';
+                            tableHtml += '</tr>';
+                        });
+
+                        tableHtml += '</tbody>';
+                        tableHtml += '</table>';
+
+                        // Append the HTML to the container
+                        $('#allExamsContainer').append(tableHtml);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Failed to fetch exams:', error);
+                        alert("Failed to fetch exams. Please try again later.");
+                    }
+                });
+            });
+
+            //edit and delete of exam
+
+            // Event listener for editExamBtn
+            $('#allExamsContainer').on('click', '.editExamBtn', function () {
+                var examId = $(this).data('exam-id');
+                window.location.href = '/Users/EditExam?id=' + examId;
+            });
+
+            // Event listener for deleteExamBtn
+            $('#allExamsContainer').on('click', '.deleteExamBtn', function () {
+                // Get the ID of the exam from the data attribute of the button
+                var examId = $(this).data('exam-id');
+                // Display a confirmation dialog
+                var confirmation = confirm("Are you sure you want to delete this exam?");
+                // If user confirms, proceed with the deletion
+                if (confirmation) {
+                    // Make an AJAX request to delete the exam
+                    $.ajax({
+                        url: 'https://localhost:7177/api/Exams/' + examId,
+                        method: 'DELETE',
+                        success: function () {
+                            // Optionally, you can remove the deleted exam from the UI
+                            alert("Exam deleted successfully.");
+                            $('#allExamsContainer').click(); // Reload the list of exams
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Failed to delete exam:', error);
+                            alert("Failed to delete exam. Please try again later.");
+                        }
+                    });
+                }
+            });
+
+
+
             //post the question
             $('#createQuestionForm').submit(function (e) {
                 e.preventDefault();
@@ -147,10 +376,17 @@
                 var currentDate = new Date();
                 var createdDate = currentDate.toISOString();
                 var modifiedDate = createdDate;
-
                 var createdBy = @Model.Id;
 
                 var modifiedBy = @Model.Id;
+
+
+                var correctOption = $('#correctOption').val();
+                var examId = $('#examDropdown').val();
+
+                if (!correctOption || !examId) {
+                    return;
+                }
 
                 var formData = {
                     questionId: 0,
@@ -159,13 +395,13 @@
                     optionB: $('#optionB').val(),
                     optionC: $('#optionC').val(),
                     optionD: $('#optionD').val(),
-                    correctOption: $('#correctOption').val(),
+                    correctOption: correctOption,
                     marks: parseInt($('#marks').val()),
                     createdDate: createdDate,
                     createdBy: createdBy,
                     modifiedDate: modifiedDate,
                     modifiedBy: modifiedBy,
-                    exanID_fk: $('#exanID_fk').val()
+                    exanID_fk: examId
                 };
 
                 $.ajax({
@@ -184,10 +420,48 @@
             });
 
 
+            // fetch exams and populate the dropdown
+            function populateExamsDropdown() {
+                $.ajax({
+                    url: 'https://localhost:7177/api/Exams',
+                    method: 'GET',
+                    success: function (exams) {
+                        // Clear existing dropdown options
+                        $('#examDropdown').empty();
+                        $('#examDropdown').append($('<option value="" > Select Exam </option>'));
+
+                        // Populate dropdown with exam names and IDs
+                        exams.forEach(function (exam) {
+                            $('#examDropdown').append($('<option>', {
+                                value: exam.examId,
+                                text: exam.examName
+                            }));
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Failed to fetch exams:', error);
+                    }
+                });
+            }
+
+
+            $('#examDropdown').change(function () {
+                // Get the selected exam ID
+                var selectedExamId = $(this).val();
+
+                $('#exanID_fk').val(selectedExamId);
+            });
+
+
 
             $('#seeAllQuestionsBtn').click(function () {
-                $('#allQuestionsContainer').toggle();
+                $('#allQuestionsContainer').show();
                 $('#createQuestionForm').hide();
+                $('#createExamForm').hide();
+                $('#ResultContainer').hide();
+                $('#allExamsContainer').hide();
+
+
                 $.ajax({
                     url: 'https://localhost:7177/api/Questions',
                     method: 'GET',
@@ -197,8 +471,8 @@
                         $('#allQuestionsContainer').empty();
 
 
-                        var tableHtml = '<table class="table">';
-                        tableHtml += '<thead>';
+                        var tableHtml = '<table class="table table-bordered table-hover">';
+                        tableHtml += '<thead class="bg-secondary bg-gradient text-light">';
                         tableHtml += '<tr>';
                         tableHtml += '<th>Question Text</th>';
                         tableHtml += '<th>Option A</th>';
@@ -207,14 +481,14 @@
                         tableHtml += '<th>Option D</th>';
                         tableHtml += '<th>Correct Option</th>';
                         tableHtml += '<th>Marks</th>';
-                        tableHtml += '<th>Exam ID</th>';
+                        tableHtml += '<th>ExamID</th>';
                         tableHtml += '<th>Actions</th>';
                         tableHtml += '</tr>';
                         tableHtml += '</thead>';
-                        tableHtml += '<tbody>';
+                        tableHtml += '<tbody >';
 
                         questions.forEach(function (question) {
-                            tableHtml += '<tr>';
+                            tableHtml += '<tr >';
                             tableHtml += '<td>' + question.questionText + '</td>';
                             tableHtml += '<td>' + question.optionA + '</td>';
                             tableHtml += '<td>' + question.optionB + '</td>';
@@ -224,10 +498,13 @@
                             tableHtml += '<td>' + question.marks + '</td>';
                             tableHtml += '<td>' + question.exanID_fk + '</td>';
                             tableHtml += '<td>';
-                            tableHtml += '<button type="button" class="btn btn-primary editQuestionBtn" data-question-id="' + question.QuestionId + '"><i class="fas fa-edit"></i></button>';
-                            tableHtml += '<button type="button" class="btn btn-danger deleteQuestionBtn" data-question-id="' + question.QuestionId + '"><i class="fas fa-trash-alt"></i></button>';
+
+                            tableHtml += '<a id="editQuestionBtn_' + question.questionId + '" href="#" class="btn btn-primary editQuestionBtn mb-1" data-question-id="' + question.questionId + '"><i class="fas fa-edit"></i></a>';
+
+                            tableHtml += '<button type="button" class="btn btn-danger deleteQuestionBtn"  data-question-id="' + question.questionId + '"><i class="fas fa-trash-alt"></i></button>';
                             tableHtml += '</td>';
                             tableHtml += '</tr>';
+                            console.log(question.questionId);
                         });
 
                         tableHtml += '</tbody>';
@@ -240,15 +517,102 @@
                     }
                 });
             });
-
-            // Event  for edit and delete buttons
-            $('#allQuestionsContainer').on('click', '.editQuestionBtn', function () {
+            $(document).on('click', '.editQuestionBtn', function (e) {
+                e.preventDefault();
                 var questionId = $(this).data('question-id');
-            });
+                window.location.href = '/Users/EditQuestion?id=' + questionId;
 
+            });
+            // Event handler for delete button click
             $('#allQuestionsContainer').on('click', '.deleteQuestionBtn', function () {
+                // Get the question id from the data attribute of the button
                 var questionId = $(this).data('question-id');
+
+                var confirmation = confirm("Are you sure you want to delete this question?");
+
+                var $button = $(this);
+
+                // If user confirms, proceed with the deletion
+                if (confirmation) {
+                    $.ajax({
+                        url: 'https://localhost:7177/api/Questions/' + questionId,
+                        method: 'DELETE',
+                        success: function () {
+                            $button.closest('.question-item').remove();
+                            alert("Question deleted successfully.");
+                            $('#seeAllQuestionsBtn').click();
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Failed to delete question:', error);
+                            alert("Failed to delete question. Please try again later.");
+                        }
+                    });
+                }
             });
+
+            //fetching the result
+
+            function displayResults() {
+                // Make AJAX request to fetch results
+                $.ajax({
+                    url: 'https://localhost:7177/api/Results',
+                    method: 'GET',
+                    success: function (results) {
+                        $('#ResultContainer').empty();
+
+                        // Create table and header
+                        var tableHtml = '<table class="table table-bordered table-hover"><thead class="bg-secondary bg-gradient text-light"><tr>';
+                        tableHtml += '<th>Student ID</th><th>Exam Name</th><th>Full Marks</th><th>Score</th><th>Status</th><th>Action</th>';
+                        tableHtml += '</tr></thead><tbody>';
+
+                        // Add rows for each result
+                        $.each(results, function (index, result) {
+                            tableHtml += '<tr>';
+                            tableHtml += '<td>' + result.studentIdFk + '</td>';
+                            tableHtml += '<td>' + result.examName + '</td>';
+                            tableHtml += '<td>' + result.fullMarks + '</td>';
+                            tableHtml += '<td>' + result.score + '</td>';
+                            tableHtml += '<td>' + result.status + '</td>';
+                            tableHtml += '<td><button type="button" class="btn btn-dark showDetailsBtn">Show Details</button></td>';
+                            tableHtml += '</tr>';
+                        });
+
+                        tableHtml += '</tbody></table>';
+
+                        // Append table HTML to container
+                        $('#ResultContainer').append(tableHtml);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Failed to fetch results:', error);
+                        alert("Failed to fetch results. Please try again later.");
+                    }
+                });
+            }
+
+            // Event listener for click on viewResultsBtn
+            $('#viewResultsBtn').on('click', function () {
+                displayResults();
+            });
+
+            // Event listener for click on showDetailsBtn
+            $('#ResultContainer').on('click', '.showDetailsBtn', function () {
+                var $row = $(this).closest('tr');
+                // Get the data from the row
+                var studentId = $row.find('td:eq(0)').text();
+                var examName = $row.find('td:eq(1)').text();
+                var fullMarks = $row.find('td:eq(2)').text();
+                var score = $row.find('td:eq(3)').text();
+                var passingMarks = 33 % fullMarks;
+                if (score > passingMarks) {
+                    var status = "Passed";
+                } else {
+                    var status = "Failed";
+                }
+
+                // Display the details in an alert
+                alert("Student ID: " + studentId + "\nExam Name: " + examName + "\nFull Marks: " + fullMarks + "\nScore: " + score + "\nStatus: " + status);
+            });
+
         });
     </script>
 

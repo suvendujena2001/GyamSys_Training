@@ -1,0 +1,261 @@
+﻿<div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+
+    <div class="text-right mt-2 mr-2 btn btn-lg float-right">Time : <span id="timer">00:00</span></div>
+
+    <!-- Exam Instructions -->
+    <div class="d-flex justify-content-center align-items-center flex-column mt-1">
+        <div class="exam-instructions text-center bg-black text-light">
+            <h2>Exam Instructions</h2>
+            <p>Follow the instructions carefully during the exam:</p>
+            <ul>
+                <li>Ensure you have a stable internet connection.</li>
+                <li>Read each question carefully before selecting your answer.</li>
+                <li>Make Sure When You Click Choose The Answer The circle Glow To Blue.</li>
+                <li>Click the "End Test" button when you have completed all questions.</li>
+
+            </ul>
+        </div>
+
+    </div>
+    <hr>
+
+    <!-- Questions Container -->
+    <div id="questionsContainer" class="questions-container m-5"></div>
+
+    <!-- End Test Button -->
+    <button id="endTestButton" class="btn btn-primary">End Test</button>
+</div>
+<!-- Include jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var score = 0; // Variable to store the score
+        var questionsData; // Global variable to store questions data
+        var ExamId = '@ViewBag.ExamId';
+
+        var duration = '@ViewBag.Duration';
+        var StudentId = '@ViewBag.StudentId';
+        var examName = '@ViewBag.examName';
+        var marks = '@ViewBag.marks';
+        var interval;
+        console.log(duration, StudentId);
+        // Start the timer
+        startTimer(duration);
+
+
+        // Fetch questions for the exam
+        loadQuestions(ExamId);
+
+        // End Test button click event
+        $('#endTestButton').click(function () {
+            // Call a function to calculate the score and save the test result
+            clearInterval(interval);
+            calculateScoreAndSaveResult();
+            $('.question').each(function () {
+                var questionId = $(this).data('question-id');
+                var question = questionsData.find(q => q.questionId == questionId);
+                var correctOption = question.correctOption;
+
+                // Display correct answer
+                $(this).append(`<p>Correct Option: ${correctOption}</p>`);
+
+                // Disable options
+                $(this).find('input[type="radio"]').prop('disabled', true);
+            });
+            var backButtonHtml = '<button id="backToDashboardButton" class="btn btn-primary">Back to Dashboard</button>';
+            $('#questionsContainer').after(backButtonHtml);
+            $(this).hide();
+        });
+
+
+
+
+        function loadQuestions(examId) {
+            // AJAX request to fetch questions based on examId
+            $.ajax({
+                url: 'https://localhost:7177/api/Questions/ByExamId/' + examId,
+                method: 'GET',
+                success: function (questions) {
+                    questionsData = questions;
+                    // Render questions in the form
+                    renderQuestions(questions);
+                },
+                error: function () {
+                    console.error('Failed to fetch questions.');
+                }
+            });
+        }
+
+        function renderQuestions(questions) {
+            // Clear previous questions if any
+            $('#questionsContainer').empty();
+
+            // Loop through each question and render it
+            questions.forEach(function (question) {
+                var questionHtml = `
+                    <div class="question" data-question-id="${question.questionId}">
+                        <p><h4>Q. ${question.questionText}</h4></p>
+                        <div class="options">
+                           A. <input type="radio" name="question_${question.questionId}" value="A">
+                            <label>${question.optionA}</label><br>
+                            B. <input type="radio" name="question_${question.questionId}" value="B">
+                            <label>${question.optionB}</label><br>
+                           C. <input type="radio" name="question_${question.questionId}" value="C">
+                            <label>${question.optionC}</label><br>
+                            D. <input type="radio" name="question_${question.questionId}" value="D">
+                            <label>${question.optionD}</label>
+                        </div>
+                    </div>
+                    <hr>
+                `;
+                $('#questionsContainer').append(questionHtml);
+            });
+        }
+
+        function startTimer(duration) {
+            var timer = duration * 60;
+            var minutes, seconds;
+
+             interval = setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                $('#timer').text(minutes + ":" + seconds);
+
+                if (timer <= 0) {
+                    clearInterval(interval);
+                    console.log("Time's up!");
+
+                    // Call a function to submit the test automatically
+                    submitTest();
+                } else if (timer == 5 * 60) { // 5 minutes left
+                    alert("Warning: Only 5 minutes left!");
+                    timer--; // Continue decrementing the timer
+                } else {
+                    timer--;
+                }
+            }, 1000);
+        }
+
+        function submitTest() {
+            // Call the calculateScore function before submitting the test
+            calculateScore();
+
+            // Optionally, you can trigger the click event of the End Test button
+            $('#endTestButton').click();
+        }
+
+
+
+        function calculateScore() {
+            // Reset score
+            score = 0;
+
+            // Iterate through each question
+            $('.question').each(function () {
+                var selectedOption = $(this).find('input[type="radio"]:checked').val();
+                var questionId = $(this).data('question-id');
+
+                // Find the question object from the global variable
+                var question = questionsData.find(q => q.questionId == questionId);
+
+                console.log('Question:', question);
+                console.log('Selected Option:', selectedOption);
+                console.log('Correct Option:', question.correctOption);
+
+                // Check if any option is selected for the question
+                if (!selectedOption) {
+                    score += 0;
+                } else {
+                    // Check if selected option matches the correct option
+                    if (selectedOption === question.correctOption) {
+                        score += question.marks;
+                    } else {
+                        score += 0;
+                    }
+                }
+            });
+
+            console.log("Total Score:", score);
+        }
+
+        function calculateScoreAndSaveResult() {
+            // Calculate the score
+            calculateScore();
+
+            // Create the test result object
+            var testResult = {
+                studentIdFk: StudentId,
+                examName: examName,
+                examId_Fk: ExamId,
+                fullMarks: marks,
+                score: score,
+                status: "Completed",
+                createdDate: new Date().toISOString(),
+                createdBy: StudentId,
+                modifiedDate: new Date().toISOString(),
+                modifiedBy: StudentId
+            };
+
+            // Make an AJAX request to save the test result
+            $.ajax({
+                url: 'https://localhost:7177/api/Results',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(testResult),
+                success: function (response) {
+                    alert("Test result saved successfully. Your score is: " + score);
+
+
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error saving test result:", error);
+                    redirectToStudentDashboardWithError();
+                }
+            });
+        }
+
+        function redirectToStudentDashboardWithError() {
+            // Redirect to student dashboard with error message
+            alert("Error occurred while processing your test result. Redirecting to student dashboard.");
+            window.location.href = '@Url.Action("SignIn", "Users")';
+        }
+
+
+        // Back to Dashboard button click event
+        $(document).on('click', '#backToDashboardButton', function () {
+            // Perform AJAX call to fetch student details
+            $.ajax({
+                url: 'https://localhost:7177/api/Users/' + StudentId,
+                method: 'GET',
+                success: function (studentDetails) {
+                    // Serialize student details
+                    var serializedStudentDetails = encodeURIComponent(JSON.stringify(studentDetails));
+
+                    // Redirect to student dashboard with serialized student details
+                    window.location.href = '@Url.Action("StudentDashboard", "Users")' + '?user=' + serializedStudentDetails;
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error fetching student details:", error);
+                    redirectToStudentDashboardWithError();
+                }
+            });
+        });
+
+        function redirectToStudentDashboardWithError() {
+            // Redirect to student dashboard with error message
+            window.location.href = '@Url.Action("SignIn", "Users")';
+        }
+
+
+
+    });
+
+</script>

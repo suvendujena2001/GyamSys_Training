@@ -25,5 +25,6 @@
         public DateTime? ModifiedDate { get; set; }
 
         public int? ModifiedBy { get; set; }
+        public int ExanID_fk { get; set; }
     }
 }

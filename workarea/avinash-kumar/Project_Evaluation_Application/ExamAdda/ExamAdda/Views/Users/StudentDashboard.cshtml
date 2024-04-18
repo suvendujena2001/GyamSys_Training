@@ -6,12 +6,12 @@
 @{
     if (TempData["put_message"] != null)
     {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>success</strong> @TempData["put_message"]
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>success</strong> @TempData["put_message"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
     }
 }
 
@@ -25,10 +25,17 @@
         </div>
         <div class="col ml-5 mt-3">
             <h1 class="mt-3">Welcome @Model.Name</h1>
+            <a id="yourDashboard" class="btn btn-dark m-1">Dashoard</a>
+            <a id="yourResultButton" class="btn btn-dark">Your Result</a>
+
         </div>
-        <div class="col-auto mt-4">
+
+        <div class="col-auto mt-2">
+
             <div class="dropdown text-right">
-                <a class="setting_icon btn dropdown-toggle bi bi-gear" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                <a class="setting_icon btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="~/Images/icon.svg" height="50px" width="50px" />
+                </a>
 
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
@@ -36,40 +43,98 @@
                     </li>
 
                     <li><a class="dropdown-item" asp-action="Edit" asp-controller="Users" asp-route-id="@Model.Id">Edit Your Details</a></li>
+
                     <li><a class="dropdown-item" asp-action="Index" asp-controller="Home">Logout</a></li>
                 </ul>
 
             </div>
         </div>
     </div>
-    <div id="examDetailsContainer" class="row"></div>
-    
+    <div class="container">
+        <table id="ExamContainer" class="table table-bordered examtable text-center ">
+            <thead>
+                <tr>
+                    <th>Exam Name</th>
+                    <th>Duration</th>
+                    <th>Total Marks</th>
+                    <th>Passing Marks</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="examDetailsTable">
+                <!-- Exam details will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
 
-    @* <div class="container mb-3">
-        <div class="card text-center" style="width: 18rem;">
-            <img src="https://www.finoit.com/wp-content/uploads/2022/11/future-of-java-programming-language.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Java</h5>
+    <div id="resultTable" class="container mt-4" style="display: none;">
+        <table class="table table-bordered examtable text-center">
+            <thead>
+                <tr>
+                    <th>Exam Name</th>
+                    <th>Full Marks</th>
+                    <th>Score</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="resultTableBody">
+                <!-- Student's result details will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
 
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Duration: </li>
-                <li class="list-group-item">Total Marks:</li>
-                <li class="list-group-item">Passing Marks:</li>
-            </ul>
-            <a href="#" class="card-link btn btn-primary mb-3">Start Test</a>
-        </div>
-    </div> *@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
+
         loadExamIds();
+
+        $('#ExamContainer').show();
+        $('#yourDashboard').click(function () {
+            $('#ExamContainer').show(); 
+            $('#resultTable').hide();
+           
+    });
+
+        $('#yourResultButton').click(function () {
+            $('#ExamContainer').hide();
+
+            // Make AJAX request to fetch the results of the student
+            $.ajax({
+                url: 'https://localhost:7177/api/Results/ByStudentId/@Model.Id',
+                method: 'GET',
+                success: function (results) {
+                    // Clear the table body
+                    $('#resultTableBody').empty();
+
+                    // Iterate over each result and generate HTML for table rows
+                    results.forEach(function (result) {
+                        var rowHtml = `
+                                                <tr>
+                                                    <td>${result.examName}</td>
+                                                    <td>${result.fullMarks}</td>
+                                                    <td>${result.score}</td>
+                                                    <td>${result.status}</td>
+                                                </tr>
+                                            `;
+                        // Append the HTML to the table body
+                        $('#resultTableBody').append(rowHtml);
+                    });
+
+                    // Show the result table
+                    $('#resultTable').show();
+                },
+                error: function (xhr, status, error) {
+                    console.error('Failed to fetch student results:', error);
+                }
+            });
+        });
     });
 
     function loadExamIds() {
         $.ajax({
-            url: 'https://localhost:7177/api/Exams', 
+            url: 'https://localhost:7177/api/Exams',
             method: 'GET',
             success: function (data) {
                 var examIds = data.map(function (exam) {
@@ -84,41 +149,51 @@
         });
     }
 
+
     function loadExamDetails(examIds) {
         examIds.forEach(function (examId) {
             $.ajax({
-                url: 'https://localhost:7177/api/Exams/' + examId, 
+                url: 'https://localhost:7177/api/Exams/' + examId,
                 method: 'GET',
                 success: function (data) {
                     var exam = data;
+                    console.log('Exam IDs:', examIds);
 
-                    var cardHtml = `
-                        <div class="col-md-4 col"> <!-- Adjust the column size as needed -->
-                            <div class="container mb-4">
-                                <div class="card text-center" style="width: 20rem;height:26rem;">
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHBIdwoZFBnseg4YDtEd9PyhBSMIu2E22capAU_aRTg&s" class="card-img-top" style="width: 20rem;height:11rem; padding:10px"alt="${exam.examName}">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${exam.examName}</h5>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Duration: 1hr</li>
-                                        <li class="list-group-item">Total Marks: ${exam.score}</li>
-                                        <li class="list-group-item">Passing Marks: 100</li>
-                                    </ul>
-                                    <a href="#" class="card-link btn btn-primary mb-3 m-2">Start Test</a>
+                    var rowHtml = `
+                            <tr>
+                               <td class="exam-cell">
+                                        <div class="d-flex align-items-center ">
+                                        <h3 class="mr-3">${exam.examName}</h3>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHBIdwoZFBnseg4YDtEd9PyhBSMIu2E22capAU_aRTg&s" class="" alt="${exam.examName}" style="width: 30px; height: 30px; margin-left: 10px;">
                                 </div>
-                            </div>
-                        </div>
+                                </td>
+                                    <td>${exam.hours}hr</td>
+                                <td>${exam.score}</td>
+                                    <td>${exam.passingMarks}</td>
+                                <td>
+                                            <button onclick="startTest(${exam.examId}, @Model.Id, ${exam.hours},${exam.score},'${exam.examName}')" class="btn btn-dark start-test">Start Test</button>
 
+                                </td>
+                            </tr>
                         `;
 
-                    $('#examDetailsContainer').append(cardHtml);
+                    $('#examDetailsTable').append(rowHtml);
+
                 },
+
                 error: function (xhr, status, error) {
                     console.error('Failed to fetch exam details:', error);
                 }
             });
         });
     }
+    function startTest(examId, studentId, duration,marks, examName) {
+        var confirmStart = confirm('Are you sure you want to start the test?');
+
+        if (confirmStart) {
+            window.location.href = `/Users/ExamDashboard?examId=${examId}&studentId=${studentId}&duration=${duration}&marks=${marks}&examName=${encodeURIComponent(examName)}`;
+        }
+    }
+
 
 </script>

@@ -1,0 +1,25 @@
+body{
+background-color: rgb(172, 196, 186);
+}
+.homebtn:hover{
+    cursor: pointer;
+}
+
+.blog-detail{
+    margin:20px;
+}
+
+.detail-title{
+    margin-left: 10%;
+    margin-bottom: 3px;
+}
+.details-image{
+    width:30%;
+    height: 30%;
+    margin-left: 30%;
+}
+
+.detail-description{
+    margin: 10%;
+    margin-top: 5px;
+}

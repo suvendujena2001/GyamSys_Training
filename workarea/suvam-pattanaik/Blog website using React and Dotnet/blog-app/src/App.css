@@ -1,0 +1,244 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* App.css */
+/* App.css */
+body {
+  background-image: url('./images/Background-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+
+/* Add any additional styling for your content */
+
+/* App.css */
+
+/* Blog card styling */
+.blog-card {
+  position: relative;
+  margin-bottom: 20px;
+  border: 1px solid #241313;
+  border-radius: 8px;
+  padding: 30px;
+  width: calc(33.33% - 20px); /* 33.33% width for each card with 20px spacing */
+  margin-right: 20px;
+  background-color: #9abb7f7a;; /* Light green-yellow color */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000; /* Black color */
+}
+
+.read-more {
+  color: #fff; /* White color */
+  background-color: #dc3545; /* Light red color */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.read-more-container {
+  position: absolute;
+  bottom: 10px; /* Adjust this value as needed */
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* Clearfix for flexbox container */
+.card-container::after {
+  content: '';
+  flex-grow: 99999;
+}
+
+
+/* BlogDetail.css */
+.blog-detail-container {
+  margin-top: 50px;
+}
+
+.blog-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.blog-description {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  margin-right: 10px;
+}
+
+
+/* CreateBlogModal.css */
+.form-container {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #95dc23;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  font-size: 2rem;
+  color: #110808;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: #dc0808;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #04882c;
+}
+/* CustomStyling.css */
+
+.input-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.textarea-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  resize: vertical; /* Allow the textarea to be resizable vertically */
+}
+
+
+
+
+
+/* BlogsPage.css */
+.blogs-container {
+  margin-top: 50px;
+}
+
+.blog-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-description {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.blog-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Navbar.css */
+
+.navbar-custom {
+  background-color: rgba(10, 114, 26, 0.936); /* Set background color to black */
+}
+
+.nav-link {
+  color: white !important; /* Use !important to override Bootstrap's default styles */
+  font-weight: bold;
+  font-size: 10rem;
+}
+
+
+.nav-item:hover {
+  background-color: rgb(196, 196, 114);
+  color: #110808 !important;
+}

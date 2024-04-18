@@ -1,0 +1,183 @@
+﻿@model ExamAdda.Models.Question
+
+@{
+    ViewData["Title"] = "EditQuestion";
+}
+
+<section class="text-center text-lg-start">
+    <div class="container py-4">
+        <div class="row g-0 align-items-center loginpage">
+            <div class="col-lg-6 mb-5 mb-lg-0 m-4 ">
+                <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+                    <h3 class="text-center mt-1">Edit The Question</h3>
+                    <form id="editQuestionForm" asp-action="EditQuestion">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="QuestionId" />
+                        <input type="hidden" asp-for="ExanID_fk" class="form-control" />
+                        <input type="hidden" asp-for="CreatedDate" class="form-control" />
+
+                        <div class="form-group m-3">
+                            <label asp-for="QuestionText" class="control-label"></label>
+                            <input asp-for="QuestionText" class="form-control" />
+                            <span asp-validation-for="QuestionText" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="OptionA" class="control-label"></label>
+                            <input asp-for="OptionA" class="form-control" />
+                            <span asp-validation-for="OptionA" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="OptionB" class="control-label"></label>
+                            <input asp-for="OptionB" class="form-control" />
+                            <span asp-validation-for="OptionB" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="OptionC" class="control-label"></label>
+                            <input asp-for="OptionC" class="form-control" />
+                            <span asp-validation-for="OptionC" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="OptionD" class="control-label"></label>
+                            <input asp-for="OptionD" class="form-control" />
+                            <span asp-validation-for="OptionD" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label for="correctOption">Correct Option</label>
+                            <select class="form-control" id="correctOption" required>
+                                <option value="">Select Correct Option</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="Marks" class="control-label"></label>
+                            <input asp-for="Marks" class="form-control" />
+                            <span asp-validation-for="Marks" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group m-3">
+                            <input type="submit" value="Save" class="btn btn-dark" />Click to save the Changes
+                        </div>
+                    </form>
+                    <input id="dashboardButton" type="button" value="Dashboard" class="btn btn-dark m-3 btn-block" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<div id="confirmationMsg" class="alert alert-success" style="display: none;">Question saved successfully.</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var questionId = '@ViewBag.questionId';
+        var userId;
+        var examId_Fk;
+        // Function to fetch question data and populate form fields
+        function populateQuestionForm() {
+            $.ajax({
+                url: 'https://localhost:7177/api/Questions/' + questionId,
+                method: 'GET',
+                success: function (question) {
+                    $('#QuestionId').val(question.questionId);
+                    $('#QuestionText').val(question.questionText);
+                    $('#OptionA').val(question.optionA);
+                    $('#OptionB').val(question.optionB);
+                    $('#OptionC').val(question.optionC);
+                    $('#OptionD').val(question.optionD);
+                    $('#Marks').val(question.marks);
+                    $('#CreatedDate').val(question.createdDate);
+                    userId = question.createdBy;
+                    examId_Fk = question.exanID_fk;
+                },
+                error: function (xhr, status, error) {
+                    console.error('Failed to fetch question data:', error);
+                }
+            });
+        }
+
+        // Call the function to populate the form when the page loads
+        populateQuestionForm();
+
+        
+
+        // Event listener for form submission
+        $('#editQuestionForm').submit(function (e) {
+            e.preventDefault();
+            var correctOption = $('#correctOption').val();
+            if (!correctOption) {
+                return;
+            }
+            console.log(correctOption);
+           
+            var formData = {
+                QuestionId: $('#QuestionId').val(),
+                QuestionText: $('#QuestionText').val(),
+                OptionA: $('#OptionA').val(),
+                OptionB: $('#OptionB').val(),
+                OptionC: $('#OptionC').val(),
+                OptionD: $('#OptionD').val(),
+                CorrectOption: correctOption,
+                Marks: $('#Marks').val(),
+                CreatedDate: $('#CreatedDate').val(),
+                CreatedBy: userId,
+                ModifiedDate: new Date(),
+                ModifiedBy: userId,
+                ExanID_fk: examId_Fk
+            };
+
+            $.ajax({
+                url: 'https://localhost:7177/api/Questions/' + questionId,
+                method: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function () {
+                    $('#confirmationMsg').show();
+                    // Get the created by user ID
+
+                    fetchUserDataAndRedirect(userId);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Failed to update question:', error);
+                }
+            });
+        });
+
+        var userDetails;
+        // Function to fetch user data and redirect to AdminDashboard
+        function fetchUserDataAndRedirect(userId) {
+            $.ajax({
+                url: 'https://localhost:7177/api/Users/' + userId,
+                method: 'GET',
+                success: function (user) {
+                    window.location.href = '/Users/AdminDashboard?user=' + JSON.stringify(user);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Failed to fetch user data:', error);
+                    alert("Try login again and continue")
+                    window.location.href = '/Users/SignIn';
+                }
+            });
+        }
+
+        $(document).on('click', '#dashboardButton', function () {
+            fetchUserDataAndRedirect(userId);
+        });
+
+    });
+</script>
+

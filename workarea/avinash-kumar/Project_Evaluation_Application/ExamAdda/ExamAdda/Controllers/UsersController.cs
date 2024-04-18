@@ -85,6 +85,18 @@ namespace ExamAdda.Controllers
             return View("SignIn");
         }
 
+        [HttpGet]
+        public IActionResult ExamDashboard(int examId,int studentId,int duration, int marks, String examName)
+        {
+            ViewBag.ExamId = examId;
+            ViewBag.StudentId = studentId;
+            ViewBag.Duration = duration*60;
+            ViewBag.examName = examName;
+            ViewBag.marks = marks;
+
+            return View();
+        }
+
         public IActionResult Details(int id)
         {
             ViewBag.userId =id;
@@ -97,6 +109,20 @@ namespace ExamAdda.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             ViewBag.userId = id;
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditQuestion(int id)
+        {
+            ViewBag.questionId = id;
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditExam(int id)
+        {
+            ViewBag.examId = id;
             return View();
         }
 

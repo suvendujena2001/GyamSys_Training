@@ -1,0 +1,166 @@
+﻿@model ExamAdda.Models.Exam
+
+@{
+    ViewData["Title"] = "EditExam";
+}
+<section class="text-center text-lg-start">
+    <div class="container py-4">
+        <div class="row g-0 align-items-center loginpage">
+            <div class="col-lg-6 mb-5 mb-lg-0 m-4 ">
+                <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+                    <h3 class="text-center mt-1">Edit Your Exam</h3>
+                    <form asp-action="EditExam">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="ExamId" />
+                        <input type="hidden" asp-for="ModifiedDate" class="form-control" />
+                        <input type="hidden" asp-for="CreatedDate" class="form-control" />
+                        <input type="hidden" asp-for="ModifiedBy" class="form-control" />
+                        <input type="hidden" asp-for="CreatedBy" class="form-control" />
+
+                        <div class="form-group m-3">
+                            <label asp-for="ExamDate" class="control-label"></label>
+                            <input asp-for="ExamDate" class="form-control" />
+                            <span asp-validation-for="ExamDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="ExamName" class="control-label"></label>
+                            <input asp-for="ExamName" class="form-control" />
+                            <span asp-validation-for="ExamName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="Score" class="control-label"></label>
+                            <input asp-for="Score" class="form-control" />
+                            <span asp-validation-for="Score" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="Hours" class="control-label"></label>
+                            <input asp-for="Hours" class="form-control" />
+                            <span asp-validation-for="Hours" class="text-danger"></span>
+                        </div>
+                        <div class="form-group m-3">
+                            <label asp-for="PassingMarks" class="control-label"></label>
+                            <input asp-for="PassingMarks" class="form-control" />
+                            <span asp-validation-for="PassingMarks" class="text-danger"></span>
+                        </div>
+                        
+                        
+                        <div class="form-group m-3">
+                            Click to Save Your Chnages <input type="submit" value="Save" class="btn btn-dark" />
+                        </div>
+                    </form>
+                    <input id="dashboardButton" type="button" value="Dashboard" class="btn btn-dark m-3 btn-block" />
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var examId = '@ViewBag.examId';
+        var userId;
+
+
+
+        // Function to fetch and display exam details by ID
+        function displayExamDetails() {
+            // Make an AJAX request to fetch the exam details
+            $.ajax({
+                url: 'https://localhost:7177/api/Exams/' + examId,
+                method: 'GET',
+                success: function (exam) {
+                    // Fill the form fields with exam details
+                    console.log(exam);
+
+                    $('#ExamName').val(exam.examName);
+                    $('#ExamDate').val(exam.examDate);
+                    $('#Score').val(exam.score);
+                    $('#Hours').val(exam.hours);
+                    $('#PassingMarks').val(exam.passingMarks);
+                    $('#CreatedDate').val(exam.createdDate);
+                    $('#ModifiedDate').val(exam.modifiedDate);
+                    $('#ModifiedBy').val(exam.modifiedBy);
+                    $('#CreatedBy').val(exam.createdBy);
+                    userId = exam.createdBy;
+
+                },
+                error: function (xhr, status, error) {
+                    console.error('Failed to fetch exam details:', error);
+                    alert("Failed to fetch exam details. Please try again later.");
+                }
+            });
+        }
+
+        displayExamDetails();
+
+        $('form').submit(function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Construct the exam data object from form values
+            var formData = {
+                ExamId: examId,
+                ExamName: $('#ExamName').val(),
+                ExamDate: $('#ExamDate').val(),
+                Score: $('#Score').val(),
+                Hours: $('#Hours').val(),
+                PassingMarks: $('#PassingMarks').val(),
+                CreatedDate: $('#CreatedDate').val(),
+                CreatedBy: $('#CreatedBy').val(),
+                ModifiedDate: new Date().toISOString(), // Update the modified date
+                ModifiedBy: userId // Use the original creator ID as the modifier ID
+            };
+
+            // Make an AJAX request to update the exam data
+            $.ajax({
+                url: 'https://localhost:7177/api/Exams/' + examId,
+                method: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function (response) {
+                    console.log('Exam data updated successfully:', response);
+                    // Optionally, display a success message or redirect to another page
+                    alert("Exam data updated successfully.");
+                    fetchUserDataAndRedirect(userId);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Failed to update exam data:', error);
+                    alert("Failed to update exam data. Please try again later.");
+                }
+            });
+        });
+        function fetchUserDataAndRedirect(userId) {
+            $.ajax({
+                url: 'https://localhost:7177/api/Users/' + userId,
+                method: 'GET',
+                success: function (user) {
+                    window.location.href = '/Users/AdminDashboard?user=' + JSON.stringify(user);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Failed to fetch user data:', error);
+                    alert("Try login again and continue")
+                    window.location.href = '/Users/SignIn';
+                }
+            });
+        }
+
+        $(document).on('click', '#dashboardButton', function () {
+            fetchUserDataAndRedirect(userId);
+        });
+
+    });
+
+</script>

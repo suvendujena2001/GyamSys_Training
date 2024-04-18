@@ -10,7 +10,10 @@
 
         public int? Score { get; set; }
 
-        public int StudentIdFk { get; set; }
+        public int Hours { get; set; }
+
+        public int? PassingMarks { get; set; }
+
 
         public DateTime? CreatedDate { get; set; }
 

@@ -14,3 +14,21 @@ select {
     text-indent: 1px;
     text-overflow: '';
 }
+.examtable {
+    border: 1px solid blue;
+}
+.exam-cell {
+    display: flex;
+    align-items: center;
+}
+
+.exam-image {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px; 
+}
+
+.exam-name {
+    font-weight: bold;
+    
+}

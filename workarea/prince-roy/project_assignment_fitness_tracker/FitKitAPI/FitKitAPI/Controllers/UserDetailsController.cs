@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using FitKitAPI.Data;
+using FitKitAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using FitKitAPI.Data;
-using FitKitAPI.Models;
+using System.Security.Claims;
 
 namespace FitKitAPI.Controllers
 {
@@ -78,6 +74,16 @@ namespace FitKitAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<UserDetails>> PostUserDetails(UserDetails userDetails)
         {
+            var currentUser = GetCurrentUser();
+            var currentUserIdStr = currentUser.UserId;
+            int currentUserIdInt;
+            if (currentUser != null && Int32.TryParse(currentUserIdStr, out currentUserIdInt))
+            {
+                userDetails.UserId = currentUserIdInt;
+                userDetails.CreatedBy = currentUserIdInt;
+                userDetails.ModifiedBy = currentUserIdInt;
+            }
+
             _context.UserDetails.Add(userDetails);
             await _context.SaveChangesAsync();
 
@@ -103,6 +109,26 @@ namespace FitKitAPI.Controllers
         private bool UserDetailsExists(int id)
         {
             return _context.UserDetails.Any(e => e.UserId == id);
+        }
+
+        private UserClaimsModel GetCurrentUser()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            if (identity != null)
+            {
+                var userClaims = identity.Claims;
+
+                return new UserClaimsModel
+                {
+                    UserId = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value,
+                    EmailAddress = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value,
+                    GivenName = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.GivenName)?.Value,
+                    Surname = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.Surname)?.Value,
+                };
+            }
+
+            return null;
         }
     }
 }

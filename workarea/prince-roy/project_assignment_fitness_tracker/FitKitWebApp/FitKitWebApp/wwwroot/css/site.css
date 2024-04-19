@@ -15,3 +15,11 @@ input {
 main {
     min-height: 100vh;
 }
+
+select{
+    all: unset;
+}
+
+option{
+    all: unset;
+}

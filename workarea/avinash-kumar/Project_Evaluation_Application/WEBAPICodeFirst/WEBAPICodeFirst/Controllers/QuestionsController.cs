@@ -40,7 +40,19 @@ namespace WEBAPICodeFirst.Controllers
 
             return question;
         }
+        //to get question related to examid
+        [HttpGet("ByExamId/{examId}")]
+        public async Task<ActionResult<IEnumerable<Question>>> GetQuestionsByExamId(int examId)
+        {
+            var questions = await _context.Questions.Where(q => q.ExanID_fk == examId).ToListAsync();
 
+            if (questions == null || questions.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return questions;
+        }
         // PUT: api/Questions/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

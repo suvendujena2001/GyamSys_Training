@@ -83,11 +83,17 @@ namespace WEBAPICodeFirst.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Hours")
+                        .HasColumnType("int");
+
                     b.Property<int?>("ModifiedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("PassingMarks")
+                        .HasColumnType("int");
 
                     b.Property<int?>("Score")
                         .HasColumnType("int");

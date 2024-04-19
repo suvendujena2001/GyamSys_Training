@@ -19,18 +19,18 @@
 
                             <div class="form-outline mb-4">
 
-                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter Email" })
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter Email", required = "required" })
 
                             </div>
 
                             <div class="form-outline mb-4">
-                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter Password" })
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter Password", required = "required" })
 
                             </div>
 
                             <br />
                             <div class="form-group">
-                                <input type="button" value="SignIn" class="btn btn-dark" onclick="signinuser()" />
+                                <input type="button" value="SignIn" class="btn btn-dark" onclick="validateAndSignIn()" />
                             </div>
                             <div id="error-message" class="text-danger"></div>
                         }
@@ -47,6 +47,22 @@
 </section>
 
 <script>
+
+    function validateAndSignIn() {
+        // Get the email and password values
+        var email = $("#Email").val().trim();
+        var password = $("#Password").val().trim();
+
+        // Check if the fields are not empty
+        if (email === '' || password === '') {
+            // Display error message
+            $("#error-message").text("Please fill in all fields.");
+            return;
+        }
+
+        // Proceed with sign-in if fields are filled
+        signinuser();
+    }
     function signinuser() {
         var settings = {
             "url": "https://localhost:7177/api/Users/SignIn",

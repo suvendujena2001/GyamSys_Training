@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\Images\\background.jpg"
     },
     {
+      "Id": "C:\\Users\\AvinashKumar\\Downloads\\ExamAdda\\ExamAdda\\wwwroot\\Images\\icon.svg",
+      "PackagePath": "staticwebassets\\Images\\icon.svg"
+    },
+    {
       "Id": "C:\\Users\\AvinashKumar\\Downloads\\ExamAdda\\ExamAdda\\wwwroot\\Images\\student.png",
       "PackagePath": "staticwebassets\\Images\\student.png"
     },

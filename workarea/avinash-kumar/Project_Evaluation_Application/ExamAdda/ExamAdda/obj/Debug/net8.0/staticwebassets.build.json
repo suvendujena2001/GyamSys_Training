@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XN34i/u90+YFJer6AGgTk10MURK+pM0Ut5Ez3yob5b8=",
+  "Hash": "wYRLtgoUJfX+KvFgq94qg/M4YBxFaQyNBSJAzTK2XPo=",
   "Source": "ExamAdda",
   "BasePath": "_content/ExamAdda",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\background.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\AvinashKumar\\Downloads\\ExamAdda\\ExamAdda\\wwwroot\\Images\\icon.svg",
+      "SourceId": "ExamAdda",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AvinashKumar\\Downloads\\ExamAdda\\ExamAdda\\wwwroot\\",
+      "BasePath": "_content/ExamAdda",
+      "RelativePath": "Images/icon.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\icon.svg"
     },
     {
       "Identity": "C:\\Users\\AvinashKumar\\Downloads\\ExamAdda\\ExamAdda\\wwwroot\\Images\\SignIn.png",

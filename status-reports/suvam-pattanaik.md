@@ -332,5 +332,85 @@
 
     2. Session on webAPI ,integration with swagger and postman in web application.
   
-  
+
+## Week -9 (1 APRIL - 7 APRIL 2024)
+
+### 1 APRIL :
+
+    1. API entity framework design through code-first-approach .
+
+    2. Session by Rahul on introduction to React JS , installation and usuage through gitbash.
+
+### 2 APRIL :
+
+    1. Working on assigned project -Inventory Management .
+
+    2. Session by Rahul on hooks ,state and component in react js.
+
+### 4 APRIL :
+
+    1. Implementation of react hooks , state through demo project.
+
+    2. Session by Rahul on conditional rendering , props, states and manipulating them through components.
+
+### 5 APRIL :
+
+    1. Evaluation on React JS .
+
+    2. Implementation of asp.net web application through API.
+
+## Week -10 (8 APRIL - 14 APRIL 2024)
+
+### 8 APRIL :
+
+    1. React practice on state ,props .
+
+    2. Working on .net project .
+
+    3. Session by Rahul on useeffect,usememo and fragmentation.
+
+### 10 APRIL :
+
+    1. Working on assigned project on .net
+
+    2. Self practice on react states and hooks.
+
+### 11 APRIL :
+
+    1. Working on inventory management project by creating and updating the date-time on which it is creted and updated in backend.
+
+### 12 APRIL :
+
+    1. Working on blog application  built using react and dotnet .
+
+    2. Evaluation on react training and .net core API.
+    
+
+## Week -11 (15 APRIL - 21 APRIL 2024)
+
+### 15 APRIL :
+
+    1. Introduction to Angular training by Dhamu , how to install , create new project and run it .
+
+    2. Working on API part of blog application.
+
+### 16 APRIL :
+
+    1. Angular session by Dhamu on component binding , its types , how to use form binding.
+
+    2. Integrating the API to react part of blog application.
+
+### 17 APRIL :
+
+    1. Angular session by Dhamu on services used in angular , custom directives , common directives like ngfor ,ngif etc.
+
+    2. Building the UI part of Blog application.
+
+### 18 APRIL :
+
+    1. Angular session on Dhamu on event emitter using parent and child .
+
+    2 . Self learning of life cycle of hooks like - ngInit ,ngOnChange ,ngDoCheck etc.
+
+    3. Completing the Blog application with complete frontend and API integrated .
 

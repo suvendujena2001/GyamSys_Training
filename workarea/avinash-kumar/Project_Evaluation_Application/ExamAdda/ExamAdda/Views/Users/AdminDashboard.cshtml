@@ -1,5 +1,4 @@
 ﻿@model WEBAPICodeFirst.Models.User
-
 @{
     ViewData["Title"] = "AdminDashboard";
 }
@@ -65,7 +64,10 @@
                 <div class="mr-auto p-2">
                     <h2>Hello  @Model.Name</h2>
                 </div>
-
+                <div class="text-right">
+                    <button class="btn btn-dark mr-2">Download All reports</button>
+                    
+                </div>
             </div>
         </div>
         <div class="container bg-black p-1">
@@ -83,15 +85,21 @@
                     <button type="button" class="btn btn-dark" id="seeAllQuestionsBtn">View Questions</button><span class="text-light ml-5">|</span>
                 </div>
                 <div class="col text-left">
-                    <button type="button" class="btn btn-dark" id="viewResultsBtn">View Results</button>
-                </div>
+                    @* <button type="button" class="btn btn-dark" id="viewResultsBtn">View Results</button> *@
+                    <select class="form-control btn-dark" id="resultDropdown">
+                        <option value="">View Result</option>
+
+                        <!-- Exam options will be populated dynamically -->
+                    </select>
+                  
+                </div>  
             </div>
         </div>
 
 
 
         <div id="contentArea" class="mt-4"></div>
-        <div id="allQuestionsContainer" class="mt-4 mb-4 border "></div>
+        <div id="allQuestionsContainer" class="m-3"></div>
 
 
         <form id="createQuestionForm" class="container" style="display: none;">
@@ -151,7 +159,7 @@
             <button type="submit" class="text-center btn btn-dark mb-5">Save</button>
         </form>
 
-        <div id="ExamContainer" class="mt-4 mb-4">
+        <div id="ExamContainer" class=" mb-4">
             <form id="createExamForm" class="container">
                 <div class="form-group">
                     <label for="examName">Exam Name</label>
@@ -180,7 +188,7 @@
 
         @* //see result *@
 
-        <div id="ResultContainer" class="m-3 text-center "> </div>
+        <div id="ResultContainer" class="m-3 text-center ">  </div>
         <div id="allExamsContainer" class="m-3 text-center "> </div>
 
 
@@ -191,6 +199,7 @@
 
     <script>
         $(document).ready(function () {
+
             $('#createExamForm').show();
             $('#createQuestionForm').hide();
             $('#allQuestionsContainer').hide();
@@ -229,8 +238,7 @@
 
 
                 // Populate the dropdown with exams
-                populateExamsDropdown();
-
+                populateExamsDropdown('examDropdown');
             });
 
 
@@ -421,18 +429,21 @@
 
 
             // fetch exams and populate the dropdown
-            function populateExamsDropdown() {
+            function populateExamsDropdown(dropdownId) {
                 $.ajax({
                     url: 'https://localhost:7177/api/Exams',
                     method: 'GET',
                     success: function (exams) {
                         // Clear existing dropdown options
-                        $('#examDropdown').empty();
-                        $('#examDropdown').append($('<option value="" > Select Exam </option>'));
-
+                        $('#' + dropdownId).empty();
+                        if (dropdownId === 'resultDropdown') {
+                            $('#' + dropdownId).append($('<option value="">View Results</option>'));
+                        } else {
+                            $('#' + dropdownId).append($('<option value="">Select Exam For Which You Want To Add Question</option>'));
+                        }
                         // Populate dropdown with exam names and IDs
                         exams.forEach(function (exam) {
-                            $('#examDropdown').append($('<option>', {
+                            $('#' + dropdownId).append($('<option>', {
                                 value: exam.examId,
                                 text: exam.examName
                             }));
@@ -445,6 +456,8 @@
             }
 
 
+            //show the result dropdown
+            populateExamsDropdown('resultDropdown');
             $('#examDropdown').change(function () {
                 // Get the selected exam ID
                 var selectedExamId = $(this).val();
@@ -550,6 +563,18 @@
                 }
             });
 
+            $('#viewResultsBtn').click(function () {
+                populateExamsDropdown();
+            });
+
+            // Event listener for exam dropdown change
+            $('#examDropdown').change(function () {
+                const selectedExamId = $(this).val();
+                if (selectedExamId) {
+                    fetchAndDisplayResults(selectedExamId);
+                }
+            });
+
             //fetching the result
 
             function displayResults() {
@@ -613,6 +638,63 @@
                 alert("Student ID: " + studentId + "\nExam Name: " + examName + "\nFull Marks: " + fullMarks + "\nScore: " + score + "\nStatus: " + status);
             });
 
+            //fetching the result 
+            $('#resultDropdown').change(function () {
+                const selectedExamId = $(this).val();
+                $('#ResultContainer').show();
+                $('#allQuestionsContainer').hide();
+                $('#createQuestionForm').hide();
+                $('#createExamForm').hide();
+                $('#allExamsContainer').hide();
+                if (selectedExamId) {
+                    fetchExamDetails(selectedExamId);
+                }
+            });
+            function fetchExamDetails(examId) {
+                $.ajax({
+                    url: 'https://localhost:7177/api/Results/api/examresults/' + examId,
+                    method: 'GET',
+                    success: function (examResults) {
+                        // Create the table header
+                        var tableHtml = '<table class="table table-bordered table-hover">';
+                        tableHtml += '<thead class="bg-secondary bg-gradient text-light">';
+                        tableHtml += '<tr>';
+                        tableHtml += '<th>Exam Name</th>';
+                        tableHtml += '<th>Student Name</th>';
+                        tableHtml += '<th>Student Email</th>';
+                        tableHtml += '<th>Score</th>';
+                        tableHtml += '<th>Full Marks</th>';
+                        tableHtml += '<th>Performance</th>';
+                        tableHtml += '</tr>';
+                        tableHtml += '</thead>';
+                        tableHtml += '<tbody>';
+
+                        // Iterate over each result and append it to the table
+                        examResults.forEach(function (result) {
+                            tableHtml += '<tr>';
+                            tableHtml += '<td>' + result.examName + '</td>';
+                            tableHtml += '<td>' + result.studentName + '</td>';
+                            tableHtml += '<td>' + result.studentEmail + '</td>';
+                            tableHtml += '<td>' + result.score + '</td>';
+                            tableHtml += '<td>' + result.fullMarks + '</td>';
+                            tableHtml += '<td>' + result.performance + '</td>';
+                            tableHtml += '</tr>';
+                        });
+
+                        tableHtml += '</tbody>';
+                        tableHtml += '</table>';
+
+                        $('#ResultContainer').empty();
+                        $('#ResultContainer').append(tableHtml);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Failed to fetch exam results:', error);
+                    }
+                });
+            }
+
+
+
         });
     </script>
 
@@ -620,3 +702,5 @@
 
 </body>
 </html>
+
+

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
-import backgroundImage from './reactP2.jpg'; // Import the image file
+import backgroundImage from './reactP2.jpg'; 
 
 function CreateBlogModal() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -28,13 +28,13 @@ function CreateBlogModal() {
 
   return (
     <div style={{
-      backgroundImage: `url(${backgroundImage})`, // Set the background image
-      backgroundSize: 'cover', // Ensure the image covers the entire background
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: 'cover', 
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100vh', // Set the height to full viewport height
+      height: '100vh', 
     }}>
       <h1>To add content, click on the button below!</h1>
       <div style={{ marginTop: '20px' }}>

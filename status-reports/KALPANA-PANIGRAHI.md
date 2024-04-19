@@ -277,6 +277,19 @@
 7. useState
 8. Creating a Simple Expanse Tracker using React
 9. Creating a simple TODO application Using React
+# Week 10 status report(April 8 to April 14)
+## React
+1. Integration of Recat with Asp .Net web API
+2. Creating a expense splitter project using React
+3. Creating a Simple ToDo Application using React
+## ASP .NET WEB API
+1. Introduction to web API
+2. Test Web API
+3. Configure Web API
+4. Web API Controllers
+5. Routing in ASP.NET web API
+# Week 11 status report(April 15 to April 21)
+   
    
     
     

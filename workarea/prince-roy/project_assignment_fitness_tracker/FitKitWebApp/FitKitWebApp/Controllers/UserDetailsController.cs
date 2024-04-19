@@ -1,7 +1,7 @@
 ﻿using FitKitWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Security.Claims;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace FitKitWebApp.Controllers
@@ -31,23 +31,14 @@ namespace FitKitWebApp.Controllers
                 userDetails.CreatedAt = DateTime.Now;
                 userDetails.ModifiedDate = DateTime.Now;
 
-                //var currentUser = GetCurrentUser();
-                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
-                var userId = "";
-                if (userIdClaim != null)
+                var accessToken = HttpContext.Session.GetString("AccessToken");
+
+                if (string.IsNullOrEmpty(accessToken))
                 {
-                    userId = userIdClaim.Value;
+                    return RedirectToAction("Index", "Signup");
                 }
 
-                int createdBy;
-                int modifiedBy;
-
-                bool success1 = int.TryParse(userId, out createdBy);
-                bool success2 = int.TryParse(userId, out modifiedBy);
-
-                userDetails.CreatedBy = createdBy;
-                userDetails.ModifiedBy = modifiedBy;
-
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
                 var json = JsonConvert.SerializeObject(userDetails);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
@@ -65,26 +56,6 @@ namespace FitKitWebApp.Controllers
             }
 
             return View();
-        }
-
-        private UserClaimsModel GetCurrentUser()
-        {
-            var identity = HttpContext.User.Identity as ClaimsIdentity;
-
-            if (identity != null)
-            {
-                var userClaims = identity.Claims;
-
-                return new UserClaimsModel
-                {
-                    UserId = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value,
-                    EmailAddress = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value,
-                    GivenName = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.GivenName)?.Value,
-                    Surname = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.Surname)?.Value,
-                };
-            }
-
-            return null;
         }
     }
 }

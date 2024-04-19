@@ -10,6 +10,17 @@
     new SelectListItem{Value="Male", Text="Male"},
     new SelectListItem{Value="Female", Text="Female"},
     };
+
+    var fitnessGoals = new List<SelectListItem>
+    {
+        new SelectListItem{Value="Weight Loss", Text="Weight Loss"},
+        new SelectListItem{Value="Muscle Gain", Text="Muscle Gain"},
+        new SelectListItem{Value="Cardiovascular Endurance", Text="Cardiovascular Endurance"},
+        new SelectListItem{Value="Flexibility and Mobility", Text="Flexibility and Mobility"},
+        new SelectListItem{Value="Performance Goals", Text="Performance Goals"},
+        new SelectListItem{Value="Overall Health and Wellness", Text="Overall Health and Wellness"},
+
+    };
 }
 
 <div class="details-container">
@@ -26,7 +37,6 @@
             <select asp-for="Gender" asp-items="@genders">
                 <option value="">Select Gender</option>
             </select>
-            @* <input asp-for="Gender" type="text" class="input-tag" placeholder="Enter your Gender here" /> *@
             <span asp-validation-for="Gender"></span>
         </div>
 
@@ -44,7 +54,9 @@
 
         <div class="input-container">
             <label asp-for="FitnessGoals" class="label"></label>
-            <input asp-for="FitnessGoals" type="text" class="input-tag" placeholder="Enter your Fitness Goals here" />
+            <select asp-for="FitnessGoals" asp-items="@fitnessGoals">
+                <option value="">Select fitness goals</option>
+            </select>
             <span asp-validation-for="FitnessGoals"></span>
         </div>
 

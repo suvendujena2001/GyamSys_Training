@@ -1,6 +1,7 @@
 ﻿using FitKitWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace FitKitWebApp.Controllers
@@ -61,7 +62,22 @@ namespace FitKitWebApp.Controllers
                         HttpContext.Session.SetString("AccessToken", token.Token);
 
                         TempData["Name"] = $"{user.FirstName} {user.LastName}";
-                        return RedirectToAction("Index", "UserDetails");
+                        TempData["UserId"] = user.UserId;
+                        var accessToken = HttpContext.Session.GetString("AccessToken");
+
+                        // Add the token to the request headers
+                        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+                        // Send a request to fetch UserDetails (optional)
+                        var userDetailsResponse = await _httpClient.GetAsync("api/UserDetails");
+
+                        // Check if UserDetails retrieval is successful
+                        if (userDetailsResponse.IsSuccessStatusCode)
+                        {
+                            // Proceed with redirect if UserDetails retrieval is successful
+                            return RedirectToAction("Index", "UserDetails");
+                        }
+                        //return RedirectToAction("Index", "UserDetails");
                     }
                 }
                 else

@@ -13,7 +13,7 @@ namespace FitKitAPI.Data
 
         public DbSet<Goal> Goal { get; set; } = default!;
 
-        public DbSet<UserDetails> UserDetails { get; set; } = default!;
+        public DbSet<UserDetails> UserDetails { get; set; }
 
         public DbSet<Nutrition> Nutrition { get; set; } = default!;
 

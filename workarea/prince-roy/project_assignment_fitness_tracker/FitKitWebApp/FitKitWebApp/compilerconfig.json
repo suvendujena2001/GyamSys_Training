@@ -10,5 +10,17 @@
   {
     "outputFile": "wwwroot/Content/UserDetails.styles.css",
     "inputFile": "wwwroot/Content/UserDetails.styles.scss"
+  },
+  {
+    "outputFile": "wwwroot/Content/Navbar.styles.css",
+    "inputFile": "wwwroot/Content/Navbar.styles.scss"
+  },
+  {
+    "outputFile": "wwwroot/Content/Profile.styles.css",
+    "inputFile": "wwwroot/Content/Profile.styles.scss"
+  },
+  {
+    "outputFile": "wwwroot/Content/Dashboard.styles.css",
+    "inputFile": "wwwroot/Content/Dashboard.styles.scss"
   }
 ]

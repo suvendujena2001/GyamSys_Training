@@ -45,6 +45,7 @@ namespace FitKitAPI.Controllers
             }
 
             return Unauthorized();
+
         }
 
         private string GenerateJwtToken(UserCredential user)
@@ -61,7 +62,7 @@ namespace FitKitAPI.Controllers
             };
 
             var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
-                _configuration["Jwt:Audience"], claims, expires: DateTime.Now.AddMinutes(15), signingCredentials: credentials);
+                _configuration["Jwt:Audience"], claims, expires: DateTime.Now.AddMinutes(20), signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
 

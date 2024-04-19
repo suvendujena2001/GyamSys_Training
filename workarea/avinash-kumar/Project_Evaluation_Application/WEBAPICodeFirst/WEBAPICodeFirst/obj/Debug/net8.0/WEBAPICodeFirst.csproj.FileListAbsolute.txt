@@ -262,3 +262,10 @@ C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0
 C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\Irony.dll
+C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\AvinashKumar\Downloads\WEBAPICodeFirst\WEBAPICodeFirst\bin\Debug\net8.0\XLParser.dll

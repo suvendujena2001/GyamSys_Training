@@ -116,7 +116,7 @@ namespace WEBAPICodeFirst.Controllers
             {
                 user.Password = logindetails.Password;
                 // Return student details along with success response
-                return Ok( user);
+                return Ok(user);
             }
 
             return Unauthorized();

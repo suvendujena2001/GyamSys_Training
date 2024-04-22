@@ -43,6 +43,11 @@ namespace FitKitWebApp.Controllers
 
                     return RedirectToAction("Index", "Home");
                 }
+                else
+                {
+                    TempData["Login failed"] = "The account you provided does not exist. Please signup or check your credentials and try again.";
+                    return RedirectToAction("Index", "Signup");
+                }
 
             }
             catch (Exception ex)

@@ -8,6 +8,19 @@
     <link href="~/Content/Form.style.css" type="text/css" rel="stylesheet" />
 }
 
+@{
+    if (TempData["Login failed"] != null)
+    {
+        <script>
+            Swal.fire({
+                icon: "error",
+                title: "Account Not Found!",
+                text: "@TempData["Login failed"]",
+            });
+        </script>
+    }
+}
+
 <div class="signup-page-container">
     <div class="hero-container">
         <div class="img-container">

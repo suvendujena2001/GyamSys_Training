@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FitKitWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3eda3132fff7ba9a7ac25bf0cc888190bd0969d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ac026642186518dcab30648c8355217b2797df0")]
 [assembly: System.Reflection.AssemblyProductAttribute("FitKitWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FitKitWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

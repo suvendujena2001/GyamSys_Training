@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gfSQOUaa3gz070xquzwU4aBkwRwXyISAXTvsKQihtv5TGVRhYdrjlPKegoGJHLBHQzWxCqPCYW13GfDUGxzbsw==",
+  "dgSpecHash": "Ct3F7K7KHiXyWc6MwHnTbLnEUyUbkhyNNLXntfHzYxdxNbTfUltnd0gVNUFB9hdWGSiMu7dxZ8VcWyLcq3acqA==",
   "success": true,
-  "projectFilePath": "C:\\visual studio\\Blog website\\BlogWebApi\\BlogWebApi\\BlogWebApi.csproj",
+  "projectFilePath": "C:\\Users\\SuvamPattanaik\\OneDrive - GyanSys Inc\\Documents\\github\\workarea\\suvam-pattanaik\\Blog website using React and Dotnet\\BlogWebApi\\BlogWebApi\\BlogWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SuvamPattanaik\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\SuvamPattanaik\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

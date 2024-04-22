@@ -4529,11 +4529,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\visual studio\\Blog website\\BlogWebApi\\BlogWebApi\\BlogWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\SuvamPattanaik\\OneDrive - GyanSys Inc\\Documents\\github\\workarea\\suvam-pattanaik\\Blog website using React and Dotnet\\BlogWebApi\\BlogWebApi\\BlogWebApi.csproj",
       "projectName": "BlogWebApi",
-      "projectPath": "C:\\visual studio\\Blog website\\BlogWebApi\\BlogWebApi\\BlogWebApi.csproj",
+      "projectPath": "C:\\Users\\SuvamPattanaik\\OneDrive - GyanSys Inc\\Documents\\github\\workarea\\suvam-pattanaik\\Blog website using React and Dotnet\\BlogWebApi\\BlogWebApi\\BlogWebApi.csproj",
       "packagesPath": "C:\\Users\\SuvamPattanaik\\.nuget\\packages\\",
-      "outputPath": "C:\\visual studio\\Blog website\\BlogWebApi\\BlogWebApi\\obj\\",
+      "outputPath": "C:\\Users\\SuvamPattanaik\\OneDrive - GyanSys Inc\\Documents\\github\\workarea\\suvam-pattanaik\\Blog website using React and Dotnet\\BlogWebApi\\BlogWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

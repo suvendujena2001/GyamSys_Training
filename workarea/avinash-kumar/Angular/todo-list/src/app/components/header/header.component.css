@@ -1,0 +1,13 @@
+.heading {
+    background-color: bisque;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading input {
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 4px;
+}

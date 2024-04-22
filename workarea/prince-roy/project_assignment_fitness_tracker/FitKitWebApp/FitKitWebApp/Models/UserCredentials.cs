@@ -16,6 +16,7 @@ namespace FitKitWebApp.Models
         public string UserName { get; set; }
 
         [Display(Name = "Email")]
+        [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/")]
         public string UserEmail { get; set; }
 
         public string Password { get; set; }

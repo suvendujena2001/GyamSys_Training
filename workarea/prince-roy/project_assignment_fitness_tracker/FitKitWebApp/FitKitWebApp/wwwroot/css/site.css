@@ -23,3 +23,33 @@ select{
 option{
     all: unset;
 }
+
+.error-animation {
+    animation-name: shake;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+    outline: 3px solid #fb5656;
+}
+
+@keyframes shake {
+    0% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: 0.5rem;
+        margin-right: -0.5rem;
+    }
+
+    75% {
+        margin-left: -0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    100% {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

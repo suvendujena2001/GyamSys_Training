@@ -1,0 +1,63 @@
+<!-- <p>task-list works!</p>
+<div class="container-fluid bg-light">
+  <div class="container bg-light">
+    <div class="row mt-4" style="height: 50px">
+      <div class="col"></div>
+      <div class="col-md-6 bg-white shadow">
+        <div class="card bg-warning mt-4">
+          <h4 class="text-white ps-3 pt-2 pb-2">Task-List</h4>
+        </div> -->
+
+<!-- <div class="input-group p-4">
+  <input
+    type="text"
+    [(ngModel)]="task"
+    class="form-control"
+    placeholder="Enter Task"
+  />
+  <button onclick="addTask()" class="btn btn-outline-success" type="button">
+    ADD
+  </button>
+</div>
+
+<h4 class="text-primary mt-4">Tasks:</h4>
+
+<div class="m-3">
+  <div class="p-2 shadow">
+    <div class="input-group row ps-3">
+      <div class="card col-md-10 border 0">Task-List</div>
+      <ul>
+        <li *ngFor="let task of tasks; let i = index">
+          <span>{{ task }}</span>
+          <button
+            onclick="deleteTask(i)"
+            class="btn btn-outline-primary col me-2"
+          >
+            edit
+          </button>
+          <button onclick="editTask(i)" class="btn btn-outline-danger col">
+            delete
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+<div class="card center-container mt-4">
+  <h4 class="text-black ps-3 pt-2 pb-2">Task-List</h4>
+
+  <div class="container bg-light center-container">
+    <input type="text" [(ngModel)]="task" class="border" />
+    <button (click)="addTask()" class="btn btn-outline-success">
+      Add Task
+    </button>
+  </div>
+
+  <ul>
+    <li *ngFor="let task of tasks; let i = index" class="task-item">
+      <span class="border">{{ task }}</span>
+      <button (click)="deleteTask(i)" class="btn-outline-danger">Delete</button>
+      <button (click)="editTask(i)" class="btn-outline-primary">Update</button>
+    </li>
+  </ul>
+</div>

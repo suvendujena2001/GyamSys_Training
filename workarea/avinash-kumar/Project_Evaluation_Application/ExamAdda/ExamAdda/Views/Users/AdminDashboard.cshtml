@@ -6,14 +6,16 @@
 
 
 @{
+    string name = Model.Name;
+    string formattedName = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower());
     if (TempData["put_message"] != null)
     {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>success</strong> @TempData["put_message"]
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>success</strong> @TempData["put_message"]
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
     }
 }
 <html lang="en">
@@ -36,8 +38,8 @@
             <div class="col-auto ">
                 <img class="image2" src="~/Images/admin.png" alt="Image 3" />
             </div>
-            <div class="col-auto mt-3 ml-5">
-                <h1 class="mt-3">Welcome To AdminDashboard</h1>
+            <div class="col-auto mt-3 ml-4">
+                <h1 class="mt-3">Welcome To Admin Dashboard</h1>
             </div>
             <div class="col-auto mt-1" >
                 <div class="dropdown text-right" style="margin-left:11rem;">
@@ -62,16 +64,14 @@
         <div class="navStudent">
             <div class="div1 d-flex justify-content-between align-items-center">
                 <div class="mr-auto p-2">
-                    <h2>Hello  @Model.Name</h2>
+                    <h2 class="ml-3">Hello  @formattedName</h2>
                 </div>
                 <div class="text-right">
-                    <button id="downloadButton" class="btn btn-dark mr-3">Download All reports</button>
-
-                    
+                    <button id="downloadButton" class="btn btn-dark text-light mr-3">Download All reports</button>
                 </div>
             </div>
         </div>
-        <div class="container bg-black p-1">
+        <div class="container bg-dark p-1">
             <div class="row mt-1 ml-2 mr-2 mb-1">
                 <div class="col text-left">
                     <button type="button" class="btn btn-dark" id="createExamBtn">Add New Exam</button><span class="text-light ml-5">|</span>
@@ -90,7 +90,7 @@
                     <select class="form-control btn-dark" id="resultDropdown">
                         <option value="">View Result</option>
 
-                        <!-- Exam options will be populated dynamically -->
+                     
                     </select>
                   
                 </div>  
@@ -99,7 +99,7 @@
 
 
 
-        <div id="contentArea" class="mt-4"></div>
+        <div id="contentArea" class="mt-1"></div>
         <div id="allQuestionsContainer" class="m-3"></div>
 
 
@@ -150,7 +150,7 @@
 
             <div class="form-group">
                 <label for="marks">Marks</label>
-                <textarea placeholder="Enter Marks" type="number" class="form-control" id="marks" required></textarea>
+                <textarea placeholder="Enter Marks" type="number" class="form-control" id="marks"  required min="0"></textarea>
             </div>
             @* <div class="form-group">
             <label for="exanID_fk">Exam Id</label>
@@ -160,7 +160,7 @@
             <button type="submit" class="text-center btn btn-dark mb-5">Save</button>
         </form>
 
-        <div id="ExamContainer" class=" mb-4">
+        <div id="ExamContainer" class=" mb-1">
             <form id="createExamForm" class="container">
                 <div class="form-group">
                     <label for="examName">Exam Name</label>
@@ -190,10 +190,11 @@
         @* //see result *@
 
         <div id="ResultContainer" class="m-3 text-center ">  </div>
+        @* exam container *@
         <div id="allExamsContainer" class="m-3 text-center "> </div>
 
-
-
+        @* search button *@
+       
 
     </div>
 
@@ -201,12 +202,16 @@
     <script>
         $(document).ready(function () {
 
+
             $('#createExamForm').show();
             $('#createQuestionForm').hide();
             $('#allQuestionsContainer').hide();
             $('#ResultContainer').hide();
             $('#allExamsContainer').hide();
 
+            var search = ` <div class="input-group m-2 rounded "id="searchBtn">
+                            <input type="search" class="form-control mr-4rounded" placeholder="Search"  style=" margin:0 30px;" aria-label="Search" aria-describedby="search-addon" />
+                </div>`;
             $('#createExamBtn').click(function () {
                 // Show the "Create Exam" form and hide other content
                 $('#createExamForm').show();
@@ -276,10 +281,12 @@
                     data: JSON.stringify(formData),
                     success: function (response) {
                         console.log('Exam data posted successfully:', response);
+                        alert("Exam Added successfully");
                         $('#createExamForm')[0].reset();
                     },
                     error: function (xhr, status, error) {
                         console.error('Failed to post exam data:', error);
+                        alert("Can not add exam right now please try after some time");
                     }
                 });
             });
@@ -294,16 +301,18 @@
                 $('#ResultContainer').hide();
                 $('#allExamsContainer').show();
 
+
                 // Make an AJAX request to fetch all exams
                 $.ajax({
                     url: 'https://localhost:7177/api/Exams',
                     method: 'GET',
                     success: function (exams) {
                         $('#allExamsContainer').empty();
+                        $('#allExamsContainer').prepend(search);
 
                         // Create HTML for displaying exams
                         var tableHtml = '<table class="table table-bordered table-hover">';
-                        tableHtml += '<thead class="bg-secondary bg-gradient text-light">';
+                        tableHtml += '<thead class="bg-dark bg-gradient text-light">';
                         tableHtml += '<tr>';
                         tableHtml += '<th>Exam Name</th>';
                         tableHtml += '<th>Exam Date</th>';
@@ -333,8 +342,35 @@
                         tableHtml += '</tbody>';
                         tableHtml += '</table>';
 
-                        // Append the HTML to the container
                         $('#allExamsContainer').append(tableHtml);
+
+
+
+                        $('#searchBtn input').on('input', function () {
+                            var searchValue = $('#searchBtn input').val().toLowerCase();
+                            
+                            var filteredExams = exams.filter(function (exam) {
+                                return exam.examName.toLowerCase().includes(searchValue);
+                            });
+
+                            // Clear the table
+                            $('#allExamsContainer tbody').empty();
+
+                            filteredExams.forEach(function (exam) {
+                                var rowHtml = '<tr>';
+                                rowHtml += '<td>' + exam.examName + '</td>';
+                                rowHtml += '<td>' + exam.examDate + '</td>';
+                                rowHtml += '<td>' + exam.score + '</td>';
+                                rowHtml += '<td>' + exam.hours + '</td>';
+                                rowHtml += '<td>' + exam.passingMarks + '</td>';
+                                rowHtml += '<td>';
+                                rowHtml += '<button type="button" class="btn btn-primary editExamBtn m-2" data-exam-id="' + exam.examId + '"><i class="fas fa-edit "></i></button>';
+                                rowHtml += '<button type="button" class="btn btn-danger deleteExamBtn m-2 " data-exam-id="' + exam.examId + '"><i class="fas fa-trash-alt"></i></button>';
+                                rowHtml += '</td>';
+                                rowHtml += '</tr>';
+                                $('#allExamsContainer tbody').append(rowHtml);
+                            });
+                        });
                     },
                     error: function (xhr, status, error) {
                         console.error('Failed to fetch exams:', error);
@@ -351,22 +387,16 @@
                 window.location.href = '/Users/EditExam?id=' + examId;
             });
 
-            // Event listener for deleteExamBtn
             $('#allExamsContainer').on('click', '.deleteExamBtn', function () {
-                // Get the ID of the exam from the data attribute of the button
                 var examId = $(this).data('exam-id');
-                // Display a confirmation dialog
                 var confirmation = confirm("Are you sure you want to delete this exam?");
-                // If user confirms, proceed with the deletion
                 if (confirmation) {
-                    // Make an AJAX request to delete the exam
                     $.ajax({
                         url: 'https://localhost:7177/api/Exams/' + examId,
                         method: 'DELETE',
                         success: function () {
-                            // Optionally, you can remove the deleted exam from the UI
                             alert("Exam deleted successfully.");
-                            $('#allExamsContainer').click(); // Reload the list of exams
+                            $('#allExamsContainer').click(); 
                         },
                         error: function (xhr, status, error) {
                             console.error('Failed to delete exam:', error);
@@ -419,10 +449,11 @@
                     contentType: 'application/json',
                     data: JSON.stringify(formData),
                     success: function (response) {
-                        console.log('Form data posted successfully:', response);
+                        alert("Question Added successfully");
                         $('#createQuestionForm')[0].reset();
                     },
                     error: function (xhr, status, error) {
+                        alert("Can Not Add Question Right Now Please Try Agin Later");
                         console.error('Failed to post form data:', error);
                     }
                 });
@@ -460,7 +491,6 @@
             //show the result dropdown
             populateExamsDropdown('resultDropdown');
             $('#examDropdown').change(function () {
-                // Get the selected exam ID
                 var selectedExamId = $(this).val();
 
                 $('#exanID_fk').val(selectedExamId);
@@ -475,18 +505,15 @@
                 $('#ResultContainer').hide();
                 $('#allExamsContainer').hide();
 
-
                 $.ajax({
                     url: 'https://localhost:7177/api/Questions',
                     method: 'GET',
                     success: function (questions) {
-                        console.log(questions[0].questionText);
-
                         $('#allQuestionsContainer').empty();
-
+                        $('#allQuestionsContainer').prepend(search);
 
                         var tableHtml = '<table class="table table-bordered table-hover">';
-                        tableHtml += '<thead class="bg-secondary bg-gradient text-light">';
+                        tableHtml += '<thead class="bg-dark bg-gradient text-light">';
                         tableHtml += '<tr>';
                         tableHtml += '<th>Question Text</th>';
                         tableHtml += '<th>Option A</th>';
@@ -495,14 +522,14 @@
                         tableHtml += '<th>Option D</th>';
                         tableHtml += '<th>Correct Option</th>';
                         tableHtml += '<th>Marks</th>';
-                        tableHtml += '<th>ExamID</th>';
+                        tableHtml += '<th>Exam Name</th>';
                         tableHtml += '<th>Actions</th>';
                         tableHtml += '</tr>';
                         tableHtml += '</thead>';
-                        tableHtml += '<tbody >';
+                        tableHtml += '<tbody>';
 
                         questions.forEach(function (question) {
-                            tableHtml += '<tr >';
+                            tableHtml += '<tr>';
                             tableHtml += '<td>' + question.questionText + '</td>';
                             tableHtml += '<td>' + question.optionA + '</td>';
                             tableHtml += '<td>' + question.optionB + '</td>';
@@ -512,34 +539,60 @@
                             tableHtml += '<td>' + question.marks + '</td>';
                             tableHtml += '<td>' + question.exanID_fk + '</td>';
                             tableHtml += '<td>';
-
                             tableHtml += '<a id="editQuestionBtn_' + question.questionId + '" href="#" class="btn btn-primary editQuestionBtn mb-1" data-question-id="' + question.questionId + '"><i class="fas fa-edit"></i></a>';
-
                             tableHtml += '<button type="button" class="btn btn-danger deleteQuestionBtn"  data-question-id="' + question.questionId + '"><i class="fas fa-trash-alt"></i></button>';
                             tableHtml += '</td>';
                             tableHtml += '</tr>';
-                            console.log(question.questionId);
                         });
 
                         tableHtml += '</tbody>';
                         tableHtml += '</table>';
 
                         $('#allQuestionsContainer').append(tableHtml);
+
+                        // Attach input event listener to the search input field
+                        $('#searchBtn input').on('input', function () {
+                            var searchValue = $(this).val().toLowerCase();
+
+                            var filteredQuestions = questions.filter(function (question) {
+                                return question.questionText.toLowerCase().includes(searchValue);
+                            });
+
+                            $('#allQuestionsContainer tbody').empty();
+
+                            filteredQuestions.forEach(function (question) {
+                                var rowHtml = '<tr>';
+                                rowHtml += '<td>' + question.questionText + '</td>';
+                                rowHtml += '<td>' + question.optionA + '</td>';
+                                rowHtml += '<td>' + question.optionB + '</td>';
+                                rowHtml += '<td>' + question.optionC + '</td>';
+                                rowHtml += '<td>' + question.optionD + '</td>';
+                                rowHtml += '<td>' + question.correctOption + '</td>';
+                                rowHtml += '<td>' + question.marks + '</td>';
+                                rowHtml += '<td>' + question.exanID_fk + '</td>';
+                                rowHtml += '<td>';
+                                rowHtml += '<a id="editQuestionBtn_' + question.questionId + '" href="#" class="btn btn-primary editQuestionBtn mb-1" data-question-id="' + question.questionId + '"><i class="fas fa-edit"></i></a>';
+                                rowHtml += '<button type="button" class="btn btn-danger deleteQuestionBtn"  data-question-id="' + question.questionId + '"><i class="fas fa-trash-alt"></i></button>';
+                                rowHtml += '</td>';
+                                rowHtml += '</tr>';
+                                $('#allQuestionsContainer tbody').append(rowHtml);
+                            });
+                        });
                     },
                     error: function (xhr, status, error) {
                         $('#allQuestionsContainer').html('<div class="alert alert-danger" role="alert">Failed to fetch questions. Error: ' + error + '</div>');
                     }
                 });
             });
+
             $(document).on('click', '.editQuestionBtn', function (e) {
                 e.preventDefault();
                 var questionId = $(this).data('question-id');
                 window.location.href = '/Users/EditQuestion?id=' + questionId;
-
             });
+
             // Event handler for delete button click
             $('#allQuestionsContainer').on('click', '.deleteQuestionBtn', function () {
-                // Get the question id from the data attribute of the button
                 var questionId = $(this).data('question-id');
 
                 var confirmation = confirm("Are you sure you want to delete this question?");
@@ -576,68 +629,7 @@
                 }
             });
 
-            //fetching the result
-
-            function displayResults() {
-                // Make AJAX request to fetch results
-                $.ajax({
-                    url: 'https://localhost:7177/api/Results',
-                    method: 'GET',
-                    success: function (results) {
-                        $('#ResultContainer').empty();
-
-                        // Create table and header
-                        var tableHtml = '<table class="table table-bordered table-hover"><thead class="bg-secondary bg-gradient text-light"><tr>';
-                        tableHtml += '<th>Student ID</th><th>Exam Name</th><th>Full Marks</th><th>Score</th><th>Status</th><th>Action</th>';
-                        tableHtml += '</tr></thead><tbody>';
-
-                        // Add rows for each result
-                        $.each(results, function (index, result) {
-                            tableHtml += '<tr>';
-                            tableHtml += '<td>' + result.studentIdFk + '</td>';
-                            tableHtml += '<td>' + result.examName + '</td>';
-                            tableHtml += '<td>' + result.fullMarks + '</td>';
-                            tableHtml += '<td>' + result.score + '</td>';
-                            tableHtml += '<td>' + result.status + '</td>';
-                            tableHtml += '<td><button type="button" class="btn btn-dark showDetailsBtn">Show Details</button></td>';
-                            tableHtml += '</tr>';
-                        });
-
-                        tableHtml += '</tbody></table>';
-
-                        // Append table HTML to container
-                        $('#ResultContainer').append(tableHtml);
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('Failed to fetch results:', error);
-                        alert("Failed to fetch results. Please try again later.");
-                    }
-                });
-            }
-
-            // Event listener for click on viewResultsBtn
-            $('#viewResultsBtn').on('click', function () {
-                displayResults();
-            });
-
-            // Event listener for click on showDetailsBtn
-            $('#ResultContainer').on('click', '.showDetailsBtn', function () {
-                var $row = $(this).closest('tr');
-                // Get the data from the row
-                var studentId = $row.find('td:eq(0)').text();
-                var examName = $row.find('td:eq(1)').text();
-                var fullMarks = $row.find('td:eq(2)').text();
-                var score = $row.find('td:eq(3)').text();
-                var passingMarks = 33 % fullMarks;
-                if (score > passingMarks) {
-                    var status = "Passed";
-                } else {
-                    var status = "Failed";
-                }
-
-                // Display the details in an alert
-                alert("Student ID: " + studentId + "\nExam Name: " + examName + "\nFull Marks: " + fullMarks + "\nScore: " + score + "\nStatus: " + status);
-            });
+           
 
             //fetching the result 
             $('#resultDropdown').change(function () {
@@ -658,7 +650,7 @@
                     success: function (examResults) {
                         // Create the table header
                         var tableHtml = '<table class="table table-bordered table-hover">';
-                        tableHtml += '<thead class="bg-secondary bg-gradient text-light">';
+                        tableHtml += '<thead class="bg-dark bg-gradient text-light">';
                         tableHtml += '<tr>';
                         tableHtml += '<th>Exam Name</th>';
                         tableHtml += '<th>Student Name</th>';
@@ -686,7 +678,55 @@
                         tableHtml += '</table>';
 
                         $('#ResultContainer').empty();
+                        $('#ResultContainer').prepend(search);
+
                         $('#ResultContainer').append(tableHtml);
+                        // Event listener for search input
+                        $('#searchBtn input').on('input', function () {
+                            var searchValue = $(this).val().trim();
+                            filterResults(searchValue);
+                        });
+                        function filterResults(searchValue) {
+                            // Check if search value is empty
+                            if (searchValue.trim() === '') {
+                                $('#ResultContainer tbody tr').show();
+                                return; // Exit the function early if search value is empty
+                            }
+
+                            // Check if search value is numeric (for score)
+                            if (!isNaN(searchValue)) {
+                                console.log('numeric input');
+                                searchByScore(parseInt(searchValue));
+                            } else {
+                                console.log('String input');
+                                searchByStudentName(searchValue);
+                            }
+                        }
+
+
+                        function searchByStudentName(studentName) {
+                            $('#ResultContainer tbody tr').each(function () {
+                                var name = $(this).find('td:eq(1)').text().toLowerCase();
+                                if (name.includes(studentName.toLowerCase())) {
+                                    $(this).show();
+                                } else {
+                                    $(this).hide();
+                                }
+                            });
+                        }
+
+                        function searchByScore(score) {
+                            $('#ResultContainer tbody tr').each(function () {
+                                var studentScore = parseInt($(this).find('td:eq(3)').text());
+                                if (studentScore === score) {
+                                    $(this).show();
+                                } else {
+                                    $(this).hide();
+                                }
+                            });
+                        }
+
+
                     },
                     error: function (xhr, status, error) {
                         console.error('Failed to fetch exam results:', error);
@@ -694,7 +734,7 @@
                 });
             }
 
-
+          
             //download report
             function downloadReports() {
                 // Send a GET request to the API endpoint
@@ -708,18 +748,13 @@
                         // Create a Blob from the response data
                         var blob = new Blob([response], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
 
-                        // Create a temporary URL for the Blob
                         var url = window.URL.createObjectURL(blob);
 
-                        // Create a temporary anchor element
                         var anchor = document.createElement('a');
                         anchor.href = url;
-                        anchor.download = 'reports.xlsx'; // Set the download attribute to specify the file name
-
-                        // Trigger a click event on the anchor element to initiate the download
+                        anchor.download = 'reports.xlsx'; 
                         anchor.click();
 
-                        // Clean up - revoke the temporary URL
                         window.URL.revokeObjectURL(url);
                     },
                     error: function (xhr, status, error) {
@@ -728,7 +763,10 @@
                 });
             }
             $('#downloadButton').click(function () {
-                downloadReports();
+                var confirmation = confirm("Are you sure you want to download reports");
+                if (confirmation) {
+                    downloadReports();
+                }
             });
 
 

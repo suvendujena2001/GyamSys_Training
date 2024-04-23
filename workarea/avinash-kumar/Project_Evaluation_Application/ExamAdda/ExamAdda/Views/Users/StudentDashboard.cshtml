@@ -4,6 +4,9 @@
     ViewData["Title"] = "StudentDashboard";
 }
 @{
+    string name = Model.Name;
+    string formattedName = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower());
+
     if (TempData["put_message"] != null)
     {
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -13,7 +16,9 @@
                 </button>
             </div>
     }
-}
+    }
+
+
 
 <div class="card cascading-right" style="
             background: hsla(0, 0%, 100%, 0.55);
@@ -24,7 +29,7 @@
             <img class="image1" src="~/Images/student.png" alt="Image 2" />
         </div>
         <div class="col ml-5 mt-3">
-            <h1 class="mt-3">Welcome @Model.Name</h1>
+            <h1 class="mt-3">Welcome @formattedName</h1>
             <a id="yourDashboard" class="btn btn-dark m-1">Dashoard</a>
             <a id="yourResultButton" class="btn btn-dark">Your Result</a>
 
@@ -50,6 +55,30 @@
             </div>
         </div>
     </div>
+
+
+   @*  <button id="confirmButton">Click to Confirm</button>
+
+    <!-- The popup dialog -->
+    <div id="popupDialog" class="popup">
+        <div class="popup-content">
+            <h2>Confirmation</h2>
+            <p>Please review the following instructions:</p>
+            <ul>
+                <li>Instruction 1</li>
+                <li>Instruction 2</li>
+                <!-- Add more instructions as needed -->
+            </ul>
+            <label for="acceptCheckbox">
+                <input type="checkbox" id="acceptCheckbox"> I accept the instructions
+            </label>
+            <br>
+            <button id="confirmAccept">Accept</button>
+            <button id="cancelAccept">Cancel</button>
+        </div>
+    </div> *@
+
+
     <div class="container">
         <table id="ExamContainer" class="table table-bordered examtable text-center ">
             <thead>
@@ -195,5 +224,37 @@
         }
     }
 
+    // Get the elements
+    const confirmButton = document.getElementById('confirmButton');
+    const popupDialog = document.getElementById('popupDialog');
+    const acceptCheckbox = document.getElementById('acceptCheckbox');
+    const confirmAccept = document.getElementById('confirmAccept');
+    const cancelAccept = document.getElementById('cancelAccept');
 
+    // Function to show the popup
+    confirmButton.addEventListener('click', function () {
+        popupDialog.style.display = 'block';
+    });
+
+    // Function to close the popup
+    function closePopup() {
+        popupDialog.style.display = 'none';
+    }
+
+    // Event listener for the cancel button
+    cancelAccept.addEventListener('click', function () {
+        closePopup();
+    });
+
+    // Event listener for the accept button
+    confirmAccept.addEventListener('click', function () {
+        if (acceptCheckbox.checked) {
+           
+            console.log('User accepted the instructions');
+            closePopup();
+        } else {
+            alert('Please accept the instructions');
+        }
+    });
+    
 </script>

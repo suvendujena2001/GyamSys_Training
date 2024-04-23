@@ -32,3 +32,33 @@ select[b-q8idy7caqn] {
     font-weight: bold;
     
 }
+
+/* Styles for the popup */
+.popup[b-q8idy7caqn] {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content[b-q8idy7caqn] {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+    .popup-content h2[b-q8idy7caqn] {
+        margin-top: 0;
+    }
+
+/* Styles for the checkbox */
+input[type="checkbox"][b-q8idy7caqn] {
+    margin-right: 5px;
+}

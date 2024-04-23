@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 
 namespace ExamAdda.Controllers
 {
+    
     public class UsersController : Controller
     {
         private readonly ExamDbcontext _context;
@@ -93,8 +94,10 @@ namespace ExamAdda.Controllers
             ViewBag.Duration = duration*60;
             ViewBag.examName = examName;
             ViewBag.marks = marks;
-
+            if(examName != null || duration!<0)
             return View();
+
+            return View("SignIn");
         }
 
         public IActionResult Details(int id)
@@ -106,7 +109,7 @@ namespace ExamAdda.Controllers
 
 
         // GET: Users/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
             ViewBag.userId = id;
             return View();

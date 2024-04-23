@@ -46,3 +46,8 @@ button.accept-policy[b-b2wak923og] {
   white-space: nowrap;
   line-height: 60px;
 }
+.heading_text[b-b2wak923og] {
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold
+}

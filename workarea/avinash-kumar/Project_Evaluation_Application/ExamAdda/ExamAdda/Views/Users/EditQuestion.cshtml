@@ -148,11 +148,13 @@
                 success: function () {
                     $('#confirmationMsg').show();
                     // Get the created by user ID
-
+                    alert("Question Updated successfully");
                     fetchUserDataAndRedirect(userId);
                 },
                 error: function (xhr, status, error) {
                     console.error('Failed to update question:', error);
+                    alert("Can not update question right now please try after some time");
+
                 }
             });
         });

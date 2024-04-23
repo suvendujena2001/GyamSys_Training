@@ -46,3 +46,8 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+.heading_text {
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold
+}

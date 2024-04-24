@@ -1,0 +1,55 @@
+<!-- 
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" [formControl]="name"><br><br>
+        <p *ngIf="name.invalid && name.touched" class="error">Invalid Entry!</p>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" [formControl]="email"><br><br>
+        <p *ngIf="email.invalid && email.touched" class="error">Invalid Entry!</p>
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" [formControl]="phone"><br><br>
+        <p *ngIf="phone.invalid && phone.touched" class="error">Invalid Entry!</p>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+        <label for="skills">Skills:</label><br>
+        <textarea id="skills" name="skills"></textarea><br><br>
+        <button onclick="emailDetail(); nameDetail(); phoneDetail();">Submit</button>
+
+    </form> -->
+    <body>
+    <h1 style="text-align: center; color:maroon; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Forms</h1>
+    <div class="container">
+        <form (ngSubmit)="submitForm()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" [formControl]="name" ><br><br>
+            <p *ngIf="name.invalid && name.touched" class="error">Invalid Entry!</p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" [formControl]="email" ><br><br>
+            <p *ngIf="email.invalid && email.touched" class="error">Invalid Entry!</p>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" [formControl]="phone" ><br><br>
+            <p *ngIf="phone.invalid && phone.touched" class="error">Invalid Entry!</p>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" [formControl]="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" [formControl]="gender" value="female">
+            <label for="female">Female</label><br><br>
+            <label for="skills">Skills:</label><br>
+            <textarea id="skills" [formControl]="skills"></textarea><br><br>
+            <button (click)="submitForm()">Submit</button>
+
+
+            <div *ngIf="submitted" class="submitted-info">
+                <h2>Submitted Information</h2>
+                <p><strong>Name:</strong>{{name.value}}</p>
+                <p><strong>Email:</strong> {{ email.value }}</p>
+                <p><strong>Phone:</strong> {{ phone.value }}</p>
+                <p><strong>Gender:</strong> {{ gender.value }}</p>
+                <p><strong>Skills:</strong> {{skills.value}}</p>
+            </div>
+        </form>
+    </div>
+    </body>

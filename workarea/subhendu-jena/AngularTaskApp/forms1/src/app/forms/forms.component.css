@@ -1,0 +1,60 @@
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-image: url('https://source.unsplash.com/random/?santorini'); 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-color:cadetblue; */
+        }
+    
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color:cadetblue;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        label {
+            font-weight: bold;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    
+        .error {
+            color:brown;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+    
+        button {
+            background-color:darkgreen; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    
+        button:hover {
+            background-color:darkred;
+        }

@@ -74,6 +74,14 @@ namespace FitKitAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<UserCredential>> PostUserCredential(UserCredential userCredential)
         {
+            userCredential.FirstName = TitleCase(userCredential.FirstName);
+            userCredential.LastName = TitleCase(userCredential.LastName);
+            userCredential.CreatedBy = $"{userCredential.FirstName} {userCredential.LastName}";
+            userCredential.ModifiedBy = $"{userCredential.FirstName} {userCredential.LastName}";
+            userCredential.CreatedDate = DateTime.Now;
+            userCredential.ModifiedDate = DateTime.Now;
+            userCredential.Active = true;
+
             // Hashing and salting
             var hashedPassword = BCrypt.Net.BCrypt.EnhancedHashPassword(userCredential.Password, HashType.SHA512);
             userCredential.Password = hashedPassword;
@@ -103,6 +111,11 @@ namespace FitKitAPI.Controllers
         private bool UserCredentialExists(int id)
         {
             return _context.UserCredential.Any(e => e.UserId == id);
+        }
+
+        private static string TitleCase(string str)
+        {
+            return str.Substring(0, 1).ToUpper() + str.Substring(1, str.Length - 1);
         }
     }
 }

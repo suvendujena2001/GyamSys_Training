@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace FitKitAPI.Models
 {
@@ -26,5 +27,10 @@ namespace FitKitAPI.Models
         public DateTime ModifiedDate { get; set; }
 
         public int ModifiedBy { get; set; }
+
+        internal ActionResult<IEnumerable<UserDetails>> ToListAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

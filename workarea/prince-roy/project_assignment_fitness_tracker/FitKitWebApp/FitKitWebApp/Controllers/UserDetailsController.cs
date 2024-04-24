@@ -18,9 +18,17 @@ namespace FitKitWebApp.Controllers
             _httpClient.BaseAddress = new Uri(url);
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var accessToken = HttpContext.Session.GetString("AccessToken");
+            if (accessToken != null)
+            {
+                return View();
+            }
+
+            TempData["AccessDenied"] = "You need to be authenticated.";
+            return RedirectToAction("Index", "Signup");
         }
 
         [HttpPost]

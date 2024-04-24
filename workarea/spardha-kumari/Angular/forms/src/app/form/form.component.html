@@ -1,0 +1,100 @@
+
+  <h2>{{title}}</h2>
+    <form [formGroup]="contactForm">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" formControlName="name" placeholder="Name" />
+            <p *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)">
+             <p *ngIf="contactForm.get('name')?.errors?.['required']">
+                 Your Name is required.
+              </p>
+              <p *ngIf="contactForm.get('name')?.errors?.['minlength']">
+      
+                Name must be at least 3 characters.
+              </p>
+            </div>
+
+            <div>
+                <label for="email">Email: </label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        placeholder="Email"
+      />
+      <p
+        *ngIf="
+          contactForm.get('email')?.invalid &&
+          (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)
+        "
+      >
+        <p *ngIf="contactForm.get('email')?.errors?.['required']">
+          Email is required.
+        </p>
+        <p *ngIf="contactForm.get('email')?.errors?.['email']">
+          Invalid email format.
+        </p>
+            </div>
+      
+     <div>
+        <label for="phoneNum">Phone Number: </label>
+      <input
+        type="text"
+        id="phoneNum"
+        formControlName="phoneNum"
+        placeholder="Phone Number"
+      />
+      <p
+        *ngIf="
+          contactForm.get('phoneNum')?.invalid &&
+          (contactForm.get('phoneNum')?.dirty || contactForm.get('phoneNum')?.touched)
+        "
+      >
+        <p *ngIf="contactForm.get('phoneNum')?.errors?.['required']">
+          Phone number is required.
+        </p>
+        <p *ngIf="contactForm.get('phoneNum')?.errors?.['pattern']">
+          Invalid phone number format.
+        </p>
+      
+
+     </div>
+  
+      
+     <div>
+        <label for="gender">Gender: </label>
+      <select id="gender" formControlName="gender">
+        <option *ngFor="let option of Options" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+      <p
+        *ngIf="
+          contactForm.get('gender')?.invalid && contactForm.get('gender')?.touched
+        "
+      >
+        <p *ngIf="contactForm.get('gender')?.errors?.['required']">
+          Gender is required.
+        </p>
+     
+     </div>
+        
+     <div>
+        <label for="skills">Skills: </label>
+      <select id="skills" formControlName="skills" multiple>
+        <option *ngFor="let option of Optionsforskills" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+     </div>
+      
+
+     <button type="submit" (onclic)="handleSubmit()">Submit</button>
+      
+    </form>
+    <div>
+
+        Form Status : {{contactForm.status}}
+    </div>
+  
+  

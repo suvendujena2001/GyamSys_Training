@@ -1,0 +1,65 @@
+
+<div class="container">
+    <h1>Registration Form</h1>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="card">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" formControlName="name">
+          <div *ngIf="myForm.get('name')?.invalid && (myForm.get('name')?.dirty || myForm.get('name')?.touched)">
+              <div *ngIf="myForm.get('name')?.errors?.['required']" style="color:red">Name is required.</div>
+              <div *ngIf="myForm.get('name')?.errors?.['maxlength']" style="color:red">Name must be at most 30 characters.</div>
+          </div>
+        </div>
+        
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email">
+          <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.dirty || myForm.get('email')?.touched)">
+              <div *ngIf="myForm.get('email')?.errors?.['required']" style="color:red">Email is required.</div> 
+              <div *ngIf="myForm.get('email')?.errors?.['email']" style="color:red">Invalid email format.</div>
+          </div>
+          </div>
+        
+        
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" formControlName="phone">
+          <div *ngIf="myForm.get('phone')?.invalid && (myForm.get('phone')?.dirty || myForm.get('phone')?.touched)">
+            <div *ngIf="myForm.get('phone')?.errors?.['required']" style="color:red">Phone Number is required.</div>
+            <div *ngIf="myForm.get('phone')?.errors?.['pattern']" style="color:red">Invalid phone number format.</div>
+          </div>
+        </div>
+        
+        <div>
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" value="male" formControlName="gender">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" formControlName="gender">
+          <label for="female">Female</label>
+          <div *ngIf="myForm.get('gender')?.invalid && (myForm.get('gender')?.dirty || myForm.get('gender')?.touched)" style="color:red">
+            Gender is required.
+          </div>
+        </div>
+        
+        <div>
+          <label for="skills">Skills:</label>
+          <textarea id="skills" formControlName="skills"></textarea>
+        </div>
+        
+        <button type="submit" [disabled]="myForm.invalid">Submit</button>
+      </form>
+</div>
+
+<hr/>
+<button (click)="showUsers()">Show Users</button>
+<hr/>
+<div *ngFor="let user of users;let i=index">
+    <h4>User-{{i+1}} Details</h4>
+  <p>Name:{{ user.name }}</p>
+  <p>Email:{{user.email}}</p>
+  <p>Phone:{{user.phone}}</p>
+  <p>Gender:{{user.gender}}</p>
+  <p>Skills:{{user.skills}}</p>
+  <button (click)="deleteuser(i)">Delete</button>
+  <hr/>
+</div>

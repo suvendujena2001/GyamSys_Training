@@ -1,0 +1,113 @@
+<h2>ANGULAR FORM</h2>
+<form [formGroup]="userForm">
+  <label for="name">Name:</label>
+  <input
+    type="text"
+    id="name"
+    formControlName="Name"
+    placeholder="Enter Name"
+  />
+  <div
+    *ngIf="
+      (userForm.controls['Name'].invalid &&
+        (isvalidSubmit || userForm.controls['Name'].touched)) ||
+      userForm.controls['Name'].dirty
+    "
+  >
+    <span *ngIf="userForm.controls['Name'].errors?.['required']"
+      >This Is Required</span
+    >
+    <span *ngIf="userForm.controls['Name'].errors?.['maxlength']"
+      >Max 30 Characters</span
+    >
+  </div>
+  <br />
+
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    formControlName="Email"
+    placeholder="Enter Email"
+  />
+  <div
+    *ngIf="
+      (userForm.controls['Email'].invalid &&
+        (isvalidSubmit || userForm.controls['Email'].touched)) ||
+      userForm.controls['Email'].dirty
+    "
+  >
+    <span *ngIf="userForm.controls['Email'].errors?.['required']"
+      >This Is Required</span
+    >
+
+    <span *ngIf="userForm.controls['Email'].errors?.['email']"
+      >Not In Valid Format</span
+    >
+  </div>
+
+  <br />
+
+  <label for="phone">Phone:</label>
+  <input
+    type="text"
+    id="phone"
+    formControlName="Phone"
+    placeholder="Enter Number"
+  />
+  <div
+    *ngIf="
+      (userForm.controls['Phone'].invalid &&
+        (isvalidSubmit || userForm.controls['Phone'].touched)) ||
+      userForm.controls['Phone'].dirty
+    "
+  >
+    <span *ngIf="userForm.controls['Phone'].errors?.['required']"
+      >This Is Required</span
+    >
+    <span *ngIf="userForm.controls['Phone'].errors?.['pattern']"
+      >Not in Format</span
+    >
+  </div>
+  <br />
+
+  <label for="gender">Gender:</label>
+  <select id="gender" formControlName="Gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <div
+    *ngIf="
+      (userForm.controls['Gender'].invalid &&
+        (isvalidSubmit || userForm.controls['Gender'].touched)) ||
+      userForm.controls['Gender'].dirty
+    "
+  >
+    <span *ngIf="userForm.controls['Gender'].errors?.['required']"
+      >This Is Required</span
+    >
+  </div>
+  <br />
+
+  <label for="skills">Skills:</label>
+  <select id="skills" formControlName="Skills">
+    <option value="Html">HTML</option>
+    <option value="Css">CSS</option>
+    <option value="JavaScript">JAVASCRIPT</option>
+    <option value="Angular">ANGULAR</option>
+  </select>
+  <div
+    *ngIf="
+      (userForm.controls['Skills'].invalid &&
+        (isvalidSubmit || userForm.controls['Skills'].touched)) ||
+      userForm.controls['Skills'].dirty
+    "
+  >
+    <span *ngIf="userForm.controls['Skills'].errors?.['required']"
+      >This Is Required</span
+    >
+  </div>
+  <br />
+
+  <button type="submit" (click)="onSubmit()">Check</button>
+</form>

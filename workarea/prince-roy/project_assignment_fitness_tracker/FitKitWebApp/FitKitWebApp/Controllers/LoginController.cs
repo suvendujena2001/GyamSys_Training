@@ -1,6 +1,7 @@
 ﻿using FitKitWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Net;
 using System.Text;
 
 namespace FitKitWebApp.Controllers
@@ -43,9 +44,14 @@ namespace FitKitWebApp.Controllers
 
                     return RedirectToAction("Index", "Home");
                 }
-                else
+                else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     TempData["Login failed"] = "The account you provided does not exist. Please signup or check your credentials and try again.";
+                    return RedirectToAction("Index", "Signup");
+                }
+                else
+                {
+                    TempData["Login failed"] = "An error occured during login. Please try again later.";
                     return RedirectToAction("Index", "Signup");
                 }
 

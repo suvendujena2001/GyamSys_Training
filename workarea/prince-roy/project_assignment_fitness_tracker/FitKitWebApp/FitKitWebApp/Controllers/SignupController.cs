@@ -19,11 +19,6 @@ namespace FitKitWebApp.Controllers
             _httpClient.BaseAddress = new Uri(url);
         }
 
-        private static string TitleCase(string str)
-        {
-            return str.Substring(0, 1).ToUpper() + str.Substring(1, str.Length - 1);
-        }
-
         [HttpGet]
         public IActionResult Index()
         {
@@ -35,14 +30,6 @@ namespace FitKitWebApp.Controllers
         {
             try
             {
-                user.FirstName = TitleCase(user.FirstName);
-                user.LastName = TitleCase(user.LastName);
-                user.CreatedBy = $"{user.FirstName} {user.LastName}";
-                user.ModifiedBy = $"{user.FirstName} {user.LastName}";
-                user.CreatedDate = DateTime.Now;
-                user.ModifiedDate = DateTime.Now;
-                user.Active = true;
-
                 var json = JsonConvert.SerializeObject(user);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -50,34 +37,35 @@ namespace FitKitWebApp.Controllers
 
                 if (response.IsSuccessStatusCode)
                 {
-                    //ModelState.Clear();
                     json = JsonConvert.SerializeObject(new { UserName = user.UserName, Password = user.Password });
                     data = new StringContent(json, Encoding.UTF8, "application/json");
                     response = await _httpClient.PostAsync("api/login", data);
+
                     if (response.IsSuccessStatusCode)
                     {
-                        var tokenResponse = await response.Content.ReadAsStringAsync();
-                        var token = JsonConvert.DeserializeObject<TokenModel>(tokenResponse);
-
-                        HttpContext.Session.SetString("AccessToken", token.Token);
-
-                        TempData["Name"] = $"{user.FirstName} {user.LastName}";
-                        TempData["UserId"] = user.UserId;
-                        var accessToken = HttpContext.Session.GetString("AccessToken");
-
-                        // Add the token to the request headers
-                        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-
-                        // Send a request to fetch UserDetails (optional)
-                        var userDetailsResponse = await _httpClient.GetAsync("api/UserDetails");
-
-                        // Check if UserDetails retrieval is successful
-                        if (userDetailsResponse.IsSuccessStatusCode)
+                        try
                         {
-                            // Proceed with redirect if UserDetails retrieval is successful
-                            return RedirectToAction("Index", "UserDetails");
+                            var tokenResponse = await response.Content.ReadAsStringAsync();
+                            var token = JsonConvert.DeserializeObject<TokenModel>(tokenResponse);
+
+                            HttpContext.Session.SetString("AccessToken", token.Token);
+
+                            TempData["Name"] = $"{user.FirstName} {user.LastName}";
+                            var accessToken = HttpContext.Session.GetString("AccessToken");
+
+                            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+                            var userDetailsResponse = await _httpClient.GetAsync("api/UserDetails");
+
+                            if (userDetailsResponse.IsSuccessStatusCode)
+                            {
+                                return RedirectToAction("Index", "UserDetails");
+                            }
                         }
-                        //return RedirectToAction("Index", "UserDetails");
+                        catch (Exception ex)
+                        {
+                            return View(ex.Message);
+                        }
                     }
                 }
                 else

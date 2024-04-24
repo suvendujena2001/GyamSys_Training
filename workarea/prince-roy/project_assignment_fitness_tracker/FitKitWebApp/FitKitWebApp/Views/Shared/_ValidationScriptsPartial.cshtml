@@ -2,7 +2,7 @@
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 <script>
-    var observer = new MutationObserver((mutationList) => {
+    var observer = new MutationObserver((mutationsList) => {
         mutationsList.forEach((mutation) => {
             if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
                 mutation.addedNodes.forEach((node) => {

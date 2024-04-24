@@ -1,0 +1,22 @@
+.task-add-container {
+    margin-bottom: 20px;
+  }
+  
+  .task-input {
+    padding: 3px;
+    margin-right: 5px;
+    border: 1px solid #eeb8b8;
+  }
+  
+  .task-button {
+    padding: 4px 8px;
+    background-color: #b700ff;
+    color: #a09d9d;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  .tak-button:hove{
+    background-color: rgb(127, 47, 255);
+  }

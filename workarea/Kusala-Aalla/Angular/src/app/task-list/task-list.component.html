@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let task in taskService.getTasks(); let i = index">
+      <span>{{ task }}</span> 
+      <button (click)="deleteTask(i)">Delete</button>
+      <button (click)="updateTask(i)">Update</button> 
+    </li>
+  </ul>

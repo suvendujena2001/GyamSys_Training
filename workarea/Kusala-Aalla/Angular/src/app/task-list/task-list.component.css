@@ -1,0 +1,20 @@
+li {
+    margin-bottom: 8px;
+  }
+input[type="text"] {
+    padding: 4px;
+    margin-right: 8px;
+  }
+  
+  button {
+    padding: 3px 6px;
+    cursor: pointer;
+    background-color: #ddd1d2;
+    color: #fff;
+    border-radius: 2px;
+  }
+  
+  button:hover {
+    background-color: #afa8a9;
+  }
+  

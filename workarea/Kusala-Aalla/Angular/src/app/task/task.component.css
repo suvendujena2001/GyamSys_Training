@@ -1,0 +1,17 @@
+.task-add-container {
+    margin-bottom: 15px;
+  }
+   
+  .task-input {
+    padding: 4px;
+    margin-right: 8px;
+    border: 1px solid #554b4b;
+  }
+   
+  .task-button {
+    padding: 4px 8px;
+    background-color: #83b8f0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }

@@ -1,0 +1,27 @@
+
+.container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto; 
+    max-width: 600px; 
+    text-align: center;
+    background-color: lightblue; 
+}
+
+.container h1 {
+    color: rgb(236, 97, 55); 
+}
+
+.detail {
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+.detail label {
+    font-weight: bold;
+}
+
+.detail span {
+    margin-left: 10px;
+}

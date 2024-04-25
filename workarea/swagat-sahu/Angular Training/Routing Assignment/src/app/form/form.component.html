@@ -1,0 +1,30 @@
+<body>
+<form class="form-container">
+  <h1>Form Validation</h1>
+    <label for="name">Name</label>
+    <span class="mandatory">*</span>
+    <input type="text" id="name" name="name" [formControl]="name">
+    <p *ngIf="name.invalid && name.touched" class="error">Invalid Entry!</p>
+    
+    <label for="email">Email</label>
+    <span class="mandatory">*</span>
+    <input type="email" id="email" name="email" [formControl]="email">
+    <p *ngIf="email.invalid && email.touched" class="error">Invalid Entry!</p>
+    
+    <label for="phone">Phone</label>
+    <span class="mandatory">*</span><br>
+    <input type="tel" id="phone" name="phone" [formControl]="phone"><br>
+    <p *ngIf="phone.invalid && phone.touched" class="error">Invalid Entry!</p>
+    
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" [formControl]="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+  
+    <label for="skills">Skills</label>
+    <input type="text" id="skills" name="skills" [formControl]="skills" required>
+  
+    <button type="button" (click)="onSubmit()">Submit</button>
+</form>
+</body>

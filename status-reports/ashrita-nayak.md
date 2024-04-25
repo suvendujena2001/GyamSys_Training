@@ -78,5 +78,8 @@
    * I was working upon my assigned project throughout the week.
    * On the last working day, we gave a React evaluation test.
 
-    ## Week 11 (15th April 2024 to 19th April 2024)
+    ## Week 11 (15th April 2024 to 17th April 2024)
+   *
+
+    ## 18th April 2024 to 10th May 2024 - LEAVE FOR ACADEMIC PURPOSES.
    

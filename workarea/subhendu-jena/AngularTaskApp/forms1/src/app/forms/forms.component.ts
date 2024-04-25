@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,EventEmitter,Output } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-forms',
   standalone: true,
@@ -16,18 +16,19 @@ export class FormsComponent {
   gender=new FormControl('');
   skills=new FormControl('');
   submitted:boolean=false;
- 
-  // emailDetail(){
-  //   console.log(this.email);
-  // }
-  // nameDetail(){
-  //   console.log(this.name);
-  // }
-  // phoneDetail(){
-  //   console.log(this.phone);
-  // }
-  submitForm(){
-    this.submitted=true;
-  }
+  constructor(private router: Router) {}
 
+  @Output() formDataSubmitted: EventEmitter<any> = new EventEmitter<any>();
+  submitForm(){
+  this.submitted = true;
+    const formData = {
+      email: this.email.value,
+      name: this.name.value,
+      phone: this.phone.value,
+      gender: this.gender.value,
+      skills: this.skills.value
+    };
+    this.formDataSubmitted.emit(formData);
+    this.router.navigate(['/details'], { queryParams: formData });
+}
 }

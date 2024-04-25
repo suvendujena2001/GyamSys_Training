@@ -1,0 +1,30 @@
+/* form-data-display.component.css */
+
+/* Style the container and row */
+
+
+/* Style the card */
+.card {
+  background-color: #a4a7e270; /* White */
+  border: 1px solid #ccc; /* Gray */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+/* Style the card body */
+.card-body {
+  color: #333; /* Dark gray */
+}
+
+/* Style the card title */
+.card-title {
+  font-size: 30px;
+  color: #333; /* Dark gray */
+}
+
+/* Style the card text */
+.card-text {
+  font-size: 22px;
+  color: #555; /* Medium gray */
+  margin-bottom: 10px;
+}

@@ -79,7 +79,7 @@
    * On the last working day, we gave a React evaluation test.
 
     ## Week 11 (15th April 2024 to 17th April 2024)
-   *
+   * Angular sessions started from the first day of the week. 
 
     ## 18th April 2024 to 10th May 2024 - LEAVE FOR ACADEMIC PURPOSES.
    

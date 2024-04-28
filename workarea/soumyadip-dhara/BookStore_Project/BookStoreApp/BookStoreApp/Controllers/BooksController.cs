@@ -9,6 +9,7 @@ using BookStoreApp.Data;
 using BookStoreApp.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using OfficeOpenXml;
 
 namespace BookStoreApp.Controllers
 {
@@ -24,7 +25,13 @@ namespace BookStoreApp.Controllers
         }
 
 
-        public async Task<IActionResult> Search(string searchTerm)
+        //public async Task<IActionResult> Search(string searchTerm)
+        //{
+            
+        //}
+
+        // GET: Books
+        public async Task<IActionResult> Index(string searchTerm)
         {
             var booksQuery = _context.Books.AsQueryable();
 
@@ -36,20 +43,15 @@ namespace BookStoreApp.Controllers
                     EF.Functions.Like(b.Title, $"%{searchTerm}%") ||
                     EF.Functions.Like(b.ISBN, $"%{searchTerm}%") ||
                     EF.Functions.Like(b.AuthorName, $"%{searchTerm}%") ||
-                    EF.Functions.Like(b.GenreName,$"%{searchTerm}")
+                    EF.Functions.Like(b.GenreName, $"%{searchTerm}")
                 );
             }
 
             var books = await booksQuery.ToListAsync();
 
-            return View("Search",books);
-        }
-
-        // GET: Books
-        public async Task<IActionResult> Index()
-        {
-            var bookStoreAppContext = _context.Books.Include(b => b.Author).Include(b => b.Genre).Include(b => b.User);
-            return View(await bookStoreAppContext.ToListAsync());
+            return View(books);
+            //var bookStoreAppContext = _context.Books.Include(b => b.Author).Include(b => b.Genre).Include(b => b.User);
+            //return View(await bookStoreAppContext.ToListAsync());
         }
 
         // GET: Books/Details/5
@@ -137,23 +139,144 @@ namespace BookStoreApp.Controllers
             return View(book);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Import(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                TempData["Error"] = "Please select a file to upload.";
+                return RedirectToAction(nameof(Index));
+            }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create([Bind("BookID,ISBN,Title,AuthorID,AuthorName,GenreID,GenreName,CoverImage,Price,Page,Description,PublicationDate,Popularity,Availability,UserId,CreatedDate,UpdatedDate")] Book book)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _context.Add(book);
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    ViewData["AuthorID"] = new SelectList(_context.Authors, "AuthorID", "AuthorID", book.AuthorID);
-        //    ViewData["GenreID"] = new SelectList(_context.Genres, "GenreID", "GenreID", book.GenreID);
-        //    ViewData["UserId"] = new SelectList(_context.Users, "UserID", "UserID", book.UserId);
-        //    return View(book);
-        //}
+            try
+            {
+                using (var stream = file.OpenReadStream())
+                {
+                    using (var package = new ExcelPackage(stream))
+                    {
+                        var worksheet = package.Workbook.Worksheets[0]; // Assuming the data is in the first worksheet
 
+                        int rowCount = worksheet.Dimension.Rows;
+                        for (int row = 2; row <= rowCount; row++) // Assuming the first row is header
+                        {
+                            var isbn = worksheet.Cells[row, 1].Value?.ToString();
+                            var existingBook = await _context.Books.FirstOrDefaultAsync(b => b.ISBN == isbn);
+
+                            if (existingBook != null)
+                            {
+                                // Update the existing book with new details
+                                existingBook.Title = worksheet.Cells[row, 2].Value?.ToString();
+                                existingBook.AuthorName = worksheet.Cells[row, 3].Value?.ToString();
+                                existingBook.GenreName = worksheet.Cells[row, 4].Value?.ToString();
+                                existingBook.CoverImage = worksheet.Cells[row, 5].Value?.ToString();
+                                existingBook.Price = decimal.Parse(worksheet.Cells[row, 6].Value?.ToString());
+                                existingBook.Page = int.Parse(worksheet.Cells[row, 7].Value?.ToString());
+                                existingBook.Description = worksheet.Cells[row, 8].Value?.ToString();
+                                existingBook.PublicationDate = DateTime.Parse(worksheet.Cells[row, 9].Value?.ToString());
+                                existingBook.Availability = bool.Parse(worksheet.Cells[row, 10].Value?.ToString());
+                                existingBook.Popularity = decimal.Parse(worksheet.Cells[row, 11].Value?.ToString());
+                                existingBook.UserUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                                existingBook.UpdatedDate = DateTime.Now;
+
+                                // Check if author exists, if not create new
+                                var existingAuthor = await _context.Authors.FirstOrDefaultAsync(a => a.AuthorName == existingBook.AuthorName);
+                                if (existingAuthor == null)
+                                {
+                                    var newAuthor = new Author { AuthorName = existingBook.AuthorName };
+                                    _context.Authors.Add(newAuthor);
+                                    await _context.SaveChangesAsync();
+                                    existingBook.AuthorID = newAuthor.AuthorID;
+                                }
+                                else
+                                {
+                                    existingBook.AuthorID = existingAuthor.AuthorID;
+                                }
+
+                                // Check if genre exists, if not create new
+                                var existingGenre = await _context.Genres.FirstOrDefaultAsync(g => g.GenreName == existingBook.GenreName);
+                                if (existingGenre == null)
+                                {
+                                    var newGenre = new Genre { GenreName = existingBook.GenreName };
+                                    _context.Genres.Add(newGenre);
+                                    await _context.SaveChangesAsync();
+                                    existingBook.GenreID = newGenre.GenreID;
+                                }
+                                else
+                                {
+                                    existingBook.GenreID = existingGenre.GenreID;
+                                }
+
+                                // Update the existing book in the database
+                                _context.Books.Update(existingBook);
+                            }
+                            else
+                            {
+                                // Create a new book if it doesn't exist
+                                var book = new Book
+                                {
+                                    ISBN = isbn,
+                                    Title = worksheet.Cells[row, 2].Value?.ToString(),
+                                    AuthorName = worksheet.Cells[row, 3].Value?.ToString(),
+                                    GenreName = worksheet.Cells[row, 4].Value?.ToString(),
+                                    CoverImage = worksheet.Cells[row, 5].Value?.ToString(),
+                                    Price = decimal.Parse(worksheet.Cells[row, 6].Value?.ToString()),
+                                    Page = int.Parse(worksheet.Cells[row, 7].Value?.ToString()),
+                                    Description = worksheet.Cells[row, 8].Value?.ToString(),
+                                    PublicationDate = DateTime.Parse(worksheet.Cells[row, 9].Value?.ToString()),
+                                    Availability = bool.Parse(worksheet.Cells[row, 10].Value?.ToString()),
+                                    Popularity = decimal.Parse(worksheet.Cells[row, 11].Value?.ToString()),
+                                    UserUserId = User.FindFirstValue(ClaimTypes.NameIdentifier),
+                                    CreatedDate = DateTime.Now,
+                                    UpdatedDate = DateTime.Now
+                                };
+
+                                // Check if author exists, if not create new
+                                var existingAuthor = await _context.Authors.FirstOrDefaultAsync(a => a.AuthorName == book.AuthorName);
+                                if (existingAuthor == null)
+                                {
+                                    var newAuthor = new Author { AuthorName = book.AuthorName };
+                                    _context.Authors.Add(newAuthor);
+                                    await _context.SaveChangesAsync();
+                                    book.AuthorID = newAuthor.AuthorID;
+                                }
+                                else
+                                {
+                                    book.AuthorID = existingAuthor.AuthorID;
+                                }
+
+                                // Check if genre exists, if not create new
+                                var existingGenre = await _context.Genres.FirstOrDefaultAsync(g => g.GenreName == book.GenreName);
+                                if (existingGenre == null)
+                                {
+                                    var newGenre = new Genre { GenreName = book.GenreName };
+                                    _context.Genres.Add(newGenre);
+                                    await _context.SaveChangesAsync();
+                                    book.GenreID = newGenre.GenreID;
+                                }
+                                else
+                                {
+                                    book.GenreID = existingGenre.GenreID;
+                                }
+
+                                // Add the new book to the database
+                                _context.Books.Add(book);
+                            }
+                        }
+
+                        // Save changes to the database
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
+                TempData["Message"] = "File uploaded successfully.";
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = $"An error occurred while importing the file: {ex.Message}";
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
 
 
         // GET: Books/Edit/5

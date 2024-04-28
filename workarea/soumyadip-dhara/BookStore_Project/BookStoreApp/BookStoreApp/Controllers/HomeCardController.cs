@@ -22,22 +22,64 @@ namespace BookStoreApp.Controllers
         }
 
         // GET: Books
-        public async Task<IActionResult> Index(int? page)
+        //public async Task<IActionResult> Index(int? page)
+        //{
+        //    int pageSize = 4;
+        //    int pageNumber = page ?? 1;
+
+        //    var books = await _context.Books
+        //        .Include(b => b.Author)
+        //        .Include(b => b.Genre)
+        //        .Include(b => b.User)
+        //        .ToListAsync();
+
+        //    var paginatedBooks = PaginatedList<Book>.Create(books.AsQueryable(), pageNumber, pageSize);
+
+        //    string currentUrl = HttpContext.Request.Path + HttpContext.Request.QueryString;
+        //    ViewData["CurrentUrl"] = currentUrl;
+
+        //    string userId = GetCurrentUserId();
+        //    var wishlistBookIds = await _context.Wishlists
+        //        .Where(w => w.UserId == userId)
+        //        .Select(w => w.BookID)
+        //        .ToListAsync();
+
+        //    ViewData["WishlistBookIds"] = wishlistBookIds;
+
+        //    return View(paginatedBooks);
+        //}
+
+        public async Task<IActionResult> Index(string searchQuery, int? page)
         {
             int pageSize = 4;
             int pageNumber = page ?? 1;
 
-            var books = await _context.Books
+            // Retrieve all books from the database
+            var booksQuery = _context.Books
                 .Include(b => b.Author)
                 .Include(b => b.Genre)
                 .Include(b => b.User)
-                .ToListAsync();
+                .AsQueryable();
 
+            // If a search query is provided, filter the books based on the search query
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                booksQuery = booksQuery.Where(b =>
+                    b.Title.Contains(searchQuery) ||
+                    b.Author.AuthorName.Contains(searchQuery) ||
+                    b.Genre.GenreName.Contains(searchQuery)
+                );
+            }
+
+            var books = await booksQuery.ToListAsync();
+
+            // Create a paginated list of books
             var paginatedBooks = PaginatedList<Book>.Create(books.AsQueryable(), pageNumber, pageSize);
 
-            string currentUrl = HttpContext.Request.Path + HttpContext.Request.QueryString;
-            ViewData["CurrentUrl"] = currentUrl;
+            // Pass the current search query to the view
+            ViewData["CurrentSearchQuery"] = searchQuery;
 
+            // Retrieve wishlist book IDs for the current user
             string userId = GetCurrentUserId();
             var wishlistBookIds = await _context.Wishlists
                 .Where(w => w.UserId == userId)

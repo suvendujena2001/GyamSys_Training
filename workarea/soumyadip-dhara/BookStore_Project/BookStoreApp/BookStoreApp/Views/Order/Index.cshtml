@@ -17,7 +17,7 @@
             <input type="date" class="form-control" id="endDate" name="endDate">
         </div>
         <div class="form-group col-md-1">
-            <button type="submit" class="btn btn-primary mx-2">Filter</button>
+            <button type="submit" class="btn btn-primary mx-2"><i class="fa-solid fa-filter"></i>Filter</button>
         </div>
     </div>
 </form>
@@ -53,12 +53,28 @@
         </tbody>
     </table>
     <div class="d-flex justify-content-end">
-        <a href="@Url.Action("GenerateInvoice", new { startDate = DateTime.Now.AddDays(-7), endDate = DateTime.Now })" class="btn btn-success">Generate Invoice</a>
+        @{
+            DateTime startDateFilter = DateTime.MinValue;
+            DateTime endDateFilter = DateTime.MaxValue;
+
+            var startDateParam = ViewContext.HttpContext.Request.Query["startDate"];
+            var endDateParam = ViewContext.HttpContext.Request.Query["endDate"];
+
+            if (!string.IsNullOrEmpty(startDateParam) && !string.IsNullOrEmpty(endDateParam))
+            {
+                DateTime.TryParse(startDateParam, out startDateFilter);
+                DateTime.TryParse(endDateParam, out endDateFilter);
+            }
+        }
+
+        <a href="@Url.Action("GenerateInvoice", new { startDate = startDateFilter, endDate = endDateFilter })" class="btn btn-success"><i class="fa-solid fa-file-invoice"></i>Generate Invoice</a>
     </div>
+
+
 
 }
 else
 {
-    <h3>You have not ordered Anything Till Now.</h3>
+    <h3>No Order Details Found</h3>
     <a asp-controller="HomeCard" asp-action="Index" asp-route-id="" class="btn btn-success"><i class="fa-solid fa-book"></i>Browse Books</a>
 }

@@ -7,19 +7,33 @@
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-        <li class="nav-item">
-            @{
-                var user = await UserManager.GetUserAsync(User);
-                var fullName = user.FullName;
-            }
-            <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @fullName!</a>
-        </li>
 
-    <li class="nav-item">
-        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "HomeCard", new { area = "" })">
-            <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">Logout</button>
-        </form>
-    </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="WishList" asp-action="Index"><i class="fa-solid fa-heart"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" style="margin-right:5px"  aria-labelledby="profileDropdown">
+                <li class="nav-item">
+                    @{
+                        var user = await UserManager.GetUserAsync(User);
+                        var fullName = user.FullName;
+                    }
+                    <a id="manage" class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @fullName!</a>
+                </li>
+                <li class="nav-item">
+                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "HomeCard", new { area = "" })">
+                        <button id="logout" type="submit" class="dropdown-item" style="border: none;"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
 }
 else
 {

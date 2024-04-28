@@ -68,3 +68,8 @@
     object-fit: cover;
     background-attachment: fixed;*/
 }
+
+.det-img:hover {
+    transform: scale(1.05);
+    box-shadow: lightgray 2px 5px 5px 2px;
+}

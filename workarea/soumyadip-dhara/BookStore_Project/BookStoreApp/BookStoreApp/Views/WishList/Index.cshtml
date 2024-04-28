@@ -23,15 +23,15 @@
                     <td>@item.Book.Title</td>
                     <td>@item.Book.Price.ToString("c")</td>
                     <td>
-                        <a href="@Url.Action("Details", "HomeCard", new { id = item.BookID })" class="btn btn-info">Details</a>
+                        <a href="@Url.Action("Details", "HomeCard", new { id = item.BookID })" class="btn btn-info"><i class="fa-solid fa-circle-info"></i></a>
                         <form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
                             <input type="hidden" name="id" value="@item.BookID" />
-                            <button type="submit" class="btn btn-success">Add to Cart</button>
+                            <button type="submit" class="btn btn-success"><i class="fa-solid fa-cart-plus"></i></button>
                         </form>
 
                         <form asp-controller="WishList" asp-action="RemoveFromWishlist" method="post" style="display: inline;">
                             <input type="hidden" name="id" value="@item.WishlistID" />
-                            <button type="submit" class="btn btn-danger">Remove</button>
+                            <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
                         </form>
                     </td>
                 </tr>

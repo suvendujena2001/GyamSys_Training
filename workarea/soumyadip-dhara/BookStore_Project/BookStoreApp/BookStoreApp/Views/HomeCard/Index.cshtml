@@ -6,10 +6,21 @@
 }
 <h2 class="my-4">Store</h2>
 
-<form class="form-inline mt-3 mb-3 d-flex justify-content-end" method="get" action="@Url.Action("Search", "Books")">
+@* <form class="form-inline mt-3 mb-3 d-flex justify-content-end" method="get" action="@Url.Action("Search", "Books")">
     <input class="form-control mr-sm-2 w-25 px-3" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form> *@
+<form method="get" action="@Url.Action("Index")">
+    <div class="d-flex justify-content-end">
+        <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="searchQuery" name="searchQuery" placeholder="Search by title,author,genre and ISBN">
+        </div>
+        <div class="form-group col-md-1">
+            <button type="submit" class="btn btn-primary mx-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
 </form>
+
 
 <div class="row">
     @foreach (var book in Model)

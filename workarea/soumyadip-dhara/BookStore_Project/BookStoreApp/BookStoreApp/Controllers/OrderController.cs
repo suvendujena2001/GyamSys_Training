@@ -59,18 +59,19 @@ namespace BookStoreApp.Controllers
         public async Task<IActionResult> GenerateInvoice(DateTime? startDate, DateTime? endDate)
         {
             string userId = GetCurrentUserId();
-            var ordersQuery = _context.Orders
+            IQueryable<Order> ordersQuery = _context.Orders
                 .Where(u => u.UserUserID == userId)
                 .Include(o => o.OrderDetails)
                 .ThenInclude(od => od.Book)
                 .OrderByDescending(o => o.OrderDate);
+
             if (startDate.HasValue)
             {
-                ordersQuery = (IOrderedQueryable<Order>)ordersQuery.Where(o => o.OrderDate >= startDate.Value);
+                ordersQuery = ordersQuery.Where(o => o.OrderDate >= startDate.Value);
             }
             if (endDate.HasValue)
             {
-                ordersQuery = (IOrderedQueryable<Order>)ordersQuery.Where(o => o.OrderDate <= endDate.Value);
+                ordersQuery = ordersQuery.Where(o => o.OrderDate <= endDate.Value);
             }
 
             var orders = await ordersQuery.ToListAsync();

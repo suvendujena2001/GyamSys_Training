@@ -1,0 +1,13 @@
+<div *ngFor="let task of tasks; let i = index">
+    <ng-container *ngIf="editingIndex !== i; else editMode">
+      <p>{{ task }}
+      <button (click)="toggleEditMode(i)">Update</button>
+      <button (click)="deleteTask(i)">Delete</button></p>
+    </ng-container>
+    <ng-template #editMode>
+      <input type="text" [(ngModel)]="updatedTask">
+      <button (click)="updateTask(i)">Update</button>
+      <button (click)="cancelEdit()">Cancel</button>
+    </ng-template>
+  </div>
+  

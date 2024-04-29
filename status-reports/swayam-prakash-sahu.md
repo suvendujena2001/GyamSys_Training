@@ -354,3 +354,31 @@ h. Operators
 2. Self Learning React concepts
 3. Self Practing MVC concepts
 4. Working on project assignment
+   
+## WEEK 10 (08-APRIL-2024 to 14-APRIL-2024)
+
+
+### DAY - 1 ( Apr 8, 2024)
+
+1. React training (useState, useEffect and useMemo)
+2. Going through React Concepts.
+3. Working on Project Assignment.
+
+### DAY - 2 (Apr 10, 2024) 
+
+1. Working on assignment Project. 
+2. Self-study on react concepts (useState, useEffect and useMemo). 
+3.Self-study on MVC concepts.
+
+### DAY - 3 (Apr 11, 2024) 
+
+1. Working on assignment project.
+2. Self learning React Concepts.
+3. Working on building interactive react landing pages.
+
+### DAY - 4 (Apr 12, 2024) 
+
+1. Working on assignment project.
+2. Self learning React Concepts.
+3. Evaluation week 10
+4. Self Learning Typescript important concepts.

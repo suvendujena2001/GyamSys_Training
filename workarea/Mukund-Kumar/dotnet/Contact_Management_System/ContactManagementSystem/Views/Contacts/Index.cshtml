@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ContactManagementSystem.Models.Contact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>My Contacts</h1>
+<form class="form-inline mt-3 mb-3 d-flex justify-content-end" method="get" action="@Url.Action("Search", "Contacts")">
+    <input class="form-control mr-sm-2 w-25 px-3" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+<div class="mb-3">
+    <form class="form-inline mt-3 mb-3 d-flex justify-content-end" method="get" action="@Url.Action("Index", "Contacts")">
+        <label for="categoryFilter" class="mr-2 mt-1">Filter by Category:</label>
+        <select class="form-control mr-sm-2 w-25 px-3" id="categoryFilter" name="categoryId">
+            <option value="">All Categories</option>
+            @foreach (var category in ViewBag.Categories)
+            {
+                <option value="@category.CategoryID">@category.CategoryName</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+</div>
+
+
+<p>
+    <a asp-action="Create"class="btn btn-success">Add New Contact</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th> *@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+           @*  <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td> *@
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

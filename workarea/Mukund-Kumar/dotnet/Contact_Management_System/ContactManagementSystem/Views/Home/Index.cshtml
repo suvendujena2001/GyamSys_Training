@@ -1,0 +1,47 @@
+﻿@model List<ContactManagementSystem.Models.Contact>
+@{
+    ViewData["Title"] = "Home";
+}
+
+@* <a class="btn btn-primary" asp-controller="Contact" asp-action="Add">Add Contact</a>
+
+<table class="table">
+    <tr>
+        <th>
+            Frist Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Phone Number
+        </th>
+        <th>
+            Email
+        </th>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                    <a asp-controller="Contact" asp-action="Edit" asp-route-id="@item.Id" asp-route-slug="@item.Slug">@Html.DisplayFor(modelItem
+     =>item.FirstName)</a>
+            </td>
+            <td>
+                <a asp-controller="Contact" asp-action="Edit" asp-route-id="@item.Id" asp-route-slug="@item.Slug">
+                        @Html.DisplayFor(modelItem
+     =>item.LastName)</a>
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-controller="Contact" asp-action="Details" asp-route-id="@item.Id" >Details</a>
+                <a asp-controller="Contact" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+        }
+</table> *@

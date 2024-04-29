@@ -382,3 +382,37 @@ h. Operators
 2. Self learning React Concepts.
 3. Evaluation week 10
 4. Self Learning Typescript important concepts.
+
+## WEEK 11 (15-APRIL-2024 to 21-APRIL-2024)
+
+### Day - 1 (Apr 15, 2024)
+
+1. Angular Training
+2. React Blog Project
+3. Self Practice Angular(Importing and using components)
+
+### DAY - 2 (Apr 16, 2024)	
+
+1. Angular Training(Services)
+2. Self Practice Angular(Component selectors, Types of selectors, Selector prefixes )
+3. Self practice Typescript
+4. Working on React Blog Project
+
+### DAY - 3 (Apr 17, 2024)	
+
+1. Angular Training
+2. Self practice React concepts
+3. Self practice Angular concepts(Styling components)
+
+### DAY - 4 (Apr 18, 2024)	
+
+1. Angular Training
+2. Self practice React concepts
+3. Self practice Angular concepts(Services and Directives, Accepting data with input properties)
+
+### DAY - 5 (Apr 19, 2024)	
+
+1. Self practice typescript concepts
+2. Self practice React concepts
+3. Self practice Angular concepts(Custom events with outputs, Component Lifecycle)
+4. Working on Angular assignment(Task manager)

@@ -1,0 +1,34 @@
+
+<div class="container">
+    <h1>Registration Form</h1>
+    <form [formGroup]="Register" (ngSubmit)="onSubmit()" class="card">
+        <div>
+          <label for="username">User Name:</label>
+          <input type="text" id="username" formControlName="username">
+          <div *ngIf="Register.get('username')?.invalid && (Register.get('username')?.dirty || Register.get('username')?.touched)">
+              <div *ngIf="Register.get('username')?.errors?.['required']" style="color:red">username is required.</div>
+              <div *ngIf="Register.get('username')?.errors?.['maxlength']" style="color:red">username must be at most 30 characters.</div>
+          </div>
+        </div>
+        
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email">
+          <div *ngIf="Register.get('email')?.invalid && (Register.get('email')?.dirty || Register.get('email')?.touched)">
+              <div *ngIf="Register.get('email')?.errors?.['required']" style="color:red">Email is required.</div> 
+              <div *ngIf="Register.get('email')?.errors?.['email']" style="color:red">Invalid email format.</div>
+          </div>
+          </div>
+        
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" formControlName="password">
+            <div *ngIf="Register.get('password')?.invalid && (Register.get('password')?.dirty || Register.get('password')?.touched)">
+              <div *ngIf="Register.get('password')?.errors?.['required']" style="color:red">Password is required.</div>
+            </div>
+          </div>
+        <button type="submit">Submit</button>
+      </form>   
+      <a href="login">Alrady have account? please Log In</a>
+</div>
+

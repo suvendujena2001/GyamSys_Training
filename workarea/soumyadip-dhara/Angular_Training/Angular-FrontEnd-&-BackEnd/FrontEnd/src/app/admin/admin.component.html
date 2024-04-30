@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Welcome to Admin Dashboard!!</h1>
+    <a href="home"><button>Log Out</button></a>
+    <table class="table-data">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Verified</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of logins; let i=index">
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+            <ng-container *ngIf="user.verify; else verifyButton">
+              True
+            </ng-container>
+            <ng-template #verifyButton>
+              <button (click)="verifyUser(user)">Verify</button>
+            </ng-template>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

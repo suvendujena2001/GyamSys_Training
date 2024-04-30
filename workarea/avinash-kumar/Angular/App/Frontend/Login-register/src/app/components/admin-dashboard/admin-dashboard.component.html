@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Verify</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.verify }}</td>
+            <td>
+                <button *ngIf="user.verify === null || user.verify === false" class="btn btn-primary"
+                    (click)="verifyUser(user.userid, user.email, user.username,user.password)">Verify</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-dark" (click)="logout()"> logout</a>
+<button class="btn btn-dark m-3" (click)="downloadExcel()">Download Excel</button>

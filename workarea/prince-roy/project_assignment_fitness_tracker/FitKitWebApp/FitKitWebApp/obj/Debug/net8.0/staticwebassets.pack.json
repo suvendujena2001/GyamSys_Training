@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\Content\\Dashboard.styles.scss"
     },
     {
+      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Exercise.style.css",
+      "PackagePath": "staticwebassets\\Content\\Exercise.style.css"
+    },
+    {
+      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Exercise.style.min.css",
+      "PackagePath": "staticwebassets\\Content\\Exercise.style.min.css"
+    },
+    {
+      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Exercise.style.scss",
+      "PackagePath": "staticwebassets\\Content\\Exercise.style.scss"
+    },
+    {
       "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Form.style.css",
       "PackagePath": "staticwebassets\\Content\\Form.style.css"
     },
@@ -39,30 +51,6 @@
     {
       "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Login.styles.scss",
       "PackagePath": "staticwebassets\\Content\\Login.styles.scss"
-    },
-    {
-      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Navbar.styles.css",
-      "PackagePath": "staticwebassets\\Content\\Navbar.styles.css"
-    },
-    {
-      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Navbar.styles.min.css",
-      "PackagePath": "staticwebassets\\Content\\Navbar.styles.min.css"
-    },
-    {
-      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Navbar.styles.scss",
-      "PackagePath": "staticwebassets\\Content\\Navbar.styles.scss"
-    },
-    {
-      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Profile.styles.css",
-      "PackagePath": "staticwebassets\\Content\\Profile.styles.css"
-    },
-    {
-      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Profile.styles.min.css",
-      "PackagePath": "staticwebassets\\Content\\Profile.styles.min.css"
-    },
-    {
-      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\Profile.styles.scss",
-      "PackagePath": "staticwebassets\\Content\\Profile.styles.scss"
     },
     {
       "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\Content\\UserDetails.styles.css",
@@ -89,6 +77,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\images\\Arrow.gif",
+      "PackagePath": "staticwebassets\\images\\Arrow.gif"
+    },
+    {
       "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\images\\Avatar.svg",
       "PackagePath": "staticwebassets\\images\\Avatar.svg"
     },
@@ -113,8 +105,20 @@
       "PackagePath": "staticwebassets\\images\\activity.svg"
     },
     {
+      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\images\\chevron-left-arrow.svg",
+      "PackagePath": "staticwebassets\\images\\chevron-left-arrow.svg"
+    },
+    {
+      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\images\\chevron-right-arrow.svg",
+      "PackagePath": "staticwebassets\\images\\chevron-right-arrow.svg"
+    },
+    {
       "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\images\\discover.svg",
       "PackagePath": "staticwebassets\\images\\discover.svg"
+    },
+    {
+      "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\images\\down-arrow.svg",
+      "PackagePath": "staticwebassets\\images\\down-arrow.svg"
     },
     {
       "Id": "C:\\frontend-challenges\\get-2024-microsoft\\workarea\\prince-roy\\project_assignment_fitness_tracker\\FitKitWebApp\\FitKitWebApp\\wwwroot\\images\\down.png",

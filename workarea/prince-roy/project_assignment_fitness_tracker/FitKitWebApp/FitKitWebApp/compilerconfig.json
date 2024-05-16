@@ -12,15 +12,19 @@
     "inputFile": "wwwroot/Content/UserDetails.styles.scss"
   },
   {
-    "outputFile": "wwwroot/Content/Navbar.styles.css",
-    "inputFile": "wwwroot/Content/Navbar.styles.scss"
-  },
-  {
-    "outputFile": "wwwroot/Content/Profile.styles.css",
-    "inputFile": "wwwroot/Content/Profile.styles.scss"
-  },
-  {
     "outputFile": "wwwroot/Content/Dashboard.styles.css",
     "inputFile": "wwwroot/Content/Dashboard.styles.scss"
+  },
+  {
+    "outputFile": "Views/Shared/_Navbar.cshtml.css",
+    "inputFile": "Views/Shared/_Navbar.cshtml.scss"
+  },
+  {
+    "outputFile": "Views/Shared/_ProfileSection.cshtml.css",
+    "inputFile": "Views/Shared/_ProfileSection.cshtml.scss"
+  },
+  {
+    "outputFile": "wwwroot/Content/Exercise.style.css",
+    "inputFile": "wwwroot/Content/Exercise.style.scss"
   }
 ]

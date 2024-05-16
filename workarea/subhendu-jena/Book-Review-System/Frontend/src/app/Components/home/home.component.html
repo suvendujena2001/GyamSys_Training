@@ -1,0 +1,86 @@
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Vertical Navbar -->
+            <div class="col-md-2">
+                <nav
+                    class="navbar navbar-expand-md navbar-dark bg-dark rounded flex-md-column flex-row align-items-start fixed-left">
+                    <a class="navbar-brand" routerLink="/home" routerLinkActive="active">Welcome</a>
+                    <div class="d-flex flex-row justify-content-between align-items-center w-100">
+                        <div class="text-light mx-4">{{username}}</div>
+                        <div class="btn btn-danger" (click)="Logout()">LogOut</div>
+                    </div>
+                    <div id="navbarNav ">
+                        <ul class="navbar-nav flex-column m-3 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <div><a class="nav-link" routerLink="/userComments" routerLinkActive="active">My
+                                        comments</a>
+                                </div>
+                            </li>
+
+                            <!-- Add more fields as needed -->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Book Cards -->
+            <div class="col-md-9">
+                <div class="row">
+
+                    <!-- Search Bar -->
+                    <div class="backGnd">
+                        <div class="col-md-12 mt-3">
+                            <h1 class="title">Book Review System</h1>
+                            <form class="form-inline my-2 my-lg-0">
+                                <div class="input-group">
+                                    <input class="form-control mr-sm-2" id="search_box" type="search"
+                                        placeholder="Search" aria-label="Search" [(ngModel)]="searchQuery"
+                                        name="searchQuery" (input)="filterBooks()">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Example Card (Repeat this for each book) -->
+                    <!-- <div class="row">
+                        <div class="col-md-3 mb-4 my-3" *ngFor="let b of book" (click)="navigateToDetailsPage(b.isbn)">
+                            <div class="card h-100 custom-card">
+                                <img [src]="b.imageUrl_L" class="card-img-top custom-img" alt="Book Cover">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title" style="font-size: 0.8rem;">{{ b.bookTitle }}</h5>
+                                    <p class="card-text" style="font-size: 0.7rem;">Author: {{ b.bookAuthor }}</p>
+                                    <p class="card-text" style="font-size: 0.7rem;">Total Likes: {{ b.totalLikes }}</p>
+                                    <p class="card-text" style="font-size: 0.7rem;">Average Rating: {{ b.averageRating }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div *ngIf="filteredBooks.length > 0; else noResults">
+                        <div class="row">
+                            <div class="col-md-3 mb-4 my-3" *ngFor="let b of filteredBooks"
+                                (click)="navigateToDetailsPage(b.isbn)">
+                                <div class="card h-100">
+                                    <img [src]="b.imageUrl_L" class="card-img-top custom-img " alt="Book Cover">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">{{ b.bookTitle }}</h5>
+                                        <p class="card-text">Author: {{ b.bookAuthor }}</p>
+                                        <p class="card-text">Total Likes: {{ b.totalLikes }}</p>
+                                        <p class="card-text">Average Rating: {{ b.averageRating }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-template #noResults>
+                        <p>No books found.</p>
+                    </ng-template>
+                    <!-- Repeat card for each book -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

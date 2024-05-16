@@ -62,7 +62,6 @@ namespace FitKitWebApp.Controllers
                 return RedirectToAction("Error", "Home");
             }
 
-            return View();
         }
     }
 }

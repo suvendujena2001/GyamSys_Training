@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="row mt-3">
+      <div class="col-5 mt-3">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group mb-3">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email"  placeholder="Enter Email" formControlName="Email">
+          </div>
+          <div class="form-group mb-3">
+            <label for="pwd">Password</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Password" formControlName="Password">
+          </div>
+          <div class="colomn d-flex justify-content-between">
+          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="button" class="btn btn-success" (click)="onRegister()">Register</button>
+        </div>
+        </form>
+      </div>
+  
+      <div class="col-7">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+        class="img-fluid" alt="Sample image">
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,36 @@
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">User Data</h5>
+            
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Verification Status</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Iterate over the data array and generate table rows -->
+                    <tr *ngFor="let user of formData">
+                        <td>{{ user.userid }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.password }}</td>
+                        <td>{{ user.verify? 'Verified':'Not Verified' }}</td>
+                        <td><button *ngIf="!user.verify" (click)="sendVerificationEmail(user.userid, user.email, user.username, user.password)" class="btn btn-primary">Verify</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button (click)="logout()" class="btn btn-danger" style="padding: 10px; margin: 10px;">Logout</button>
+</div>

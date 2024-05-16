@@ -1,0 +1,26 @@
+<h2 class="head">Users Table</h2>
+<div class="admin-panel">
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.userid }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.verify ? 'Verified' : 'Not Verified' }}</td>
+          <td>
+            <button *ngIf="!user.verify && user.username !== 'Admin'" (click)="verifyUser(user)">Verify</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<button class="tail" type="submit" (click)="onClick()" >Logout</button>

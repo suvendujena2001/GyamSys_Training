@@ -1,0 +1,51 @@
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; }
+   */
+
+
+   /* External CSS file */
+
+/* Center align text */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure container fills the entire viewport */
+  }
+  
+  /* Style the card */
+  .card {
+    background-color: #615959; /* Light black color */
+    color: #fff; /* White text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(186, 176, 176, 0.1);
+    text-align: center; /* Center align text inside the card */
+    width: 50%;
+  }
+  
+  /* Style the card body */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style the logout button */
+  .btn-danger {
+    margin-top: 20px; /* Add margin at the top */
+  }
+  

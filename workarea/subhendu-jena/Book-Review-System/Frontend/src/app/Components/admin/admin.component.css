@@ -1,0 +1,15 @@
+#admin_container {
+    height: 100vh;
+    background-color: cadetblue;
+
+
+}
+
+table {
+    border: 2px solid black;
+
+}
+
+.AdminHeading {
+    border: 2px solid black;
+}

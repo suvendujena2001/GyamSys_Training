@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace FitKitAPI.Models
+﻿namespace FitKitAPI.Models
 {
     public class UserClaimsModel
     {
@@ -11,11 +9,6 @@ namespace FitKitAPI.Models
         public string GivenName { get; set; }
 
         public string Surname { get; set; }
-
-        internal ActionResult<IEnumerable<UserClaimsModel>> toListAsync()
-        {
-            throw new NotImplementedException();
-        }
     }
 
 }

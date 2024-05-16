@@ -3,6 +3,7 @@ using FitKitAPI.Data;
 using FitKitAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace FitKitAPI.Controllers
 {
@@ -76,11 +77,7 @@ namespace FitKitAPI.Controllers
         {
             userCredential.FirstName = TitleCase(userCredential.FirstName);
             userCredential.LastName = TitleCase(userCredential.LastName);
-            userCredential.CreatedBy = $"{userCredential.FirstName} {userCredential.LastName}";
-            userCredential.ModifiedBy = $"{userCredential.FirstName} {userCredential.LastName}";
-            userCredential.CreatedDate = DateTime.Now;
-            userCredential.ModifiedDate = DateTime.Now;
-            userCredential.Active = true;
+            //userCredential.Active = true;
 
             // Hashing and salting
             var hashedPassword = BCrypt.Net.BCrypt.EnhancedHashPassword(userCredential.Password, HashType.SHA512);
@@ -111,6 +108,26 @@ namespace FitKitAPI.Controllers
         private bool UserCredentialExists(int id)
         {
             return _context.UserCredential.Any(e => e.UserId == id);
+        }
+
+        private UserClaimsModel GetCurrentUser()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            if (identity != null)
+            {
+                var userClaims = identity.Claims;
+
+                return new UserClaimsModel
+                {
+                    UserId = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value,
+                    EmailAddress = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value,
+                    GivenName = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.GivenName)?.Value,
+                    Surname = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.Surname)?.Value,
+                };
+            }
+
+            return null;
         }
 
         private static string TitleCase(string str)

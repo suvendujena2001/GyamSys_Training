@@ -7,17 +7,14 @@ namespace FitKitAPI.Data
     {
         public FitKitDbContext(DbContextOptions<FitKitDbContext> options) : base(options) { }
 
-        public DbSet<Workout> WorkoutTable { get; set; }
-
-        public DbSet<Activity> ActivityTable { get; set; }
-
-        public DbSet<Goal> Goal { get; set; } = default!;
+        public DbSet<UserCredential> UserCredential { get; set; }
 
         public DbSet<UserDetails> UserDetails { get; set; }
 
-        public DbSet<Nutrition> Nutrition { get; set; } = default!;
+        public DbSet<Exercise> Exercise { get; set; }
 
-        public DbSet<UserCredential> UserCredential { get; set; }
+        public DbSet<Workout> Workout { get; set; }
+
 
     }
 }

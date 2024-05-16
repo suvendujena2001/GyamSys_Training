@@ -1,0 +1,17 @@
+
+<body>
+    <div class="login-container">
+        <h2 style="text-align: center;">Login</h2>
+        <form (ngSubmit)="onSubmit()">
+            <label for="username" >Username:</label>
+            <input type="text" id="username" name="username" class="formControl" [formControl]="username">
+            <p *ngIf="username.invalid && username.touched" class="error">Kindly Enter Something!</p>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="formControl" required [formControl]="password">
+            <p *ngIf="password.invalid && password.touched" class="error">Kindly Enter Something!</p>
+            <button type="submit" >Submit</button>
+            
+        </form>
+        <button type="submit" (click)="onClick()">Register</button>
+    </div>
+</body>

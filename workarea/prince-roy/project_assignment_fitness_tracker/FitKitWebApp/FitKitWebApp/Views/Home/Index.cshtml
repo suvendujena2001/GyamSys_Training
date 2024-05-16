@@ -5,25 +5,11 @@
 }
 
 @section Styles { 
-    <link href="~/Content/Navbar.styles.css" type="text/css" rel="stylesheet" />
     <link href="~/Content/Dashboard.styles.css" type="text/css" rel="stylesheet" />
-    <link href="~/Content/Profile.styles.css" type="text/css" rel="stylesheet" />
-
 }
 
 <div class="container">
-    <aside class="sidebar">
-        <nav class="navbar">
-            <ul class="navbar-list">
-                <li class="list-item"><img src="~/images/Home.svg" alt="" /></li>
-                <li class="list-item"><img src="~/images/activity.svg" alt="" /></li>
-                <li class="list-item"><img src="~/images//Exercise.svg" alt="" /></li>
-                <li class="list-item"><img src="~/images/messages.svg" alt="" /></li>
-                <li class="list-item"><img src="~/images/discover.svg" alt="" /></li>
-                <li class="list-item"><img src="~/images/setting.svg" alt="" /></li>
-            </ul>
-        </nav>
-    </aside>
+    @await Html.PartialAsync("_Navbar")
 
     <div class="dashboard-container">
        <h1><span>Good Morning</span> Welcome Back 🎉</h1>
@@ -98,7 +84,7 @@
            </div>
        </div>
     </div>
-    @await Html.PartialAsync("_ProfileSection", Model);     
+    @await Html.PartialAsync("_ProfileSection", Model)    
 </div>
 
 @section Script{

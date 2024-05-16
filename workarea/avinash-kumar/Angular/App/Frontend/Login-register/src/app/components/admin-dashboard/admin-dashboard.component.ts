@@ -14,6 +14,7 @@ import * as XLSX from 'xlsx';
 })
 export class AdminDashboardComponent {
   users: any[] = [];
+  appointments: any[] = [];
   title = 'httpclient';
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -34,8 +35,19 @@ export class AdminDashboardComponent {
     }
 
     this.getUsers();
+    this.getAppointment();
   }
-
+  getAppointment() {
+    this.http.get<any[]>('http://localhost:8081/get-appointments').subscribe(
+      (data) => {
+        this.appointments = data;
+        console.log(this.appointments);
+      },
+      (error) => {
+        console.error('Error fetching users:', error);
+      }
+    );
+  }
   getUsers() {
     this.http.get<any[]>('http://localhost:8081/users').subscribe(
       (data) => {
@@ -61,7 +73,18 @@ export class AdminDashboardComponent {
       }
     );
   }
-
+  AcceptAppointment(appointmentId: number, userEmail: string, userName: string, appointmentTime: string) {
+    console.log(appointmentTime);
+    this.http.post<any>('http://localhost:8081/acceptAppointment', { appointmentId: appointmentId, email: userEmail, username: userName, appointmenttime: appointmentTime }).subscribe(
+      (response) => {
+        console.log('Verification successful:', response);
+        this.getUsers();
+      },
+      (error) => {
+        console.error('Verification failed:', error);
+      }
+    );
+  }
   downloadExcel() {
     const data: any[] = [];
     const headers = ['Username', 'Email', 'Verify', 'Password'];
@@ -75,4 +98,6 @@ export class AdminDashboardComponent {
     XLSX.utils.book_append_sheet(wb, ws, 'Users');
     XLSX.writeFile(wb, 'user_records.xlsx');
   }
+
+
 }

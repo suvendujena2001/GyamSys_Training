@@ -1,0 +1,29 @@
+<div class="background">
+<div class="container  d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="card">
+        <h2>Register Form</h2>
+        <div class="card-body">
+          <form id="registerForm" (ngSubmit)="onRegister()">
+            <div class="form-group">
+              <label for="username" class="bold-input">Username:</label>
+              <input type="text" placeholder="Username" class="form-control" id="username" name="username" [formControl]="username">
+            </div>
+            <div class="form-group">
+              <label for="email" class="bold-input">Email:</label>
+              <input type="email" placeholder="Email" class="form-control" id="email" name="email" [formControl]="email">
+            </div>
+            <div class="form-group">
+              <label for="password" class="bold-input">Password:</label>
+              <input type="password" placeholder="Password" class="form-control" id="password" name="password" [formControl]="password">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

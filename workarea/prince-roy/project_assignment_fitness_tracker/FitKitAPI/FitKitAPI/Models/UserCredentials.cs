@@ -9,7 +9,7 @@ namespace FitKitAPI.Models
 
         public string FirstName { get; set; }
 
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         public string UserName { get; set; }
 
@@ -17,17 +17,14 @@ namespace FitKitAPI.Models
 
         public string Password { get; set; }
 
-        public string? CreatedBy { get; set; }
+        public int CreatedBy { get; set; }
 
-        public DateTime? CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
 
-        public string? ModifiedBy { get; set; }
+        public int ModifiedBy { get; set; }
 
-        public DateTime? ModifiedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
 
-        public bool? Active { get; set; }
-
-        //[ValidateNever]
-        //public ICollection<UserDetails> Details { get; set; }
+        public bool Active { get; set; }
     }
 }

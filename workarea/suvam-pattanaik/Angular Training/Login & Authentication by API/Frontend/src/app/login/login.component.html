@@ -1,0 +1,35 @@
+
+<div class="background">
+<div class="container  justify-content-center align-items-center">
+  <div class="col-md-6">
+    <div class="card">
+      <h2 >LOGIN </h2>
+      <div class="card-body">
+        <form id="contactForm" (ngSubmit)="onLogin()">
+          <div class="form-group">
+            <label for="name" class="bold-input">UserName:</label>
+            <span class="mandatory">*</span>
+            <input type="text" placeholder="Name" class="form-control" id="UserName" name="username" [formControl]="username">
+            <p *ngIf="username.invalid && username.touched " class="text-danger">UserName is a required field !</p>
+          </div>
+          <div class="form-group">
+            <label for="password" class="bold-input">Password:</label>
+            <span class="mandatory">*</span>
+            <input type="password" placeholder="password" class="form-control" id="Password" name="Password" [formControl]="password">
+            <p *ngIf="password.invalid && password.touched" class="text-danger">Password is required field !</p>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+          <p style="text-align: center; font-weight: bold;">Not a user yet , Register here!!</p>
+          <div class="text-center mt-3">
+            <button (click)="navigateToRegister()" class="btn btn-secondary" style="width: 50%;">Register</button>
+          </div>
+          
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>

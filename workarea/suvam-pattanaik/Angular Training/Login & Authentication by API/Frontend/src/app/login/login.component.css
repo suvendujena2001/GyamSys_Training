@@ -1,0 +1,55 @@
+.background {
+  background-image: url('../image/back1.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%; /* Make the container take full width */
+  max-width: 400px; /* Set maximum width for the container */
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.38);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-container {
+  background-color: rgba(255, 255, 255, 0.38);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+}
+
+.col-md-6 {
+  width: 120%; /* Adjust width of the login form */
+  max-width: 475px; /* Set maximum width for the login form */
+}
+h2 {
+  text-align: center; /* Center align the heading */
+}
+
+.bold-input {
+  font-size: 18px;
+  font-weight: bold; /* Make input labels bold */
+  padding: 15px 0px;
+}
+
+.mandatory {
+  color: red; /* Make mandatory indicator red */
+
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: blue; 
+  margin: 15px;/* Set submit button background color to blue */
+  width: 50%;
+}
+

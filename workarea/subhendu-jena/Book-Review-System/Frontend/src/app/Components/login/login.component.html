@@ -1,0 +1,31 @@
+<div id="loginContainer">
+  <div class="text-left">
+    <div class="container">
+      <img src="../../../assets/UserPicture.png" alt="Image"
+        style="width: 20rem; height: auto; display: block; margin: 0 auto;" />
+      <h2 class="text-center mb-4"
+        style="font-size:3rem; font-family:Georgia, 'Times New Roman', Times, serif; font-style: oblique; color: tan;">
+        Welcome</h2>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="form-group">
+          <input type="text" class="form-control" id="username" placeholder="Enter username" [(ngModel)]="username"
+            name="username" required #usernameInput="ngModel">
+          <div *ngIf="usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)" class="text-danger">
+            Username is required</div>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="password" placeholder="Enter password" [(ngModel)]="password"
+            name="password" required #passwordInput="ngModel">
+          <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)" class="text-danger">
+            Password is required</div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+        <div class="text-center mt-3">
+        </div>
+        <div class="text-center mt-3 text-light">
+          Don't have an account? <a routerLink="/register" routerLinkActive="active">Register here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

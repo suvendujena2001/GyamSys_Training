@@ -25,7 +25,6 @@ namespace FitKitWebApp.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-
             try
             {
                 var accessToken = HttpContext.Session.GetString("AccessToken");

@@ -24,6 +24,13 @@ option{
     all: unset;
 }
 
+.container {
+    min-height: 100vh;
+    background-color: #FAFAFA;
+    display: grid;
+    grid-template-columns: min-content auto auto;
+}
+
 .error-animation {
     animation-name: shake;
     animation-duration: 0.2s;

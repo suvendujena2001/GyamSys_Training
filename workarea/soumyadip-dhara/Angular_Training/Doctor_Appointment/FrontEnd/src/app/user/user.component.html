@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Welcome to user dashboard!!!</h1>
+    <div class="appointment-form">
+      <form (ngSubmit)="submitAppointment()" [formGroup]="appointmentForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label for="datetime">Date and Time:</label>
+          <input type="datetime-local" id="datetime" name="datetime" formControlName="datetime">
+      </div>
+      
+        <!-- <div class="form-group">
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" formControlName="time">
+        </div> -->
+        <button type="submit">Submit Appointment</button>
+      </form>
+    </div>
+    <a href="home"><button>Log Out</button></a>
+</div>

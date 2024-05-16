@@ -26,10 +26,14 @@ namespace FitKitWebApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(UserCredentials user)
+        public async Task<IActionResult> Index(UserCredential user)
         {
             try
             {
+                user.CreatedDate = DateTime.Now;
+                user.ModifiedDate = DateTime.Now;
+                user.Active = true;
+
                 var json = JsonConvert.SerializeObject(user);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -81,6 +85,11 @@ namespace FitKitWebApp.Controllers
             }
 
             return View();
+        }
+
+        private static string TitleCase(string str)
+        {
+            return str.Substring(0, 1).ToUpper() + str.Substring(1, str.Length - 1);
         }
     }
 }

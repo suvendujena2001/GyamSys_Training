@@ -1,0 +1,56 @@
+<div class="container">
+    <h1>Welcome to Admin Dashboard!!</h1>
+    <a href="home"><button>Log Out</button></a>
+    <table class="table-data">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Verified</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of logins; let i=index">
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+            <ng-container *ngIf="user.verify; else verifyButton">
+              True
+            </ng-container>
+            <ng-template #verifyButton>
+              <button (click)="verifyUser(user)">Verify</button>
+            </ng-template>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Appointments</h2>
+    <table class="table-data">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Acceptance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let app of appointment; let i=index">
+          <td>{{ app.pname }}</td>
+          <td>{{ app.appointmentDate | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ app.appointmentDate | date: 'hh:mm a': 'UTC' }}</td>
+          <td>
+            <ng-container *ngIf="app.acceptance; else AcceptButton">
+              True
+            </ng-container>
+            <ng-template #AcceptButton>
+              <button (click)="updateAcceptance(app)">Accept</button>
+            </ng-template>
+          </td>                  
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+

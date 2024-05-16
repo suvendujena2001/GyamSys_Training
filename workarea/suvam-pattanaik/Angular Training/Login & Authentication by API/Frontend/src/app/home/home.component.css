@@ -1,0 +1,55 @@
+/* External CSS file */
+
+/* Style the container */
+.container {
+    margin-top: 50px;
+  }
+  
+  /* Style the card */
+  .card {
+    background-color: #f9f9f9; /* Light white background color */
+    border: none; /* Remove border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  }
+  
+  /* Style the card header */
+  .card-header {
+    background-color: #343a40; /* Dark blue color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Add padding */
+  }
+  
+  /* Style the card title */
+  .card-title {
+    font-size: 18px; /* Adjust font size */
+    margin: 0; /* Remove margin */
+  }
+  
+  /* Style the card body */
+  .card-body {
+    
+    padding: 20px; /* Add padding */
+  }
+  
+  /* Style the table */
+  .table {
+    width: 100%; /* Set table width to 100% */
+  }
+  
+  /* Style the table headings */
+  .table th {
+    background-color: #343a40; /* Dark blue color */
+    color: #ffffff; /* White text color */
+    padding: 10px; /* Add padding */
+  }
+  
+  /* Style the table cells */
+  .table td {
+    padding: 10px; /* Add padding */
+  }
+  
+  /* Style the logout button */
+  .btn-logout {
+    margin-top: 20px; /* Add margin at the top */
+  }
+  

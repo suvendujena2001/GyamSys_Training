@@ -119,7 +119,7 @@ circle {
   height: 9rem;
   width: 9rem;
   border-radius: 50%;
-  background-image: radial-gradient(closest-side, white 70%, transparent 70% 100%), conic-gradient(#1AB0B0 90deg, #FF844B 90deg 180deg, #F85C7F 180deg 270deg, #8676FE 270deg 360deg);
+  background-image: radial-gradient(closest-side, white 69%, transparent 70% 100%), conic-gradient(#1AB0B0 90deg, #FF844B 90deg 180deg, #F85C7F 180deg 270deg, #8676FE 270deg 360deg);
 }
 
 .activities {

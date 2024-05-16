@@ -1,0 +1,39 @@
+
+<div class="container">
+    <h1>Registration Form</h1>
+    <form [formGroup]="Register" (ngSubmit)="onSubmit()" class="card">
+        <div>
+          <label for="name">User Name:</label>
+          <input type="text" id="name" formControlName="name">
+          <div *ngIf="Register.get('name')?.invalid && (Register.get('name')?.dirty || Register.get('name')?.touched)">
+              <div *ngIf="Register.get('name')?.errors?.['required']" style="color:red">name is required.</div>
+              <div *ngIf="Register.get('name')?.errors?.['maxlength']" style="color:red">name must be at most 30 characters.</div>
+          </div>
+        </div>
+        <div>
+          <label for="email">Email Id:</label>
+          <input type="email" id="email" formControlName="email">
+          <div *ngIf="Register.get('email')?.invalid && (Register.get('email')?.dirty || Register.get('email')?.touched)">
+              <div *ngIf="Register.get('email')?.errors?.['required']" style="color:red">Email is required.</div>
+          </div>
+        </div>
+        <div>
+          <label for="phoneNo">Phone Number:</label>
+          <input type="text" id="phoneNo" formControlName="phoneNo">
+          <div *ngIf="Register.get('phoneNo')?.invalid && (Register.get('phoneNo')?.dirty || Register.get('phoneNo')?.touched)">
+              <div *ngIf="Register.get('phoneNo')?.errors?.['required']" style="color:red">Phone Number is required.</div>
+              <div *ngIf="Register.get('phoneNo')?.errors?.['pattern']" style="color:red">Enter a Valid Phone Number.</div>
+          </div>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" formControlName="password">
+            <div *ngIf="Register.get('password')?.invalid && (Register.get('password')?.dirty || Register.get('password')?.touched)">
+              <div *ngIf="Register.get('password')?.errors?.['required']" style="color:red">Password is required.</div>
+            </div>
+          </div>
+        <button type="submit">Submit</button>
+      </form>   
+      <a href="login">Alrady have account? please Log In</a>
+</div>
+

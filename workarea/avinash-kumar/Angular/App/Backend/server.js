@@ -104,6 +104,9 @@ app.post("/saveuser", async (req, res) => {
   return res.status(201).json(result);
 });
 
+
+
+
 app.post("/verifyuser", async (req, res) => {
   console.log(req.body);
   const result = await executeQuery(
@@ -140,6 +143,76 @@ app.post("/verifyuser", async (req, res) => {
       });
   }
 });
+
+
+//book appointment 
+// Endpoint for users to book appointments
+app.post("/book-appointment", async (req, res) => {
+  try {
+    const { userID, appointmentTime } = req.body;
+    console.log(userID, appointmentTime);
+    const result = await executeQuery(
+      `INSERT INTO Appointments (UserID, AppointmentTime, Accept) 
+       VALUES (${userID},'${appointmentTime}', 0)`
+    );
+    return res.status(201).json({ success: true, message: "Appointment booked successfully" });
+  } catch (error) {
+    console.error("Error:", error.message);
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Endpoint for the doctor to view booked appointments
+app.get("/get-appointments", async (req, res) => {
+  try {
+    const result = await executeSelect(
+      ` SELECT a.AppointmentID,u.username,u.email,a.appointmentTime,a.Accept FROM users u inner join Appointments a on u.userid=a.userId`
+    );
+    return res.status(200).json(result);
+  } catch (error) {
+    console.error("Error:", error.message);
+    return res.status(500).json({ error: error.message });
+  }
+});
+
+
+app.post("/acceptAppointment", async (req, res) => {
+  console.log(req.body);
+  const result = await executeQuery(
+    "Update appointments set accept = 1 where appointmentId = " + req.body.appointmentId + ";"
+  );
+  console.log(result);
+  if (result.affectedRows <= 0) {
+    return res.json(result);
+  } else {
+    let message = {
+      from: "avinash.kumar2@gmail.com",
+      to: req.body.email,
+      subject: "Welcome to Doctor Website!",
+      html:
+        "<b>Your Appointment is Confirmed !!! <br>" +
+        "username : " +
+        req.body.username +
+        "<br>Appointment Time : " +
+        req.body.appointmenttime +
+        "<br><a href='http://localhost:4200/login' target='_blank'> Login</a>" +
+        " </br>",
+    };
+    transporter
+      .sendMail(message)
+      .then((info) => {
+        return res.status(201).json({
+          msg: "Email sent",
+          info: info.messageId,
+          preview: nodemailer.getTestMessageUrl(info),
+        });
+      })
+      .catch((err) => {
+        return res.status(500).json({ msg: err });
+      });
+  }
+});
+
 
 app.listen(8081, () => {
   console.log("listening");

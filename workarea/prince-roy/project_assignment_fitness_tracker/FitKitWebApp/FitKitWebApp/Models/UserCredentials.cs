@@ -2,20 +2,22 @@
 
 namespace FitKitWebApp.Models
 {
-    public class UserCredentials
+    public class UserCredential
     {
+        [Key]
         public int UserId { get; set; }
 
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [Display(Name = "User Name")]
         public string UserName { get; set; }
 
         [Display(Name = "Email")]
+        [EmailAddress]
         //[RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/")]
         public string UserEmail { get; set; }
 
@@ -25,11 +27,11 @@ namespace FitKitWebApp.Models
         [Compare("Password", ErrorMessage = "Password is not identical")]
         public string ConfirmPassword { get; set; }
 
-        public string? CreatedBy { get; set; }
+        public int CreatedBy { get; set; }
 
         public DateTime? CreatedDate { get; set; }
 
-        public string? ModifiedBy { get; set; }
+        public int ModifiedBy { get; set; }
 
         public DateTime? ModifiedDate { get; set; }
 

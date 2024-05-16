@@ -1,0 +1,21 @@
+.MaIn{
+    background-image: url('https://i.imgur.com/81RTZEw.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 6%;
+    padding-top: 150px;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  

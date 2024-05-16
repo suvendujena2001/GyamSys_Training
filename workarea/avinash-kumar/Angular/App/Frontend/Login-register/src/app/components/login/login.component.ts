@@ -39,10 +39,11 @@ export class LoginComponent {
   login() {
     this.http.post('http://localhost:8081/login', { username: this.username, password: this.password }).subscribe(
       (data) => {
-        console.log('Login successful:', data);
         sessionStorage.setItem('userDetails', JSON.stringify(data));
         const userDetailsString = sessionStorage.getItem('userDetails');
         if (userDetailsString != null) {
+          console.log('Login successful:', data);
+
           const userDetailsArray = JSON.parse(userDetailsString);
           const userDetail = userDetailsArray[0];
           if (this.username == "admin" && this.password === "admin") {

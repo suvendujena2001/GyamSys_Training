@@ -1,0 +1,15 @@
+<article class="url urls-list__item">
+  <p class="url__long">{{ originalLink }}</p>
+  <hr />
+  <div class="url__short">
+    <p>{{ shortenedLink }}</p>
+    <button
+      ngxClipboard
+      [cbContent]="shortenedLink"
+      (cbOnSuccess)="onCopySuccess()"
+      type="button"
+    >
+      {{ copySuccess ? "Copied" : "Copy" }}
+    </button>
+  </div>
+</article>
